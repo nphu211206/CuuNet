@@ -2,8 +2,10 @@
 
 import { useMemo, useState, useCallback } from "react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { recentDisasters, sosAlerts } from "@/data/disaster-data";
 import MapStatsBar from "@/features/map-disaster/ui/MapStatsBar";
+import { Brain, Users, BarChart3, ArrowRight } from "lucide-react";
 
 const DisasterMap = dynamic(
   () => import("@/features/map-disaster/ui/DisasterMap"),
@@ -86,6 +88,22 @@ export default function MapPage() {
         disasters={recentDisasters}
         onFilterByTime={handleFilterByTime}
       />
+
+      {/* Cross-links: Bước tiếp theo */}
+      <div className="mt-6 p-4 rounded-2xl bg-slate-900/40 border border-slate-700/30">
+        <h4 className="text-xs font-semibold text-slate-300 mb-3">Bước tiếp theo</h4>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/predict" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-blue-500/40 hover:text-blue-400 transition-colors">
+            <Brain className="w-3.5 h-3.5" /> Xem dự đoán cho khu vực này <ArrowRight className="w-3 h-3" />
+          </Link>
+          <Link href="/report" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-green-500/40 hover:text-green-400 transition-colors">
+            <Users className="w-3.5 h-3.5" /> Gửi báo cáo thiên tai <ArrowRight className="w-3 h-3" />
+          </Link>
+          <Link href="/dashboard" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-cyan-500/40 hover:text-cyan-400 transition-colors">
+            <BarChart3 className="w-3.5 h-3.5" /> Xem thống kê <ArrowRight className="w-3 h-3" />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

@@ -203,6 +203,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── HOW IT WORKS FLOW ────────────────────────────────────────────────── */}
+      <section className="py-20 px-6 border-t border-slate-800/30">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="text-[11px] font-semibold text-blue-400 uppercase tracking-widest">Quy trình</span>
+            <h2 className="text-2xl font-black text-white mt-2 mb-3">CứuNet hoạt động thế nào?</h2>
+            <p className="text-sm text-slate-500 max-w-xl mx-auto">
+              Từ giám sát đến cứu hộ — hệ thống hoàn chỉnh bảo vệ người dân Việt Nam trước thiên tai
+            </p>
+          </motion.div>
+
+          {/* Flow Steps */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center justify-between gap-4"
+          >
+            {[
+              { icon: <Map className="w-6 h-6" />, label: "Giám sát", desc: "Theo dõi real-time 63 tỉnh", stat: "63 tỉnh", color: "#3B82F6", href: "/map" },
+              { icon: <Brain className="w-6 h-6" />, label: "Dự đoán", desc: "AI phân tích rủi ro", stat: "6 loại", color: "#8B5CF6", href: "/predict" },
+              { icon: <Siren className="w-6 h-6" />, label: "Cảnh báo", desc: "Thông báo khẩn cấp", stat: "4 mức", color: "#EF4444", href: "/alerts" },
+              { icon: <HandHeart className="w-6 h-6" />, label: "Cứu hộ", desc: "Điều phối cứu trợ", stat: "ICS", color: "#F59E0B", href: "/rescue" },
+              { icon: <BarChart3 className="w-6 h-6" />, label: "Phân tích", desc: "Thống kê & báo cáo", stat: "8 biểu đồ", color: "#06B6D4", href: "/dashboard" },
+            ].map((step, i) => (
+              <motion.div key={step.label} variants={fadeUp} custom={i} className="flex items-center gap-3 md:gap-4">
+                <Link href={step.href} className="group flex flex-col items-center text-center">
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-2 transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1"
+                    style={{ backgroundColor: `${step.color}15`, border: `1px solid ${step.color}30` }}
+                  >
+                    <span style={{ color: step.color }}>{step.icon}</span>
+                  </div>
+                  <span className="text-xs font-bold text-slate-200 group-hover:text-white transition-colors">{step.label}</span>
+                  <span className="text-[10px] text-slate-500 mt-0.5">{step.desc}</span>
+                  <span className="text-[9px] font-bold mt-1 px-2 py-0.5 rounded-full" style={{ backgroundColor: `${step.color}15`, color: step.color }}>
+                    {step.stat}
+                  </span>
+                </Link>
+                {i < 4 && (
+                  <motion.div
+                    animate={{ x: [0, 6, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                    className="hidden md:block"
+                  >
+                    <ArrowRight className="w-5 h-5 text-slate-600" />
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Summary line */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+            className="text-center mt-8"
+          >
+            <p className="text-xs text-slate-600">
+              Giám sát → Dự đoán → Cảnh báo → Cứu hộ → Phân tích = <span className="text-blue-400 font-semibold">Hệ thống hoàn chỉnh</span>
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── MODULES GRID ─────────────────────────────────────────────────────── */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
