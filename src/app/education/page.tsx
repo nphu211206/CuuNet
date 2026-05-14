@@ -32,6 +32,10 @@ import {
   Zap,
   Award,
   Flame,
+  Map,
+  Siren,
+  BarChart3,
+  ArrowRight,
 } from "lucide-react";
 import clsx from "clsx";
 
@@ -752,6 +756,24 @@ function EducationPageContent() {
           </motion.div>
         </AnimatePresence>
       </main>
+
+      {/* Cross-links */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-6">
+        <div className="p-4 rounded-2xl bg-slate-900/40 border border-slate-700/30">
+          <h4 className="text-xs font-semibold text-slate-300 mb-3">Áp dụng kiến thức</h4>
+          <div className="flex flex-wrap gap-2">
+            <a href="/map" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-blue-500/40 hover:text-blue-400 transition-colors">
+              <Map className="w-3.5 h-3.5" /> Xem thiên tai trên bản đồ <ArrowRight className="w-3 h-3" />
+            </a>
+            <a href="/alerts" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-red-500/40 hover:text-red-400 transition-colors">
+              <Siren className="w-3.5 h-3.5" /> Gửi SOS khẩn cấp <ArrowRight className="w-3 h-3" />
+            </a>
+            <a href="/dashboard" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-cyan-500/40 hover:text-cyan-400 transition-colors">
+              <BarChart3 className="w-3.5 h-3.5" /> Xem thống kê thiên tai <ArrowRight className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+      </div>
 
       {/* Toasts */}
       <ToastContainer toasts={state.toasts} onDismiss={handleToastDismiss} />

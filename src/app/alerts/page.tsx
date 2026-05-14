@@ -36,7 +36,10 @@ import {
   History,
   BarChart3,
   ChevronRight,
+  HandHeart,
+  ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 import clsx from "clsx";
 import dynamic from "next/dynamic";
 
@@ -697,6 +700,24 @@ function AlertPageContent() {
                 </div>
               </div>
             </motion.div>
+          )}
+
+          {/* Cross-links */}
+          {state.viewMode === "dashboard" && (
+            <div className="mt-4 p-4 rounded-2xl bg-slate-900/40 border border-slate-700/30">
+              <h4 className="text-xs font-semibold text-slate-300 mb-3">Bước tiếp theo</h4>
+              <div className="flex flex-wrap gap-2">
+                <Link href="/map" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-blue-500/40 hover:text-blue-400 transition-colors">
+                  <Map className="w-3.5 h-3.5" /> Xem trên bản đồ <ArrowRight className="w-3 h-3" />
+                </Link>
+                <Link href="/rescue" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-amber-500/40 hover:text-amber-400 transition-colors">
+                  <HandHeart className="w-3.5 h-3.5" /> Kích hoạt cứu hộ <ArrowRight className="w-3 h-3" />
+                </Link>
+                <Link href="/dashboard" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-cyan-500/40 hover:text-cyan-400 transition-colors">
+                  <BarChart3 className="w-3.5 h-3.5" /> Xem thống kê <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </div>
           )}
 
           {/* Feed View */}
