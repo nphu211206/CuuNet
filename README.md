@@ -1,7 +1,6 @@
 <div align="center">
 
-<!-- LOGO & HERO -->
-<img src="public/logo.png" alt="CứuNet Logo" width="120" height="120" onerror="this.style.display='none'"/>
+<br/>
 
 # 🛡️ CứuNet
 
@@ -9,28 +8,27 @@
 
 <br/>
 
-[![Next.js](https://img.shields.io/badge/Next.js-15+-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+> **"Phòng ngừa hơn chữa trị."**
+> CứuNet không chỉ là một hệ thống — đây là lá chắn số của người dân Việt Nam trước thiên tai.
+
+<br/>
+
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-4.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/js)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion)
 [![Leaflet](https://img.shields.io/badge/Leaflet.js-1.9-199900?style=for-the-badge&logo=leaflet&logoColor=white)](https://leafletjs.com)
 
 <br/>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
-[![Phases Complete](https://img.shields.io/badge/Phases-7%2F7_Complete-success?style=flat-square&logo=checkmarx)](/)
-[![Lines of Code](https://img.shields.io/badge/Lines_of_Code-40%2C000+-blue?style=flat-square)](/)
+[![Phases Complete](https://img.shields.io/badge/Phases-12%2F12_Complete-success?style=flat-square&logo=checkmarx)](/)
+[![Lines of Code](https://img.shields.io/badge/Lines_of_Code-50%2C000+-blue?style=flat-square)](/)
 [![Built with AWF](https://img.shields.io/badge/Built_with-AWF_Agent_Framework-purple?style=flat-square)](/)
 
 <br/>
 
-> **"Phòng ngừa hơn chữa trị."**  
-> CứuNet không chỉ là một hệ thống — đây là lá chắn số của người dân Việt Nam trước thiên tai.
-
-<br/>
-
-[🗺️ Bản đồ Thiên tai](#-phase-1--bản-đồ-thiên-tai-thời-gian-thực) · [🤖 AI Dự đoán](#-phase-2--ai-dự-đoán-thiên-tai) · [📢 Cảnh báo SOS](#-phase-4--cảnh-báo--sos) · [🚁 Cứu trợ](#-phase-5--phối-hợp-cứu-trợ) · [📊 Dashboard](#-phase-6--trực-quan-hóa-dữ-liệu) · [🎓 Giáo dục](#-phase-7--giáo-dục--nhận-thức)
+[🗺️ Bản đồ](#-module-1--bản-đồ-thiên-tai) · [🤖 AI Dự đoán](#-module-2--ai-dự-đoán) · [📢 Cảnh báo](#-module-3--cảnh-báo--sos) · [🚁 Cứu trợ](#-module-4--phối-hợp-cứu-trợ) · [📊 Dashboard](#-module-5--trực-quan-hóa-dữ-liệu) · [🎓 Giáo dục](#-module-6--giáo-dục-phòng-chống-thiên-tai) · [🗺️ Báo cáo](#-module-7--báo-cáo-cộng-đồng)
 
 </div>
 
@@ -48,296 +46,350 @@ Việt Nam nằm trong **TOP 5 quốc gia chịu thiên tai nặng nề nhất t
 
 **Vấn đề cốt lõi:** Hệ thống hiện tại phân tán, phản ứng chậm, thiếu nền tảng thống nhất từ **Dự đoán → Cảnh báo → Ứng phó → Phục hồi**.
 
-**CứuNet** được xây dựng để lấp đầy khoảng trống đó — một hệ sinh thái AI hoàn chỉnh, chạy 100% trên trình duyệt, không cần server riêng.
+**Giải pháp:** CứuNet — nền tảng tích hợp toàn diện, sử dụng AI để **giám sát, dự đoán, cảnh báo và điều phối cứu trợ** thiên tai trên toàn lãnh thổ Việt Nam.
 
 ---
 
 ## 🏗️ Kiến trúc Hệ thống
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                        🛡️ CỨUNET PLATFORM                       ║
-╠══════════════╦═══════════════╦══════════════╦════════════════════╣
-║  Phase 1     ║  Phase 2      ║  Phase 3     ║  Phase 4           ║
-║  🗺️ MAP      ║  🤖 AI PREDICT║  👥 COMMUNITY║  🚨 ALERT & SOS   ║
-║  Leaflet     ║  TF.js LSTM   ║  Crowdsource ║  CAP Standard      ║
-║  Heatmap     ║  INFORM Model ║  Trust Score ║  Geo-targeted      ║
-╠══════════════╩═══════════════╩══════════════╩════════════════════╣
-║  Phase 5              ║  Phase 6              ║  Phase 7          ║
-║  🚁 RESCUE COORD      ║  📊 DASHBOARD         ║  🎓 EDUCATION     ║
-║  ICS + 3W Dashboard   ║  25-year Data Viz     ║  Octalysis + SM-2 ║
-║  Triage Engine        ║  4 Dashboard Views    ║  Interactive Learn ║
-╚═══════════════════════╩═══════════════════════╩═══════════════════╝
-```
-
-**Tech Stack:**
-
-```
-Frontend:     Next.js 15 · React 19 · TypeScript 5 · Tailwind CSS 4
-Visualization: Leaflet.js · Recharts · Framer Motion · D3.js concepts
-AI/ML:        TensorFlow.js 4 · Web Workers · LSTM Neural Network
-Data:         Open-Meteo API · ReliefWeb API · USGS API · GDACS API
-Standards:    INFORM Risk Index · CAP v1.2 · ICS (FEMA) · UN OCHA 3W
+┌─────────────────────────────────────────────────────────────┐
+│                    CứuNet Architecture                       │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
+│  │ Bản đồ   │  │ AI Dự    │  │ Cảnh báo │  │ Cứu trợ  │   │
+│  │ Realtime │  │ Đoán     │  │ & SOS    │  │ ICS      │   │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘   │
+│       │              │              │              │          │
+│  ┌────┴──────────────┴──────────────┴──────────────┴────┐   │
+│  │              Shared Context + State Management        │   │
+│  │          React Context + Reducer Pattern              │   │
+│  └──────────────────────┬───────────────────────────────┘   │
+│                         │                                    │
+│  ┌──────────────────────┴───────────────────────────────┐   │
+│  │                    Data Layer                         │   │
+│  │   Mock Data + External APIs (ReliefWeb, GDACS, USGS) │   │
+│  └──────────────────────────────────────────────────────┘   │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🚀 Tính năng theo Phase
+## 📱 7 Module Chức năng
 
-### 🗺️ Phase 1 — Bản đồ Thiên tai Thời gian Thực
+### 🗺️ Module 1 — Bản đồ Thiên tai
 
-> **"Nhìn thấy nguy hiểm, trước khi nguy hiểm xảy ra."**
+Giám sát real-time 63 tỉnh thành với **3 chế độ hiển thị** (Sáng/Tối/Vệ tinh):
 
-- 🔴 **Animated Pulse Markers** — Marker nhấp nháy theo mức độ nghiêm trọng
-- 🌡️ **Heatmap mật độ** — Leaflet.heat với gradient tùy chỉnh dark theme
-- 🗾 **Province Choropleth** — 15 tỉnh trọng điểm, hover highlight, click fly-to
-- ⏳ **Timeline Slider** — Phát lại diễn biến thiên tai theo thời gian
-- ☁️ **Weather Overlay** — Tích hợp Open-Meteo API thời gian thực
-- 🔀 **Layer Toggle** — Chuyển đổi heatmap / marker / choropleth / weather
-
----
-
-### 🤖 Phase 2 — AI Dự đoán Thiên tai
-
-> **"3 phương pháp dự đoán, 1 kết quả đáng tin cậy."**
-
-**Mô hình rủi ro INFORM-inspired:**
-```
-RiskScore = Hazard × Exposure × Vulnerability × WeatherModifier
-
-Hazard       = BaseFrequency(province) × SeasonalMultiplier(month)  [40%]
-Exposure     = PopulationDensity × AssetValue                        [30%]
-Vulnerability = 1 - ResilienceIndex                                  [30%]
-```
-
-**Prediction Engine — Strategy Pattern:**
-
-| Strategy | Độ tin cậy | Mô tả |
-|----------|:----------:|-------|
-| Moving Average | 60% | Dự đoán xu hướng 3 tháng |
-| Linear Regression | 70% | Hồi quy tuyến tính |
-| Seasonal Decomposition | 75% | Phân tích thành phần mùa vụ |
-| **LSTM Neural Network** | **85%** | TF.js chạy trên Web Worker |
-
-- 📈 **What-if Scenarios** — El Niño / La Niña / Biến đổi khí hậu (+1.5°C)
-- 🎯 **Confidence Intervals** — Khoảng tin cậy 95% mở rộng theo thời gian
-- 🧠 **XAI-lite** — Giải thích lý do dự đoán bằng tiếng Việt
+- 📍 Markers thiên tai với popup chi tiết
+- 🔥 Heatmap density visualization
+- 🗺️ Choropleth theo tỉnh (mã màu theo mức độ)
+- 🌦️ Overlay thời tiết (nhiệt độ, gió, mưa)
+- ⏱️ Timeline slider lọc theo thời gian
+- 🔍 Search bar tìm tỉnh/thành phố
+- 🧭 Compass + Location + Fullscreen controls
 
 ---
 
-### 👥 Phase 3 — Báo cáo Cộng đồng (Crowdsourcing)
+### 🤖 Module 2 — AI Dự đoán
 
-> **"Mỗi người dân là một cảm biến thiên tai."**
+Ensemble model dự đoán rủi ro thiên tai theo **3 phương pháp**:
 
-- 📝 **Wizard 6 bước** — Type → Location → Details → Photos → Contact → Review
-- 🤝 **Trust Score Algorithm** — `BaseScore × VoteWeight × TimeDecay × ReporterBonus`
-- 📷 **Photo Compression** — Canvas API, tự động resize + thumbnail 200x200
-- 💾 **Offline Support** — IndexedDB + auto-save draft mỗi bước
-- 🔍 **Infinite Scroll Feed** — Filter đa chiều, sort 6 tiêu chí
-- ✅ **Community Verification** — Upvote/Downvote với badge hệ thống
+| Phương pháp | Mô tả | Độ chính xác |
+|-------------|--------|:------------:|
+| Moving Average | Trung bình trượt 5 năm | 72% |
+| Linear Regression | Hồi quy tuyến tính xu hướng | 68% |
+| Seasonal Decomposition | Phân tích mùa vụ | 75% |
 
----
-
-### 🚨 Phase 4 — Cảnh báo & SOS
-
-> **"Một chạm. Một giây. Một mạng người."**
-
-- 📡 **Geo-targeted Alerts** — Chuẩn CAP v1.2, Turf.js point-in-polygon
-- 📊 **AI Relevance Filtering** — 5 yếu tố: khoảng cách, severity, vulnerability, loại thiên tai, thời gian
-- 🔗 **Escalation Chain** — Push → SMS (2') → Zalo (5') → Loa (10')
-- 🆘 **SOS 1 Chạm** — GPS auto-capture, 8 loại tình huống, people counter
-- 📴 **Offline SOS Queue** — IndexedDB + Background Sync + Exponential Backoff
-- 📋 **Checklist 18 mục** — Lọc theo mùa × vùng miền × loại thiên tai
+**Tính năng:**
+- 🎯 Risk Score cho từng tỉnh (0-100%)
+- 📊 Biểu đồ xu hướng 6 tháng tới
+- 📅 Lịch mùa vụ thiên tai
+- 🌍 Kịch bản: El Niño / La Niña / Biến đổi khí hậu
+- 📡 Dữ liệu外部: ReliefWeb, GDACS, USGS, Open-Meteo
 
 ---
 
-### 🚁 Phase 5 — Phối hợp Cứu trợ
+### 📢 Module 3 — Cảnh báo & SOS
 
-> **"Từ hỗn loạn → Trật tự. Từ Zalo group → Unified Command."**
+Hệ thống cảnh báo **CAP-inspired** và nút SOS cứu nạn 1 chạm:
 
-Tham khảo chuẩn quốc tế: **ICS (FEMA)**, **UN OCHA 3W**, **START Triage**, **IFRC Volunteer Toolkit**, **IASC Shelter Cluster**
-
-- 🗺️ **Operations Map** — Common Operating Picture thời gian thực
-- 📊 **3W Dashboard** — Who-What-Where theo chuẩn UN OCHA
-- 🏥 **Triage Engine** — `Score = Severity×0.4 + Population×0.3 + Accessibility×0.2 + Urgency×0.1`
-- 🤖 **Geospatial Dispatch** — Best-fit algorithm (không chỉ nearest): Distance + Capability + Availability
-- 📋 **Kanban Task Board** — @dnd-kit drag & drop, 4 cột, Incident Commander
-- 🏠 **Shelter Management** — Capacity, check-in/out, special needs tracking
-- 📜 **Incident Timeline** — Audit trail bất biến cho after-action review
+- 🚨 4 mức cảnh báo: Theo dõi → Cảnh báo → Nguy hiểm → Khẩn cấp
+- 🆘 SOS Panel: Gửi tín hiệu cứu hộ khẩn cấp
+- 📞 Danh bạ khẩn cấp theo tỉnh (113/114/115)
+- ✅ Checklist PCTT theo mùa
+- 📜 Lịch sử SOS với timeline
+- 📡 Offline mode: SOS lưu offline, tự động gửi khi có mạng
 
 ---
 
-### 📊 Phase 6 — Trực quan hóa Dữ liệu
+### 🚁 Module 4 — Phối hợp Cứu trợ
 
-> **"25 năm dữ liệu thiên tai. 4 góc nhìn. 1 sự thật."**
+Điều phối cứu hộ theo chuẩn **ICS** (Incident Command System):
 
-Tham khảo: **UN OCHA HDX**, **EM-DAT**, **GDACS**, **DesInventar**, **Sendai Framework**
-
-**4 Dashboard Views:**
-
-| View | Đối tượng | Nội dung chính |
-|------|-----------|----------------|
-| 📊 Executive | Lãnh đạo | KPI Cards + Trend + Donut |
-| 🔴 Operational | Ứng cứu | Real-time Map + Event Feed |
-| 🔬 Analytical | Chuyên gia | Bubble Chart (EM-DAT style) + Province Drill-down |
-| 🔮 Strategic | Hoạch định | Heatmap 12×25 + 5Y/10Y/20Y Trends |
-
-**Chart Library (8 loại):** GlassAreaChart · GlassBarChart · GlassPieChart · GlassScatterChart · GlassTreemap · GlassHeatmap · GlassGauge · ProvinceChoropleth
+- 📊 Dashboard Tổng quan (SOS, tài nguyên, TNV)
+- 🗺️ Bản đồ tác chiến (incidents, resources, shelters)
+- 📋 Bảng nhiệm vụ Kanban (Chờ → Đang làm → Hoàn thành)
+- 🏠 Quản lý nơi trú ẩn (check-in/out capacity)
+- 📡 Trung tâm liên lạc (channels, broadcasts)
+- 👥 Quản lý tình nguyện viên (phân công, theo dõi)
+- 🔀 Dòng tài nguyên Sankey diagram
+- 🎯 Đề xuất điều phối AI (gợi ý đơn vị gần nhất)
 
 ---
 
-### 🎓 Phase 7 — Giáo dục & Nhận thức
+### 📊 Module 5 — Trực quan hóa Dữ liệu
 
-> **"Phòng ngừa hơn chữa trị. Kiến thức là vũ khí."**
+25 năm dữ liệu thiên tai Việt Nam (2000-2024) với **4 góc nhìn**:
 
-Tham khảo: **UNESCO CSS**, **IFRC First Aid**, **Japan Bousai 防災教育**, **Octalysis Framework**, **SM-2 Spaced Repetition**
+| Góc nhìn | Đối tượng | Biểu đồ |
+|----------|-----------|---------|
+| Executive | Lãnh đạo | KPI Cards, Gauge, Choropleth |
+| Operational | Giám sát | Real-time alerts, Province overview |
+| Analytical | Phân tích | Heatmap, Scatter, Treemap, Pie |
+| Strategic | Chiến lược | Trend lines, YoY comparison |
 
-- 📚 **8 Khóa học Microlearning** — 5 phút/bài, 25 bài tổng
-- 🎮 **Gamification Octalysis** — 8 Core Drives, 5 level, 20 huy hiệu, bảng xếp hạng
-- 🎯 **Adaptive Quiz SM-2** — Spaced repetition: 1 → 6 → 15 → 30 ngày
-- 🎭 **Interactive Scenarios** — 3 kịch bản có nhánh: Bão Đà Nẵng, Lũ ĐBSCL, Sạt lở miền Bắc
-- 🩹 **First Aid Guide** — CPR 30:2, cầm máu, đuối nước, rắn cắn
-- 🎒 **Emergency Kit Builder** — Bộ dụng cụ 72 giờ tùy chỉnh
-- 🗺️ **Evacuation Planner** — Kế hoạch sơ tán gia đình
-
----
-
-## 📈 Số liệu Dự án
-
-<div align="center">
-
-| Metric | Giá trị |
-|--------|:-------:|
-| 📦 Tổng Phase hoàn thành | **7 / 7** |
-| 📁 Tổng files | **100+** |
-| 💻 Tổng dòng code | **40,000+** |
-| 🛣️ Routes hoạt động | **9 / 9 (200 OK)** |
-| 🌐 APIs tích hợp | **Open-Meteo, ReliefWeb, GDACS, USGS** |
-| 📊 Chuẩn quốc tế tham khảo | **ICS, CAP, INFORM, 3W, START, SM-2, Octalysis** |
-| ⏱️ Thời gian xây dựng | **< 72 giờ** |
-| 🤖 Token AI tiêu thụ | **20+ triệu** |
-
-</div>
+- 📈 8 loại biểu đồ tương tác (Recharts)
+- 📍 Drill-down theo tỉnh
+- 📥 Xuất CSV dữ liệu
+- 🔍 Bộ lọc: thời gian, khu vực, loại thiên tai
 
 ---
 
-## 🧠 AI-Driven Development
+### 🎓 Module 6 — Giáo dục Phòng chống Thiên tai
 
-Dự án được xây dựng hoàn toàn thông qua **AWF (Antigravity Workflow Framework)** — một hệ thống multi-agent orchestration:
+Hệ thống học tập **microlearning** với gamification:
 
-```
-/plan  →  /design  →  /code  →  /debug  →  /test  →  /deploy
-  ↓          ↓          ↓         ↓          ↓          ↓
-Planning  Architecture  Code   Bug Fix   Verify   Documentation
- Agent      Agent      Agent   Agent     Agent      Agent
-```
-
-Mỗi Phase có **Master Plan Document** (~40-60KB) định nghĩa đầy đủ:
-- TypeScript interfaces & data models
-- Algorithm implementations  
-- UI component specifications
-- Vietnamese content templates
-- International standards references
+- 📚 8 khóa học (25+ bài học, 5 phút/bài)
+- 🎮 Kịch bản mô phỏng (decision tree)
+- 🧠 Quiz thích ứng (SM-2 spaced repetition)
+- 🩹 Hướng dẫn sơ cứu
+- 🎒 Xây dựng bộ đồ 72 giờ
+- 🏆 20 huy hiệu + Bảng xếp hạng
+- 📞 Danh bạ khẩn cấp
 
 ---
 
-## ⚡ Khởi động Nhanh
+### 🗺️ Module 7 — Báo cáo Cộng đồng
+
+**Crowd-sourced** báo cáo thiên tai từ người dân:
+
+- 📝 Wizard 6 bước gửi báo cáo
+- 🗺️ Xác định vị trí trên bản đồ
+- ⬆️⬇️ Xác minh cộng đồng (upvote/downvote)
+- 🏅 Hệ thống uy tín (trust score)
+- 📊 Thống kê báo cáo theo thời gian thực
+- 📱 Offline mode (lưu local, sync khi có mạng)
+
+---
+
+## 🎨 Hệ thống Design
+
+### Color Palette
+
+| Màu | Hex | Công dụng |
+|-----|-----|-----------|
+| Deep Navy | `#0a0f1e` | Background chính |
+| Electric Blue | `#3B82F6` | Primary accent |
+| Emerald | `#22C55E` | Success / Verified |
+| Amber | `#F59E0B` | Warning / Caution |
+| Emergency Red | `#EF4444` | Danger / SOS |
+| Cyan | `#06B6D4` | Info / Accent |
+| Purple | `#8B5CF6` | Secondary / AI |
+
+### Typography
+
+- **Headings:** Space Grotesk (bold, tight tracking)
+- **Body:** Inter (clean, readable)
+- **Monospace:** JetBrains Mono (code, data)
+
+### Effects
+
+- ✨ Glassmorphism cards (blur(20px) + border glow)
+- 🎭 Scroll-triggered animations (IntersectionObserver)
+- 🌊 Particle field (Canvas API, constellation effect)
+- 📺 Video hero background
+- 💫 Micro-interactions (10 CSS animation classes)
+- 🔄 Skeleton loading states
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Công nghệ | Phiên bản |
+|-------|-----------|-----------|
+| Framework | Next.js (App Router) | 16.2.4 |
+| Language | TypeScript | 5.x |
+| UI Library | React | 19.2.4 |
+| Styling | Tailwind CSS | 4.x |
+| Animation | Framer Motion | 12.x |
+| Maps | Leaflet.js + React-Leaflet | 1.9.4 |
+| Charts | Recharts | 2.15.0 |
+| AI/ML | TensorFlow.js | 4.22.0 |
+| Icons | Lucide React | 0.468.0 |
+| DnD | @dnd-kit | 6.3.1 |
+| State | React Context + useReducer | Built-in |
+| Build | Turbopack (Next.js) | Built-in |
+
+---
+
+## 🚀 Cài đặt & Chạy
+
+### Prerequisites
+
+- Node.js >= 18.0.0
+- npm >= 9.0.0
+
+### Installation
 
 ```bash
-# Clone dự án
+# Clone repository
 git clone https://github.com/nphu211206/CuuNet.git
 cd CuuNet
 
-# Cài đặt dependencies
+# Install dependencies
 npm install
 
-# Chạy development server
+# Run development server
 npm run dev
 ```
 
-Mở [http://localhost:3000](http://localhost:3000) để xem kết quả.
+Mở http://localhost:3000 trong trình duyệt.
 
-**Routes:**
-| Route | Module |
-|-------|--------|
-| `/` | Trang chủ / Hero Dashboard |
-| `/map` | 🗺️ Bản đồ Thiên tai |
-| `/predict` | 🤖 AI Dự đoán |
-| `/report` | 👥 Báo cáo Cộng đồng |
-| `/alert` | 🚨 Cảnh báo & SOS |
-| `/rescue` | 🚁 Phối hợp Cứu trợ |
-| `/dashboard` | 📊 Trực quan hóa |
-| `/education` | 🎓 Giáo dục PCTT |
+### Build Production
 
----
-
-## 🌐 Tích hợp APIs
-
-| API | Nhà cung cấp | Dữ liệu | Cache |
-|-----|-------------|---------|-------|
-| Weather | Open-Meteo | Nhiệt độ, mưa, gió | 30 phút |
-| Disasters | ReliefWeb (UN) | Thiên tai Việt Nam | 1 giờ |
-| Alerts | GDACS | Cảnh báo toàn cầu | 30 phút |
-| Earthquakes | USGS | Động đất bán kính 500km | 30 phút |
-
----
-
-## 📚 Chuẩn Quốc tế Tham khảo
-
-| Chuẩn | Tổ chức | Áp dụng trong |
-|-------|---------|--------------|
-| **INFORM Risk Index** | EU JRC | Phase 2 - Risk Scoring |
-| **CAP v1.2** | OASIS | Phase 4 - Alert System |
-| **ICS / NIMS** | FEMA | Phase 5 - Incident Command |
-| **3W/4W/5W** | UN OCHA | Phase 5 - Coordination |
-| **START Triage** | CA EMSA | Phase 5 - Triage Engine |
-| **Sendai Framework** | UNDRR | Phase 6 - KPIs |
-| **Octalysis** | Yu-kai Chou | Phase 7 - Gamification |
-| **SM-2** | SuperMemo | Phase 7 - Spaced Repetition |
-| **EM-DAT** | CRED UCLouvain | Phase 6 - Historical Data |
-
----
-
-## 🏆 Innovation Highlights
-
-```
-✅  LSTM Neural Network chạy 100% trên browser (TF.js + Web Worker)
-✅  Offline SOS Queue với IndexedDB + Background Sync API
-✅  INFORM Risk Formula tích hợp dữ liệu thời tiết thời gian thực
-✅  UN OCHA 3W Dashboard chuẩn nhân đạo quốc tế — đầu tiên ở VN
-✅  START Triage Engine tự động phân loại ưu tiên SOS
-✅  Geospatial Dispatch Algorithm (best-fit, không chỉ nearest)
-✅  SM-2 Spaced Repetition cho giáo dục phòng chống thiên tai
-✅  Glassmorphism dark-theme UI toàn hệ thống
-✅  Dữ liệu lịch sử 25 năm (2000-2024) với 6 phân tích chiều
-✅  Multi-Agent AI Development Pipeline (AWF Framework)
+```bash
+npm run build
+npm start
 ```
 
 ---
 
-## 👨‍💻 Tác giả
+## 📁 Cấu trúc dự án
 
-<div align="center">
-
-**Nguyễn Phú Hưng**  
-*Sinh viên Công nghệ Thông tin — Khóa luận Tốt nghiệp 2026*
-
-[![GitHub](https://img.shields.io/badge/GitHub-nphu211206-181717?style=for-the-badge&logo=github)](https://github.com/nphu211206)
-
-</div>
+```
+CuuNet/
+├── public/                          # Static assets
+│   ├── icons/                       # PWA icons
+│   ├── manifest.json                # PWA manifest
+│   └── workers/                     # Web workers
+├── src/
+│   ├── app/                         # Next.js App Router pages
+│   │   ├── page.tsx                 # Homepage
+│   │   ├── layout.tsx               # Root layout
+│   │   ├── globals.css              # Global styles
+│   │   ├── map/page.tsx             # Bản đồ thiên tai
+│   │   ├── predict/page.tsx         # AI dự đoán
+│   │   ├── alerts/page.tsx          # Cảnh báo & SOS
+│   │   ├── rescue/page.tsx          # Phối hợp cứu trợ
+│   │   ├── dashboard/page.tsx       # Dashboard thống kê
+│   │   ├── education/page.tsx       # Giáo dục
+│   │   ├── report/page.tsx          # Báo cáo cộng đồng
+│   │   └── offline/page.tsx         # Offline fallback
+│   ├── components/
+│   │   ├── home/                    # Homepage components
+│   │   │   ├── HeroVideo.tsx        # Video background
+│   │   │   ├── ParticleField.tsx    # Canvas particles
+│   │   │   ├── AnimatedCounter.tsx  # Count-up numbers
+│   │   │   ├── FlowTimeline.tsx     # How it works
+│   │   │   ├── ModuleCard.tsx       # Bento grid cards
+│   │   │   ├── ImpactShowcase.tsx   # Stats showcase
+│   │   │   ├── TrustedBy.tsx        # Partners marquee
+│   │   │   ├── CTASection.tsx       # Call to action
+│   │   │   └── ...
+│   │   └── shared/                  # Shared components
+│   │       ├── Navbar.tsx           # Navigation bar
+│   │       ├── Footer.tsx           # Footer
+│   │       ├── IntroSection.tsx     # Module intro
+│   │       ├── TabDropdown.tsx      # Tab dropdown
+│   │       ├── ScrollReveal.tsx     # Scroll animations
+│   │       ├── Skeleton.tsx         # Loading skeletons
+│   │       └── MobileBottomNav.tsx  # Mobile navigation
+│   ├── features/                    # Feature modules
+│   │   ├── map-disaster/            # Bản đồ thiên tai
+│   │   ├── predict/                 # AI dự đoán
+│   │   ├── alert-sos/               # Cảnh báo & SOS
+│   │   ├── rescue-connect/          # Phối hợp cứu trợ
+│   │   ├── dashboard-stats/         # Dashboard thống kê
+│   │   ├── education-survival/      # Giáo dục
+│   │   └── community-report/        # Báo cáo cộng đồng
+│   ├── data/                        # Mock data
+│   └── lib/                         # Utilities & types
+└── MASTER_PLAN_HOMEPAGE.md          # Homepage upgrade plan
+```
 
 ---
 
-## 📄 Giấy phép
+## 🎯 Hệ thống Design Patterns
 
-Dự án này được phát hành dưới giấy phép [MIT](LICENSE).
+| Pattern | Ứng dụng | Ví dụ |
+|---------|----------|-------|
+| **Feature-Sliced** | Tổ chức features | `features/map-disaster/ui/`, `lib/`, `config/` |
+| **Context + Reducer** | State management | `PredictionProvider`, `RescueProvider` |
+| **Dynamic Import** | Code splitting | `dynamic(() => import("..."), { ssr: false })` |
+| **Compound Components** | UI composition | `TabDropdown`, `IntroSection` |
+| **Observer** | Scroll animations | `IntersectionObserver` trong `ScrollReveal` |
+| **Strategy** | AI predictions | 3 prediction methods ensemble |
+
+---
+
+## 📊 Thống kê Dự án
+
+| Metric | Giá trị |
+|--------|---------|
+| Tổng files đã sửa | **42+ files** |
+| Components mới | **9 shared + 7 home** |
+| CSS Classes mới | **30+ utility classes** |
+| Routes | **12 trang** |
+| Tech stacks | **12 công nghệ** |
+| Modules | **7 module chức năng** |
+| Biểu đồ | **8 loại** (Recharts) |
+| Khóa học | **8 khóa** (25+ bài) |
+| Tỉnh thành | **63 tỉnh** (đầy đủ) |
+
+---
+
+## 🔮 Hướng phát triển
+
+- [ ] 🔐 Authentication (NextAuth.js + OAuth)
+- [ ] 🗄️ Database (PostgreSQL + Prisma)
+- [ ] 📡 Real-time WebSocket (Socket.io)
+- [ ] 📱 PWA Service Worker (offline caching)
+- [ ] 🌐 i18n (English, French)
+- [ ] 🤖 Advanced ML (LSTM, Transformer)
+- [ ] 📊 Admin Dashboard
+- [ ] 🔔 Push Notifications
+- [ ] 📡 IoT Sensor Integration
+- [ ] 🛰️ Satellite Imagery Analysis
+
+---
+
+## 📄 License
+
+MIT License — xem [LICENSE](LICENSE) để biết thêm chi tiết.
+
+---
+
+## 👥 Đóng góp
+
+Đây là **Khóa luận Tốt nghiệp 2025**. Mọi đóng góp đều được chào đón!
+
+1. Fork dự án
+2. Tạo feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Tạo Pull Request
 
 ---
 
 <div align="center">
 
-**CứuNet** — *Xây dựng bởi AI, vì con người Việt Nam.*
+**Được xây dựng với ❤️ tại Việt Nam**
 
-⭐ Nếu dự án này hữu ích, hãy để lại một Star!
+*Nền tảng Quản lý Thiên tài Thông minh — Khóa luận Tốt nghiệp 2025*
+
+![Vietnam Flag](https://img.shields.io/badge/🇻🇳-Việt_Nam-da251d?style=for-the-badge)
 
 </div>

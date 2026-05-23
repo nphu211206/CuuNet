@@ -4,7 +4,7 @@ import { useState, useCallback, useMemo, useEffect } from "react";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 import type { DisasterEvent, DisasterType, SeverityLevel, MapLayer, Province, WeatherData } from "@/lib/types";
-import { MAP_CONFIG, VIETNAM_PROVINCES } from "../config/map-config";
+import { MAP_CONFIG, TILE_OPTIONS, VIETNAM_PROVINCES, type TileMode } from "../config/map-config";
 import PulseMarker from "./PulseMarker";
 import HeatmapLayer from "./HeatmapLayer";
 import ProvinceChoropleth from "./ProvinceChoropleth";
@@ -15,6 +15,7 @@ import WeatherOverlay from "./WeatherOverlay";
 interface DisasterMapProps {
   disasters: DisasterEvent[];
   geojsonData?: GeoJSON.FeatureCollection | null;
+  tileMode?: TileMode;
 }
 
 const DEFAULT_LAYERS: MapLayer[] = [
@@ -27,6 +28,7 @@ const DEFAULT_LAYERS: MapLayer[] = [
 export default function DisasterMap({
   disasters,
   geojsonData,
+  tileMode = "light",
 }: DisasterMapProps) {
   const [layers, setLayers] = useState<MapLayer[]>(DEFAULT_LAYERS);
   const [activeTypes, setActiveTypes] = useState<DisasterType[]>([
@@ -129,8 +131,8 @@ export default function DisasterMap({
         zoomControl={false}
       >
         <TileLayer
-          url={MAP_CONFIG.tileUrl}
-          attribution={MAP_CONFIG.attribution}
+          url={TILE_OPTIONS[tileMode].url}
+          attribution={TILE_OPTIONS[tileMode].attribution}
           subdomains="abcd"
           maxZoom={19}
         />

@@ -48,6 +48,8 @@ import {
 } from "lucide-react";
 import clsx from "clsx";
 import dynamic from "next/dynamic";
+import IntroSection from "@/components/shared/IntroSection";
+import TabDropdown from "@/components/shared/TabDropdown";
 
 import { RescueProvider, useRescue } from "@/features/rescue-connect/lib/rescue-context";
 import type { RescueTab, RescueToast } from "@/features/rescue-connect/lib/types";
@@ -269,6 +271,14 @@ function RescuePageHeader({
   isOnline: boolean;
   onToggleMobileDrawer: () => void;
 }) {
+  // Split 14 tabs into 5 primary + 9 secondary
+  const PRIMARY_TABS = VIEW_TABS.filter((t) =>
+    ["dashboard", "operations", "sos", "tasks", "resources"].includes(t.key)
+  );
+  const SECONDARY_TABS = VIEW_TABS.filter((t) =>
+    !["dashboard", "operations", "sos", "tasks", "resources"].includes(t.key)
+  );
+
   return (
     <motion.header
       variants={headerVariants}
@@ -310,36 +320,14 @@ function RescuePageHeader({
           </div>
         </div>
 
-        {/* Tab navigation */}
-        <div className="flex gap-1 overflow-x-auto scrollbar-hide pb-2 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-          {VIEW_TABS.map((tab) => {
-            const isActive = activeTab === tab.key;
-            return (
-              <button
-                key={tab.key}
-                onClick={() => onTabChange(tab.key)}
-                className={clsx(
-                  "flex items-center gap-1.5 px-3 py-2 rounded-lg text-[11px] font-medium",
-                  "transition-all duration-200 border whitespace-nowrap",
-                  isActive
-                    ? "border-opacity-40 text-opacity-100"
-                    : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50 hover:text-slate-300"
-                )}
-                style={
-                  isActive
-                    ? {
-                        backgroundColor: `${tab.color}15`,
-                        borderColor: `${tab.color}40`,
-                        color: tab.color,
-                      }
-                    : undefined
-                }
-              >
-                {tab.icon}
-                <span className="hidden sm:inline">{tab.label}</span>
-              </button>
-            );
-          })}
+        {/* Tab navigation — 5 primary + dropdown */}
+        <div className="pb-2 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+          <TabDropdown
+            primaryTabs={PRIMARY_TABS}
+            secondaryTabs={SECONDARY_TABS}
+            activeTab={activeTab}
+            onTabChange={onTabChange}
+          />
         </div>
       </div>
     </motion.header>
@@ -856,6 +844,21 @@ function RescuePageContent() {
 
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* Intro Section */}
+      <IntroSection
+        moduleNumber="5"
+        icon={<HandHeart className="w-4 h-4" />}
+        title="Phối hợp Cứu trợ Thiên tai"
+        subtitle="Điều phối cứu hộ theo chuẩn ICS, 3W Dashboard, triage SOS, quản lý tài nguyên và tình nguyện viên. Từ hỗn loạn đến trật tự."
+        accentColor="#F59E0B"
+        guideSteps={[
+          { icon: <BarChart3 className="w-3.5 h-3.5" />, text: "Xem Tổng quan để biết tình hình hiện tại" },
+          { icon: <Map className="w-3.5 h-3.5" />, text: "Theo dõi SOS trên Bản đồ tác chiến" },
+          { icon: <ClipboardList className="w-3.5 h-3.5" />, text: "Quản lý Nhiệm vụ và Tài nguyên" },
+          { icon: <HandHeart className="w-3.5 h-3.5" />, text: "Phối hợp TNV và Tổ chức" },
+        ]}
+      />
+
       {/* Header */}
       <RescuePageHeader
         activeTab={state.activeTab}

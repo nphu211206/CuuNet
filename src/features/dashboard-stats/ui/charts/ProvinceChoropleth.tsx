@@ -32,7 +32,7 @@ const MAP_CENTER: [number, number] = [16.0, 108.0];
 const MAP_ZOOM = 5;
 const MAP_MIN_ZOOM = 4;
 const MAP_MAX_ZOOM = 12;
-const TILE_URL = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+const TILE_URL = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
 const TILE_ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
 

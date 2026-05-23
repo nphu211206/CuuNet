@@ -1,0 +1,144 @@
+# MASTER AGENT CONFIGURATION — AWF + AGENT SKILLS STANDARD
+# Adapted for Cline (VS Code Extension) | Version: 3.0
+# All rules below are MANDATORY for every session.
+
+---
+
+## SECTION 1 — LANGUAGE & COMMUNICATION
+- ALWAYS respond in Vietnamese unless the user writes in English first.
+- Adjust terminology based on the user's apparent level.
+- Be concise. Do not pad responses.
+
+---
+
+## SECTION 2 — SKILL LOCATIONS (Absolute Paths on this machine)
+
+### ROOT A — AWF Core Skills
+`C:\Users\Admin\.gemini\antigravity\skills\`
+Contains: awf-session-restore, awf-context-help, awf-error-translator, awf-auto-save, awf-onboarding, awf-adaptive-language
+
+### ROOT B — Common & Language Skills (agent-skills-standard/.agents/skills/)
+`C:\Users\Admin\.gemini\antigravity\skills\agent-skills-standard\.agents\skills\`
+Contains: common/*, typescript/*, javascript/*, caveman/*, quality-engineering/*
+
+### ROOT C — Tech Stack Skills (agent-skills-standard/skills/)
+`C:\Users\Admin\.gemini\antigravity\skills\agent-skills-standard\skills\`
+Contains: nextjs/, react/, nestjs/, flutter/, angular/, golang/, java/, php/, laravel/, spring-boot/, android/, ios/, swift/, kotlin/, dart/, database/, react-native/, specialists/
+
+### ROOT D — AWF Workflows
+`C:\Users\Admin\.gemini\antigravity\global_workflows\`
+Contains: plan.md, code.md, debug.md, design.md, review.md, refactor.md, test.md, deploy.md, run.md, brainstorm.md, audit.md, save_brain.md, visualize.md, init.md, next.md, recap.md, rollback.md, help.md, customize.md, awf-update.md
+
+---
+
+## SECTION 3 — TOKEN OPTIMIZATION (CRITICAL)
+
+DO NOT read every skill file! Use Lazy Loading:
+
+1. **Detect tech stack** from the current project (check package.json, file extensions, config files).
+2. **Read _INDEX.md** of the matching tech stack in ROOT C (e.g., `ROOT C\nextjs\_INDEX.md`).
+3. **Pick ONLY 1-2 most relevant SKILL.md files** based on the user's request and file patterns.
+4. **NEVER read more than 3 skill files** per request unless absolutely necessary.
+
+### Example
+User asks: "Fix Next.js caching issue"
+- BAD: Read all 18 Next.js skills
+- GOOD: Read `ROOT C\nextjs\nextjs-caching\SKILL.md` ONLY
+
+---
+
+## SECTION 4 — SKILL LAZY-LOADING TRIGGERS
+
+### AWF Core Skills (ROOT A) — Read on trigger only
+| Trigger | Skill to read |
+|---------|---------------|
+| Session starts | `ROOT A\awf-session-restore\SKILL.md` |
+| User asks for help | `ROOT A\awf-context-help\SKILL.md` |
+| Code throws an error | `ROOT A\awf-error-translator\SKILL.md` |
+| End of a big task | `ROOT A\awf-auto-save\SKILL.md` |
+| First time user | `ROOT A\awf-onboarding\SKILL.md` |
+
+### Common Engineering Skills (ROOT B) — Read when task matches
+| Task | Skill to read |
+|------|---------------|
+| Code Review | `ROOT B\common\common-code-review\SKILL.md` |
+| Debugging | `ROOT B\common\common-debugging\SKILL.md` |
+| Writing Tests | `ROOT B\common\common-tdd\SKILL.md` |
+| UI Design | `ROOT B\common\common-ui-design\SKILL.md` |
+| Performance | `ROOT B\common\common-performance-engineering\SKILL.md` |
+| Security | `ROOT B\common\common-security-audit\SKILL.md` |
+| System Design | `ROOT B\common\common-system-design\SKILL.md` |
+| Git Workflow | `ROOT B\common\common-git-collaboration\SKILL.md` |
+| Documentation | `ROOT B\common\common-documentation\SKILL.md` |
+
+### Tech Stack Skills (ROOT C) — Read _INDEX.md first, then pick skill
+| Stack | Index file | Common skills |
+|-------|-----------|---------------|
+| Next.js | `ROOT C\nextjs\_INDEX.md` | app-router, server-components, data-fetching, styling, auth |
+| React | `ROOT C\react\_INDEX.md` | hooks, state, performance |
+| NestJS | `ROOT C\nestjs\_INDEX.md` | architecture, database, auth |
+| Flutter | `ROOT C\flutter\_INDEX.md` | widgets, state, navigation |
+| TypeScript | `ROOT C\typescript\_INDEX.md` | types, generics, patterns |
+| Angular | `ROOT C\angular\_INDEX.md` | components, services, rxjs |
+
+---
+
+## SECTION 5 — AWF WORKFLOW PROTOCOL
+
+When user triggers a workflow (e.g., /plan, /code, /debug):
+1. Read the matching file in `ROOT D\<workflow>.md`
+2. Follow the phases step-by-step
+3. Report progress at each phase
+
+### Available Workflows
+| Command | Workflow | Purpose |
+|---------|----------|---------|
+| /plan | plan.md | Planning & architecture |
+| /code | code.md | Code implementation |
+| /debug | debug.md | Debugging & troubleshooting |
+| /design | design.md | UI/UX design |
+| /review | review.md | Code review |
+| /refactor | refactor.md | Code refactoring |
+| /test | test.md | Testing strategy |
+| /deploy | deploy.md | Deployment |
+| /run | run.md | Run & verify |
+| /brainstorm | brainstorm.md | Idea generation |
+| /audit | audit.md | Code audit |
+| /save | save_brain.md | Save session context |
+| /visualize | visualize.md | Visual documentation |
+| /init | init.md | Project initialization |
+| /next | next.md | Next steps |
+| /recap | recap.md | Session recap |
+| /rollback | rollback.md | Rollback changes |
+| /help | help.md | Get help |
+| /customize | customize.md | Customize workflow |
+
+---
+
+## SECTION 6 — CODING STANDARDS
+
+1. Read existing code to understand patterns before writing.
+2. Preserve existing comments and code style.
+3. Never hardcode secrets or credentials.
+4. Use proper types — avoid `any` in TypeScript.
+5. Follow the project's existing architecture.
+6. Write meaningful commit messages.
+7. Test changes before declaring done.
+
+---
+
+## SECTION 7 — AUTO-APPROVE RULES
+
+### Safe (execute without asking):
+- Read files, list directories
+- Create/edit files
+- Run safe commands: npm install, npm run, git status, git diff, git log
+- Search code: grep, find, glob
+
+### Ask before:
+- Delete files or directories
+- Drop database tables
+- Git push, force push
+- External API calls
+- Modify CI/CD pipelines
+- Change package.json dependencies

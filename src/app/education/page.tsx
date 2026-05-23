@@ -20,6 +20,7 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import IntroSection from "@/components/shared/IntroSection";
 import {
   X,
   ArrowLeft,
@@ -735,6 +736,21 @@ function EducationPageContent() {
 
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* Intro Section */}
+      <IntroSection
+        moduleNumber="7"
+        icon={<BookOpen className="w-4 h-4" />}
+        title="Giáo dục Phòng chống Thiên tai"
+        subtitle="8 khóa học microlearning, SM-2 spaced repetition, 20 huy hiệu, bảng xếp hạng. Phòng ngừa hơn chữa trị."
+        accentColor="#14B8A6"
+        guideSteps={[
+          { icon: <BookOpen className="w-3.5 h-3.5" />, text: "Chọn khóa học phù hợp với khu vực" },
+          { icon: <Brain className="w-3.5 h-3.5" />, text: "Hoàn thành bài học 5 phút mỗi ngày" },
+          { icon: <Gamepad2 className="w-3.5 h-3.5" />, text: "Thử kịch bản để rèn luyện kỹ năng" },
+          { icon: <Award className="w-3.5 h-3.5" />, text: "Thu thập huy hiệu và leo bảng xếp hạng" },
+        ]}
+      />
+
       {/* Header */}
       <EducationHeader
         activeTab={state.activeTab}

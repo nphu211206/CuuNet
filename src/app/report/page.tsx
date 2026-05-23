@@ -2,6 +2,7 @@
 
 import { useCallback, useMemo, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import IntroSection from "@/components/shared/IntroSection";
 import {
   AlertTriangle,
   RefreshCw,
@@ -12,6 +13,7 @@ import {
   Loader2,
   Wifi,
   WifiOff,
+  Users,
 } from "lucide-react";
 import clsx from "clsx";
 import { ReportProvider, useReport, getUserId } from "@/features/community-report/lib/report-context";
@@ -318,6 +320,21 @@ function ReportPageContent() {
       animate="visible"
       className="min-h-screen"
     >
+      {/* Intro Section */}
+      <IntroSection
+        moduleNumber="3"
+        icon={<Users className="w-4 h-4" />}
+        title="Báo cáo Thiên tai Cộng đồng"
+        subtitle="Mỗi người dân là một cảm biến thiên tai. Gửi báo cáo 6 bước, xác minh cộng đồng. Crowd-sourced data từ người dân địa phương."
+        accentColor="#22C55E"
+        guideSteps={[
+          { icon: <AlertTriangle className="w-3.5 h-3.5" />, text: "Chọn loại thiên tai đã chứng kiến" },
+          { icon: <Map className="w-3.5 h-3.5" />, text: "Xác định vị trí trên bản đồ" },
+          { icon: <LayoutGrid className="w-3.5 h-3.5" />, text: "Mô tả tình hình và đính kèm ảnh" },
+          { icon: <RefreshCw className="w-3.5 h-3.5" />, text: "Gửi báo cáo — cộng đồng xác minh" },
+        ]}
+      />
+
       {/* === HEADER === */}
       <ReportHeader
         viewMode={state.viewMode}

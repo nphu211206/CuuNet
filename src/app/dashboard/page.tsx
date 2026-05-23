@@ -19,6 +19,7 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import IntroSection from "@/components/shared/IntroSection";
 import {
   X,
   Loader2,
@@ -26,6 +27,11 @@ import {
   Map,
   Siren,
   ArrowRight,
+  BarChart3,
+  TrendingUp,
+  PieChart,
+  Target,
+  Eye,
 } from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
@@ -512,6 +518,21 @@ function DashboardPageContent() {
 
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* Intro Section */}
+      <IntroSection
+        moduleNumber="6"
+        icon={<BarChart3 className="w-4 h-4" />}
+        title="Trực quan hóa Dữ liệu Thiên tai"
+        subtitle="25 năm dữ liệu thiên tai Việt Nam (2000-2024). 4 góc nhìn. Xuất CSV. Phân tích xu hướng và so sánh quốc tế."
+        accentColor="#06B6D4"
+        guideSteps={[
+          { icon: <Eye className="w-3.5 h-3.5" />, text: "Executive: KPI Cards cho lãnh đạo" },
+          { icon: <Target className="w-3.5 h-3.5" />, text: "Operational: Giám sát thời gian thực" },
+          { icon: <PieChart className="w-3.5 h-3.5" />, text: "Analytical: Phân tích chi tiết" },
+          { icon: <TrendingUp className="w-3.5 h-3.5" />, text: "Strategic: Xu hướng dài hạn" },
+        ]}
+      />
+
       {/* Header */}
       <DashboardHeader
         activeView={state.activeView}

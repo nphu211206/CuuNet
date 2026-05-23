@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import IntroSection from "@/components/shared/IntroSection";
 import {
   Brain,
   ChevronDown,
@@ -14,6 +15,9 @@ import {
   Layers,
   Zap,
   Info,
+  Target,
+  TrendingUp,
+  Globe,
 } from "lucide-react";
 import { PredictionProvider, usePrediction } from "@/features/predict/lib/prediction-context";
 import type { DisasterType } from "@/lib/types";
@@ -32,6 +36,9 @@ const RiskMap = dynamic(() => import("@/features/predict/ui/RiskMap"), {
   ssr: false,
   loading: () => <ComponentSkeleton height={450} label="Đang tải bản đồ..." />,
 });
+
+// Use enhanced skeleton for map loading
+import { SkeletonMap } from "@/components/shared/Skeleton";
 const TrendChart = dynamic(() => import("@/features/predict/ui/TrendChart"), {
   ssr: false,
   loading: () => <ComponentSkeleton height={300} />,
@@ -909,7 +916,20 @@ function PredictPageContent() {
 export default function PredictPage() {
   return (
     <PredictionProvider>
-      <div className="min-h-screen p-4 md:p-6">
+    <div className="min-h-screen p-4 md:p-6">
+        <IntroSection
+          moduleNumber="2"
+          icon={<Brain className="w-4 h-4" />}
+          title="AI Dự đoán Thiên tai"
+          subtitle="Mô hình Machine Learning dự đoán rủi ro theo khu vực, thời gian và kịch bản khí hậu. Ensemble 3 phương pháp: Moving Average, Linear Regression, Seasonal Decomposition."
+          accentColor="#8B5CF6"
+          guideSteps={[
+            { icon: <MapPin className="w-3.5 h-3.5" />, text: "Chọn tỉnh/thành phố ở panel trái" },
+            { icon: <Calendar className="w-3.5 h-3.5" />, text: "Chọn tháng để xem dự đoán theo mùa" },
+            { icon: <Target className="w-3.5 h-3.5" />, text: "Chọn kịch bản: El Niño, La Niña, BĐKH" },
+            { icon: <TrendingUp className="w-3.5 h-3.5" />, text: "Xem biểu đồ xu hướng 6 tháng tới" },
+          ]}
+        />
         <PredictPageContent />
       </div>
     </PredictionProvider>

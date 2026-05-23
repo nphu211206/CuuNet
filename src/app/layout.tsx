@@ -1,14 +1,35 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import MobileBottomNav from "@/components/shared/MobileBottomNav";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-heading" });
 
 export const metadata: Metadata = {
   title: "CứuNet - Nền tảng Quản lý Thiên tai Thông minh",
   description: "Hệ thống quản lý thiên tai sử dụng AI & Machine Learning - Khóa luận Tốt nghiệp 2025",
+  manifest: "/manifest.json",
+  themeColor: "#3B82F6",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "CứuNet",
+  },
+  openGraph: {
+    title: "CứuNet - Nền tảng Quản lý Thiên tai",
+    description: "AI & Machine Learning giám sát, dự đoán và ứng phó với thiên tai",
+    type: "website",
+    locale: "vi_VN",
+  },
 };
 
 export default function RootLayout({
@@ -18,10 +39,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className="dark">
-      <body className={`${inter.className} flex flex-col min-h-screen antialiased`}>
+      <body className={`${inter.className} ${spaceGrotesk.variable} flex flex-col min-h-screen antialiased`}>
         <Navbar />
-        <main className="flex-1 pt-16">{children}</main>
+        <main className="flex-1 pt-16 pb-16 md:pb-0">{children}</main>
         <Footer />
+        <MobileBottomNav />
       </body>
     </html>
   );

@@ -11,6 +11,12 @@ import {
   Cloud,
   Eye,
   EyeOff,
+  Locate,
+  Maximize2,
+  Minimize2,
+  ZoomIn,
+  ZoomOut,
+  Navigation,
 } from "lucide-react";
 import type { DisasterType, SeverityLevel, MapLayer } from "@/lib/types";
 import { DISASTER_CONFIG, SEVERITY_COLORS } from "../config/map-config";
@@ -25,6 +31,12 @@ interface MapControlsProps {
   onToggleSeverity: (severity: SeverityLevel) => void;
 }
 
+interface ExtendedMapControlsProps extends MapControlsProps {
+  onLocateUser?: () => void;
+  onToggleFullscreen?: () => void;
+  isFullscreen?: boolean;
+}
+
 export default function MapControls({
   layers,
   onToggleLayer,
@@ -32,7 +44,10 @@ export default function MapControls({
   onToggleType,
   activeSeverities,
   onToggleSeverity,
-}: MapControlsProps) {
+  onLocateUser,
+  onToggleFullscreen,
+  isFullscreen,
+}: ExtendedMapControlsProps) {
   const [showLayers, setShowLayers] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
 
@@ -207,6 +222,45 @@ export default function MapControls({
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Bottom-right controls: Location + Fullscreen */}
+      <div className="absolute bottom-4 right-4 z-[1000] flex flex-col gap-2">
+        {/* Location Button */}
+        {onLocateUser && (
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={onLocateUser}
+            className="w-10 h-10 rounded-xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center text-slate-300 hover:text-white hover:border-slate-500 transition-all shadow-lg"
+            title="Vị trí của tôi"
+          >
+            <Locate className="w-4 h-4" />
+          </motion.button>
+        )}
+
+        {/* Fullscreen Button */}
+        {onToggleFullscreen && (
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={onToggleFullscreen}
+            className="w-10 h-10 rounded-xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center text-slate-300 hover:text-white hover:border-slate-500 transition-all shadow-lg"
+            title={isFullscreen ? "Thoát toàn màn hình" : "Toàn màn hình"}
+          >
+            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+          </motion.button>
+        )}
+
+        {/* Compass */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="w-10 h-10 rounded-xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center text-slate-300 hover:text-white hover:border-slate-500 transition-all shadow-lg"
+          title="Hướng Bắc"
+        >
+          <Navigation className="w-4 h-4" />
+        </motion.button>
+      </div>
     </>
   );
 }

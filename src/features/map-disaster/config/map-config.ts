@@ -1,14 +1,39 @@
 import type { SeverityLevel, DisasterType } from "@/lib/types";
 
+// ═══════════════════════════════════════════════════════════════════════
+// TILE OPTIONS — 3 chế độ xem bản đồ
+// ═══════════════════════════════════════════════════════════════════════
+
+export type TileMode = "light" | "dark" | "satellite";
+
+export const TILE_OPTIONS: Record<TileMode, { url: string; label: string; icon: string; attribution: string }> = {
+  light: {
+    url: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+    label: "Sáng",
+    icon: "☀️",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  },
+  dark: {
+    url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+    label: "Tối",
+    icon: "🌙",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  },
+  satellite: {
+    url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    label: "Vệ tinh",
+    icon: "🛰️",
+    attribution: '&copy; Esri, Maxar, Earthstar Geographics',
+  },
+};
+
 export const MAP_CONFIG = {
   center: [14.0583, 108.2772] as [number, number],
   zoom: 6,
   minZoom: 5,
   maxZoom: 18,
-  tileUrl:
-    "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  tileUrl: TILE_OPTIONS.light.url,
+  attribution: TILE_OPTIONS.light.attribution,
 };
 
 export const SEVERITY_COLORS: Record<SeverityLevel, string> = {

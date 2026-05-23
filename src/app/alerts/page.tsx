@@ -21,6 +21,8 @@
 
 import { useCallback, useMemo, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import IntroSection from "@/components/shared/IntroSection";
+import TabDropdown from "@/components/shared/TabDropdown";
 import {
   AlertTriangle,
   Map,
@@ -38,6 +40,8 @@ import {
   ChevronRight,
   HandHeart,
   ArrowRight,
+  Shield,
+  Radio,
 } from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
@@ -581,6 +585,21 @@ function AlertPageContent() {
       animate="visible"
       className="min-h-screen"
     >
+      {/* Intro Section */}
+      <IntroSection
+        moduleNumber="4"
+        icon={<Siren className="w-4 h-4" />}
+        title="Cảnh báo & SOS Thiên tai"
+        subtitle="Hệ thống cảnh báo CAP-inspired và nút SOS cứu nạn 1 chạm. Một chạm. Một giây. Một mạng người."
+        accentColor="#EF4444"
+        guideSteps={[
+          { icon: <Bell className="w-3.5 h-3.5" />, text: "Xem cảnh báo gần đây ở tab Tổng quan" },
+          { icon: <Siren className="w-3.5 h-3.5" />, text: "Gửi SOS khẩn cấp bằng nút đỏ" },
+          { icon: <Phone className="w-3.5 h-3.5" />, text: "Tìm danh bạ khẩn cấp theo tỉnh" },
+          { icon: <ClipboardCheck className="w-3.5 h-3.5" />, text: "Kiểm tra checklist PCTT theo mùa" },
+        ]}
+      />
+
       {/* === HEADER === */}
       <AlertPageHeader
         viewMode={state.viewMode}
@@ -970,49 +989,17 @@ function AlertPageHeader({
           </div>
         </div>
 
-        {/* Tab navigation */}
-        <div className="flex gap-1 pb-2 overflow-x-auto scrollbar-hide -mx-1 px-1">
-          {VIEW_TABS.map((tab) => {
-            const isActive = viewMode === tab.key;
-            return (
-              <motion.button
-                key={tab.key}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => onViewModeChange(tab.key)}
-                className={clsx(
-                  "flex items-center gap-1.5 px-3 py-2 rounded-lg",
-                  "text-xs font-medium whitespace-nowrap",
-                  "transition-all duration-200 border",
-                  isActive
-                    ? "border-opacity-40 shadow-sm"
-                    : "bg-transparent border-transparent text-slate-500 hover:text-slate-300 hover:bg-slate-800/30"
-                )}
-                style={
-                  isActive
-                    ? {
-                        backgroundColor: `${tab.color}15`,
-                        borderColor: `${tab.color}40`,
-                        color: tab.color,
-                      }
-                    : undefined
-                }
-              >
-                {tab.icon}
-                {tab.label}
-                {tab.key === "sos" && sosCount > 0 && (
-                  <span
-                    className="text-[9px] px-1 rounded-full"
-                    style={{
-                      backgroundColor: `${tab.color}25`,
-                      color: tab.color,
-                    }}
-                  >
-                    {sosCount}
-                  </span>
-                )}
-              </motion.button>
-            );
-          })}
+        {/* Tab navigation — 4 primary + dropdown */}
+        <div className="pb-2">
+          <TabDropdown
+            primaryTabs={VIEW_TABS.filter((t) => ["dashboard", "feed", "sos", "directory"].includes(t.key)).map((t) => ({
+              ...t,
+              badge: t.key === "sos" ? sosCount : undefined,
+            }))}
+            secondaryTabs={VIEW_TABS.filter((t) => ["map", "checklist", "history"].includes(t.key))}
+            activeTab={viewMode}
+            onTabChange={onViewModeChange}
+          />
         </div>
       </div>
     </motion.header>

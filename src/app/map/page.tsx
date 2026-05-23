@@ -5,20 +5,19 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { recentDisasters, sosAlerts } from "@/data/disaster-data";
 import MapStatsBar from "@/features/map-disaster/ui/MapStatsBar";
-import { Brain, Users, BarChart3, ArrowRight } from "lucide-react";
+import TileToggle from "@/features/map-disaster/ui/TileToggle";
+import { TILE_OPTIONS, type TileMode } from "@/features/map-disaster/config/map-config";
+import IntroSection from "@/components/shared/IntroSection";
+import ScrollReveal from "@/components/shared/ScrollReveal";
+import MapSearchBar from "@/features/map-disaster/ui/MapSearchBar";
+import { SkeletonMap, SkeletonStatBar } from "@/components/shared/Skeleton";
+import { Brain, Users, BarChart3, ArrowRight, Map as MapIcon, MousePointerClick, Clock, Layers as LayersIcon } from "lucide-react";
 
 const DisasterMap = dynamic(
   () => import("@/features/map-disaster/ui/DisasterMap"),
   {
     ssr: false,
-    loading: () => (
-      <div className="flex items-center justify-center h-[600px] bg-slate-900/50 rounded-2xl border border-slate-800/50">
-        <div className="text-center">
-          <div className="w-12 h-12 border-2 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-slate-400 text-sm">Đang tải bản đồ...</p>
-        </div>
-      </div>
-    ),
+    loading: () => <SkeletonMap height="600px" />,
   }
 );
 
@@ -31,6 +30,7 @@ const TimelineSlider = dynamic(
 
 export default function MapPage() {
   const [filteredByTime, setFilteredByTime] = useState(recentDisasters);
+  const [tileMode, setTileMode] = useState<TileMode>("light");
 
   const stats = useMemo(() => {
     const active = recentDisasters.filter((d) => d.status === "active").length;
@@ -56,18 +56,23 @@ export default function MapPage() {
   return (
     <div className="min-h-screen bg-aurora pb-24">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">
-            <span className="gradient-text">Bản đồ Thiên tai</span>
-          </h1>
-          <p className="text-slate-400 text-lg">
-            Giám sát thiên tai real-time trên toàn lãnh thổ Việt Nam
-          </p>
-        </div>
+        {/* Intro Section */}
+        <IntroSection
+          moduleNumber="1"
+          icon={<MapIcon className="w-4 h-4" />}
+          title="Giám sát Thiên tai Thời gian Thực"
+          subtitle="Theo dõi 63 tỉnh thành với heatmap, markers, và dữ liệu thời tiết real-time. Click vào marker để xem chi tiết sự kiện."
+          accentColor="#3B82F6"
+          guideSteps={[
+            { icon: <MousePointerClick className="w-3.5 h-3.5" />, text: "Click marker để xem chi tiết sự kiện" },
+            { icon: <Clock className="w-3.5 h-3.5" />, text: "Kéo timeline để xem diễn biến theo thời gian" },
+            { icon: <LayersIcon className="w-3.5 h-3.5" />, text: "Bật/tắt Heatmap, Markers, Choropleth, Thời tiết" },
+            { icon: <MapIcon className="w-3.5 h-3.5" />, text: "Chuyển đổi: Sáng / Tối / Vệ tinh" },
+          ]}
+        />
 
         {/* Stats Bar */}
-        <div className="mb-6">
+        <ScrollReveal delay={100} className="mb-6">
           <MapStatsBar
             activeDisasters={stats.active}
             monitoringDisasters={stats.monitoring}
@@ -75,21 +80,29 @@ export default function MapPage() {
             totalAffected={stats.affected}
             sosCount={stats.activeSOS}
           />
-        </div>
+        </ScrollReveal>
 
         {/* Map Container */}
-        <div className="h-[65vh] min-h-[550px]">
-          <DisasterMap disasters={filteredByTime} />
+        <div className="relative h-[65vh] min-h-[550px]">
+          <DisasterMap disasters={filteredByTime} tileMode={tileMode} />
+          <TileToggle currentMode={tileMode} onModeChange={setTileMode} />
+          <MapSearchBar onProvinceSelect={(p) => {
+            // Future: fly map to province
+          }} />
         </div>
       </div>
 
       {/* Timeline Slider */}
+      <ScrollReveal delay={200}>
       <TimelineSlider
         disasters={recentDisasters}
         onFilterByTime={handleFilterByTime}
       />
 
+      </ScrollReveal>
+
       {/* Cross-links: Bước tiếp theo */}
+      <ScrollReveal delay={300}>
       <div className="mt-6 p-4 rounded-2xl bg-slate-900/40 border border-slate-700/30">
         <h4 className="text-xs font-semibold text-slate-300 mb-3">Bước tiếp theo</h4>
         <div className="flex flex-wrap gap-2">
@@ -104,6 +117,7 @@ export default function MapPage() {
           </Link>
         </div>
       </div>
+      </ScrollReveal>
     </div>
   );
 }
