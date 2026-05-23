@@ -2,393 +2,418 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useMemo, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
 import {
   Map, Brain, Users, Siren, HandHeart, BarChart3, BookOpen,
-  ArrowRight, MapPin, Activity, Zap, Shield, Radio,
-  ChevronDown,
+  ArrowRight, Shield, Zap, ChevronDown,
 } from "lucide-react";
-import { recentDisasters } from "@/data/disaster-data";
-import type { DisasterType, SeverityLevel } from "@/lib/types";
-import HeroVideo from "@/components/home/HeroVideo";
-import AnimatedCounter from "@/components/home/AnimatedCounter";
-import ScrollReveal from "@/components/home/ScrollReveal";
-import ModuleCard from "@/components/home/ModuleCard";
+import type { ReactNode } from "react";
 
-// Dynamic imports for heavy below-fold components (Phase 8 — Performance)
+// ─── DYNAMIC IMPORTS ──────────────────────────────────────────────────────────
 const ParticleField = dynamic(() => import("@/components/home/ParticleField"), { ssr: false });
-const FlowTimeline = dynamic(() => import("@/components/home/FlowTimeline"), { ssr: false });
-const TechStack = dynamic(() => import("@/components/home/TechStack"), { ssr: false });
-const LiveStats = dynamic(() => import("@/components/home/LiveStats"), { ssr: false });
-const EventsTimeline = dynamic(() => import("@/components/home/EventsTimeline"), { ssr: false });
-const ImpactShowcase = dynamic(() => import("@/components/home/ImpactShowcase"), { ssr: false });
-const TrustedBy = dynamic(() => import("@/components/home/TrustedBy"), { ssr: false });
-const CTASection = dynamic(() => import("@/components/home/CTASection"), { ssr: false });
+const AnimatedCounter = dynamic(() => import("@/components/home/AnimatedCounter"), { ssr: false });
 
 // ─── MODULE CONFIG ────────────────────────────────────────────────────────────
 const MODULES = [
-  { href: "/map", icon: <Map className="w-7 h-7" />, title: "Bản đồ Thiên tai", description: "Theo dõi real-time 63 tỉnh thành với heatmap và cảnh báo sớm tương tác", borderColor: "#3B82F6", glow: "rgba(59,130,246,0.25)", stat: { value: "63", label: "tỉnh theo dõi" } },
-  { href: "/predict", icon: <Brain className="w-7 h-7" />, title: "AI Dự đoán", description: "Mô hình Machine Learning dự đoán rủi ro thiên tai theo khu vực và mùa vụ", borderColor: "#8B5CF6", glow: "rgba(139,92,246,0.25)", stat: { value: "6", label: "loại thiên tai" } },
-  { href: "/report", icon: <Users className="w-7 h-7" />, title: "Báo cáo Cộng đồng", description: "Crowd-sourced báo cáo thiên tai từ người dân địa phương với xác minh", borderColor: "#22C55E", glow: "rgba(34,197,94,0.25)", stat: { value: "24/7", label: "giám sát" } },
-  { href: "/alerts", icon: <Siren className="w-7 h-7" />, title: "Cảnh báo & SOS", description: "Hệ thống cảnh báo khẩn cấp CAP-inspired và nút SOS cứu nạn 1 chạm", borderColor: "#EF4444", glow: "rgba(239,68,68,0.25)", stat: { value: "4", label: "mức cảnh báo" } },
-  { href: "/rescue", icon: <HandHeart className="w-7 h-7" />, title: "Phối hợp Cứu trợ", description: "Điều phối cứu hộ ICS, 3W Dashboard, triage SOS, quản lý tài nguyên", borderColor: "#F59E0B", glow: "rgba(245,158,11,0.25)", stat: { value: "ICS", label: "chuẩn quốc tế" } },
-  { href: "/dashboard", icon: <BarChart3 className="w-7 h-7" />, title: "Dashboard Thống kê", description: "Trực quan hóa dữ liệu thiên tai với 8 loại biểu đồ tương tác", borderColor: "#06B6D4", glow: "rgba(6,182,212,0.25)", stat: { value: "8", label: "loại biểu đồ" } },
-  { href: "/education", icon: <BookOpen className="w-7 h-7" />, title: "Giáo dục Sinh tồn", description: "Học kỹ năng sinh tồn, sơ cứu, xây dựng kế hoạch phòng chống thiên tai", borderColor: "#14B8A6", glow: "rgba(20,184,166,0.25)", stat: { value: "25+", label: "bài học" } },
+  { href: "/map", icon: <Map className="w-6 h-6" />, title: "Bản đồ Thiên tai", desc: "Giám sát real-time 63 tỉnh thành", color: "#3B82F6", stat: "63 tỉnh" },
+  { href: "/predict", icon: <Brain className="w-6 h-6" />, title: "AI Dự đoán", desc: "Machine Learning dự đoán rủi ro", color: "#8B5CF6", stat: "75% chính xác" },
+  { href: "/alerts", icon: <Siren className="w-6 h-6" />, title: "Cảnh báo & SOS", desc: "Cảnh báo CAP-inspired 1 chạm", color: "#EF4444", stat: "4 mức cảnh báo" },
+  { href: "/rescue", icon: <HandHeart className="w-6 h-6" />, title: "Phối hợp Cứu trợ", desc: "Điều phối ICS quốc tế", color: "#F59E0B", stat: "ICS chuẩn" },
+  { href: "/report", icon: <Users className="w-6 h-6" />, title: "Báo cáo Cộng đồng", desc: "Crowd-sourced từ người dân", color: "#22C55E", stat: "24/7 giám sát" },
+  { href: "/dashboard", icon: <BarChart3 className="w-6 h-6" />, title: "Thống kê", desc: "25 năm dữ liệu thiên tai", color: "#06B6D4", stat: "8 biểu đồ" },
+  { href: "/education", icon: <BookOpen className="w-6 h-6" />, title: "Giáo dục Sinh tồn", desc: "Microlearning + Gamification", color: "#14B8A6", stat: "25+ bài học" },
 ];
 
-const SEVERITY_CONFIG: Record<SeverityLevel, { label: string; color: string; bg: string }> = {
-  critical: { label: "KHẨN CẤP", color: "#EF4444", bg: "rgba(239,68,68,0.12)" },
-  high:     { label: "NGUY HIỂM", color: "#F97316", bg: "rgba(249,115,22,0.12)" },
-  medium:   { label: "CẢNH BÁO",  color: "#F59E0B", bg: "rgba(245,158,11,0.12)" },
-  low:      { label: "THEO DÕI",  color: "#22C55E", bg: "rgba(34,197,94,0.12)" },
-};
-
-const DISASTER_ICONS: Record<DisasterType, string> = {
-  flood: "🌊", storm: "🌪️", landslide: "⛰️", drought: "☀️", earthquake: "🏔️", tsunami: "🌊",
-};
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1, y: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
-  }),
-};
-
-const stagger = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
-};
-
-// Ticker items
-const TICKER_ITEMS = [
-  "🌪️ Bão số 4 tiếp cận bờ biển Quảng Nam",
-  "🌊 Lũ lụt nghiêm trọng tại Hà Giang — 12,000 hộ bị ảnh hưởng",
-  "⚠️ Cảnh báo sạt lở đất khu vực Tây Nguyên",
-  "🆘 3 SOS đang hoạt động — Điện Biên, Lai Châu, Hà Giang",
-  "🌡️ Nắng nóng trên 40°C tại Nghệ An & Hà Tĩnh",
-];
-
-// Hero stats config
-const HERO_STATS = [
-  { value: 63, label: "Tỉnh thành", color: "#3B82F6", icon: <MapPin className="w-4 h-4" />, suffix: "" },
-  { value: 24, label: "Giám sát", color: "#22C55E", icon: <Shield className="w-4 h-4" />, suffix: "/7" },
-  { value: 6, label: "Loại thiên tai", color: "#8B5CF6", icon: <Brain className="w-4 h-4" />, suffix: "" },
-  { value: 7, label: "Modules", color: "#06B6D4", icon: <Zap className="w-4 h-4" />, suffix: "" },
-];
-
+// ─── MAIN PAGE ────────────────────────────────────────────────────────────────
 export default function Home() {
-  const recentEvents = useMemo(
-    () => [...recentDisasters].sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()).slice(0, 4),
-    []
-  );
-
-  // Typewriter effect
-  const [typewriterText, setTypewriterText] = useState("");
-  const fullText = "Nền tảng Quản lý Thiên tai Thông minh";
-
-  useEffect(() => {
-    let i = 0;
-    const timer = setInterval(() => {
-      if (i <= fullText.length) {
-        setTypewriterText(fullText.slice(0, i));
-        i++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 50);
-    return () => clearInterval(timer);
-  }, []);
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
+  const heroY = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
 
   return (
     <div className="min-h-screen bg-[#0a0f1e]">
-
-      {/* ── LIVE TICKER ─────────────────────────────────────────────────────── */}
-      <div className="relative overflow-hidden bg-red-950/40 border-b border-red-900/40 py-2.5">
-        <div className="flex items-center gap-0">
-          <div className="shrink-0 flex items-center gap-2 px-4 bg-red-600 h-full py-1 mr-4">
-            <Radio className="w-3 h-3 text-white animate-pulse" />
-            <span className="text-[11px] font-bold text-white uppercase tracking-wider" role="status" aria-live="polite">LIVE</span>
-          </div>
-          <div className="overflow-hidden flex-1">
-            <motion.div
-              className="flex gap-16 whitespace-nowrap"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-            >
-              {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
-                <span key={i} className="text-[11px] text-red-300 shrink-0">{item}</span>
-              ))}
-            </motion.div>
-          </div>
+      {/* ═══════════════════════════════════════════════════════════════════
+          SECTION 1 — MEGA HERO
+          Linear.app style: massive typography, video background, 1 CTA
+      ═══════════════════════════════════════════════════════════════════ */}
+      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay muted loop playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="https://images.unsplash.com/photo-1547683905-f686c993aae5?w=1920&q=80"
+          >
+            <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-flooded-area-5765/1080p.mp4" type="video/mp4" />
+          </video>
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1e]/70 via-[#0a0f1e]/85 to-[#0a0f1e]" />
         </div>
-      </div>
 
-      {/* ── HERO SECTION ─────────────────────────────────────────────────────── */}
-      <HeroVideo
-        posterSrc="https://images.unsplash.com/photo-1547683905-f686c993aae5?w=1920&q=80"
-        videoSrc="https://cdn.coverr.co/videos/coverr-aerial-view-of-flooded-area-5765/1080p.mp4"
-      >
-        {/* Particle field overlay */}
+        {/* Particle Field */}
         <ParticleField />
 
-        <div className="max-w-7xl mx-auto px-6 py-24 w-full">
-          <div className="grid grid-cols-1 xl:grid-cols-5 gap-12 items-center">
-
-            {/* Left content — 3 cols */}
-            <div className="xl:col-span-3">
-              <motion.div variants={stagger} initial="hidden" animate="visible">
-
-                {/* Badge */}
-                <motion.div variants={fadeUp} custom={0} className="mb-8">
-                  <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-red-500/30 bg-red-500/10 text-[11px] font-semibold text-red-400 uppercase tracking-widest">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                    Đang giám sát toàn quốc
-                  </span>
-                </motion.div>
-
-                {/* Title */}
-                <motion.h1 variants={fadeUp} custom={1} className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.9] mb-6 tracking-tight">
-                  Cứu
-                  <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent animate-gradient-text">Net</span>
-                </motion.h1>
-
-                {/* Typewriter subtitle */}
-                <motion.div variants={fadeUp} custom={2} className="mb-4 h-10">
-                  <p className="text-xl md:text-2xl text-slate-200 font-light">
-                    {typewriterText}
-                    <span className="typewriter-cursor ml-0.5">&nbsp;</span>
-                  </p>
-                </motion.div>
-
-                <motion.p variants={fadeUp} custom={3} className="text-base text-slate-400 mb-10 max-w-xl leading-relaxed">
-                  AI & Machine Learning giám sát, dự đoán và ứng phó với thiên tai trên toàn lãnh thổ Việt Nam. Cứu sống con người bằng công nghệ.
-                </motion.p>
-
-                {/* Animated Stats */}
-                <motion.div variants={fadeUp} custom={4} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
-                  {HERO_STATS.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="px-4 py-4 rounded-2xl backdrop-blur-xl border transition-all duration-300 hover:scale-105"
-                      style={{ backgroundColor: `${stat.color}08`, borderColor: `${stat.color}25` }}
-                    >
-                      <div className="flex items-center gap-2 mb-1" style={{ color: stat.color }}>
-                        {stat.icon}
-                        <AnimatedCounter
-                          end={stat.value}
-                          className="text-3xl font-black tabular-nums"
-                        />
-                        <span className="text-lg font-bold">{stat.suffix}</span>
-                      </div>
-                      <span className="text-[10px] text-slate-500 uppercase tracking-wider font-medium">{stat.label}</span>
-                    </div>
-                  ))}
-                </motion.div>
-
-                {/* CTAs */}
-                <motion.div variants={fadeUp} custom={5} className="flex flex-wrap gap-4">
-                  <Link href="/map"
-                    aria-label="Xem bản đồ thiên tai"
-                    className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-500 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 animate-glow-pulse"
-                  >
-                    <Map className="w-5 h-5" />
-                    <span>Xem Bản đồ</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                  <Link href="/alerts"
-                    aria-label="Gửi tín hiệu SOS khẩn cấp"
-                    className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-red-600/20 border border-red-500/40 text-red-400 text-sm font-bold hover:bg-red-600/30 hover:border-red-400 transition-all duration-300 hover:-translate-y-1"
-                  >
-                    <Siren className="w-5 h-5" />
-                    <span>SOS Khẩn cấp</span>
-                  </Link>
-                  <Link href="/report"
-                    aria-label="Gửi báo cáo thiên tai cộng đồng"
-                    className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-slate-800/60 border border-slate-700/40 text-slate-300 text-sm font-bold hover:border-slate-500 hover:text-white transition-all duration-300 hover:-translate-y-1"
-                  >
-                    <Users className="w-5 h-5" />
-                    <span>Gửi Báo cáo</span>
-                  </Link>
-                </motion.div>
-              </motion.div>
-            </div>
-
-            {/* Right — Floating activity card */}
-            <motion.div
-              initial={{ opacity: 0, x: 50, scale: 0.95 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ delay: 0.8, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="xl:col-span-2 hidden lg:block"
-            >
-              <div className="relative">
-                {/* Glow behind card */}
-                <div className="absolute -inset-4 bg-blue-600/10 rounded-3xl blur-2xl" />
-
-                <div className="relative rounded-3xl bg-slate-900/60 backdrop-blur-2xl border border-slate-700/50 p-6 space-y-4">
-                  {/* Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-green-500/15 flex items-center justify-center">
-                        <Activity className="w-4 h-4 text-green-400" />
-                      </div>
-                      <div>
-                        <span className="text-xs font-bold text-slate-200 uppercase tracking-wider">Hoạt động gần đây</span>
-                        <p className="text-[10px] text-slate-500">Cập nhật real-time</p>
-                      </div>
-                    </div>
-                    <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-500/15 border border-green-500/20">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                      <span className="text-[10px] font-bold text-green-400">LIVE</span>
-                    </span>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="h-px bg-gradient-to-r from-transparent via-slate-700/50 to-transparent" />
-
-                  {/* Disaster list */}
-                  {recentDisasters.slice(0, 3).map((d, i) => (
-                    <motion.div
-                      key={d.id}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 1 + i * 0.15 }}
-                      className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800/40 transition-colors cursor-pointer"
-                    >
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0"
-                        style={{ backgroundColor: SEVERITY_CONFIG[d.severity].bg }}>
-                        {DISASTER_ICONS[d.type]}
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <p className="text-xs font-semibold text-slate-200 truncate">{d.title}</p>
-                        <p className="text-[10px] text-slate-500">{d.location.province}</p>
-                      </div>
-                      <span className="shrink-0 text-[9px] font-bold px-2 py-1 rounded-lg"
-                        style={{ color: SEVERITY_CONFIG[d.severity].color, backgroundColor: SEVERITY_CONFIG[d.severity].bg }}>
-                        {SEVERITY_CONFIG[d.severity].label}
-                      </span>
-                    </motion.div>
-                  ))}
-
-                  {/* Quick action */}
-                  <Link href="/map" className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600/10 border border-blue-500/20 text-blue-400 text-xs font-bold hover:bg-blue-600/20 transition-colors">
-                    <Map className="w-3.5 h-3.5" />
-                    Xem bản đồ đầy đủ
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+        {/* Gradient Mesh */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-blue-600/8 blur-[150px]" />
+          <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] rounded-full bg-purple-600/6 blur-[120px]" />
+          <div className="absolute top-1/2 right-1/3 w-[400px] h-[400px] rounded-full bg-cyan-600/5 blur-[100px]" />
         </div>
 
-        {/* Scroll indicator */}
+        {/* Content */}
+        <motion.div
+          style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
+          className="relative z-10 max-w-5xl mx-auto px-6 text-center"
+        >
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="mb-8"
+          >
+            <span className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-red-500/30 bg-red-500/10 text-[11px] font-semibold text-red-400 uppercase tracking-[0.2em]">
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+              Đang giám sát 63 tỉnh thành
+            </span>
+          </motion.div>
+
+          {/* Title — Massive Typography */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            className="text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.85] tracking-tighter mb-8"
+            style={{ fontFamily: "var(--font-heading, inherit)" }}
+          >
+            <span className="text-white">Cứu</span>
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Net
+            </span>
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="text-xl md:text-2xl lg:text-3xl text-slate-300 font-light max-w-3xl mx-auto mb-12 leading-relaxed"
+          >
+            Nền tảng Quản lý Thiên tai Thông minh
+            <br />
+            <span className="text-slate-500 text-lg md:text-xl">Powered by AI & Machine Learning</span>
+          </motion.p>
+
+          {/* Single CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <Link
+              href="/map"
+              className="group inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-white text-black font-bold text-base hover:bg-slate-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10 hover:-translate-y-0.5"
+            >
+              <Map className="w-5 h-5" />
+              Xem Bản đồ
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              href="/alerts"
+              className="inline-flex items-center gap-3 px-8 py-5 rounded-2xl border border-slate-700 text-slate-300 font-medium text-base hover:border-slate-500 hover:text-white transition-all duration-300 hover:-translate-y-0.5"
+            >
+              <Siren className="w-5 h-5 text-red-400" />
+              SOS Khẩn cấp
+            </Link>
+          </motion.div>
+
+          {/* Stats Row */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.3, duration: 1 }}
+            className="mt-20 flex items-center justify-center gap-8 md:gap-16"
+          >
+            {[
+              { value: 63, label: "Tỉnh thành", suffix: "" },
+              { value: 24, label: "Giám sát", suffix: "/7" },
+              { value: 7, label: "Modules", suffix: "" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-3xl md:text-4xl font-black text-white mb-1">
+                  <AnimatedCounter end={stat.value} className="tabular-nums" />
+                  <span className="text-blue-400">{stat.suffix}</span>
+                </div>
+                <span className="text-[11px] text-slate-500 uppercase tracking-widest">{stat.label}</span>
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
+
+        {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
-          role="button"
-          aria-label="Cuộn xuống khám phá"
-          tabIndex={0}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer z-10"
           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
         >
-          <span className="text-[10px] text-slate-500 uppercase tracking-widest font-medium">Khám phá</span>
-          <ChevronDown className="w-5 h-5 text-slate-500 animate-scroll-bounce" />
+          <span className="text-[10px] text-slate-600 uppercase tracking-[0.3em]">Khám phá</span>
+          <ChevronDown className="w-5 h-5 text-slate-600 animate-scroll-bounce" />
         </motion.div>
-      </HeroVideo>
+      </section>
 
-      {/* ── HOW IT WORKS FLOW ────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 border-t border-slate-800/30 relative overflow-hidden">
-        {/* Background accents */}
-        <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-blue-600/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-purple-600/5 rounded-full blur-[100px]" />
-
-        <div className="max-w-6xl mx-auto relative">
-          <ScrollReveal className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[11px] font-semibold text-blue-400 uppercase tracking-widest mb-4">
-              Quy trình
+      {/* ═══════════════════════════════════════════════════════════════════
+          SECTION 2 — MODULES (Bento Grid)
+          Clean, minimal cards with hover glow
+      ═══════════════════════════════════════════════════════════════════ */}
+      <section className="py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <RevealBlock>
+            <span className="text-[11px] font-semibold text-blue-400 uppercase tracking-[0.2em] mb-4 block">
+              Hệ thống tích hợp
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-4">CứuNet hoạt động thế nào?</h2>
-            <p className="text-base text-slate-500 max-w-xl mx-auto">
-              Từ giám sát đến cứu hộ — hệ thống hoàn chỉnh bảo vệ người dân Việt Nam trước thiên tai
+            <h2
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight"
+              style={{ fontFamily: "var(--font-heading, inherit)" }}
+            >
+              7 Module Chức năng
+            </h2>
+            <p className="text-lg text-slate-500 max-w-2xl leading-relaxed">
+              Hệ thống quản lý thiên tai hoàn chỉnh — từ giám sát đến giáo dục cộng đồng.
             </p>
-          </ScrollReveal>
+          </RevealBlock>
 
-          {/* Interactive Flow Timeline */}
-          <FlowTimeline />
-
-          {/* Summary line */}
-          <ScrollReveal delay={400} className="text-center mt-16">
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-slate-900/50 backdrop-blur border border-slate-700/30">
-              <span className="text-sm text-slate-500">
-                Giám sát → Dự đoán → Cảnh báo → Cứu hộ → Phân tích
-              </span>
-              <span className="text-blue-400 font-bold text-sm">= Hệ thống hoàn chỉnh</span>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ── MODULES GRID (BENTO) ──────────────────────────────────────────────── */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal className="mb-16">
-            <div className="flex items-center gap-2 mb-3">
-              <Zap className="w-4 h-4 text-blue-400" />
-              <span className="text-[11px] font-semibold text-blue-400 uppercase tracking-widest">Hệ thống tích hợp</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-3">7 Module Chức năng</h2>
-            <p className="text-base text-slate-500">Hệ thống quản lý thiên tai hoàn chỉnh từ giám sát đến giáo dục cộng đồng</p>
-          </ScrollReveal>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 auto-rows-auto"
-          >
-            {MODULES.map((mod, i) => (
-              <ModuleCard
-                key={mod.href}
-                href={mod.href}
-                icon={mod.icon}
-                title={mod.title}
-                description={mod.description}
-                borderColor={mod.borderColor}
-                glow={mod.glow}
-                stat={mod.stat}
-                featured={i === 0}
-                index={i}
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16">
+            {/* Featured card — spans 2 cols */}
+            <RevealBlock delay={0.1}>
+              <ModuleCardFeatured module={MODULES[0]} />
+            </RevealBlock>
+            {/* Regular cards */}
+            {MODULES.slice(1).map((mod, i) => (
+              <RevealBlock key={mod.href} delay={0.15 + i * 0.05}>
+                <ModuleCardSimple module={mod} />
+              </RevealBlock>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ── TECH STACK ──────────────────────────────────────────────────────── */}
-      <TechStack />
+      {/* ═══════════════════════════════════════════════════════════════════
+          SECTION 3 — IMPACT STATS
+          3 massive numbers with gradient background
+      ═══════════════════════════════════════════════════════════════════ */}
+      <section className="py-32 px-6 relative overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1e] via-blue-950/10 to-[#0a0f1e]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-600/5 rounded-full blur-[200px]" />
+        </div>
 
-      {/* ── LIVE STATS ─────────────────────────────────────────────────────── */}
-      <LiveStats />
+        <div className="max-w-5xl mx-auto relative">
+          <RevealBlock className="text-center mb-20">
+            <span className="text-[11px] font-semibold text-blue-400 uppercase tracking-[0.2em] mb-4 block">
+              Tác động
+            </span>
+            <h2
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight"
+              style={{ fontFamily: "var(--font-heading, inherit)" }}
+            >
+              Bảo vệ người dân Việt Nam
+            </h2>
+          </RevealBlock>
 
-      {/* ── IMPACT SHOWCASE (PHASE 5) ──────────────────────────────────────── */}
-      <ImpactShowcase />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { value: 63, suffix: "", label: "Tỉnh thành được giám sát", desc: "Bao phủ toàn bộ lãnh thổ Việt Nam" },
+              { value: 25, suffix: "+", label: "Năm dữ liệu thiên tai", desc: "Từ 2000 đến 2025, cập nhật liên tục" },
+              { value: 99, suffix: "%", label: "Thời gian hoạt động", desc: "Hệ thống giám sát 24/7 không ngừng nghỉ" },
+            ].map((stat, i) => (
+              <RevealBlock key={stat.label} delay={i * 0.1}>
+                <div className="text-center p-8 rounded-3xl bg-slate-900/30 border border-slate-800/50 hover:border-slate-700/50 transition-all duration-500">
+                  <div className="text-6xl md:text-7xl font-black mb-4" style={{ fontFamily: "var(--font-heading, inherit)" }}>
+                    <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                      <AnimatedCounter end={stat.value} className="tabular-nums" />
+                    </span>
+                    <span className="text-blue-400/70">{stat.suffix}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{stat.label}</h3>
+                  <p className="text-sm text-slate-500">{stat.desc}</p>
+                </div>
+              </RevealBlock>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* ── TRUSTED BY ─────────────────────────────────────────────────────── */}
-      <TrustedBy />
+      {/* ═══════════════════════════════════════════════════════════════════
+          SECTION 4 — CTA
+          Clean gradient + 1 button
+      ═══════════════════════════════════════════════════════════════════ */}
+      <section className="py-32 px-6 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1e] via-blue-950/20 to-[#0a0f1e]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[200px]" />
+        </div>
 
-      {/* ── EVENTS TIMELINE ────────────────────────────────────────────────── */}
-      <EventsTimeline
-        events={recentEvents}
-        severityConfig={SEVERITY_CONFIG}
-        disasterIcons={DISASTER_ICONS}
+        <RevealBlock className="max-w-3xl mx-auto text-center relative">
+          <h2
+            className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-8 tracking-tight"
+            style={{ fontFamily: "var(--font-heading, inherit)" }}
+          >
+            Sẵn sàng bảo vệ{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              cộng đồng
+            </span>
+            ?
+          </h2>
+          <p className="text-xl text-slate-400 mb-12 max-w-xl mx-auto leading-relaxed">
+            Tham gia cùng hàng nghìn người đang sử dụng CứuNet để giám sát và ứng phó với thiên tai.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/map"
+              className="group inline-flex items-center gap-3 px-12 py-6 rounded-2xl bg-white text-black font-bold text-lg hover:bg-slate-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10 hover:-translate-y-0.5"
+            >
+              Bắt đầu ngay
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              href="/education"
+              className="inline-flex items-center gap-3 px-10 py-6 rounded-2xl border border-slate-700 text-slate-300 font-medium text-lg hover:border-slate-500 hover:text-white transition-all duration-300"
+            >
+              Tìm hiểu thêm
+            </Link>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="mt-12 flex items-center justify-center gap-6 text-[11px] text-slate-600">
+            <span className="flex items-center gap-1.5">
+              <Shield className="w-3.5 h-3.5" />
+              Không cần đăng ký
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Zap className="w-3.5 h-3.5" />
+              Miễn phí
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Map className="w-3.5 h-3.5" />
+              Mã nguồn mở
+            </span>
+          </div>
+        </RevealBlock>
+      </section>
+    </div>
+  );
+}
+
+// ─── REVEAL BLOCK (Scroll-triggered animation) ────────────────────────────────
+function RevealBlock({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+// ─── MODULE CARD — Featured (spans 2 cols) ────────────────────────────────────
+function ModuleCardFeatured({ module }: { module: (typeof MODULES)[0] }) {
+  return (
+    <Link
+      href={module.href}
+      className="group relative block p-8 rounded-3xl bg-slate-900/40 border border-slate-800/50 md:col-span-2 overflow-hidden hover:border-slate-700/50 transition-all duration-500"
+    >
+      {/* Gradient accent */}
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        style={{ background: `radial-gradient(ellipse at 50% 0%, ${module.color}15 0%, transparent 60%)` }}
       />
 
-      {/* ── CTA SECTION (PHASE 6) ──────────────────────────────────────────── */}
-      <CTASection />
+      <div className="relative">
+        <div
+          className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+          style={{ backgroundColor: `${module.color}15`, color: module.color }}
+        >
+          {module.icon}
+        </div>
+        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+          {module.title}
+        </h3>
+        <p className="text-base text-slate-400 mb-6 max-w-md leading-relaxed">
+          {module.desc}
+        </p>
+        <div className="flex items-center gap-4">
+          <span
+            className="text-sm font-bold px-4 py-2 rounded-full"
+            style={{ backgroundColor: `${module.color}15`, color: module.color }}
+          >
+            {module.stat}
+          </span>
+          <ArrowRight className="w-5 h-5 text-slate-600 group-hover:text-white group-hover:translate-x-1 transition-all" />
+        </div>
+      </div>
+    </Link>
+  );
+}
 
-    </div>
+// ─── MODULE CARD — Simple ─────────────────────────────────────────────────────
+function ModuleCardSimple({ module }: { module: (typeof MODULES)[0] }) {
+  return (
+    <Link
+      href={module.href}
+      className="group relative block p-6 rounded-2xl bg-slate-900/30 border border-slate-800/40 overflow-hidden hover:border-slate-700/50 transition-all duration-500 hover:-translate-y-1"
+    >
+      {/* Hover glow */}
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        style={{ background: `radial-gradient(ellipse at 50% 0%, ${module.color}10 0%, transparent 60%)` }}
+      />
+
+      <div className="relative">
+        <div className="flex items-start justify-between mb-4">
+          <div
+            className="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+            style={{ backgroundColor: `${module.color}12`, color: module.color }}
+          >
+            {module.icon}
+          </div>
+          <span
+            className="text-[10px] font-bold px-3 py-1 rounded-full"
+            style={{ backgroundColor: `${module.color}10`, color: `${module.color}aa` }}
+          >
+            {module.stat}
+          </span>
+        </div>
+        <h3 className="text-base font-bold text-white mb-1.5 group-hover:text-blue-400 transition-colors">
+          {module.title}
+        </h3>
+        <p className="text-[13px] text-slate-500 leading-relaxed">{module.desc}</p>
+        <ArrowRight className="w-4 h-4 text-slate-700 group-hover:text-white group-hover:translate-x-1 transition-all mt-4" />
+      </div>
+    </Link>
   );
 }
