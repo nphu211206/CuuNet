@@ -106,6 +106,8 @@ export default function Home() {
 
       {/* ── LIVE TICKER ─────────────────────────────────────────────────────── */}
       <div className="relative overflow-hidden bg-red-950/40 border-b border-red-900/40 py-2.5">
+        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-red-950/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-red-950/80 to-transparent z-10 pointer-events-none" />
         <div className="flex items-center gap-0">
           <div className="shrink-0 flex items-center gap-2 px-4 bg-red-600 h-full py-1 mr-4">
             <Radio className="w-3 h-3 text-white animate-pulse" />
@@ -149,7 +151,7 @@ export default function Home() {
                 </motion.div>
 
                 {/* Title */}
-                <motion.h1 variants={fadeUp} custom={1} className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.9] mb-6 tracking-tight">
+                <motion.h1 variants={fadeUp} custom={1} className="text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] mb-6 tracking-tighter" style={{ fontFamily: "var(--font-heading, inherit)" }}>
                   Cứu
                   <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent animate-gradient-text">Net</span>
                 </motion.h1>
@@ -191,7 +193,7 @@ export default function Home() {
                 <motion.div variants={fadeUp} custom={5} className="flex flex-wrap gap-4">
                   <Link href="/map"
                     aria-label="Xem bản đồ thiên tai"
-                    className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-500 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 animate-glow-pulse"
+                    className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-white text-black text-sm font-bold hover:bg-slate-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10 hover:-translate-y-1"
                   >
                     <Map className="w-5 h-5" />
                     <span>Xem Bản đồ</span>
@@ -300,7 +302,7 @@ export default function Home() {
       </HeroVideo>
 
       {/* ── HOW IT WORKS FLOW ────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 border-t border-slate-800/30 relative overflow-hidden">
+      <section className="py-28 px-6 border-t border-slate-800/30 relative overflow-hidden">
         {/* Background accents */}
         <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-blue-600/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-purple-600/5 rounded-full blur-[100px]" />
@@ -332,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* ── MODULES GRID (BENTO) ──────────────────────────────────────────────── */}
-      <section className="py-24 px-6">
+      <section className="py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal className="mb-16">
             <div className="flex items-center gap-2 mb-3">
