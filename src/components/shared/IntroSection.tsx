@@ -83,7 +83,7 @@ export default function IntroSection({
           <motion.h1
             variants={fadeUp}
             custom={1}
-            className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight tracking-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4 leading-tight tracking-tight"
             style={{ fontFamily: "var(--font-heading, inherit)" }}
           >
             {title}
@@ -93,7 +93,7 @@ export default function IntroSection({
           <motion.p
             variants={fadeUp}
             custom={2}
-            className="text-base md:text-lg text-slate-400 mb-8 max-w-2xl leading-relaxed"
+            className="text-base md:text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed"
           >
             {subtitle}
           </motion.p>
@@ -115,7 +115,7 @@ export default function IntroSection({
                   duration: 0.4,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700/30 hover:border-slate-600/50 hover:bg-slate-800/60 transition-all duration-300 group cursor-default"
+                className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 group cursor-default shadow-sm"
               >
                 <span
                   className="w-7 h-7 rounded-lg flex items-center justify-center text-sm shrink-0 transition-transform duration-300 group-hover:scale-110"
@@ -126,7 +126,7 @@ export default function IntroSection({
                 >
                   {step.icon}
                 </span>
-                <span className="text-xs text-slate-300 font-medium group-hover:text-slate-200 transition-colors">
+                <span className="text-xs text-slate-700 font-medium group-hover:text-slate-900 transition-colors">
                   {step.text}
                 </span>
               </motion.div>

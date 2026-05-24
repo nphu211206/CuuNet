@@ -48,8 +48,8 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-slate-950/95 backdrop-blur-2xl border-b border-slate-800/60 shadow-lg shadow-black/20"
-          : "bg-slate-950/60 backdrop-blur-xl border-b border-slate-800/30"
+          ? "bg-white/95 backdrop-blur-2xl border-b border-slate-200 shadow-md"
+          : "bg-white/80 backdrop-blur-xl border-b border-slate-100"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,8 +57,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <span className="text-2xl">🛡️</span>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              CứuNet
+            <span className="text-xl font-bold text-slate-900">
+              Cứu<span className="text-blue-600">Net</span>
             </span>
           </Link>
 
@@ -74,8 +74,8 @@ export default function Navbar() {
                   className={cn(
                     "relative flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
                     isActive
-                      ? "text-blue-400"
-                      : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/50"
+                      ? "text-blue-600"
+                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                   )}
                 >
                   <Icon className="w-4 h-4" />
@@ -83,7 +83,7 @@ export default function Navbar() {
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-blue-500/10 border border-blue-500/20 rounded-lg"
+                      className="absolute inset-0 bg-blue-50 border border-blue-200 rounded-lg"
                       transition={{
                         type: "spring",
                         stiffness: 300,
@@ -99,7 +99,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+            className="md:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
           >
             {mobileOpen ? (
               <X className="w-5 h-5" />
@@ -118,7 +118,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden bg-slate-950/95 backdrop-blur-xl border-b border-slate-800/50"
+            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-b border-slate-200"
           >
             <div className="px-4 py-3 space-y-1">
               {NAV_ITEMS.map((item) => {
@@ -132,8 +132,8 @@ export default function Navbar() {
                     className={cn(
                       "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all",
                       isActive
-                        ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-                        : "text-slate-400 hover:text-white hover:bg-slate-800/50"
+                        ? "bg-blue-50 text-blue-600 border border-blue-200"
+                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                     )}
                   >
                     <Icon className="w-5 h-5" />

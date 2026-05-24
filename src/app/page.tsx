@@ -102,7 +102,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0a0f1e]">
+    <div className="min-h-screen bg-[#f8fafc]">
 
       {/* ── LIVE TICKER ─────────────────────────────────────────────────────── */}
       <div className="relative overflow-hidden bg-red-950/40 border-b border-red-900/40 py-2.5">
@@ -302,18 +302,18 @@ export default function Home() {
       </HeroVideo>
 
       {/* ── HOW IT WORKS FLOW ────────────────────────────────────────────────── */}
-      <section className="py-28 px-6 border-t border-slate-800/30 relative overflow-hidden">
+      <section className="py-28 px-6 border-t border-slate-200 relative overflow-hidden">
         {/* Background accents */}
         <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-blue-600/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-purple-600/5 rounded-full blur-[100px]" />
 
         <div className="max-w-6xl mx-auto relative">
           <ScrollReveal className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[11px] font-semibold text-blue-400 uppercase tracking-widest mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[11px] font-semibold text-blue-600 uppercase tracking-widest mb-4">
               Quy trình
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-4">CứuNet hoạt động thế nào?</h2>
-            <p className="text-base text-slate-500 max-w-xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">CứuNet hoạt động thế nào?</h2>
+            <p className="text-base text-slate-600 max-w-xl mx-auto">
               Từ giám sát đến cứu hộ — hệ thống hoàn chỉnh bảo vệ người dân Việt Nam trước thiên tai
             </p>
           </ScrollReveal>
@@ -323,11 +323,11 @@ export default function Home() {
 
           {/* Summary line */}
           <ScrollReveal delay={400} className="text-center mt-16">
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-slate-900/50 backdrop-blur border border-slate-700/30">
-              <span className="text-sm text-slate-500">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-slate-100 border border-slate-200">
+              <span className="text-sm text-slate-600">
                 Giám sát → Dự đoán → Cảnh báo → Cứu hộ → Phân tích
               </span>
-              <span className="text-blue-400 font-bold text-sm">= Hệ thống hoàn chỉnh</span>
+              <span className="text-blue-600 font-bold text-sm">= Hệ thống hoàn chỉnh</span>
             </div>
           </ScrollReveal>
         </div>
@@ -341,8 +341,8 @@ export default function Home() {
               <Zap className="w-4 h-4 text-blue-400" />
               <span className="text-[11px] font-semibold text-blue-400 uppercase tracking-widest">Hệ thống tích hợp</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-3">7 Module Chức năng</h2>
-            <p className="text-base text-slate-500">Hệ thống quản lý thiên tai hoàn chỉnh từ giám sát đến giáo dục cộng đồng</p>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3">7 Module Chức năng</h2>
+            <p className="text-base text-slate-600">Hệ thống quản lý thiên tai hoàn chỉnh từ giám sát đến giáo dục cộng đồng</p>
           </ScrollReveal>
 
           <motion.div

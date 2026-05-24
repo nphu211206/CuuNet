@@ -44,11 +44,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="relative border-t border-slate-800/50 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#06080f] to-[#040610]" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-blue-600/3 rounded-full blur-[200px]" />
-        </div>
+      <footer className="relative border-t border-slate-200 overflow-hidden bg-white">
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
@@ -56,11 +52,11 @@ export default function Footer() {
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-2.5 mb-5 group">
                 <span className="text-2xl">🛡️</span>
-                <span className="text-xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  CứuNet
+                <span className="text-xl font-black text-slate-900">
+                  Cứu<span className="text-blue-600">Net</span>
                 </span>
               </Link>
-              <p className="text-sm text-slate-400 leading-relaxed mb-5">
+              <p className="text-sm text-slate-600 leading-relaxed mb-5">
                 Nền tảng AI quản lý thiên tai & phản ứng cộng đồng thông minh.
                 Sử dụng công nghệ để cứu sống con người và bảo vệ cộng đồng.
               </p>
@@ -87,8 +83,8 @@ export default function Footer() {
 
             {/* Modules */}
             <div>
-              <h3 className="text-sm font-bold text-slate-200 mb-5 flex items-center gap-2">
-                <Shield className="w-4 h-4 text-blue-400" />
+              <h3 className="text-sm font-bold text-slate-900 mb-5 flex items-center gap-2">
+                <Shield className="w-4 h-4 text-blue-600" />
                 Modules
               </h3>
               <ul className="space-y-2.5">
