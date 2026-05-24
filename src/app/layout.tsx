@@ -5,6 +5,7 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import MobileBottomNav from "@/components/shared/MobileBottomNav";
 import CursorGlow from "@/components/shared/CursorGlow";
+import ScrollProgress from "@/components/shared/ScrollProgress";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-heading" });
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Footer />
         <MobileBottomNav />
         <CursorGlow />
+        <ScrollProgress />
       </body>
     </html>
   );

@@ -433,12 +433,42 @@ html {
 .scroll-delay-5 { transition-delay: 400ms; }
 .scroll-delay-6 { transition-delay: 480ms; }
 
-/* Reduced motion */
+/* Reduced motion — comprehensive */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Disable particle field canvas */
+  .particle-field-canvas {
+    display: none !important;
+  }
+
+  /* Disable cursor glow */
+  [data-cursor-glow] {
+    display: none !important;
+  }
+
+  /* Disable scroll progress animation */
+  [data-scroll-progress] {
+    transition: none !important;
+  }
+
+  /* Disable typewriter cursor blink */
+  .typewriter-cursor {
+    animation: none !important;
+    border-right-color: #3b82f6 !important;
+  }
+
+  /* Disable pulse animations */
+  .animate-pulse,
+  .animate-scroll-bounce,
+  .animate-glow-pulse,
+  .animate-gradient-text {
+    animation: none !important;
   }
 }
 
