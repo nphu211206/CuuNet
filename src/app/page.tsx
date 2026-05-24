@@ -63,11 +63,11 @@ const stagger = {
 
 // Ticker items
 const TICKER_ITEMS = [
-  "🌪️ Bão số 4 tiếp cận bờ biển Quảng Nam",
-  "🌊 Lũ lụt nghiêm trọng tại Hà Giang — 12,000 hộ bị ảnh hưởng",
-  "⚠️ Cảnh báo sạt lở đất khu vực Tây Nguyên",
-  "🆘 3 SOS đang hoạt động — Điện Biên, Lai Châu, Hà Giang",
-  "🌡️ Nắng nóng trên 40°C tại Nghệ An & Hà Tĩnh",
+  "🌊 Ngập lụt miền Bắc — Hà Nội, Vĩnh Phúc, Phú Thọ bị ngập sâu",
+  "⛰️ Sạt lở Sơn La — nhiều tuyến đường bị chia cắt, cô lập bản làng",
+  "🌡️ Nắng nóng kỷ lục 42°C tại miền Bắc — ảnh hưởng 5 triệu người",
+  "🌪️ Áp thấp nhiệt đới trên Biển Đông — cảnh báo mưa lớn miền Trung",
+  "☀️ Hạn hán Tây Nguyên — hồ chứa xuống mức thấp kỷ lục",
 ];
 
 // Hero stats config
