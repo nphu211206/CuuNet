@@ -23,6 +23,7 @@ const FlowTimeline = dynamic(() => import("@/components/home/FlowTimeline"), { s
 const TechStack = dynamic(() => import("@/components/home/TechStack"), { ssr: false });
 const LiveStats = dynamic(() => import("@/components/home/LiveStats"), { ssr: false });
 const EventsTimeline = dynamic(() => import("@/components/home/EventsTimeline"), { ssr: false });
+const InteractiveTimeline = dynamic(() => import("@/components/home/InteractiveTimeline"), { ssr: false });
 const ImpactShowcase = dynamic(() => import("@/components/home/ImpactShowcase"), { ssr: false });
 const TrustedBy = dynamic(() => import("@/components/home/TrustedBy"), { ssr: false });
 const CTASection = dynamic(() => import("@/components/home/CTASection"), { ssr: false });
@@ -385,12 +386,8 @@ export default function Home() {
       {/* ── TRUSTED BY ─────────────────────────────────────────────────────── */}
       <TrustedBy />
 
-      {/* ── EVENTS TIMELINE ────────────────────────────────────────────────── */}
-      <EventsTimeline
-        events={recentEvents}
-        severityConfig={SEVERITY_CONFIG}
-        disasterIcons={DISASTER_ICONS}
-      />
+      {/* ── INTERACTIVE TIMELINE ────────────────────────────────────────────── */}
+      <InteractiveTimeline />
 
       {/* ── CTA SECTION (PHASE 6) ──────────────────────────────────────────── */}
       <CTASection />

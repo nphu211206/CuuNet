@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import MobileBottomNav from "@/components/shared/MobileBottomNav";
+import CursorGlow from "@/components/shared/CursorGlow";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-heading" });
@@ -44,6 +45,7 @@ export default function RootLayout({
         <main className="flex-1 pt-16 pb-16 md:pb-0">{children}</main>
         <Footer />
         <MobileBottomNav />
+        <CursorGlow />
       </body>
     </html>
   );
