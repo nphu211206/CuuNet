@@ -735,7 +735,7 @@ function EducationPageContent() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-[#f8fafc]">
       {/* Intro Section */}
       <IntroSection
         moduleNumber="7"

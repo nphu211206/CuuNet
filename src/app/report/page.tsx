@@ -318,7 +318,7 @@ function ReportPageContent() {
       variants={pageVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-screen"
+      className="min-h-screen bg-[#f8fafc]"
     >
       {/* Intro Section */}
       <IntroSection
