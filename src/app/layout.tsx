@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "CứuNet - Nền tảng Quản lý Thiên tai Thông minh",
   description: "Hệ thống quản lý thiên tai sử dụng AI & Machine Learning - Khóa luận Tốt nghiệp 2025",
   manifest: "/manifest.json",
-  themeColor: "#3B82F6",
+  themeColor: "#0369a1",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className="dark">
+    <html lang="vi">
       <body className={`${inter.className} ${spaceGrotesk.variable} flex flex-col min-h-screen antialiased`}>
         <Navbar />
         <main className="flex-1 pt-16 pb-16 md:pb-0">{children}</main>
