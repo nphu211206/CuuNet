@@ -18,6 +18,7 @@ import ModuleCard from "@/components/home/ModuleCard";
 
 // Dynamic imports for heavy below-fold components (Phase 8 — Performance)
 const ParticleField = dynamic(() => import("@/components/home/ParticleField"), { ssr: false });
+const GlobeVisualization = dynamic(() => import("@/components/home/GlobeVisualization"), { ssr: false });
 const FlowTimeline = dynamic(() => import("@/components/home/FlowTimeline"), { ssr: false });
 const TechStack = dynamic(() => import("@/components/home/TechStack"), { ssr: false });
 const LiveStats = dynamic(() => import("@/components/home/LiveStats"), { ssr: false });
@@ -368,6 +369,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* ── 3D GLOBE ────────────────────────────────────────────────────────── */}
+      <GlobeVisualization />
 
       {/* ── TECH STACK ──────────────────────────────────────────────────────── */}
       <TechStack />
