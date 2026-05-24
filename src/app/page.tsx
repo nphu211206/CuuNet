@@ -24,6 +24,7 @@ const TechStack = dynamic(() => import("@/components/home/TechStack"), { ssr: fa
 const LiveStats = dynamic(() => import("@/components/home/LiveStats"), { ssr: false });
 const EventsTimeline = dynamic(() => import("@/components/home/EventsTimeline"), { ssr: false });
 const InteractiveTimeline = dynamic(() => import("@/components/home/InteractiveTimeline"), { ssr: false });
+const WeatherWidget = dynamic(() => import("@/components/home/WeatherWidget"), { ssr: false });
 const ImpactShowcase = dynamic(() => import("@/components/home/ImpactShowcase"), { ssr: false });
 const TrustedBy = dynamic(() => import("@/components/home/TrustedBy"), { ssr: false });
 const CTASection = dynamic(() => import("@/components/home/CTASection"), { ssr: false });
@@ -379,6 +380,9 @@ export default function Home() {
 
       {/* ── IMPACT SHOWCASE (PHASE 5) ──────────────────────────────────────── */}
       <ImpactShowcase />
+
+      {/* ── WEATHER (REAL-TIME API) ──────────────────────────────────────────── */}
+      <WeatherWidget />
 
       {/* ── INTERACTIVE TIMELINE ────────────────────────────────────────────── */}
       <InteractiveTimeline />
