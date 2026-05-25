@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import IntroSection from "@/components/shared/IntroSection";
+import CompactPageHeader from "@/components/shared/CompactPageHeader";
 import {
   Brain,
   ChevronDown,
@@ -68,7 +68,7 @@ const PredictStatsBar = dynamic(() => import("@/features/predict/ui/PredictStats
 const RiskGauge = dynamic(() => import("@/features/predict/ui/RiskGauge"), {
   ssr: false,
   loading: () => (
-    <div className="w-[100px] h-[100px] bg-slate-800/30 rounded-full animate-pulse" />
+    <div className="w-[100px] h-[100px] bg-slate-100 rounded-full animate-pulse" />
   ),
 });
 
@@ -117,13 +117,12 @@ function ProvinceSelector({
       </label>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-slate-800/50 border border-slate-700/50 text-sm text-slate-200 hover:border-slate-600/60 transition-colors"
+        className="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-white border border-slate-200 text-sm text-slate-700 hover:border-slate-300 transition-colors"
       >
         <span className="truncate">{value ?? "Chọn tỉnh..."}</span>
         <ChevronDown
-          className={`w-4 h-4 text-slate-500 transition-transform ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`w-4 h-4 text-slate-500 transition-transform ${isOpen ? "rotate-180" : ""
+            }`}
         />
       </button>
 
@@ -143,7 +142,7 @@ function ProvinceSelector({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Tìm tỉnh..."
-                className="w-full px-2 py-1.5 text-xs bg-slate-800/60 border border-slate-700/40 rounded text-slate-200 placeholder-slate-600 focus:outline-none focus:border-blue-500/40"
+                className="w-full px-2 py-1.5 text-xs bg-white border border-slate-200 rounded text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500/40"
                 autoFocus
               />
             </div>
@@ -158,11 +157,10 @@ function ProvinceSelector({
                     setIsOpen(false);
                     setSearch("");
                   }}
-                  className={`w-full text-left px-3 py-2 text-xs transition-colors ${
-                    province === value
-                      ? "bg-blue-500/15 text-blue-400"
-                      : "text-slate-400 hover:bg-slate-800/40 hover:text-slate-200"
-                  }`}
+                  className={`w-full text-left px-3 py-2 text-xs transition-colors ${province === value
+                    ? "bg-blue-500/15 text-blue-400"
+                    : "text-slate-400 hover:bg-slate-800/40 hover:text-slate-200"
+                    }`}
                 >
                   {province}
                 </button>
@@ -200,13 +198,12 @@ function MonthSelector({
           <button
             key={i}
             onClick={() => onChange(i)}
-            className={`text-[10px] px-2 py-1.5 rounded-md transition-all ${
-              i === value
-                ? "bg-blue-500/20 text-blue-400 border border-blue-500/30 font-semibold"
-                : i === new Date().getMonth()
-                  ? "bg-slate-800/40 text-amber-400 border border-amber-500/20"
-                  : "bg-slate-800/30 text-slate-500 hover:text-slate-400 hover:bg-slate-800/50"
-            }`}
+            className={`text-[10px] px-2 py-1.5 rounded-md transition-all ${i === value
+              ? "bg-blue-500/20 text-blue-400 border border-blue-500/30 font-semibold"
+              : i === new Date().getMonth()
+                ? "bg-amber-50 text-amber-600 border border-amber-200"
+                : "bg-slate-50 text-slate-500 hover:text-slate-700 hover:bg-slate-100"
+              }`}
           >
             {name}
           </button>
@@ -238,11 +235,10 @@ function ScenarioSelector({
             <button
               key={scenario.id}
               onClick={() => onChange(scenario.id)}
-              className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-xs transition-all ${
-                isActive
-                  ? "bg-blue-500/15 text-blue-400 border border-blue-500/30"
-                  : "bg-slate-800/30 text-slate-500 hover:text-slate-400 hover:bg-slate-800/50 border border-transparent"
-              }`}
+              className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-xs transition-all ${isActive
+                ? "bg-blue-500/15 text-blue-400 border border-blue-500/30"
+                : "bg-slate-50 text-slate-500 hover:text-slate-700 hover:bg-slate-100 border border-transparent"
+                }`}
             >
               <span className="text-base">{scenario.icon}</span>
               <span className="font-medium">{scenario.name}</span>
@@ -276,11 +272,10 @@ function DisasterTypeFilter({
       <div className="flex flex-wrap gap-1">
         <button
           onClick={() => onChange(null)}
-          className={`text-[10px] px-2 py-1.5 rounded-md transition-colors ${
-            value === null
-              ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-              : "bg-slate-800/30 text-slate-500 hover:text-slate-400"
-          }`}
+          className={`text-[10px] px-2 py-1.5 rounded-md transition-colors ${value === null
+            ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+            : "bg-slate-50 text-slate-500 hover:text-slate-700"
+            }`}
         >
           Tất cả
         </button>
@@ -288,18 +283,17 @@ function DisasterTypeFilter({
           <button
             key={type}
             onClick={() => onChange(type)}
-            className={`text-[10px] px-2 py-1.5 rounded-md transition-colors ${
-              value === type
-                ? "border text-white font-medium"
-                : "bg-slate-800/30 text-slate-500 hover:text-slate-400"
-            }`}
+            className={`text-[10px] px-2 py-1.5 rounded-md transition-colors ${value === type
+              ? "border text-white font-medium"
+              : "bg-slate-800/30 text-slate-500 hover:text-slate-400"
+              }`}
             style={
               value === type
                 ? {
-                    backgroundColor: `${DISASTER_CONFIG[type].color}20`,
-                    borderColor: `${DISASTER_CONFIG[type].color}40`,
-                    color: DISASTER_CONFIG[type].color,
-                  }
+                  backgroundColor: `${DISASTER_CONFIG[type].color}20`,
+                  borderColor: `${DISASTER_CONFIG[type].color}40`,
+                  color: DISASTER_CONFIG[type].color,
+                }
                 : undefined
             }
           >
@@ -350,11 +344,10 @@ function ProvinceRiskList({
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.04 }}
             onClick={() => onProvinceSelect(risk.province)}
-            className={`flex items-center gap-3 p-2.5 rounded-lg cursor-pointer transition-all ${
-              risk.province === selectedProvince
-                ? "bg-blue-500/10 border border-blue-500/25"
-                : "bg-slate-800/20 border border-transparent hover:bg-slate-800/40"
-            }`}
+            className={`flex items-center gap-3 p-2.5 rounded-lg cursor-pointer transition-all ${risk.province === selectedProvince
+              ? "bg-blue-500/10 border border-blue-500/25"
+              : "bg-slate-50 border border-transparent hover:bg-slate-100"
+              }`}
           >
             <span className="text-xs font-mono text-slate-600 w-5 text-right">
               {i + 1}
@@ -392,7 +385,7 @@ function ProvinceRiskList({
       {sortedProvinces.length > 6 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="w-full mt-2 text-xs text-slate-500 hover:text-slate-400 py-1.5 rounded-lg hover:bg-slate-800/30 transition-colors"
+          className="w-full mt-2 text-xs text-slate-500 hover:text-slate-700 py-1.5 rounded-lg hover:bg-slate-100 transition-colors"
         >
           {showAll ? "Thu gọn" : `Xem tất cả (${sortedProvinces.length})`}
         </button>
@@ -451,7 +444,7 @@ function ExternalAlertsPanel() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="h-10 bg-slate-800/30 rounded-lg animate-pulse"
+              className="h-10 bg-slate-100 rounded-lg animate-pulse"
             />
           ))}
         </div>
@@ -501,7 +494,7 @@ function ExternalAlertsPanel() {
           return (
             <div
               key={alert.id}
-              className="flex items-start gap-2 p-2 rounded-lg bg-slate-800/20 hover:bg-slate-800/40 transition-colors"
+              className="flex items-start gap-2 p-2 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors"
             >
               <span className="text-sm mt-0.5">{config.icon}</span>
               <div className="flex-1 min-w-0">
@@ -612,36 +605,23 @@ function PredictPageContent() {
 
   return (
     <div className="min-h-screen">
-      {/* Page Header */}
-      <motion.div
-        className="mb-6"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl md:text-3xl font-bold gradient-text flex items-center gap-3">
-              <Brain className="w-7 h-7 text-blue-400" />
-              AI Dự đoán Thiên tai
-            </h1>
-            <p className="text-sm text-slate-500 mt-1">
-              Module 2 - Mô hình AI dự đoán rủi ro thiên tai theo khu vực, thời gian và kịch bản khí hậu
-            </p>
-          </div>
-
+      {/* Compact Page Header */}
+      <CompactPageHeader
+        icon={<Brain className="w-4 h-4" />}
+        title="AI Dự đoán Thiên tai"
+        subtitle="Mô hình AI dự đoán rủi ro thiên tai theo khu vực, thời gian và kịch bản khí hậu"
+        accentColor="#8B5CF6"
+        actions={
           <button
             onClick={handleRefresh}
             disabled={isLoading}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs text-slate-400 hover:text-slate-200 hover:border-slate-600/60 transition-colors disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-200 text-xs text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-colors disabled:opacity-50"
           >
-            <RefreshCw
-              className={`w-3.5 h-3.5 ${isLoading ? "animate-spin" : ""}`}
-            />
+            <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? "animate-spin" : ""}`} />
             Tải lại
           </button>
-        </div>
-      </motion.div>
+        }
+      />
 
       {/* Error Banner */}
       <AnimatePresence>
@@ -741,11 +721,10 @@ function PredictPageContent() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-medium transition-all ${
-                  activeTab === tab.id
-                    ? "bg-blue-500/15 text-blue-400 border border-blue-500/25"
-                    : "text-slate-500 hover:text-slate-400"
-                }`}
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-medium transition-all ${activeTab === tab.id
+                  ? "bg-blue-500/15 text-blue-400 border border-blue-500/25"
+                  : "text-slate-500 hover:text-slate-400"
+                  }`}
               >
                 {tab.icon}
                 {tab.label}
@@ -833,9 +812,9 @@ function PredictPageContent() {
             comparisonData={
               selectedProvinceRisk
                 ? {
-                    normal: selectedProvinceRisk.overallRisk,
-                    current: selectedProvinceRisk.overallRisk,
-                  }
+                  normal: selectedProvinceRisk.overallRisk,
+                  current: selectedProvinceRisk.overallRisk,
+                }
                 : undefined
             }
           />
@@ -916,20 +895,9 @@ function PredictPageContent() {
 export default function PredictPage() {
   return (
     <PredictionProvider>
-    <div className="min-h-screen p-4 md:p-6">
-        <IntroSection
-          moduleNumber="2"
-          icon={<Brain className="w-4 h-4" />}
-          title="AI Dự đoán Thiên tai"
-          subtitle="Mô hình Machine Learning dự đoán rủi ro theo khu vực, thời gian và kịch bản khí hậu. Ensemble 3 phương pháp: Moving Average, Linear Regression, Seasonal Decomposition."
-          accentColor="#8B5CF6"
-          guideSteps={[
-            { icon: <MapPin className="w-3.5 h-3.5" />, text: "Chọn tỉnh/thành phố ở panel trái" },
-            { icon: <Calendar className="w-3.5 h-3.5" />, text: "Chọn tháng để xem dự đoán theo mùa" },
-            { icon: <Target className="w-3.5 h-3.5" />, text: "Chọn kịch bản: El Niño, La Niña, BĐKH" },
-            { icon: <TrendingUp className="w-3.5 h-3.5" />, text: "Xem biểu đồ xu hướng 6 tháng tới" },
-          ]}
-        />
+      <div className="min-h-screen p-4 md:p-6 relative">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[400px] bg-purple-600/3 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[300px] bg-blue-600/3 rounded-full blur-[120px] pointer-events-none" />
         <PredictPageContent />
       </div>
     </PredictionProvider>

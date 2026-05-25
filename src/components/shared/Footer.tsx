@@ -51,9 +51,12 @@ export default function Footer() {
             {/* Brand */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-2.5 mb-5 group">
-                <span className="text-2xl">🛡️</span>
-                <span className="text-xl font-black text-slate-900">
-                  Cứu<span className="text-blue-600">Net</span>
+                <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#0066FF] to-[#00C9A7] flex items-center justify-center shadow-sm">
+                  <Shield className="w-4.5 h-4.5 text-white" />
+                </div>
+                <span className="text-xl font-black tracking-tight" style={{ fontFamily: 'var(--font-heading, inherit)' }}>
+                  <span className="text-[#0F172A]">Cứu</span>
+                  <span className="text-[#0066FF]">Net</span>
                 </span>
               </Link>
               <p className="text-sm text-slate-600 leading-relaxed mb-5">
@@ -94,9 +97,9 @@ export default function Footer() {
                     <li key={mod.href}>
                       <Link
                         href={mod.href}
-                        className="group flex items-center gap-2.5 text-sm text-slate-400 hover:text-blue-400 transition-colors"
+                        className="group flex items-center gap-2.5 text-sm text-slate-500 hover:text-[#0066FF] transition-colors"
                       >
-                        <Icon className="w-3.5 h-3.5 text-slate-600 group-hover:text-blue-400 transition-colors" />
+                        <Icon className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#0066FF] transition-colors" />
                         {mod.label}
                       </Link>
                     </li>
@@ -107,8 +110,8 @@ export default function Footer() {
 
             {/* Data Sources */}
             <div>
-              <h3 className="text-sm font-bold text-slate-200 mb-5 flex items-center gap-2">
-                <ExternalLink className="w-4 h-4 text-cyan-400" />
+              <h3 className="text-sm font-bold text-slate-900 mb-5 flex items-center gap-2">
+                <ExternalLink className="w-4 h-4 text-[#0066FF]" />
                 Nguồn dữ liệu
               </h3>
               <ul className="space-y-2.5">
@@ -118,9 +121,9 @@ export default function Footer() {
                       href={src.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors"
+                      className="group flex items-center gap-2 text-sm text-slate-500 hover:text-[#0066FF] transition-colors"
                     >
-                      <span className="w-1 h-1 rounded-full bg-slate-700 group-hover:bg-cyan-400 transition-colors" />
+                      <span className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-[#0066FF] transition-colors" />
                       {src.name}
                     </a>
                   </li>
@@ -130,12 +133,12 @@ export default function Footer() {
 
             {/* About */}
             <div>
-              <h3 className="text-sm font-bold text-slate-200 mb-5 flex items-center gap-2">
-                <Heart className="w-4 h-4 text-red-400" />
+              <h3 className="text-sm font-bold text-slate-900 mb-5 flex items-center gap-2">
+                <Heart className="w-4 h-4 text-[#FF6B6B]" />
                 Về dự án
               </h3>
               <div className="space-y-4">
-                <p className="text-sm text-slate-400 leading-relaxed">
+                <p className="text-sm text-slate-500 leading-relaxed">
                   CứuNet là dự án Khóa luận Tốt nghiệp 2025, nhằm xây dựng nền tảng quản lý thiên tai thông minh cho Việt Nam.
                 </p>
                 <div className="flex items-center gap-3">
@@ -143,26 +146,26 @@ export default function Footer() {
                     href="https://github.com/nphu211206/CuuNet"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-xl bg-slate-800/60 border border-slate-700/40 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-500 transition-all"
+                    className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#0066FF] hover:border-[#0066FF]/30 transition-all"
                   >
                     <Github className="w-4 h-4" />
                   </a>
                   <a
                     href="mailto:contact@cuunet.vn"
-                    className="w-9 h-9 rounded-xl bg-slate-800/60 border border-slate-700/40 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-500 transition-all"
+                    className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#0066FF] hover:border-[#0066FF]/30 transition-all"
                   >
                     <Mail className="w-4 h-4" />
                   </a>
                 </div>
-                <div className="pt-4 border-t border-slate-800/50">
+                <div className="pt-4 border-t border-slate-100">
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <p className="text-lg font-black text-blue-400">63</p>
-                      <p className="text-[10px] text-slate-600 uppercase tracking-wider">Tỉnh thành</p>
+                      <p className="text-lg font-black text-[#0066FF]">63</p>
+                      <p className="text-[10px] text-slate-400 uppercase tracking-wider">Tỉnh thành</p>
                     </div>
                     <div>
-                      <p className="text-lg font-black text-emerald-400">24/7</p>
-                      <p className="text-[10px] text-slate-600 uppercase tracking-wider">Giám sát</p>
+                      <p className="text-lg font-black text-[#00C9A7]">24/7</p>
+                      <p className="text-[10px] text-slate-400 uppercase tracking-wider">Giám sát</p>
                     </div>
                   </div>
                 </div>
@@ -171,17 +174,17 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-12 pt-8 border-t border-slate-800/50">
+          <div className="mt-12 pt-8 border-t border-slate-100">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-[12px] text-slate-600 text-center sm:text-left">
+              <p className="text-[12px] text-slate-400 text-center sm:text-left">
                 © {new Date().getFullYear()} CứuNet — Khóa luận Tốt nghiệp 2025. Bảo vệ cộng đồng bằng công nghệ.
               </p>
               <div className="flex items-center gap-4">
-                <span className="text-[11px] text-slate-600">100% Miễn phí</span>
-                <span className="text-slate-700">•</span>
-                <span className="text-[11px] text-slate-600">Mã nguồn mở</span>
-                <span className="text-slate-700">•</span>
-                <span className="text-[11px] text-slate-600">Made with <Heart className="w-3 h-3 inline text-red-500" /> in Vietnam</span>
+                <span className="text-[11px] text-slate-400">100% Miễn phí</span>
+                <span className="text-slate-200">•</span>
+                <span className="text-[11px] text-slate-400">Mã nguồn mở</span>
+                <span className="text-slate-200">•</span>
+                <span className="text-[11px] text-slate-400">Made with <Heart className="w-3 h-3 inline text-[#FF6B6B]" /> in Vietnam</span>
               </div>
             </div>
           </div>
@@ -196,7 +199,7 @@ export default function Footer() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-2xl bg-blue-600/90 backdrop-blur-sm border border-blue-500/30 text-white flex items-center justify-center shadow-xl shadow-blue-500/20 hover:bg-blue-500 hover:shadow-blue-500/30 hover:-translate-y-1 transition-all duration-300"
+            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-2xl bg-[#0066FF] text-white flex items-center justify-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
             <ChevronUp className="w-5 h-5" />
           </motion.button>

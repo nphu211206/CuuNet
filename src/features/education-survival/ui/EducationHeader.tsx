@@ -56,7 +56,7 @@ function EducationHeaderComponent({
       initial="hidden"
       animate="visible"
       className={clsx(
-        "sticky top-0 z-30 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50",
+        "sticky top-0 z-30 bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-sm",
         className
       )}
     >
@@ -64,7 +64,7 @@ function EducationHeaderComponent({
         {/* Title bar */}
         <div className="flex items-center justify-between py-3">
           <div>
-            <h1 className="text-lg font-bold text-white flex items-center gap-2">
+            <h1 className="text-lg font-bold text-[#0F172A] flex items-center gap-2">
               📚 Giáo dục & Nhận thức
             </h1>
             <p className="text-[10px] text-slate-500">
@@ -83,7 +83,7 @@ function EducationHeaderComponent({
             )}
 
             {/* XP + Level */}
-            <div className="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-slate-800/40 border border-slate-700/40">
+            <div className="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-200">
               <span className="text-sm">{currentLevel.icon}</span>
               <div>
                 <span className="text-[10px] font-bold" style={{ color: currentLevel.color }}>
@@ -110,7 +110,7 @@ function EducationHeaderComponent({
                   "transition-all duration-200 border whitespace-nowrap",
                   isActive
                     ? "border-opacity-40 text-opacity-100"
-                    : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50 hover:text-slate-300"
+                    : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-700"
                 )}
                 style={
                   isActive

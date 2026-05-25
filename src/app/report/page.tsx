@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import IntroSection from "@/components/shared/IntroSection";
+import CompactPageHeader from "@/components/shared/CompactPageHeader";
 import {
   AlertTriangle,
   RefreshCw,
@@ -35,10 +35,10 @@ const ReportMap = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex items-center justify-center h-[500px] rounded-xl bg-slate-900/60 border border-slate-700/50">
+      <div className="flex items-center justify-center h-[500px] rounded-xl bg-slate-50 border border-slate-200">
         <div className="flex flex-col items-center gap-3">
-          <Loader2 className="w-8 h-8 text-blue-400 animate-spin" />
-          <p className="text-sm text-slate-400">Đang tải bản đồ...</p>
+          <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+          <p className="text-sm text-slate-500">Đang tải bản đồ...</p>
         </div>
       </div>
     ),
@@ -318,21 +318,18 @@ function ReportPageContent() {
       variants={pageVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-screen bg-[#f8fafc]"
+      className="min-h-screen bg-[#f8fafc] relative"
     >
-      {/* Intro Section */}
-      <IntroSection
-        moduleNumber="3"
+      {/* Aurora background accents */}
+      <div className="absolute top-0 right-1/4 w-[500px] h-[400px] bg-green-600/2 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-1/3 left-1/3 w-[400px] h-[300px] bg-blue-600/2 rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Compact Page Header */}
+      <CompactPageHeader
         icon={<Users className="w-4 h-4" />}
         title="Báo cáo Thiên tai Cộng đồng"
-        subtitle="Mỗi người dân là một cảm biến thiên tai. Gửi báo cáo 6 bước, xác minh cộng đồng. Crowd-sourced data từ người dân địa phương."
+        subtitle="Mỗi người dân là một cảm biến thiên tai. Gửi báo cáo, xác minh cộng đồng."
         accentColor="#22C55E"
-        guideSteps={[
-          { icon: <AlertTriangle className="w-3.5 h-3.5" />, text: "Chọn loại thiên tai đã chứng kiến" },
-          { icon: <Map className="w-3.5 h-3.5" />, text: "Xác định vị trí trên bản đồ" },
-          { icon: <LayoutGrid className="w-3.5 h-3.5" />, text: "Mô tả tình hình và đính kèm ảnh" },
-          { icon: <RefreshCw className="w-3.5 h-3.5" />, text: "Gửi báo cáo — cộng đồng xác minh" },
-        ]}
       />
 
       {/* === HEADER === */}
@@ -419,10 +416,10 @@ function ReportPageContent() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] z-50 overflow-y-auto bg-slate-950 border-r border-slate-700/50 lg:hidden"
+              className="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] z-50 overflow-y-auto bg-white border-r border-slate-200 lg:hidden shadow-xl"
             >
-              <div className="flex items-center justify-between p-4 border-b border-slate-700/30">
-                <h3 className="text-sm font-semibold text-slate-300">Bộ lọc</h3>
+              <div className="flex items-center justify-between p-4 border-b border-slate-200">
+                <h3 className="text-sm font-semibold text-[#0F172A]">Bộ lọc</h3>
                 <button
                   onClick={() => toggleMobileFilter(false)}
                   className="p-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors"
@@ -484,9 +481,9 @@ function ReportPageContent() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/30 backdrop-blur-sm z-30 flex items-center justify-center"
           >
-            <div className="flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-900/90 border border-slate-700/50 shadow-xl">
-              <Loader2 className="w-5 h-5 text-blue-400 animate-spin" />
-              <span className="text-sm text-slate-300">Đang tải dữ liệu...</span>
+            <div className="flex items-center gap-3 px-6 py-4 rounded-xl bg-white border border-slate-200 shadow-xl">
+              <Loader2 className="w-5 h-5 text-blue-500 animate-spin" />
+              <span className="text-sm text-slate-700">Đang tải dữ liệu...</span>
             </div>
           </motion.div>
         )}
@@ -564,7 +561,7 @@ function ReportHeader({
       variants={headerVariants}
       initial="hidden"
       animate="visible"
-      className="sticky top-0 z-20 backdrop-blur-xl bg-slate-950/80 border-b border-slate-700/30"
+      className="sticky top-0 z-20 backdrop-blur-xl bg-white/95 border-b border-slate-200/80 shadow-sm"
     >
       <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between gap-4">
@@ -584,7 +581,7 @@ function ReportHeader({
             </button>
 
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-slate-100">
+              <h1 className="text-xl sm:text-2xl font-bold text-[#0F172A]">
                 <span className="gradient-text">Báo cáo Cộng đồng</span>
               </h1>
               <p className="text-xs text-slate-500 mt-0.5 hidden sm:block">

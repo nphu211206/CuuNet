@@ -48,7 +48,7 @@ import {
 } from "lucide-react";
 import clsx from "clsx";
 import dynamic from "next/dynamic";
-import IntroSection from "@/components/shared/IntroSection";
+import CompactPageHeader from "@/components/shared/CompactPageHeader";
 import TabDropdown from "@/components/shared/TabDropdown";
 
 import { RescueProvider, useRescue } from "@/features/rescue-connect/lib/rescue-context";
@@ -75,10 +75,10 @@ const OperationsMap = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex items-center justify-center h-[500px] rounded-xl bg-slate-900/60 border border-slate-700/50">
+      <div className="flex items-center justify-center h-[500px] rounded-xl bg-slate-50 border border-slate-200">
         <div className="flex flex-col items-center gap-3">
-          <Loader2 className="w-8 h-8 text-blue-400 animate-spin" />
-          <p className="text-sm text-slate-400">Đang tải bản đồ tác chiến...</p>
+          <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+          <p className="text-sm text-slate-500">Đang tải bản đồ tác chiến...</p>
         </div>
       </div>
     ),
@@ -189,21 +189,21 @@ const VIEW_TABS: Array<{
   icon: React.ReactNode;
   color: string;
 }> = [
-  { key: "dashboard", label: "Tổng quan", icon: <BarChart3 className="w-4 h-4" />, color: "#3B82F6" },
-  { key: "operations", label: "Bản đồ", icon: <Map className="w-4 h-4" />, color: "#22C55E" },
-  { key: "sos", label: "SOS", icon: <Siren className="w-4 h-4" />, color: "#EF4444" },
-  { key: "tasks", label: "Nhiệm vụ", icon: <ClipboardList className="w-4 h-4" />, color: "#F59E0B" },
-  { key: "resources", label: "Tài nguyên", icon: <Truck className="w-4 h-4" />, color: "#3B82F6" },
-  { key: "3w", label: "3W", icon: <Globe className="w-4 h-4" />, color: "#8B5CF6" },
-  { key: "shelters", label: "Nơi trú", icon: <Home className="w-4 h-4" />, color: "#06B6D4" },
-  { key: "communication", label: "Liên lạc", icon: <MessageSquare className="w-4 h-4" />, color: "#EC4899" },
-  { key: "timeline", label: "Timeline", icon: <Calendar className="w-4 h-4" />, color: "#F97316" },
-  { key: "volunteers", label: "TNV", icon: <HandHeart className="w-4 h-4" />, color: "#8B5CF6" },
-  { key: "checkin", label: "Check-in", icon: <Shield className="w-4 h-4" />, color: "#22C55E" },
-  { key: "dispatch", label: "Điều phối", icon: <Target className="w-4 h-4" />, color: "#EF4444" },
-  { key: "command", label: "Chỉ huy", icon: <ArrowRightLeft className="w-4 h-4" />, color: "#F59E0B" },
-  { key: "flow", label: "Dòng TN", icon: <Package className="w-4 h-4" />, color: "#3B82F6" },
-];
+    { key: "dashboard", label: "Tổng quan", icon: <BarChart3 className="w-4 h-4" />, color: "#3B82F6" },
+    { key: "operations", label: "Bản đồ", icon: <Map className="w-4 h-4" />, color: "#22C55E" },
+    { key: "sos", label: "SOS", icon: <Siren className="w-4 h-4" />, color: "#EF4444" },
+    { key: "tasks", label: "Nhiệm vụ", icon: <ClipboardList className="w-4 h-4" />, color: "#F59E0B" },
+    { key: "resources", label: "Tài nguyên", icon: <Truck className="w-4 h-4" />, color: "#3B82F6" },
+    { key: "3w", label: "3W", icon: <Globe className="w-4 h-4" />, color: "#8B5CF6" },
+    { key: "shelters", label: "Nơi trú", icon: <Home className="w-4 h-4" />, color: "#06B6D4" },
+    { key: "communication", label: "Liên lạc", icon: <MessageSquare className="w-4 h-4" />, color: "#EC4899" },
+    { key: "timeline", label: "Timeline", icon: <Calendar className="w-4 h-4" />, color: "#F97316" },
+    { key: "volunteers", label: "TNV", icon: <HandHeart className="w-4 h-4" />, color: "#8B5CF6" },
+    { key: "checkin", label: "Check-in", icon: <Shield className="w-4 h-4" />, color: "#22C55E" },
+    { key: "dispatch", label: "Điều phối", icon: <Target className="w-4 h-4" />, color: "#EF4444" },
+    { key: "command", label: "Chỉ huy", icon: <ArrowRightLeft className="w-4 h-4" />, color: "#F59E0B" },
+    { key: "flow", label: "Dòng TN", icon: <Package className="w-4 h-4" />, color: "#3B82F6" },
+  ];
 
 // =============================================================================
 // TOAST CONTAINER
@@ -284,7 +284,7 @@ function RescuePageHeader({
       variants={headerVariants}
       initial="hidden"
       animate="visible"
-      className="sticky top-0 z-30 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50"
+      className="sticky top-0 z-30 bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-sm"
     >
       <div className="px-4 sm:px-6 lg:px-8">
         {/* Title bar */}
@@ -297,7 +297,7 @@ function RescuePageHeader({
               <Menu className="w-4 h-4" />
             </button>
             <div>
-              <h1 className="text-lg font-bold text-white flex items-center gap-2">
+              <h1 className="text-lg font-bold text-[#0F172A] flex items-center gap-2">
                 🤝 Phối hợp cứu trợ
               </h1>
               <p className="text-[10px] text-slate-500">Module 5 - Điều phối cứu hộ thiên tai</p>
@@ -402,8 +402,8 @@ function DashboardView() {
             layers={state.selectedMapLayer}
             onIncidentSelect={handleIncidentSelect}
             onSOSClick={handleSOSSelect}
-            onResourceClick={() => {}}
-            onShelterClick={() => {}}
+            onResourceClick={() => { }}
+            onShelterClick={() => { }}
           />
         </div>
 
@@ -685,8 +685,8 @@ function RescuePageContent() {
               layers={state.selectedMapLayer}
               onIncidentSelect={handleIncidentSelect}
               onSOSClick={handleSOSSelect}
-              onResourceClick={() => {}}
-              onShelterClick={() => {}}
+              onResourceClick={() => { }}
+              onShelterClick={() => { }}
             />
           </div>
         );
@@ -711,9 +711,9 @@ function RescuePageContent() {
             incidents={state.incidents}
             volunteers={state.volunteers}
             resources={state.resources}
-            onTaskCreate={() => {}}
-            onTaskUpdate={() => {}}
-            onTaskDelete={() => {}}
+            onTaskCreate={() => { }}
+            onTaskUpdate={() => { }}
+            onTaskDelete={() => { }}
             onTaskMove={handleTaskMove}
           />
         );
@@ -723,8 +723,8 @@ function RescuePageContent() {
           <ResourceRegistry
             resources={state.resources}
             incidents={state.incidents}
-            onResourceAdd={() => {}}
-            onResourceUpdate={() => {}}
+            onResourceAdd={() => { }}
+            onResourceUpdate={() => { }}
             onResourceDeploy={handleResourceDeploy}
             onResourceReturn={handleResourceReturn}
           />
@@ -737,7 +737,7 @@ function RescuePageContent() {
             organizations={state.organizations}
             incidents={state.incidents}
             gapAnalysis={[]}
-            onOrgSelect={() => {}}
+            onOrgSelect={() => { }}
           />
         );
 
@@ -746,8 +746,8 @@ function RescuePageContent() {
           <ShelterManager
             shelters={state.shelters}
             incidents={state.incidents}
-            onShelterAdd={() => {}}
-            onShelterUpdate={() => {}}
+            onShelterAdd={() => { }}
+            onShelterUpdate={() => { }}
             onCheckIn={handleShelterCheckIn}
             onCheckOut={handleShelterCheckOut}
           />
@@ -782,8 +782,8 @@ function RescuePageContent() {
             volunteers={state.volunteers}
             incidents={state.incidents}
             tasks={state.tasks}
-            onVolunteerAdd={() => {}}
-            onVolunteerUpdate={() => {}}
+            onVolunteerAdd={() => { }}
+            onVolunteerUpdate={() => { }}
             onVolunteerAssign={handleVolunteerAssign}
             onVolunteerRelease={handleVolunteerRelease}
           />
@@ -796,7 +796,7 @@ function RescuePageContent() {
             incidents={state.incidents}
             stats={checkInStats}
             onCheckInAdd={handleCheckInAdd}
-            onCheckInUpdate={() => {}}
+            onCheckInUpdate={() => { }}
           />
         );
 
@@ -816,8 +816,8 @@ function RescuePageContent() {
         return selectedIncidentForCommand ? (
           <IncidentCommandBoard
             incident={selectedIncidentForCommand}
-            onCommandUpdate={() => {}}
-            onTransferCommand={() => {}}
+            onCommandUpdate={() => { }}
+            onTransferCommand={() => { }}
           />
         ) : (
           <div className="flex items-center justify-center py-12 text-slate-500">
@@ -843,20 +843,15 @@ function RescuePageContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc]">
-      {/* Intro Section */}
-      <IntroSection
-        moduleNumber="5"
+    <div className="min-h-screen bg-[#f8fafc] relative">
+      <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-amber-600/2 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[300px] bg-blue-600/2 rounded-full blur-[120px] pointer-events-none" />
+      {/* Compact Page Header */}
+      <CompactPageHeader
         icon={<HandHeart className="w-4 h-4" />}
         title="Phối hợp Cứu trợ Thiên tai"
-        subtitle="Điều phối cứu hộ theo chuẩn ICS, 3W Dashboard, triage SOS, quản lý tài nguyên và tình nguyện viên. Từ hỗn loạn đến trật tự."
+        subtitle="Điều phối cứu hộ theo chuẩn ICS, 3W Dashboard, triage SOS, quản lý tài nguyên và tình nguyện viên."
         accentColor="#F59E0B"
-        guideSteps={[
-          { icon: <BarChart3 className="w-3.5 h-3.5" />, text: "Xem Tổng quan để biết tình hình hiện tại" },
-          { icon: <Map className="w-3.5 h-3.5" />, text: "Theo dõi SOS trên Bản đồ tác chiến" },
-          { icon: <ClipboardList className="w-3.5 h-3.5" />, text: "Quản lý Nhiệm vụ và Tài nguyên" },
-          { icon: <HandHeart className="w-3.5 h-3.5" />, text: "Phối hợp TNV và Tổ chức" },
-        ]}
       />
 
       {/* Header */}
@@ -882,23 +877,6 @@ function RescuePageContent() {
         </AnimatePresence>
       </main>
 
-      {/* Cross-links */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-6">
-        <div className="p-4 rounded-2xl bg-slate-900/40 border border-slate-700/30">
-          <h4 className="text-xs font-semibold text-slate-300 mb-3">Bước tiếp theo</h4>
-          <div className="flex flex-wrap gap-2">
-            <a href="/map" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-blue-500/40 hover:text-blue-400 transition-colors">
-              <Map className="w-3.5 h-3.5" /> Xem trên bản đồ <ArrowRight className="w-3 h-3" />
-            </a>
-            <a href="/dashboard" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-cyan-500/40 hover:text-cyan-400 transition-colors">
-              <BarChart3 className="w-3.5 h-3.5" /> Xem thống kê <ArrowRight className="w-3 h-3" />
-            </a>
-            <a href="/education" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-teal-500/40 hover:text-teal-400 transition-colors">
-              <BookOpen className="w-3.5 h-3.5" /> Học kỹ năng sinh tồn <ArrowRight className="w-3 h-3" />
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* Toasts */}
       <ToastContainer toasts={state.toasts} onDismiss={handleToastDismiss} />

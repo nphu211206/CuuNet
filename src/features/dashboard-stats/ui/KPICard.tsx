@@ -101,8 +101,8 @@ function KPICardComponent({ kpi, index, className }: KPICardProps) {
       whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
       className={clsx(
         "relative overflow-hidden rounded-xl p-3",
-        "bg-slate-900/60 backdrop-blur-xl",
-        "border border-slate-700/40",
+        "bg-white",
+        "border border-slate-200",
         "hover:border-slate-600/60 transition-colors duration-300",
         className
       )}

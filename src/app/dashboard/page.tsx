@@ -19,7 +19,7 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import IntroSection from "@/components/shared/IntroSection";
+import CompactPageHeader from "@/components/shared/CompactPageHeader";
 import {
   X,
   Loader2,
@@ -186,16 +186,16 @@ function ProvinceDetailView({
       {/* Back button */}
       <button
         onClick={onBack}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/40 border border-slate-700/40 text-slate-400 text-[11px] font-medium hover:border-slate-600/50 transition-colors"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-slate-500 text-[11px] font-medium hover:border-slate-300 transition-colors"
       >
         <ArrowLeft className="w-3.5 h-3.5" />
         Quay lại
       </button>
 
       {/* Province header */}
-      <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-4">
-        <h2 className="text-lg font-bold text-white mb-1">{province.province}</h2>
-        <div className="flex items-center gap-4 text-[11px] text-slate-400">
+      <div className="rounded-xl bg-white border border-slate-200 p-4">
+        <h2 className="text-lg font-bold text-[#0F172A] mb-1">{province.province}</h2>
+        <div className="flex items-center gap-4 text-[11px] text-slate-500">
           <span>Dân số: {(province.population / 1000000).toFixed(1)}M</span>
           <span>Diện tích: {province.areaKm2.toLocaleString("vi-VN")} km²</span>
           <span>GDP: {(province.gdpBillionVND / 1000).toFixed(0)} nghìn tỷ</span>
@@ -219,7 +219,7 @@ function ProvinceDetailView({
           { label: "Tổng受影响", value: province.totalAffected, color: "#8B5CF6" },
           { label: "Thiệt hại (tỷ)", value: province.totalDamageBillionVND, color: "#F59E0B" },
         ].map((stat) => (
-          <div key={stat.label} className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+          <div key={stat.label} className="p-3 rounded-xl bg-white border border-slate-200 text-center">
             <span className="text-xl font-bold block" style={{ color: stat.color }}>
               {stat.value.toLocaleString("vi-VN")}
             </span>
@@ -230,11 +230,11 @@ function ProvinceDetailView({
 
       {/* Major events */}
       {province.majorEvents.length > 0 && (
-        <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-4">
-          <h3 className="text-sm font-semibold text-slate-200 mb-3">📅 Sự kiện lớn</h3>
+        <div className="rounded-xl bg-white border border-slate-200 p-4">
+          <h3 className="text-sm font-semibold text-[#0F172A] mb-3">📅 Sự kiện lớn</h3>
           <div className="space-y-2">
             {province.majorEvents.map((event, i) => (
-              <div key={i} className="flex items-center gap-3 p-2 rounded-lg bg-slate-800/30">
+              <div key={i} className="flex items-center gap-3 p-2 rounded-lg bg-slate-50 border border-slate-100">
                 <span className="text-sm font-bold text-amber-400 w-12">{event.year}</span>
                 <div className="flex-1">
                   <p className="text-xs text-slate-200">{event.name}</p>
@@ -249,8 +249,8 @@ function ProvinceDetailView({
       )}
 
       {/* Type distribution */}
-      <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-4">
-        <h3 className="text-sm font-semibold text-slate-200 mb-3">📊 Phân bố loại thiên tai</h3>
+      <div className="rounded-xl bg-white border border-slate-200 p-4">
+        <h3 className="text-sm font-semibold text-[#0F172A] mb-3">📊 Phân bố loại thiên tai</h3>
         <div className="space-y-2">
           {Object.entries(province.typeDistribution).map(([type, count]) => {
             const config = {
@@ -273,7 +273,7 @@ function ProvinceDetailView({
                     <span className="text-xs text-slate-200">{config.label}</span>
                     <span className="text-[10px] font-bold" style={{ color: config.color }}>{percent}%</span>
                   </div>
-                  <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${percent}%` }}
@@ -326,7 +326,7 @@ function OperationalDashboardSimple() {
           { label: "Thiệt hại (tỷ)", value: 13000, color: "#F59E0B" },
           { label: "受影响 (K)", value: 4100, color: "#8B5CF6" },
         ].map((stat) => (
-          <div key={stat.label} className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+          <div key={stat.label} className="p-3 rounded-xl bg-white border border-slate-200 text-center">
             <span className="text-xl font-bold block" style={{ color: stat.color }}>
               {stat.value.toLocaleString("vi-VN")}
             </span>
@@ -336,11 +336,11 @@ function OperationalDashboardSimple() {
       </div>
 
       {/* Province overview */}
-      <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-4">
-        <h3 className="text-sm font-semibold text-slate-200 mb-3">📍 Tổng quan tỉnh</h3>
+      <div className="rounded-xl bg-white border border-slate-200 p-4">
+        <h3 className="text-sm font-semibold text-[#0F172A] mb-3">📍 Tổng quan tỉnh</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           {filteredProvinceData.slice(0, 9).map((p) => (
-            <div key={p.province} className="flex items-center gap-3 p-2 rounded-lg bg-slate-800/30">
+            <div key={p.province} className="flex items-center gap-3 p-2 rounded-lg bg-slate-50 border border-slate-100">
               <div
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
                 style={{
@@ -517,20 +517,15 @@ function DashboardPageContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc]">
-      {/* Intro Section */}
-      <IntroSection
-        moduleNumber="6"
+    <div className="min-h-screen bg-[#f8fafc] relative">
+      <div className="absolute top-0 left-1/3 w-[600px] h-[400px] bg-cyan-600/3 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[300px] bg-blue-600/3 rounded-full blur-[120px] pointer-events-none" />
+      {/* Compact Page Header */}
+      <CompactPageHeader
         icon={<BarChart3 className="w-4 h-4" />}
         title="Trực quan hóa Dữ liệu Thiên tai"
-        subtitle="25 năm dữ liệu thiên tai Việt Nam (2000-2024). 4 góc nhìn. Xuất CSV. Phân tích xu hướng và so sánh quốc tế."
+        subtitle="25 năm dữ liệu thiên tai Việt Nam (2000-2024). 4 góc nhìn. Xuất CSV."
         accentColor="#06B6D4"
-        guideSteps={[
-          { icon: <Eye className="w-3.5 h-3.5" />, text: "Executive: KPI Cards cho lãnh đạo" },
-          { icon: <Target className="w-3.5 h-3.5" />, text: "Operational: Giám sát thời gian thực" },
-          { icon: <PieChart className="w-3.5 h-3.5" />, text: "Analytical: Phân tích chi tiết" },
-          { icon: <TrendingUp className="w-3.5 h-3.5" />, text: "Strategic: Xu hướng dài hạn" },
-        ]}
       />
 
       {/* Header */}
@@ -566,20 +561,6 @@ function DashboardPageContent() {
         </AnimatePresence>
       </main>
 
-      {/* Cross-links */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-6">
-        <div className="p-4 rounded-2xl bg-slate-900/40 border border-slate-700/30">
-          <h4 className="text-xs font-semibold text-slate-300 mb-3">Bước tiếp theo</h4>
-          <div className="flex flex-wrap gap-2">
-            <Link href="/map" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-blue-500/40 hover:text-blue-400 transition-colors">
-              <Map className="w-3.5 h-3.5" /> Xem chi tiết trên bản đồ <ArrowRight className="w-3 h-3" />
-            </Link>
-            <Link href="/alerts" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-red-500/40 hover:text-red-400 transition-colors">
-              <Siren className="w-3.5 h-3.5" /> Xem cảnh báo <ArrowRight className="w-3 h-3" />
-            </Link>
-          </div>
-        </div>
-      </div>
 
       {/* Toasts */}
       <ToastContainer toasts={state.toasts} onDismiss={handleToastDismiss} />

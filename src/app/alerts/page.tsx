@@ -21,7 +21,7 @@
 
 import { useCallback, useMemo, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import IntroSection from "@/components/shared/IntroSection";
+import CompactPageHeader from "@/components/shared/CompactPageHeader";
 import TabDropdown from "@/components/shared/TabDropdown";
 import {
   AlertTriangle,
@@ -72,10 +72,10 @@ const AlertMap = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex items-center justify-center h-[500px] rounded-xl bg-slate-900/60 border border-slate-700/50">
+      <div className="flex items-center justify-center h-[500px] rounded-xl bg-slate-50 border border-slate-200">
         <div className="flex flex-col items-center gap-3">
-          <Loader2 className="w-8 h-8 text-blue-400 animate-spin" />
-          <p className="text-sm text-slate-400">Đang tải bản đồ...</p>
+          <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+          <p className="text-sm text-slate-500">Đang tải bản đồ...</p>
         </div>
       </div>
     ),
@@ -189,14 +189,14 @@ const VIEW_TABS: {
   icon: React.ReactNode;
   color: string;
 }[] = [
-  { key: "dashboard", label: "Tổng quan", icon: <BarChart3 className="w-4 h-4" />, color: "#3B82F6" },
-  { key: "feed", label: "Cảnh báo", icon: <Bell className="w-4 h-4" />, color: "#F59E0B" },
-  { key: "map", label: "Bản đồ", icon: <Map className="w-4 h-4" />, color: "#22C55E" },
-  { key: "sos", label: "SOS", icon: <Siren className="w-4 h-4" />, color: "#EF4444" },
-  { key: "directory", label: "Danh bạ", icon: <Phone className="w-4 h-4" />, color: "#8B5CF6" },
-  { key: "checklist", label: "Checklist", icon: <ClipboardCheck className="w-4 h-4" />, color: "#06B6D4" },
-  { key: "history", label: "Lịch sử", icon: <History className="w-4 h-4" />, color: "#EC4899" },
-];
+    { key: "dashboard", label: "Tổng quan", icon: <BarChart3 className="w-4 h-4" />, color: "#3B82F6" },
+    { key: "feed", label: "Cảnh báo", icon: <Bell className="w-4 h-4" />, color: "#F59E0B" },
+    { key: "map", label: "Bản đồ", icon: <Map className="w-4 h-4" />, color: "#22C55E" },
+    { key: "sos", label: "SOS", icon: <Siren className="w-4 h-4" />, color: "#EF4444" },
+    { key: "directory", label: "Danh bạ", icon: <Phone className="w-4 h-4" />, color: "#8B5CF6" },
+    { key: "checklist", label: "Checklist", icon: <ClipboardCheck className="w-4 h-4" />, color: "#06B6D4" },
+    { key: "history", label: "Lịch sử", icon: <History className="w-4 h-4" />, color: "#EC4899" },
+  ];
 
 // Default toast duration
 const TOAST_DURATION = 5000;
@@ -583,22 +583,19 @@ function AlertPageContent() {
       variants={pageVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-screen bg-[#f8fafc]"
+      className="min-h-screen bg-[#f8fafc] relative"
     >
-      {/* Intro Section */}
-      <IntroSection
-        moduleNumber="4"
+      {/* Compact Page Header */}
+      <CompactPageHeader
         icon={<Siren className="w-4 h-4" />}
         title="Cảnh báo & SOS Thiên tai"
-        subtitle="Hệ thống cảnh báo CAP-inspired và nút SOS cứu nạn 1 chạm. Một chạm. Một giây. Một mạng người."
+        subtitle="Hệ thống cảnh báo CAP-inspired và nút SOS cứu nạn 1 chạm."
         accentColor="#EF4444"
-        guideSteps={[
-          { icon: <Bell className="w-3.5 h-3.5" />, text: "Xem cảnh báo gần đây ở tab Tổng quan" },
-          { icon: <Siren className="w-3.5 h-3.5" />, text: "Gửi SOS khẩn cấp bằng nút đỏ" },
-          { icon: <Phone className="w-3.5 h-3.5" />, text: "Tìm danh bạ khẩn cấp theo tỉnh" },
-          { icon: <ClipboardCheck className="w-3.5 h-3.5" />, text: "Kiểm tra checklist PCTT theo mùa" },
-        ]}
       />
+
+      {/* Aurora background accents */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[400px] bg-red-600/2 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-1/3 right-1/3 w-[400px] h-[300px] bg-amber-600/2 rounded-full blur-[120px] pointer-events-none" />
 
       {/* === HEADER === */}
       <AlertPageHeader
@@ -680,7 +677,7 @@ function AlertPageContent() {
                       userLocation={state.userLocation}
                       selectedAlert={state.selectedAlert}
                       onAlertSelect={handleAlertClick}
-                      onSOSSelect={() => {}}
+                      onSOSSelect={() => { }}
                     />
                   </div>
                 </div>
@@ -721,23 +718,6 @@ function AlertPageContent() {
             </motion.div>
           )}
 
-          {/* Cross-links */}
-          {state.viewMode === "dashboard" && (
-            <div className="mt-4 p-4 rounded-2xl bg-slate-900/40 border border-slate-700/30">
-              <h4 className="text-xs font-semibold text-slate-300 mb-3">Bước tiếp theo</h4>
-              <div className="flex flex-wrap gap-2">
-                <Link href="/map" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-blue-500/40 hover:text-blue-400 transition-colors">
-                  <Map className="w-3.5 h-3.5" /> Xem trên bản đồ <ArrowRight className="w-3 h-3" />
-                </Link>
-                <Link href="/rescue" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-amber-500/40 hover:text-amber-400 transition-colors">
-                  <HandHeart className="w-3.5 h-3.5" /> Kích hoạt cứu hộ <ArrowRight className="w-3 h-3" />
-                </Link>
-                <Link href="/dashboard" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/30 text-slate-400 text-xs hover:border-cyan-500/40 hover:text-cyan-400 transition-colors">
-                  <BarChart3 className="w-3.5 h-3.5" /> Xem thống kê <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
-            </div>
-          )}
 
           {/* Feed View */}
           {state.viewMode === "feed" && (
@@ -775,7 +755,7 @@ function AlertPageContent() {
                 userLocation={state.userLocation}
                 selectedAlert={state.selectedAlert}
                 onAlertSelect={handleAlertClick}
-                onSOSSelect={() => {}}
+                onSOSSelect={() => { }}
               />
             </motion.div>
           )}
@@ -884,9 +864,9 @@ function AlertPageContent() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/30 backdrop-blur-sm z-30 flex items-center justify-center"
           >
-            <div className="flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-900/90 border border-slate-700/50 shadow-xl">
-              <Loader2 className="w-5 h-5 text-blue-400 animate-spin" />
-              <span className="text-sm text-slate-300">
+            <div className="flex items-center gap-3 px-6 py-4 rounded-xl bg-white border border-slate-200 shadow-xl">
+              <Loader2 className="w-5 h-5 text-blue-500 animate-spin" />
+              <span className="text-sm text-slate-700">
                 Đang tải dữ liệu...
               </span>
             </div>
@@ -938,7 +918,7 @@ function AlertPageHeader({
       variants={headerVariants}
       initial="hidden"
       animate="visible"
-      className="sticky top-0 z-20 backdrop-blur-xl bg-slate-950/80 border-b border-slate-700/30"
+      className="sticky top-0 z-20 backdrop-blur-xl bg-white/95 border-b border-slate-200/80 shadow-sm"
     >
       <div className="px-4 sm:px-6 lg:px-8">
         {/* Top row: Title + actions */}
@@ -948,7 +928,7 @@ function AlertPageHeader({
               <Siren className="w-5 h-5 text-red-400" />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-white">
+              <h1 className="text-lg font-bold text-[#0F172A]">
                 Cảnh Báo & SOS
               </h1>
               <p className="text-[10px] text-slate-500">

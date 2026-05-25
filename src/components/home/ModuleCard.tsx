@@ -55,12 +55,12 @@ export default function ModuleCard({
         className="group relative block rounded-2xl border overflow-hidden transition-all duration-400 h-full"
         style={{
           background: isHovered
-            ? `linear-gradient(135deg, ${borderColor}08 0%, rgba(15,17,28,0.8) 50%, ${borderColor}05 100%)`
-            : "rgba(15,17,28,0.6)",
-          borderColor: isHovered ? `${borderColor}50` : "rgba(51,65,85,0.3)",
+            ? `linear-gradient(135deg, ${borderColor}06 0%, #FFFFFF 50%, ${borderColor}03 100%)`
+            : "#FFFFFF",
+          borderColor: isHovered ? `${borderColor}40` : "#E2E8F0",
           boxShadow: isHovered
-            ? `0 16px 48px ${glow}, 0 0 0 1px ${borderColor}20, inset 0 1px 0 ${borderColor}10`
-            : "0 4px 12px rgba(0,0,0,0.2)",
+            ? `0 16px 48px rgba(0,0,0,0.08), 0 0 0 1px ${borderColor}15`
+            : "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02)",
           transform: isHovered ? "translateY(-6px)" : "translateY(0)",
         }}
         onMouseEnter={() => setIsHovered(true)}
@@ -133,7 +133,7 @@ export default function ModuleCard({
           {/* Title */}
           <h3
             className={`${featured ? "text-xl md:text-2xl" : "text-base"} font-bold mb-3 transition-colors duration-300`}
-            style={{ color: isHovered ? "#ffffff" : "#e2e8f0" }}
+            style={{ color: isHovered ? "#0F172A" : "#1E293B" }}
           >
             {title}
           </h3>
@@ -167,7 +167,7 @@ export default function ModuleCard({
           <div className="flex items-center justify-between mt-auto">
             {/* Progress bar (fake health indicator) */}
             <div className="flex-1 mr-4">
-              <div className="h-1 rounded-full bg-slate-800/50 overflow-hidden">
+              <div className="h-1 rounded-full bg-slate-100 overflow-hidden">
                 <motion.div
                   className="h-full rounded-full"
                   style={{ backgroundColor: `${borderColor}60` }}
@@ -177,15 +177,15 @@ export default function ModuleCard({
                   transition={{ delay: index * 0.1 + 0.5, duration: 1, ease: "easeOut" }}
                 />
               </div>
-              <span className="text-[9px] text-slate-600 mt-1 block">Hoạt động</span>
+              <span className="text-[9px] text-slate-400 mt-1 block">Hoạt động</span>
             </div>
 
             {/* Arrow */}
             <div
               className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300"
               style={{
-                backgroundColor: isHovered ? `${borderColor}15` : "rgba(30,41,59,0.5)",
-                color: isHovered ? borderColor : "#475569",
+                backgroundColor: isHovered ? `${borderColor}10` : "#F1F5F9",
+                color: isHovered ? borderColor : "#64748B",
                 transform: isHovered ? "translateX(2px)" : "translateX(0)",
               }}
             >

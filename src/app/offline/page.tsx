@@ -33,7 +33,7 @@ export default function OfflinePage() {
           <h3 className="text-xs font-semibold text-slate-300 uppercase tracking-wider">
             Tính năng offline
           </h3>
-          <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-900/50 border border-slate-700/30">
+          <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-200">
             <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
               <Map className="w-4 h-4 text-blue-400" />
             </div>
@@ -42,7 +42,7 @@ export default function OfflinePage() {
               <p className="text-[10px] text-slate-500">Dữ liệu bản đồ cache</p>
             </div>
           </div>
-          <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-900/50 border border-slate-700/30">
+          <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-200">
             <div className="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center">
               <Siren className="w-4 h-4 text-red-400" />
             </div>

@@ -427,7 +427,7 @@ function DashboardHeaderComponent({
       initial="hidden"
       animate="visible"
       className={clsx(
-        "sticky top-0 z-30 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50",
+        "sticky top-0 z-30 bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-sm",
         className
       )}
     >
@@ -435,7 +435,7 @@ function DashboardHeaderComponent({
         {/* Title bar */}
         <div className="flex items-center justify-between py-3">
           <div>
-            <h1 className="text-lg font-bold text-white flex items-center gap-2">
+            <h1 className="text-lg font-bold text-[#0F172A] flex items-center gap-2">
               📊 Dashboard Thống kê
             </h1>
             <p className="text-[10px] text-slate-500">

@@ -19,7 +19,7 @@ export default function MobileBottomNav() {
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-950/95 backdrop-blur-2xl border-t border-slate-800/60"
+      className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-2xl border-t border-slate-200/80 shadow-sm"
       aria-label="Điều hướng di động"
     >
       <div className="flex items-center justify-around px-2 py-1 safe-area-bottom">
@@ -31,11 +31,11 @@ export default function MobileBottomNav() {
             <Link
               key={item.href}
               href={item.href}
-              className={clsx(
+                className={clsx(
                 "flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl min-w-[56px] transition-all duration-200",
                 isActive
-                  ? "text-blue-400"
-                  : "text-slate-500 active:text-slate-300"
+                  ? "text-[#0066FF]"
+                  : "text-slate-400 active:text-slate-600"
               )}
             >
               <div className="relative">
@@ -43,7 +43,7 @@ export default function MobileBottomNav() {
                 {isActive && (
                   <motion.div
                     layoutId="bottomNavIndicator"
-                    className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-blue-400"
+                    className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#0066FF]"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}

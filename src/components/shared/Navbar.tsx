@@ -15,7 +15,9 @@ import {
   Handshake,
   BarChart3,
   BookOpen,
+  Shield,
 } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const NAV_ITEMS = [
   { href: "/map", label: "Bản đồ", icon: Map },
@@ -48,17 +50,20 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/95 backdrop-blur-2xl border-b border-slate-200 shadow-md"
-          : "bg-white/80 backdrop-blur-xl border-b border-slate-100"
+          ? "bg-white/95 backdrop-blur-2xl border-b border-slate-200/80 shadow-sm"
+          : "bg-white/70 backdrop-blur-xl border-b border-slate-100/50"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-2xl">🛡️</span>
-            <span className="text-xl font-bold text-slate-900">
-              Cứu<span className="text-blue-600">Net</span>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#0066FF] to-[#00C9A7] flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+              <Shield className="w-4.5 h-4.5 text-white" />
+            </div>
+            <span className="text-xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-heading, inherit)' }}>
+              <span className="text-[#0F172A]">Cứu</span>
+              <span className="text-[#0066FF]">Net</span>
             </span>
           </Link>
 
@@ -72,10 +77,10 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "relative flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                    "relative flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200",
                     isActive
-                      ? "text-blue-600"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                      ? "text-[#0066FF]"
+                      : "text-slate-500 hover:text-[#0F172A] hover:bg-slate-50"
                   )}
                 >
                   <Icon className="w-4 h-4" />
@@ -83,7 +88,8 @@ export default function Navbar() {
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-blue-50 border border-blue-200 rounded-lg"
+                      className="absolute inset-0 rounded-lg"
+                      style={{ background: 'rgba(0, 102, 255, 0.06)', border: '1px solid rgba(0, 102, 255, 0.12)' }}
                       transition={{
                         type: "spring",
                         stiffness: 300,
@@ -96,17 +102,20 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
-          >
-            {mobileOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
-          </button>
+          {/* Theme Toggle + Mobile Menu Button */}
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden p-2 text-slate-500 hover:text-[#0F172A] hover:bg-slate-50 rounded-lg transition-colors"
+            >
+              {mobileOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -118,7 +127,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-b border-slate-200"
+            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-b border-slate-100"
           >
             <div className="px-4 py-3 space-y-1">
               {NAV_ITEMS.map((item) => {
@@ -132,9 +141,10 @@ export default function Navbar() {
                     className={cn(
                       "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all",
                       isActive
-                        ? "bg-blue-50 text-blue-600 border border-blue-200"
-                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                        ? "text-[#0066FF] border"
+                        : "text-slate-500 hover:text-[#0F172A] hover:bg-slate-50"
                     )}
+                    style={isActive ? { background: 'rgba(0, 102, 255, 0.06)', borderColor: 'rgba(0, 102, 255, 0.12)' } : undefined}
                   >
                     <Icon className="w-5 h-5" />
                     <span>{item.label}</span>
