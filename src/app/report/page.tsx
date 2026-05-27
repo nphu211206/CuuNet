@@ -422,7 +422,7 @@ function ReportPageContent() {
                 <h3 className="text-sm font-semibold text-[#0F172A]">Bộ lọc</h3>
                 <button
                   onClick={() => toggleMobileFilter(false)}
-                  className="p-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors"
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -570,7 +570,7 @@ function ReportHeader({
             {/* Mobile filter button */}
             <button
               onClick={onOpenFilter}
-              className="lg:hidden relative p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors"
+              className="lg:hidden relative p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
             >
               <Filter className="w-5 h-5" />
               {activeFilterCount > 0 && (
@@ -607,14 +607,14 @@ function ReportHeader({
             {/* Refresh */}
             <button
               onClick={onRefresh}
-              className="p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors"
+              className="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
               title="Làm mới"
             >
               <RefreshCw className="w-4 h-4" />
             </button>
 
             {/* View mode toggle */}
-            <div className="flex items-center rounded-lg bg-slate-800/50 border border-slate-700/30 p-0.5">
+            <div className="flex items-center rounded-lg bg-slate-100 border border-slate-200 p-0.5">
               <button
                 onClick={() => onViewModeChange("feed")}
                 className={clsx(
