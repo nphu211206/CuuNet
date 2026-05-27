@@ -11,8 +11,8 @@ export const recentDisasters: DisasterEvent[] = [
       "Bão siêu mạnh đổ bộ miền Bắc, gió giật cấp 16-17. Cảnh báo lũ quét, sạt lở đất tại các tỉnh miền núi.",
     location: { lat: 21.0285, lng: 105.8542, province: "Hà Nội" },
     affectedPeople: 2500000,
-    startDate: "2024-09-07T08:00:00Z",
-    updatedAt: "2024-09-07T14:30:00Z",
+    startDate: "2026-05-15T08:00:00Z",
+    updatedAt: "2026-05-20T14:30:00Z",
   },
   {
     id: "dis-002",
@@ -24,8 +24,8 @@ export const recentDisasters: DisasterEvent[] = [
       "Mưa lớn kéo dài gây ngập lụt nặng tại Quảng Bình, Quảng Trị. Mực nước sông dâng cao kỷ lục.",
     location: { lat: 17.4689, lng: 106.6223, province: "Quảng Bình" },
     affectedPeople: 180000,
-    startDate: "2024-10-15T06:00:00Z",
-    updatedAt: "2024-10-16T10:00:00Z",
+    startDate: "2026-05-20T06:00:00Z",
+    updatedAt: "2026-05-22T10:00:00Z",
   },
   {
     id: "dis-003",
@@ -37,8 +37,8 @@ export const recentDisasters: DisasterEvent[] = [
       "Sạt lở đất nghiêm trọng do mưa bão, nhiều ngôi nhà bị vùi lấp. Đang cứu hộ khẩn cấp.",
     location: { lat: 22.338, lng: 103.8447, province: "Lào Cai" },
     affectedPeople: 45000,
-    startDate: "2024-09-08T03:00:00Z",
-    updatedAt: "2024-09-08T18:00:00Z",
+    startDate: "2026-05-22T03:00:00Z",
+    updatedAt: "2026-05-24T18:00:00Z",
   },
   {
     id: "dis-004",
