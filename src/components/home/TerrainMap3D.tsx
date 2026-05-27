@@ -103,11 +103,23 @@ function TerrainMesh() {
     }, []);
 
     const material = useMemo(() => {
+        const canvas = document.createElement("canvas");
+        canvas.width = 256;
+        canvas.height = 256;
+        const ctx = canvas.getContext("2d")!;
+        const grad = ctx.createLinearGradient(0, 0, 0, 256);
+        grad.addColorStop(0, "#4ade80");
+        grad.addColorStop(0.3, "#22c55e");
+        grad.addColorStop(0.6, "#15803d");
+        grad.addColorStop(0.8, "#854d0e");
+        grad.addColorStop(1, "#a16207");
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 256, 256);
+        const texture = new THREE.CanvasTexture(canvas);
         return new THREE.MeshStandardMaterial({
-            vertexColors: false,
-            color: "#E2E8F0",
-            metalness: 0.1,
-            roughness: 0.8,
+            map: texture,
+            metalness: 0.05,
+            roughness: 0.7,
             flatShading: true,
         });
     }, []);
@@ -228,11 +240,11 @@ function WaterPlane() {
         <mesh ref={waterRef} rotation={[-Math.PI / 2, 0, 0]} position={[0, -2.1, 0]}>
             <planeGeometry args={[200, 200]} />
             <meshStandardMaterial
-                color="#BFDBFE"
+                color="#60a5fa"
                 transparent
-                opacity={0.4}
-                metalness={0.3}
-                roughness={0.2}
+                opacity={0.5}
+                metalness={0.4}
+                roughness={0.1}
             />
         </mesh>
     );

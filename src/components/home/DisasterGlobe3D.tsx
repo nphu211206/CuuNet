@@ -66,18 +66,18 @@ function EarthGlobe() {
         canvas.height = 512;
         const ctx = canvas.getContext("2d")!;
 
-        // Ocean gradient
+        // Ocean - deep blue
         const oceanGrad = ctx.createLinearGradient(0, 0, 0, 512);
-        oceanGrad.addColorStop(0, "#0A1628");
-        oceanGrad.addColorStop(0.3, "#0E2A4A");
-        oceanGrad.addColorStop(0.5, "#163D6B");
-        oceanGrad.addColorStop(0.7, "#0E2A4A");
-        oceanGrad.addColorStop(1, "#0A1628");
+        oceanGrad.addColorStop(0, "#1a365d");
+        oceanGrad.addColorStop(0.3, "#1e3a5f");
+        oceanGrad.addColorStop(0.5, "#1a365d");
+        oceanGrad.addColorStop(0.7, "#1e3a5f");
+        oceanGrad.addColorStop(1, "#1a365d");
         ctx.fillStyle = oceanGrad;
         ctx.fillRect(0, 0, 1024, 512);
 
-        // Grid lines (latitude/longitude)
-        ctx.strokeStyle = "rgba(0, 102, 255, 0.08)";
+        // Grid lines (latitude/longitude) - subtle
+        ctx.strokeStyle = "rgba(100, 180, 255, 0.08)";
         ctx.lineWidth = 0.5;
         for (let i = 0; i < 18; i++) {
             ctx.beginPath();
@@ -92,9 +92,57 @@ function EarthGlobe() {
             ctx.stroke();
         }
 
-        // Vietnam landmass (simplified polygon)
-        ctx.fillStyle = "rgba(0, 102, 255, 0.25)";
-        ctx.strokeStyle = "rgba(0, 201, 167, 0.6)";
+        // Landmasses - green/earth tone
+        ctx.fillStyle = "rgba(34, 139, 34, 0.2)";
+        ctx.strokeStyle = "rgba(34, 139, 34, 0.4)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        const continent1 = [[450, 100], [550, 90], [580, 130], [560, 200], [500, 220], [440, 180], [430, 130]];
+        ctx.moveTo(continent1[0][0], continent1[0][1]);
+        for (const [x, y] of continent1.slice(1)) ctx.lineTo(x, y);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = "rgba(34, 139, 34, 0.15)";
+        ctx.beginPath();
+        const continent2 = [[700, 120], [800, 100], [850, 150], [830, 220], [760, 250], [710, 200], [690, 150]];
+        ctx.moveTo(continent2[0][0], continent2[0][1]);
+        for (const [x, y] of continent2.slice(1)) ctx.lineTo(x, y);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = "rgba(34, 139, 34, 0.12)";
+        ctx.beginPath();
+        const continent3 = [[300, 200], [380, 180], [420, 230], [400, 300], [340, 320], [280, 280], [290, 230]];
+        ctx.moveTo(continent3[0][0], continent3[0][1]);
+        for (const [x, y] of continent3.slice(1)) ctx.lineTo(x, y);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = "rgba(34, 139, 34, 0.12)";
+        ctx.beginPath();
+        const continent4 = [[150, 250], [220, 230], [260, 280], [240, 340], [180, 350], [140, 310], [145, 270]];
+        ctx.moveTo(continent4[0][0], continent4[0][1]);
+        for (const [x, y] of continent4.slice(1)) ctx.lineTo(x, y);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = "rgba(34, 139, 34, 0.12)";
+        ctx.beginPath();
+        const continent5 = [[800, 280], [870, 260], [900, 310], [880, 370], [830, 380], [790, 340], [795, 300]];
+        ctx.moveTo(continent5[0][0], continent5[0][1]);
+        for (const [x, y] of continent5.slice(1)) ctx.lineTo(x, y);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        // Vietnam landmass — bright highlight
+        ctx.fillStyle = "rgba(0, 180, 100, 0.45)";
+        ctx.strokeStyle = "rgba(0, 255, 136, 0.8)";
         ctx.lineWidth = 1.5;
         ctx.beginPath();
         // Vietnam coordinates mapped to texture
