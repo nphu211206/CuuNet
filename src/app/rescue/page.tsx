@@ -292,7 +292,7 @@ function RescuePageHeader({
           <div className="flex items-center gap-3">
             <button
               onClick={onToggleMobileDrawer}
-              className="lg:hidden p-2 rounded-lg bg-slate-800/50 border border-slate-700/30 text-slate-400"
+              className="lg:hidden p-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-500"
             >
               <Menu className="w-4 h-4" />
             </button>

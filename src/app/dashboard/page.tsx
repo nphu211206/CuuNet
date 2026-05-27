@@ -20,6 +20,7 @@
 import { useCallback, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CompactPageHeader from "@/components/shared/CompactPageHeader";
+import { exportDashboardToPDF } from "@/lib/export-pdf";
 import {
   X,
   Loader2,
@@ -430,8 +431,13 @@ function DashboardPageContent() {
   }, [filteredYearlyData, showToast]);
 
   // Export PNG (placeholder)
-  const handleExportPNG = useCallback(() => {
-    showToast({ type: "info", title: "Xuất PNG", message: "Tính năng đang phát triển", duration: 3000 });
+  const handleExportPNG = useCallback(async () => {
+    const success = await exportDashboardToPDF("dashboard-content", "CuuNet-ThongKe");
+    if (success) {
+      showToast({ type: "success", title: "Xuất PDF", message: "Đã xuất file PDF thành công", duration: 3000 });
+    } else {
+      showToast({ type: "error", title: "Lỗi", message: "Không thể xuất PDF", duration: 3000 });
+    }
   }, [showToast]);
 
   // Aggregated data

@@ -593,7 +593,7 @@ function ReportHeader({
           {/* Right: Actions */}
           <div className="flex items-center gap-2">
             {/* Online indicator */}
-            <div className="hidden sm:flex items-center gap-1.5 px-2 py-1 rounded-full bg-slate-800/50">
+            <div className="hidden sm:flex items-center gap-1.5 px-2 py-1 rounded-full bg-slate-100 border border-slate-200">
               {isOnline ? (
                 <Wifi className="w-3 h-3 text-green-400" />
               ) : (
