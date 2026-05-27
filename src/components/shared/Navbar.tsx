@@ -18,6 +18,7 @@ import {
   Shield,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const NAV_ITEMS = [
   { href: "/map", label: "Bản đồ", icon: Map },
@@ -104,6 +105,7 @@ export default function Navbar() {
 
           {/* Theme Toggle + Mobile Menu Button */}
           <div className="flex items-center gap-2">
+            <LanguageSwitcher />
             <ThemeToggle />
             <button
               onClick={() => setMobileOpen(!mobileOpen)}

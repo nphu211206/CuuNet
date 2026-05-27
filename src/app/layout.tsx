@@ -12,6 +12,7 @@ import AIChatbot from "@/components/shared/AIChatbot";
 import ThemeProvider from "@/components/shared/ThemeProvider";
 import BrandedLoadingScreen from "@/components/shared/BrandedLoadingScreen";
 import KeyboardShortcutsGuide from "@/components/shared/KeyboardShortcutsGuide";
+import { I18nProvider } from "@/lib/i18n";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-heading" });
@@ -49,18 +50,20 @@ export default function RootLayout({
     <html lang="vi">
       <body className={`${inter.className} ${spaceGrotesk.variable} flex flex-col min-h-screen antialiased`}>
         <ThemeProvider>
-          <BrandedLoadingScreen />
-          <Navbar />
-          <main className="flex-1 pt-16 pb-16 md:pb-0">
-            <PageTransition>{children}</PageTransition>
-          </main>
-          <Footer />
-          <MobileBottomNav />
-          <CursorGlow />
-          <ScrollProgress />
-          <CommandPalette />
-          <KeyboardShortcutsGuide />
-          <AIChatbot />
+          <I18nProvider>
+            <BrandedLoadingScreen />
+            <Navbar />
+            <main className="flex-1 pt-16 pb-16 md:pb-0">
+              <PageTransition>{children}</PageTransition>
+            </main>
+            <Footer />
+            <MobileBottomNav />
+            <CursorGlow />
+            <ScrollProgress />
+            <CommandPalette />
+            <KeyboardShortcutsGuide />
+            <AIChatbot />
+          </I18nProvider>
         </ThemeProvider>
       </body>
     </html>
