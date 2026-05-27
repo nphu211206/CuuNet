@@ -20,7 +20,7 @@ import ModuleCard from "@/components/home/ModuleCard";
 const ParticleField = dynamic(() => import("@/components/home/ParticleField"), { ssr: false });
 const DisasterGlobe3D = dynamic(() => import("@/components/home/DisasterGlobe3D"), { ssr: false });
 const GSAPScrollAnimations = dynamic(() => import("@/components/home/GSAPScrollAnimations"), { ssr: false });
-const TerrainMap3D = dynamic(() => import("@/components/home/TerrainMap3D"), { ssr: false });
+const VietnamHeatmap = dynamic(() => import("@/components/home/VietnamHeatmap"), { ssr: false });
 const GlobeVisualization = dynamic(() => import("@/components/home/GlobeVisualization"), { ssr: false });
 const FlowTimeline = dynamic(() => import("@/components/home/FlowTimeline"), { ssr: false });
 const TechStack = dynamic(() => import("@/components/home/TechStack"), { ssr: false });
@@ -298,8 +298,8 @@ export default function Home() {
       {/* ── 3D INTERACTIVE GLOBE ──────────────────────────────────────────────── */}
       <DisasterGlobe3D />
 
-      {/* ── 3D TERRAIN MAP ────────────────────────────────────────────────────── */}
-      <TerrainMap3D />
+      {/* ── VIETNAM DISASTER HEATMAP ───────────────────────────────────────────── */}
+      <VietnamHeatmap />
 
       {/* ── IMPACT NUMBERS (merged LiveStats + ImpactShowcase) ────────────────── */}
       <LiveStats />
