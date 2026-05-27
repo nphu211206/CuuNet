@@ -19,6 +19,7 @@ import ModuleCard from "@/components/home/ModuleCard";
 // Dynamic imports for heavy below-fold components (Phase 8 — Performance)
 const ParticleField = dynamic(() => import("@/components/home/ParticleField"), { ssr: false });
 const DisasterGlobe3D = dynamic(() => import("@/components/home/DisasterGlobe3D"), { ssr: false });
+const GSAPScrollAnimations = dynamic(() => import("@/components/home/GSAPScrollAnimations"), { ssr: false });
 const GlobeVisualization = dynamic(() => import("@/components/home/GlobeVisualization"), { ssr: false });
 const FlowTimeline = dynamic(() => import("@/components/home/FlowTimeline"), { ssr: false });
 const TechStack = dynamic(() => import("@/components/home/TechStack"), { ssr: false });
@@ -107,6 +108,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
+      <GSAPScrollAnimations />
 
       {/* ── LIVE TICKER (Premium Light) ──────────────────────────────────────── */}
       <div className="relative overflow-hidden ticker-gradient border-b border-[#0066FF]/5 py-2">
@@ -225,7 +227,7 @@ export default function Home() {
       </HeroVideo>
 
       {/* ── HOW IT WORKS FLOW ────────────────────────────────────────────────── */}
-      <section className="py-28 px-6 border-t border-slate-200 relative overflow-hidden">
+      <section className="py-28 px-6 border-t border-slate-200 relative overflow-hidden" data-gsap-parallax>
         {/* Background accents */}
         <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-blue-600/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-purple-600/5 rounded-full blur-[100px]" />
@@ -257,7 +259,7 @@ export default function Home() {
       </section>
 
       {/* ── MODULES GRID (BENTO) ──────────────────────────────────────────────── */}
-      <section className="py-28 px-6">
+      <section className="py-28 px-6" data-gsap-stagger>
         <div className="max-w-7xl mx-auto">
           <ScrollReveal className="mb-16">
             <div className="flex items-center gap-2 mb-3">
