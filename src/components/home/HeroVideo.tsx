@@ -47,10 +47,10 @@ export default function HeroVideo({ posterSrc, videoSrc, children }: HeroVideoPr
           fetchPriority="high"
         />
 
-        {/* Dark overlay with gradient */}
-        <div className="absolute inset-0 bg-slate-950/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e] via-slate-950/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 to-transparent" />
+        {/* Dark overlay with gradient — lighter for better readability */}
+        <div className="absolute inset-0 bg-slate-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e]/70 via-slate-950/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/40 to-transparent" />
 
         {/* Animated glow orbs */}
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-blue-600/8 blur-[120px] animate-pulse" />
