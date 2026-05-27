@@ -79,47 +79,13 @@ function Earth() {
         return loader.load("/images/earth-topology.png");
     }, []);
 
-    // Custom shader for day/night blending
     const earthMaterial = useMemo(() => {
-        return new THREE.ShaderMaterial({
-            uniforms: {
-                dayMap: { value: dayTexture },
-                nightMap: { value: nightTexture },
-                sunDirection: { value: new THREE.Vector3(1, 0.3, 0.5).normalize() },
-            },
-            vertexShader: `
-                varying vec2 vUv;
-                varying vec3 vNormal;
-                varying vec3 vPosition;
-                void main() {
-                    vUv = uv;
-                    vNormal = normalize(normalMatrix * normal);
-                    vPosition = (modelViewMatrix * vec4(position, 1.0)).xyz;
-                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-                }
-            `,
-            fragmentShader: `
-                uniform sampler2D dayMap;
-                uniform sampler2D nightMap;
-                uniform vec3 sunDirection;
-                varying vec2 vUv;
-                varying vec3 vNormal;
-                varying vec3 vPosition;
-                void main() {
-                    vec3 dayColor = texture2D(dayMap, vUv).rgb;
-                    vec3 nightColor = texture2D(nightMap, vUv).rgb;
-                    float sunDot = dot(vNormal, sunDirection);
-                    float mixFactor = smoothstep(-0.1, 0.3, sunDot);
-                    vec3 color = mix(nightColor * 1.2, dayColor, mixFactor);
-                    // Add subtle rim light
-                    vec3 viewDir = normalize(-vPosition);
-                    float rim = 1.0 - max(dot(viewDir, vNormal), 0.0);
-                    color += vec3(0.1, 0.2, 0.4) * pow(rim, 3.0) * 0.3;
-                    gl_FragColor = vec4(color, 1.0);
-                }
-            `,
+        return new THREE.MeshStandardMaterial({
+            map: dayTexture,
+            metalness: 0.05,
+            roughness: 0.7,
         });
-    }, [dayTexture, nightTexture]);
+    }, [dayTexture]);
 
     useFrame((state) => {
         if (earthRef.current) {
@@ -143,7 +109,7 @@ function Earth() {
                 <meshPhongMaterial
                     map={topoTexture}
                     transparent
-                    opacity={0.15}
+                    opacity={0.08}
                     depthWrite={false}
                 />
             </mesh>
@@ -310,9 +276,9 @@ function GlobeScene() {
 
     return (
         <>
-            <ambientLight intensity={0.15} />
-            <directionalLight position={[5, 3, 5]} intensity={1.2} color="#ffffff" />
-            <pointLight position={[-5, -3, -5]} intensity={0.15} color="#4A90D9" />
+            <ambientLight intensity={0.6} />
+            <directionalLight position={[5, 3, 5]} intensity={1.8} color="#ffffff" />
+            <pointLight position={[-5, -3, -5]} intensity={0.3} color="#4A90D9" />
 
             <Earth />
             <Particles />
