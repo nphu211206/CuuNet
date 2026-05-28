@@ -159,7 +159,7 @@ function ProvinceSelector({
                   }}
                   className={`w-full text-left px-3 py-2 text-xs transition-colors ${province === value
                     ? "bg-blue-500/15 text-blue-400"
-                    : "text-slate-500 hover:bg-slate-100 hover:text-slate-700"
+                    : "text-slate-500 hover:bg-slate-50"
                     }`}
                 >
                   {province}
@@ -285,7 +285,7 @@ function DisasterTypeFilter({
             onClick={() => onChange(type)}
             className={`text-[10px] px-2 py-1.5 rounded-md transition-colors ${value === type
               ? "border text-white font-medium"
-              : "bg-slate-800/30 text-slate-500 hover:text-slate-400"
+              : "bg-slate-100 text-slate-500 hover:text-slate-700 hover:bg-slate-200"
               }`}
             style={
               value === type
@@ -327,7 +327,7 @@ function ProvinceRiskList({
   return (
     <div>
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-slate-200 flex items-center gap-2">
+        <h3 className="text-sm font-semibold text-slate-800 flex items-center gap-2">
           <MapPin className="w-4 h-4 text-slate-500" />
           Xếp hạng rủi ro tỉnh/thành
         </h3>
@@ -353,7 +353,7 @@ function ProvinceRiskList({
               {i + 1}
             </span>
             <div className="flex-1 min-w-0">
-              <p className="text-xs text-slate-300 font-medium truncate">
+              <p className="text-xs text-slate-700 font-medium truncate">
                 {risk.province}
               </p>
               <p className="text-[10px] text-slate-600">
@@ -436,7 +436,7 @@ function ExternalAlertsPanel() {
       <div className="glass-card p-4">
         <div className="flex items-center gap-2 mb-3">
           <Zap className="w-4 h-4 text-slate-500" />
-          <h3 className="text-sm font-semibold text-slate-200">
+          <h3 className="text-sm font-semibold text-slate-800">
             Cảnh báo bên ngoài
           </h3>
         </div>
@@ -457,7 +457,7 @@ function ExternalAlertsPanel() {
       <div className="glass-card p-4">
         <div className="flex items-center gap-2 mb-3">
           <Zap className="w-4 h-4 text-slate-500" />
-          <h3 className="text-sm font-semibold text-slate-200">
+          <h3 className="text-sm font-semibold text-slate-800">
             Cảnh báo bên ngoài
           </h3>
         </div>
@@ -472,7 +472,7 @@ function ExternalAlertsPanel() {
     <div className="glass-card p-4">
       <div className="flex items-center gap-2 mb-3">
         <Zap className="w-4 h-4 text-amber-400" />
-        <h3 className="text-sm font-semibold text-slate-200">
+        <h3 className="text-sm font-semibold text-slate-800">
           Cảnh báo bên ngoài
         </h3>
         <span className="text-[10px] text-slate-600 ml-auto">
