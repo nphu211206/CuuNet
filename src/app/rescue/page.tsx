@@ -243,7 +243,7 @@ function ToastContainer({
                 </div>
                 <button
                   onClick={() => onDismiss(toast.id)}
-                  className="text-slate-500 hover:text-slate-300 transition-colors"
+                  className="text-slate-500 hover:text-slate-700 transition-colors"
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>

@@ -236,14 +236,14 @@ function ToastContainer({
             >
               <span className="text-base shrink-0">{style.iconSymbol}</span>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-slate-200">
+                <p className="text-sm font-semibold text-slate-800">
                   {toast.title}
                 </p>
                 <p className="text-xs text-slate-400 mt-0.5">{toast.message}</p>
               </div>
               <button
                 onClick={() => onDismiss(toast.id)}
-                className="p-1 rounded text-slate-500 hover:text-slate-300 transition-colors shrink-0"
+                className="p-1 rounded text-slate-500 hover:text-slate-700 transition-colors shrink-0"
               >
                 <X className="w-3.5 h-3.5" />
               </button>
@@ -634,7 +634,7 @@ function AlertPageContent() {
                 {/* Recent Alerts */}
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-sm font-semibold text-slate-300 flex items-center gap-2">
+                    <h2 className="text-sm font-semibold text-slate-700 flex items-center gap-2">
                       <Bell className="w-4 h-4 text-amber-400" />
                       Cảnh báo gần đây
                     </h2>
@@ -659,7 +659,7 @@ function AlertPageContent() {
                 {/* Map Preview */}
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-sm font-semibold text-slate-300 flex items-center gap-2">
+                    <h2 className="text-sm font-semibold text-slate-700 flex items-center gap-2">
                       <Map className="w-4 h-4 text-green-400" />
                       Bản đồ cảnh báo
                     </h2>
@@ -691,7 +691,7 @@ function AlertPageContent() {
                       <Siren className="w-5 h-5 text-red-400" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-semibold text-slate-200">
+                      <h3 className="text-sm font-semibold text-slate-800">
                         Cần cứu hộ khẩn cấp?
                       </h3>
                       <p className="text-xs text-slate-500">
