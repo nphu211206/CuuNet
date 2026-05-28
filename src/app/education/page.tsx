@@ -153,7 +153,7 @@ function ToastContainer({
                 </div>
                 <button
                   onClick={() => onDismiss(toast.id)}
-                  className="text-slate-500 hover:text-slate-300 transition-colors"
+                  className="text-slate-500 hover:text-slate-700 transition-colors"
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>
@@ -317,7 +317,7 @@ function CoursesView() {
                   {isCompleted ? "✓" : lesson.order}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className={clsx("text-xs font-medium", isCompleted ? "text-slate-500 line-through" : "text-slate-200")}>
+                  <h4 className={clsx("text-xs font-medium", isCompleted ? "text-slate-500 line-through" : "text-slate-800")}>
                     {lesson.titleVi}
                   </h4>
                   <p className="text-[10px] text-slate-500 mt-0.5">
@@ -656,7 +656,7 @@ function InfoView() {
 
       <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
         <h3 className="text-sm font-bold text-blue-400 mb-2">🎯 Mục tiêu học tập</h3>
-        <ul className="space-y-1.5 text-xs text-blue-300/70">
+        <ul className="space-y-1.5 text-xs text-blue-600">
           <li>• Nhận biết các loại thiên tai ở Việt Nam</li>
           <li>• Biết cách chuẩn bị và ứng phó khi có thiên tai</li>
           <li>• Có kỹ năng sơ cấp cứu cơ bản</li>
@@ -667,7 +667,7 @@ function InfoView() {
 
       <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
         <h3 className="text-sm font-bold text-green-400 mb-2">📚 Nguồn tham khảo</h3>
-        <ul className="space-y-1 text-xs text-green-300/70">
+        <ul className="space-y-1 text-xs text-green-600">
           <li>• UNESCO Comprehensive School Safety Framework</li>
           <li>• UNICEF Child-Centered DRR</li>
           <li>• IFRC Volunteer Training Curricula</li>
