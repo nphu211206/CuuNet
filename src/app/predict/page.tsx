@@ -498,7 +498,7 @@ function ExternalAlertsPanel() {
             >
               <span className="text-sm mt-0.5">{config.icon}</span>
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-slate-300 truncate">{alert.title}</p>
+                <p className="text-xs text-slate-700 truncate">{alert.title}</p>
                 <div className="flex items-center gap-2 mt-0.5">
                   <span
                     className="text-[9px] px-1 py-0.5 rounded"
@@ -822,7 +822,7 @@ function PredictPageContent() {
           {/* Province Risk Cards (high risk only) */}
           {highRiskProvinces.length > 0 && (
             <div>
-              <h3 className="text-sm font-semibold text-slate-200 mb-3 flex items-center gap-2">
+              <h3 className="text-sm font-semibold text-slate-800 mb-3 flex items-center gap-2">
                 <AlertCircle className="w-4 h-4 text-red-400" />
                 Tỉnh có rủi ro cao cần chú ý
               </h3>
