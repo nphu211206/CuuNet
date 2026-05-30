@@ -9,12 +9,12 @@ export default function PredictLoading() {
           <div className="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center mx-auto animate-pulse">
             <Brain className="w-8 h-8 text-blue-400" />
           </div>
-          <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center mx-auto" style={{ left: "calc(50% + 16px)", top: "calc(50% + 16px)" }}>
+          <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-white border border-slate-200 flex items-center justify-center mx-auto" style={{ left: "calc(50% + 16px)", top: "calc(50% + 16px)" }}>
             <Loader2 className="w-4 h-4 text-blue-400 animate-spin" />
           </div>
         </div>
 
-        <h2 className="text-lg font-semibold text-slate-200 mb-2">
+        <h2 className="text-lg font-semibold text-slate-800 mb-2">
           Đang tải mô hình AI
         </h2>
         <p className="text-sm text-slate-500 max-w-xs mx-auto">

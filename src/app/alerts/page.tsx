@@ -670,7 +670,7 @@ function AlertPageContent() {
                       Xem đầy đủ <ChevronRight className="w-3 h-3" />
                     </button>
                   </div>
-                  <div className="rounded-xl overflow-hidden border border-slate-700/30">
+                  <div className="rounded-xl overflow-hidden border border-slate-200">
                     <AlertMap
                       alerts={filteredAlerts}
                       sosRequests={state.sosRequests}

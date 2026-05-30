@@ -190,7 +190,7 @@ export default function Home() {
               </Link>
               <Link href="/report"
                 aria-label="Gửi báo cáo thiên tai cộng đồng"
-                className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800/60 border border-slate-700/40 text-slate-300 text-sm font-bold hover:border-slate-500 hover:text-white transition-all duration-300 hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white/80 text-sm font-bold hover:border-white/40 hover:text-white transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm"
               >
                 <Users className="w-4 h-4" />
                 <span>Gửi Báo cáo</span>

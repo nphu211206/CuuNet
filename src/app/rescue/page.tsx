@@ -390,7 +390,7 @@ function DashboardView() {
       {/* Grid: Map + SOS */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* Mini map */}
-        <div className="rounded-xl overflow-hidden border border-slate-700/30" style={{ height: 350 }}>
+        <div className="rounded-xl overflow-hidden border border-slate-200" style={{ height: 350 }}>
           <OperationsMap
             incidents={state.incidents}
             sosRequests={state.sosRequests}
@@ -673,7 +673,7 @@ function RescuePageContent() {
 
       case "operations":
         return (
-          <div className="rounded-xl overflow-hidden border border-slate-700/30" style={{ height: 600 }}>
+          <div className="rounded-xl overflow-hidden border border-slate-200" style={{ height: 600 }}>
             <OperationsMap
               incidents={state.incidents}
               sosRequests={state.sosRequests}
