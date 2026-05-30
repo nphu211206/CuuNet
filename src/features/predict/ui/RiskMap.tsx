@@ -80,7 +80,7 @@ function ProvincePopup({
   return (
     <div className="min-w-[220px]">
       {/* Header */}
-      <div className="flex items-center justify-between mb-2 pb-2 border-b border-slate-700/50">
+      <div className="flex items-center justify-between mb-2 pb-2 border-b border-slate-200">
         <div>
           <h3 className="text-sm font-bold text-white">{province}</h3>
           <p className="text-[10px] text-slate-500">{GEO_LABELS[geoType]}</p>
@@ -105,10 +105,10 @@ function ProvincePopup({
           return (
             <div key={item.type} className="flex items-center gap-2">
               <span className="text-xs">{DISASTER_CONFIG[item.type].icon}</span>
-              <span className="text-[11px] text-slate-400 flex-1">
+              <span className="text-[11px] text-slate-500 flex-1">
                 {DISASTER_CONFIG[item.type].label}
               </span>
-              <div className="w-16 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+              <div className="w-16 h-1.5 bg-slate-200 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full"
                   style={{
@@ -129,7 +129,7 @@ function ProvincePopup({
       </div>
 
       {/* Trend */}
-      <div className="flex items-center gap-1.5 text-xs pt-2 border-t border-slate-700/50">
+      <div className="flex items-center gap-1.5 text-xs pt-2 border-t border-slate-200">
         <span style={{ color: trendColor }}>{trendSymbol}</span>
         <span className="text-slate-500">
           Xu hướng:{" "}
@@ -173,7 +173,7 @@ function MapControls({
             className={`text-[10px] px-2 py-1 rounded-md transition-colors ${
               selectedType === null
                 ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                : "bg-slate-800/40 text-slate-500 hover:text-slate-400"
+                : "bg-slate-100 text-slate-500 hover:text-slate-500"
             }`}
           >
             Tất cả
@@ -185,7 +185,7 @@ function MapControls({
               className={`text-[10px] px-2 py-1 rounded-md transition-colors ${
                 selectedType === type
                   ? "border text-white"
-                  : "bg-slate-800/40 text-slate-500 hover:text-slate-400"
+                  : "bg-slate-100 text-slate-500 hover:text-slate-500"
               }`}
               style={
                 selectedType === type
@@ -231,7 +231,7 @@ function RiskLegend() {
                 }}
               />
               <div>
-                <span className="text-[9px] text-slate-400 block">{item.label}</span>
+                <span className="text-[9px] text-slate-500 block">{item.label}</span>
                 <span className="text-[8px] text-slate-600">{item.range}</span>
               </div>
             </div>
@@ -313,7 +313,7 @@ export default function RiskMap({
 
   return (
     <motion.div
-      className={`relative rounded-xl overflow-hidden border border-slate-700/40 ${className}`}
+      className={`relative rounded-xl overflow-hidden border border-slate-200 ${className}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

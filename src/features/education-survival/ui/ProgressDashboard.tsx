@@ -80,7 +80,7 @@ function LevelProgressBar({ progress }: { progress: LearningProgress }) {
   const percent = getLevelProgressPercent(progress.xp, progress.level);
 
   return (
-    <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-700/30">
+    <div className="p-4 rounded-xl bg-white border border-slate-200">
       <div className="flex items-center gap-4">
         {/* Level icon */}
         <motion.div
@@ -101,11 +101,11 @@ function LevelProgressBar({ progress }: { progress: LearningProgress }) {
             <span className="text-lg font-bold" style={{ color: currentLevel.color }}>
               Level {currentLevel.level}
             </span>
-            <span className="text-sm text-slate-400">- {currentLevel.nameVi}</span>
+            <span className="text-sm text-slate-500">- {currentLevel.nameVi}</span>
           </div>
 
           {/* XP bar */}
-          <div className="h-3 bg-slate-800 rounded-full overflow-hidden mb-1">
+          <div className="h-3 bg-slate-200 rounded-full overflow-hidden mb-1">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${percent}%` }}
@@ -221,8 +221,8 @@ function SkillTree({ competencies }: { competencies: Record<string, number> }) {
   const userPath = userPoints.map((p) => `${p.x},${p.y}`).join(" ");
 
   return (
-    <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-700/30">
-      <h4 className="text-xs font-semibold text-slate-200 mb-3 flex items-center gap-2">
+    <div className="p-4 rounded-xl bg-white border border-slate-200">
+      <h4 className="text-xs font-semibold text-slate-800 mb-3 flex items-center gap-2">
         <Brain className="w-4 h-4 text-purple-400" />
         Cây kỹ năng
       </h4>
@@ -332,7 +332,7 @@ function SkillTree({ competencies }: { competencies: Record<string, number> }) {
           return (
             <div key={topic.key} className="flex items-center gap-1.5 text-[10px]">
               <span>{topic.icon}</span>
-              <span className="text-slate-400">{topic.label}</span>
+              <span className="text-slate-500">{topic.label}</span>
               <span className="ml-auto font-bold" style={{ color: level.color }}>
                 {level.labelVi}
               </span>
@@ -366,7 +366,7 @@ function LearningStatsGrid({ progress }: { progress: LearningProgress }) {
         <motion.div
           key={stat.label}
           variants={cardVariants}
-          className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30"
+          className="p-3 rounded-xl bg-white border border-slate-200"
         >
           <div className="flex items-center gap-2 mb-1">
             <span style={{ color: stat.color }}>{stat.icon}</span>
@@ -381,7 +381,7 @@ function LearningStatsGrid({ progress }: { progress: LearningProgress }) {
       {/* Velocity */}
       <motion.div
         variants={cardVariants}
-        className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30"
+        className="p-3 rounded-xl bg-white border border-slate-200"
       >
         <div className="flex items-center gap-2 mb-1">
           <TrendingUp className="w-4 h-4 text-cyan-400" />
@@ -394,7 +394,7 @@ function LearningStatsGrid({ progress }: { progress: LearningProgress }) {
       {/* Time to next level */}
       <motion.div
         variants={cardVariants}
-        className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30"
+        className="p-3 rounded-xl bg-white border border-slate-200"
       >
         <div className="flex items-center gap-2 mb-1">
           <Clock className="w-4 h-4 text-amber-400" />

@@ -118,11 +118,11 @@ function SubtaskProgress({ subtasks }: { subtasks: RescueTask["subtasks"] }) {
     <div className="mt-2">
       <div className="flex items-center justify-between mb-1">
         <span className="text-[9px] text-slate-500">Tiến độ</span>
-        <span className="text-[9px] font-medium text-slate-400">
+        <span className="text-[9px] font-medium text-slate-500">
           {completed}/{subtasks.length}
         </span>
       </div>
-      <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
+      <div className="h-1 bg-slate-200 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${percent}%` }}
@@ -145,7 +145,7 @@ function SubtaskProgress({ subtasks }: { subtasks: RescueTask["subtasks"] }) {
             <span
               className={clsx(
                 "text-[10px]",
-                sub.completed ? "text-slate-600 line-through" : "text-slate-400"
+                sub.completed ? "text-slate-600 line-through" : "text-slate-500"
               )}
             >
               {sub.title}
@@ -196,8 +196,8 @@ function SortableTaskCard({
       className={clsx(
         "rounded-xl border p-3 transition-all duration-200",
         isDragging
-          ? "bg-slate-800/80 border-blue-500/50 shadow-lg shadow-blue-500/10"
-          : "bg-slate-900/50 border-slate-700/30 hover:border-slate-600/50"
+          ? "bg-slate-200/80 border-blue-500/50 shadow-lg shadow-blue-500/10"
+          : "bg-white border-slate-200 hover:border-slate-300"
       )}
     >
       {/* Header */}
@@ -206,7 +206,7 @@ function SortableTaskCard({
         <div
           {...attributes}
           {...listeners}
-          className="mt-0.5 cursor-grab active:cursor-grabbing p-0.5 rounded hover:bg-slate-800/50"
+          className="mt-0.5 cursor-grab active:cursor-grabbing p-0.5 rounded hover:bg-slate-100"
         >
           <GripVertical className="w-3.5 h-3.5 text-slate-600" />
         </div>
@@ -230,7 +230,7 @@ function SortableTaskCard({
             )}
           </div>
 
-          <h4 className="text-xs font-medium text-slate-200 leading-tight mb-1">
+          <h4 className="text-xs font-medium text-slate-800 leading-tight mb-1">
             {task.title}
           </h4>
 
@@ -268,7 +268,7 @@ function SortableTaskCard({
       </div>
 
       {/* Quick status buttons */}
-      <div className="flex items-center gap-1 mt-2 pt-2 border-t border-slate-700/20">
+      <div className="flex items-center gap-1 mt-2 pt-2 border-t border-slate-200">
         {task.status !== "done" && (
           <>
             {task.status === "new" && (
@@ -310,7 +310,7 @@ function TaskCardOverlay({ task }: { task: RescueTask }) {
   const priorityConfig = TASK_PRIORITY_CONFIG[task.priority];
 
   return (
-    <div className="rounded-xl border border-blue-500/50 bg-slate-800/90 p-3 shadow-2xl shadow-blue-500/20 rotate-2">
+    <div className="rounded-xl border border-blue-500/50 bg-white/95 p-3 shadow-2xl shadow-blue-500/20 rotate-2">
       <div className="flex items-center gap-1.5 mb-1">
         <span
           className="text-[9px] font-bold px-1.5 py-0.5 rounded"
@@ -322,7 +322,7 @@ function TaskCardOverlay({ task }: { task: RescueTask }) {
           {task.priority}
         </span>
       </div>
-      <h4 className="text-xs font-medium text-slate-200">{task.title}</h4>
+      <h4 className="text-xs font-medium text-slate-800">{task.title}</h4>
     </div>
   );
 }
@@ -356,7 +356,7 @@ function KanbanColumn({
         }}
       >
         <span className="text-sm">{column.icon}</span>
-        <span className="text-xs font-semibold text-slate-200 flex-1">
+        <span className="text-xs font-semibold text-slate-800 flex-1">
           {column.labelVi}
         </span>
         <span
@@ -372,7 +372,7 @@ function KanbanColumn({
 
       {/* Task list */}
       <SortableContext items={taskIds} strategy={verticalListSortingStrategy}>
-        <div className="space-y-2 flex-1 min-h-[200px] p-1 rounded-xl bg-slate-900/20 border border-slate-800/30">
+        <div className="space-y-2 flex-1 min-h-[200px] p-1 rounded-xl bg-white border border-slate-200">
           {tasks.map((task) => (
             <SortableTaskCard
               key={task.id}

@@ -191,9 +191,9 @@ function StatCard({
       onClick={onClick}
       className={clsx(
         "relative rounded-2xl p-4 overflow-hidden cursor-pointer",
-        "bg-slate-900/60 backdrop-blur-xl",
-        "border border-slate-700/40",
-        "hover:border-slate-600/60 hover:shadow-xl hover:shadow-black/20",
+        "bg-white backdrop-blur-xl",
+        "border border-slate-200",
+        "hover:border-slate-300 hover:shadow-xl hover:shadow-black/20",
         "transition-all duration-300",
         "group"
       )}
@@ -241,7 +241,7 @@ function StatCard({
             {animatedValue.toLocaleString()}
           </motion.span>
           {suffix && (
-            <span className="text-sm font-medium text-slate-400">{suffix}</span>
+            <span className="text-sm font-medium text-slate-500">{suffix}</span>
           )}
         </div>
 
@@ -287,7 +287,7 @@ function TrendBadge({ trend }: { trend: "increasing" | "stable" | "decreasing" }
         return {
           icon: Minus,
           label: "Ổn định",
-          color: "text-slate-400",
+          color: "text-slate-500",
           bg: "bg-slate-500/10",
           border: "border-slate-500/20",
         };
@@ -475,8 +475,8 @@ function AlertStatsBarComponent({ stats, className }: AlertStatsBarProps) {
         variants={cardVariants}
         className={clsx(
           "flex flex-wrap items-center justify-between gap-3 px-4 py-2.5 rounded-xl",
-          "bg-slate-900/40 backdrop-blur-sm",
-          "border border-slate-700/30"
+          "bg-white backdrop-blur-sm",
+          "border border-slate-200"
         )}
       >
         {/* Left: Severity breakdown */}
@@ -491,14 +491,14 @@ function AlertStatsBarComponent({ stats, className }: AlertStatsBarProps) {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5">
             <span className="text-[10px] text-slate-500">Loại phổ biến:</span>
-            <span className="text-xs font-medium text-slate-300">
+            <span className="text-xs font-medium text-slate-700">
               {topTypeInfo.icon} {topTypeInfo.label}
             </span>
           </div>
 
           <div className="flex items-center gap-1.5">
             <span className="text-[10px] text-slate-500">Tỉnh nhiều nhất:</span>
-            <span className="text-xs font-medium text-slate-300">
+            <span className="text-xs font-medium text-slate-700">
               📍 {stats.topProvince}
             </span>
           </div>

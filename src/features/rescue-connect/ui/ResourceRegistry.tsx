@@ -92,14 +92,14 @@ function UtilizationBar({ resources }: { resources: RescueResource[] }) {
   }, [resources]);
 
   return (
-    <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30">
+    <div className="p-3 rounded-xl bg-white border border-slate-200">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs font-semibold text-slate-200">Sử dụng tài nguyên</span>
+        <span className="text-xs font-semibold text-slate-800">Sử dụng tài nguyên</span>
         <span className="text-xs font-bold text-blue-400">{stats.utilizationRate}%</span>
       </div>
 
       {/* Progress bar */}
-      <div className="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+      <div className="h-2 bg-slate-200 rounded-full overflow-hidden flex">
         {stats.total > 0 && (
           <>
             <motion.div
@@ -180,7 +180,7 @@ function StatusFilterRow({
               "transition-all duration-200 border whitespace-nowrap",
               isActive
                 ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
             )}
           >
             <span>{filter.icon}</span>
@@ -239,7 +239,7 @@ function TypeFilterRow({
               "transition-all duration-200 border whitespace-nowrap",
               isActive
                 ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
             )}
           >
             <span>{type.icon}</span>
@@ -268,7 +268,7 @@ function CapabilityBadges({ capabilities }: { capabilities: ResourceCapability[]
         return (
           <span
             key={cap}
-            className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-md text-[8px] font-medium bg-slate-800/50 text-slate-400 border border-slate-700/30"
+            className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-md text-[8px] font-medium bg-slate-100 text-slate-500 border border-slate-200"
           >
             {config.icon} {config.labelVi}
           </span>
@@ -315,7 +315,7 @@ function ResourceCard({
       layout
       className={clsx(
         "rounded-xl border p-3 transition-all duration-200",
-        "bg-slate-900/50 border-slate-700/30 hover:border-slate-600/50"
+        "bg-white border-slate-200 hover:border-slate-300"
       )}
     >
       {/* Header */}
@@ -334,7 +334,7 @@ function ResourceCard({
         {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-0.5">
-            <h4 className="text-xs font-semibold text-slate-200 truncate">{resource.name}</h4>
+            <h4 className="text-xs font-semibold text-slate-800 truncate">{resource.name}</h4>
             <span
               className="text-[9px] font-medium px-1.5 py-0.5 rounded shrink-0"
               style={{
@@ -377,7 +377,7 @@ function ResourceCard({
         {/* Expand toggle */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="p-1 rounded hover:bg-slate-800/50"
+          className="p-1 rounded hover:bg-slate-100"
         >
           {isExpanded ? (
             <ChevronDown className="w-4 h-4 text-slate-500" />
@@ -396,10 +396,10 @@ function ResourceCard({
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden"
           >
-            <div className="pt-3 mt-3 border-t border-slate-700/20 space-y-2">
+            <div className="pt-3 mt-3 border-t border-slate-200 space-y-2">
               {/* Notes */}
               {resource.notes && (
-                <p className="text-[11px] text-slate-400">{resource.notes}</p>
+                <p className="text-[11px] text-slate-500">{resource.notes}</p>
               )}
 
               {/* Contact */}
@@ -454,10 +454,10 @@ function ResourceCard({
 function EmptyState({ statusFilter, typeFilter }: { statusFilter: string; typeFilter: string }) {
   return (
     <div className="flex flex-col items-center justify-center py-12 text-center">
-      <div className="w-16 h-16 rounded-full bg-slate-800/50 flex items-center justify-center mb-4">
+      <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mb-4">
         <Truck className="w-8 h-8 text-slate-600" />
       </div>
-      <p className="text-sm text-slate-400 mb-1">Không có tài nguyên</p>
+      <p className="text-sm text-slate-500 mb-1">Không có tài nguyên</p>
       <p className="text-xs text-slate-600">
         {statusFilter === "all" && typeFilter === "all"
           ? "Chưa có tài nguyên nào được đăng ký"

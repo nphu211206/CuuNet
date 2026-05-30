@@ -64,7 +64,7 @@ function PeriodSelector({
             "px-3 py-1.5 rounded-lg text-[11px] font-medium border transition-colors",
             activeRange === r.id
               ? "bg-amber-500/15 border-amber-500/40 text-amber-400"
-              : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+              : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
           )}
         >
           {r.label}
@@ -80,8 +80,8 @@ function PeriodSelector({
 
 function InsightsPanel({ insights }: { insights: string[] }) {
   return (
-    <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-4">
-      <h3 className="text-sm font-semibold text-slate-200 mb-3 flex items-center gap-2">
+    <div className="rounded-xl bg-white border border-slate-200 p-4">
+      <h3 className="text-sm font-semibold text-slate-800 mb-3 flex items-center gap-2">
         <Lightbulb className="w-4 h-4 text-amber-400" />
         Phân tích & Nhận định
       </h3>
@@ -92,10 +92,10 @@ function InsightsPanel({ insights }: { insights: string[] }) {
             initial={{ opacity: 0, x: -12 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.1, duration: 0.3 }}
-            className="flex items-start gap-2 p-2 rounded-lg bg-slate-800/30"
+            className="flex items-start gap-2 p-2 rounded-lg bg-slate-50"
           >
             <ArrowRight className="w-3 h-3 text-amber-400 mt-0.5 shrink-0" />
-            <span className="text-[11px] text-slate-300">{insight}</span>
+            <span className="text-[11px] text-slate-700">{insight}</span>
           </motion.div>
         ))}
       </div>
@@ -123,7 +123,7 @@ function TrendSummaryCard({
   color: string;
 }) {
   return (
-    <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-3">
+    <div className="rounded-xl bg-white border border-slate-200 p-3">
       <span className="text-[10px] text-slate-500">{labelVi}</span>
       <div className="flex items-baseline gap-2 mt-1">
         <span className="text-lg font-bold" style={{ color }}>{value}</span>
@@ -225,7 +225,7 @@ function StrategicDashboardComponent({
     <div className={clsx("space-y-4", className)}>
       {/* Period Selector */}
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-slate-200 flex items-center gap-2">
+        <h3 className="text-sm font-semibold text-slate-800 flex items-center gap-2">
           <Calendar className="w-4 h-4 text-amber-400" />
           Phân tích xu hướng dài hạn
         </h3>

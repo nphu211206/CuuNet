@@ -157,7 +157,7 @@ function TriageBreakdownDisplay({
       {factors.map((factor) => (
         <div key={factor.label} className="flex items-center gap-2">
           <span className="text-[10px] text-slate-500 w-16">{factor.label}</span>
-          <div className="flex-1 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+          <div className="flex-1 h-1.5 bg-slate-200 rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${factor.score}%` }}
@@ -248,7 +248,7 @@ function StatusFilterRow({
               "transition-all duration-200 border whitespace-nowrap",
               isActive
                 ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
             )}
           >
             <span>{filter.icon}</span>
@@ -301,8 +301,8 @@ function SOSCard({
       className={clsx(
         "rounded-xl border transition-all duration-200 cursor-pointer",
         isSelected
-          ? "bg-slate-800/60 border-blue-500/40"
-          : "bg-slate-900/40 border-slate-700/30 hover:border-slate-600/50"
+          ? "bg-slate-100 border-blue-500/40"
+          : "bg-white border-slate-200 hover:border-slate-300"
       )}
     >
       {/* Header */}
@@ -335,7 +335,7 @@ function SOSCard({
               </span>
             </div>
 
-            <div className="flex items-center gap-1.5 text-[11px] text-slate-400 mb-1">
+            <div className="flex items-center gap-1.5 text-[11px] text-slate-500 mb-1">
               <MapPin className="w-3 h-3" />
               <span>{sos.location.district}, {sos.location.province}</span>
             </div>
@@ -368,7 +368,7 @@ function SOSCard({
               e.stopPropagation();
               setIsExpanded(!isExpanded);
             }}
-            className="p-1 rounded hover:bg-slate-800/50"
+            className="p-1 rounded hover:bg-slate-100"
           >
             {isExpanded ? (
               <ChevronDown className="w-4 h-4 text-slate-500" />
@@ -389,16 +389,16 @@ function SOSCard({
             exit="exit"
             className="overflow-hidden"
           >
-            <div className="px-3 pb-3 space-y-3 border-t border-slate-700/20 pt-3">
+            <div className="px-3 pb-3 space-y-3 border-t border-slate-200 pt-3">
               {/* Description */}
               {sos.situation.description && (
-                <p className="text-xs text-slate-400">{sos.situation.description}</p>
+                <p className="text-xs text-slate-500">{sos.situation.description}</p>
               )}
 
               {/* Triage explanation */}
-              <div className="p-2 rounded-lg bg-slate-800/30 border border-slate-700/20">
-                <p className="text-[10px] font-medium text-slate-300 mb-1.5">📊 Giải thích phân loại</p>
-                <p className="text-[11px] text-slate-400">{sos.triage.explanation}</p>
+              <div className="p-2 rounded-lg bg-slate-50 border border-slate-200">
+                <p className="text-[10px] font-medium text-slate-700 mb-1.5">📊 Giải thích phân loại</p>
+                <p className="text-[11px] text-slate-500">{sos.triage.explanation}</p>
                 <div className="mt-2">
                   <TriageBreakdownDisplay breakdown={sos.triage.breakdown} />
                 </div>
@@ -408,16 +408,16 @@ function SOSCard({
               {sos.dispatch.assignedUnitId && (
                 <div className="p-2 rounded-lg bg-blue-500/5 border border-blue-500/15">
                   <p className="text-[10px] font-medium text-blue-400 mb-1">🚁 Đơn vị được triển khai</p>
-                  <p className="text-xs text-slate-300">ID: {sos.dispatch.assignedUnitId}</p>
+                  <p className="text-xs text-slate-700">ID: {sos.dispatch.assignedUnitId}</p>
                   {sos.dispatch.etaMinutes && (
-                    <p className="text-[11px] text-slate-400">ETA: {sos.dispatch.etaMinutes} phút</p>
+                    <p className="text-[11px] text-slate-500">ETA: {sos.dispatch.etaMinutes} phút</p>
                   )}
                 </div>
               )}
 
               {/* Timeline */}
               <div className="space-y-1">
-                <p className="text-[10px] font-medium text-slate-400">📅 Timeline</p>
+                <p className="text-[10px] font-medium text-slate-500">📅 Timeline</p>
                 {sos.timeline.slice(-4).map((entry, i) => (
                   <div key={i} className="flex items-start gap-2 text-[10px]">
                     <div
@@ -425,7 +425,7 @@ function SOSCard({
                       style={{ backgroundColor: RESCUE_SOS_STATUS_CONFIG[entry.status]?.color || "#6B7280" }}
                     />
                     <div>
-                      <span className="text-slate-400">
+                      <span className="text-slate-500">
                         {new Date(entry.timestamp).toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" })}
                       </span>
                       {entry.note && <span className="text-slate-500 ml-1">- {entry.note}</span>}
@@ -488,10 +488,10 @@ function SOSCard({
 function EmptyState({ filter }: { filter: string }) {
   return (
     <div className="flex flex-col items-center justify-center py-12 text-center">
-      <div className="w-16 h-16 rounded-full bg-slate-800/50 flex items-center justify-center mb-4">
+      <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mb-4">
         <Siren className="w-8 h-8 text-slate-600" />
       </div>
-      <p className="text-sm text-slate-400 mb-1">Không có yêu cầu SOS</p>
+      <p className="text-sm text-slate-500 mb-1">Không có yêu cầu SOS</p>
       <p className="text-xs text-slate-600">
         {filter === "all" ? "Chưa có yêu cầu cứu hộ nào" : `Không có yêu cầu ở trạng thái "${filter}"`}
       </p>
@@ -523,7 +523,7 @@ function SOSStatsSummary({ requests }: { requests: RescueSOSRequest[] }) {
       ].map((stat) => (
         <div
           key={stat.label}
-          className="p-2 rounded-lg bg-slate-900/40 border border-slate-700/30 text-center"
+          className="p-2 rounded-lg bg-white border border-slate-200 text-center"
         >
           <motion.span
             initial={{ opacity: 0, scale: 0.5 }}

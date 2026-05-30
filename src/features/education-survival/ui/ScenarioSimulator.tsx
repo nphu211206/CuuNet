@@ -98,7 +98,7 @@ function MetricsDisplay({
       {items.map((item) => (
         <div
           key={item.label}
-          className="p-2 rounded-lg bg-slate-800/30 border border-slate-700/20 text-center"
+          className="p-2 rounded-lg bg-slate-50 border border-slate-200 text-center"
         >
           <div className="flex items-center justify-center gap-1 mb-1">
             <span style={{ color: item.color }}>{item.icon}</span>
@@ -152,14 +152,14 @@ function DecisionNode({
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        className="p-4 rounded-xl bg-slate-900/60 border border-slate-700/30"
+        className="p-4 rounded-xl bg-white border border-slate-200"
       >
-        <p className="text-sm text-slate-200 leading-relaxed">{node.narrativeVi}</p>
+        <p className="text-sm text-slate-800 leading-relaxed">{node.narrativeVi}</p>
       </motion.div>
 
       {/* Choices */}
       <div className="space-y-2">
-        <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Quyết định của bạn</p>
+        <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Quyết định của bạn</p>
         {node.choices?.map((choice, i) => (
           <motion.button
             key={choice.id}
@@ -172,16 +172,16 @@ function DecisionNode({
             onClick={() => onChoiceSelect(choice.id)}
             className={clsx(
               "w-full p-3 rounded-xl border text-left transition-all duration-200",
-              "bg-slate-900/40 border-slate-700/30 hover:border-slate-600/50",
-              "hover:bg-slate-800/40"
+              "bg-white border-slate-200 hover:border-slate-300",
+              "hover:bg-slate-100"
             )}
           >
             <div className="flex items-center gap-3">
-              <div className="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-400 shrink-0">
+              <div className="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-500 shrink-0">
                 {String.fromCharCode(65 + i)}
               </div>
               <div className="flex-1">
-                <p className="text-xs text-slate-200">{choice.textVi}</p>
+                <p className="text-xs text-slate-800">{choice.textVi}</p>
               </div>
               <ArrowRight className="w-4 h-4 text-slate-600 shrink-0" />
             </div>
@@ -225,13 +225,13 @@ function OutcomeNode({
             ? "bg-red-500/10 border-red-500/20"
             : choice?.correctness === "optimal"
               ? "bg-green-500/10 border-green-500/20"
-              : "bg-slate-900/40 border-slate-700/30"
+              : "bg-white border-slate-200"
         )}
       >
         <div className="flex items-center gap-2 mb-2">
           {choice && <CorrectnessBadge correctness={choice.correctness} />}
         </div>
-        <p className="text-sm text-slate-200 leading-relaxed">{node.narrativeVi}</p>
+        <p className="text-sm text-slate-800 leading-relaxed">{node.narrativeVi}</p>
       </motion.div>
 
       {/* Learning note */}
@@ -282,7 +282,7 @@ function DebriefNode({
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", stiffness: 200, damping: 15 }}
-        className="p-6 rounded-xl bg-slate-900/60 border border-slate-700/30 text-center"
+        className="p-6 rounded-xl bg-white border border-slate-200 text-center"
       >
         <Trophy className="w-10 h-10 mx-auto mb-2" style={{ color: scoreColor }} />
         <h3 className="text-2xl font-black tabular-nums" style={{ color: scoreColor }}>
@@ -306,7 +306,7 @@ function DebriefNode({
       <div className="flex gap-2">
         <button
           onClick={onRestart}
-          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-slate-800/40 border border-slate-700/40 text-slate-400 text-xs font-medium hover:border-slate-600/50 transition-colors"
+          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-500 text-xs font-medium hover:border-slate-300 transition-colors"
         >
           <RotateCcw className="w-3.5 h-3.5" />
           Thử lại
@@ -380,7 +380,7 @@ function ScenarioSimulatorComponent({
   return (
     <div className={clsx("space-y-4", className)}>
       {/* Scenario header */}
-      <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-700/30">
+      <div className="p-4 rounded-xl bg-white border border-slate-200">
         <div className="flex items-center gap-3 mb-2">
           <div
             className="w-10 h-10 rounded-xl flex items-center justify-center text-lg"
@@ -389,13 +389,13 @@ function ScenarioSimulatorComponent({
             {scenario.icon}
           </div>
           <div>
-            <h2 className="text-sm font-bold text-slate-200">{scenario.titleVi}</h2>
+            <h2 className="text-sm font-bold text-slate-800">{scenario.titleVi}</h2>
             <p className="text-[10px] text-slate-500">
               {typeConfig.icon} {typeConfig.labelVi} • {scenario.region} • ⚡ {scenario.xpReward} XP
             </p>
           </div>
         </div>
-        <p className="text-[11px] text-slate-400">{scenario.descriptionVi}</p>
+        <p className="text-[11px] text-slate-500">{scenario.descriptionVi}</p>
 
         {/* Accumulated metrics */}
         <div className="mt-3">

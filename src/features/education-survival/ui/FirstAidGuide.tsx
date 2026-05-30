@@ -66,17 +66,17 @@ function StepCard({ step, index, isLast }: { step: FirstAidGuideType["steps"][0]
 
       {/* Step content */}
       <div className="flex-1 pb-4">
-        <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30">
+        <div className="p-3 rounded-xl bg-white border border-slate-200">
           <div className="flex items-center gap-2 mb-1">
             <span className="text-base">{step.icon}</span>
-            <h4 className="text-xs font-semibold text-slate-200">{step.titleVi}</h4>
+            <h4 className="text-xs font-semibold text-slate-800">{step.titleVi}</h4>
             {step.duration && (
               <span className="text-[9px] px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400 ml-auto">
                 {step.duration}
               </span>
             )}
           </div>
-          <p className="text-[11px] text-slate-400 leading-relaxed">{step.descriptionVi}</p>
+          <p className="text-[11px] text-slate-500 leading-relaxed">{step.descriptionVi}</p>
 
           {/* Tips */}
           {step.tipsVi && step.tipsVi.length > 0 && (
@@ -115,14 +115,14 @@ function GuideDetail({
       {/* Back button */}
       <button
         onClick={onBack}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/40 border border-slate-700/40 text-slate-400 text-[11px] font-medium hover:border-slate-600/50 transition-colors"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-500 text-[11px] font-medium hover:border-slate-300 transition-colors"
       >
         <ArrowLeft className="w-3.5 h-3.5" />
         Quay lại danh sách
       </button>
 
       {/* Header */}
-      <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-700/30">
+      <div className="p-4 rounded-xl bg-white border border-slate-200">
         <div className="flex items-center gap-3 mb-2">
           <div
             className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
@@ -157,7 +157,7 @@ function GuideDetail({
 
       {/* Steps */}
       <div>
-        <h3 className="text-xs font-semibold text-slate-300 mb-3">Các bước thực hiện</h3>
+        <h3 className="text-xs font-semibold text-slate-700 mb-3">Các bước thực hiện</h3>
         {guide.steps.map((step, i) => (
           <StepCard
             key={step.stepNumber}
@@ -220,7 +220,7 @@ function GuideList({
 }) {
   return (
     <div className="space-y-3">
-      <h3 className="text-sm font-semibold text-slate-200">Chọn chủ đề sơ cứu</h3>
+      <h3 className="text-sm font-semibold text-slate-800">Chọn chủ đề sơ cứu</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {guides.map((guide) => {
           const topicConfig = FIRST_AID_TOPIC_CONFIG[guide.topic];
@@ -230,7 +230,7 @@ function GuideList({
               whileHover={{ scale: 1.02, transition: { duration: 0.15 } }}
               whileTap={{ scale: 0.98 }}
               onClick={() => onSelect(guide)}
-              className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 hover:border-slate-600/50 transition-colors text-left"
+              className="p-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition-colors text-left"
             >
               <div className="flex items-center gap-3">
                 <div
@@ -240,7 +240,7 @@ function GuideList({
                   {guide.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-xs font-semibold text-slate-200">{guide.titleVi}</h4>
+                  <h4 className="text-xs font-semibold text-slate-800">{guide.titleVi}</h4>
                   <p className="text-[10px] text-slate-500">{guide.steps.length} bước</p>
                 </div>
                 <span
@@ -267,7 +267,7 @@ function GuideList({
             <div key={num.number} className="flex items-center gap-2">
               <span className="text-sm">{num.icon}</span>
               <div>
-                <span className="text-xs font-bold text-slate-200">{num.number}</span>
+                <span className="text-xs font-bold text-slate-800">{num.number}</span>
                 <span className="text-[9px] text-slate-500 ml-1">{num.label}</span>
               </div>
             </div>

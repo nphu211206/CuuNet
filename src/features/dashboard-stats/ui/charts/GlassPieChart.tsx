@@ -59,7 +59,7 @@ function GlassTooltip({
           {data.nameVi || data.name}
         </p>
       </div>
-      <p className="text-[11px] text-slate-300">
+      <p className="text-[11px] text-slate-700">
         {formatNumber(item.value)} ({formatPercent(data.percentage)})
       </p>
     </div>
@@ -160,12 +160,12 @@ function GlassPieChartComponent({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: DASHBOARD_ANIMATION.duration.slow }}
-      className={clsx("rounded-xl bg-slate-900/40 border border-slate-700/30 p-4", className)}
+      className={clsx("rounded-xl bg-white border border-slate-200 p-4", className)}
     >
       {/* Title */}
       {(title || titleVi) && (
         <div className="mb-3">
-          {titleVi && <h3 className="text-sm font-semibold text-slate-200">{titleVi}</h3>}
+          {titleVi && <h3 className="text-sm font-semibold text-slate-800">{titleVi}</h3>}
           {title && <p className="text-[10px] text-slate-500">{title}</p>}
         </div>
       )}
@@ -209,7 +209,7 @@ function GlassPieChartComponent({
             {centerValue && (
               <span className="text-xl font-bold text-white">{centerValue}</span>
             )}
-            <span className="text-[10px] text-slate-400">{centerLabel}</span>
+            <span className="text-[10px] text-slate-500">{centerLabel}</span>
           </div>
         )}
       </div>

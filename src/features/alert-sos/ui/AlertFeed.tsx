@@ -124,7 +124,7 @@ function FilterChip({
         "border whitespace-nowrap",
         active
           ? "border-opacity-50 shadow-sm"
-          : "bg-slate-800/30 border-slate-700/30 text-slate-400 hover:border-slate-600/50"
+          : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
       )}
       style={
         active
@@ -168,9 +168,9 @@ function AlertCard({
       onClick={onClick}
       className={clsx(
         "relative flex gap-3 p-3.5 rounded-xl cursor-pointer",
-        "bg-slate-900/50 backdrop-blur-sm",
-        "border border-slate-700/30",
-        "hover:border-slate-600/50 hover:bg-slate-900/70",
+        "bg-white backdrop-blur-sm",
+        "border border-slate-200",
+        "hover:border-slate-300 hover:bg-slate-900/70",
         "transition-all duration-200 group",
         isExpired && "opacity-50",
         isCancelled && "opacity-40"
@@ -282,10 +282,10 @@ function EmptyState({ hasFilters }: { hasFilters: boolean }) {
       animate={{ opacity: 1, y: 0 }}
       className="flex flex-col items-center justify-center py-16 text-center"
     >
-      <div className="w-16 h-16 rounded-2xl bg-slate-800/50 flex items-center justify-center mb-4">
+      <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mb-4">
         <Shield className="w-8 h-8 text-slate-600" />
       </div>
-      <h3 className="text-lg font-semibold text-slate-400 mb-1">
+      <h3 className="text-lg font-semibold text-slate-500 mb-1">
         {hasFilters ? "Không tìm thấy cảnh báo" : "Không có cảnh báo"}
       </h3>
       <p className="text-sm text-slate-600 max-w-xs">
@@ -307,15 +307,15 @@ function LoadingSkeleton() {
       {Array.from({ length: 5 }, (_, i) => (
         <div
           key={i}
-          className="flex gap-3 p-3.5 rounded-xl bg-slate-900/30 border border-slate-700/20 animate-pulse"
+          className="flex gap-3 p-3.5 rounded-xl bg-white border border-slate-200 animate-pulse"
         >
-          <div className="w-10 h-10 rounded-xl bg-slate-800" />
+          <div className="w-10 h-10 rounded-xl bg-slate-200" />
           <div className="flex-1 space-y-2">
-            <div className="h-4 bg-slate-800 rounded w-3/4" />
-            <div className="h-3 bg-slate-800 rounded w-1/2" />
-            <div className="h-3 bg-slate-800 rounded w-2/3" />
+            <div className="h-4 bg-slate-200 rounded w-3/4" />
+            <div className="h-3 bg-slate-200 rounded w-1/2" />
+            <div className="h-3 bg-slate-200 rounded w-2/3" />
           </div>
-          <div className="w-16 h-6 bg-slate-800 rounded" />
+          <div className="w-16 h-6 bg-slate-200 rounded" />
         </div>
       ))}
     </div>
@@ -343,8 +343,8 @@ function SortDropdown({
         className={clsx(
           "flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg",
           "text-xs font-medium",
-          "bg-slate-800/40 border border-slate-700/40",
-          "text-slate-300 hover:border-slate-600/50",
+          "bg-slate-100 border border-slate-200",
+          "text-slate-700 hover:border-slate-300",
           "transition-all duration-200"
         )}
       >
@@ -361,8 +361,8 @@ function SortDropdown({
             exit={{ opacity: 0, y: -5 }}
             className={clsx(
               "absolute top-full right-0 mt-1 w-44 rounded-xl overflow-hidden z-50",
-              "bg-slate-900/95 backdrop-blur-xl",
-              "border border-slate-700/50",
+              "bg-white/95 backdrop-blur-xl",
+              "border border-slate-200",
               "shadow-xl shadow-black/30"
             )}
           >
@@ -378,7 +378,7 @@ function SortDropdown({
                   "text-xs transition-colors",
                   value === option.value
                     ? "bg-blue-500/15 text-blue-400"
-                    : "text-slate-300 hover:bg-slate-800/60"
+                    : "text-slate-700 hover:bg-slate-100"
                 )}
               >
                 <span>{option.icon}</span>
@@ -456,7 +456,7 @@ function AlertFeedComponent({
               "border",
               showFilters || hasFilters
                 ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                : "bg-slate-800/40 border-slate-700/40 text-slate-400 hover:border-slate-600/50"
+                : "bg-slate-100 border-slate-200 text-slate-500 hover:border-slate-300"
             )}
           >
             <Filter className="w-3.5 h-3.5" />
@@ -487,7 +487,7 @@ function AlertFeedComponent({
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden"
           >
-            <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 space-y-3">
+            <div className="p-3 rounded-xl bg-white border border-slate-200 space-y-3">
               {/* Severity filters */}
               <div>
                 <p className="text-[10px] text-slate-500 uppercase tracking-wider font-medium mb-1.5">

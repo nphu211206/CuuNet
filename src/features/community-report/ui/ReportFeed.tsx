@@ -286,10 +286,10 @@ function ReportFeedHeader({
     <div className="flex items-center justify-between mb-4">
       {/* Count */}
       <div className="flex items-center gap-2">
-        <h2 className="text-sm font-medium text-slate-300">
+        <h2 className="text-sm font-medium text-slate-700">
           Báo cáo cộng đồng
         </h2>
-        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-700/50 text-slate-400">
+        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-700/50 text-slate-500">
           {count}
         </span>
       </div>
@@ -300,8 +300,8 @@ function ReportFeedHeader({
           onClick={onToggleSort}
           className={clsx(
             "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs",
-            "bg-slate-800/50 border border-slate-700/50 text-slate-400",
-            "hover:bg-slate-700/50 hover:text-slate-300 transition-colors"
+            "bg-slate-100 border border-slate-200 text-slate-500",
+            "hover:bg-slate-200 hover:text-slate-700 transition-colors"
           )}
         >
           <ArrowUpDown className="w-3.5 h-3.5" />
@@ -321,7 +321,7 @@ function ReportFeedHeader({
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="absolute right-0 top-full mt-1 z-50 w-48 py-1 rounded-lg bg-slate-800 border border-slate-700/50 shadow-xl shadow-black/30"
+              className="absolute right-0 top-full mt-1 z-50 w-48 py-1 rounded-lg bg-slate-200 border border-slate-200 shadow-xl shadow-black/30"
             >
               {Object.entries(SORT_OPTIONS).map(([key, option]) => (
                 <button
@@ -331,7 +331,7 @@ function ReportFeedHeader({
                     "w-full flex items-center gap-2 px-3 py-2 text-xs text-left transition-colors",
                     currentSort === key
                       ? "bg-blue-500/10 text-blue-400"
-                      : "text-slate-400 hover:bg-slate-700/50 hover:text-slate-300"
+                      : "text-slate-500 hover:bg-slate-200 hover:text-slate-700"
                   )}
                 >
                   <span>{option.icon}</span>
@@ -358,7 +358,7 @@ function ReportFeedSkeleton() {
       {Array.from({ length: REPORT_CONFIG.SKELETON_COUNT }).map((_, i) => (
         <div
           key={i}
-          className="rounded-xl border border-slate-700/30 bg-slate-900/40 p-4 animate-pulse"
+          className="rounded-xl border border-slate-200 bg-white p-4 animate-pulse"
         >
           {/* Header skeleton */}
           <div className="flex items-start gap-2 mb-3">
@@ -381,7 +381,7 @@ function ReportFeedSkeleton() {
           </div>
 
           {/* Meta skeleton */}
-          <div className="flex items-center justify-between pt-2 border-t border-slate-700/20">
+          <div className="flex items-center justify-between pt-2 border-t border-slate-200">
             <div className="flex gap-3">
               <div className="h-3 w-8 rounded bg-slate-700/30" />
               <div className="h-3 w-16 rounded bg-slate-700/30" />
@@ -408,12 +408,12 @@ function ReportFeedEmpty() {
       className="flex flex-col items-center justify-center py-16 px-4"
     >
       {/* Illustration */}
-      <div className="w-20 h-20 rounded-full bg-slate-800/50 flex items-center justify-center mb-6">
+      <div className="w-20 h-20 rounded-full bg-slate-100 flex items-center justify-center mb-6">
         <Inbox className="w-10 h-10 text-slate-600" />
       </div>
 
       {/* Text */}
-      <h3 className="text-lg font-semibold text-slate-400 mb-2">
+      <h3 className="text-lg font-semibold text-slate-500 mb-2">
         Chưa có báo cáo nào
       </h3>
       <p className="text-sm text-slate-500 text-center max-w-md mb-6">
@@ -426,8 +426,8 @@ function ReportFeedEmpty() {
         onClick={() => window.location.reload()}
         className={clsx(
           "inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm",
-          "bg-slate-800/50 border border-slate-700/50 text-slate-400",
-          "hover:bg-slate-700/50 hover:text-slate-300 transition-colors"
+          "bg-slate-100 border border-slate-200 text-slate-500",
+          "hover:bg-slate-200 hover:text-slate-700 transition-colors"
         )}
       >
         <RefreshCw className="w-4 h-4" />

@@ -125,7 +125,7 @@ export default function ProvinceChoropleth({
               <h4 class="font-bold text-white text-xs mb-1">Tỉnh/Thành phố</h4>
               <b class="text-blue-400">${props.NAME_1 ?? props.name ?? "N/A"}</b>
             </div>`
-          : '<div class="glass-card px-3 py-2 text-xs text-slate-400">Hover để xem tên tỉnh</div>';
+          : '<div class="glass-card px-3 py-2 text-xs text-slate-500">Hover để xem tên tỉnh</div>';
       },
     });
 

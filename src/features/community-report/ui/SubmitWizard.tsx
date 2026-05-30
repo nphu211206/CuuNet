@@ -313,7 +313,7 @@ function SubmitWizardComponent({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed inset-x-0 bottom-0 z-50 max-h-[90vh] bg-slate-900 border-t border-slate-700/50 rounded-t-2xl shadow-2xl shadow-black/50 overflow-hidden flex flex-col"
+            className="fixed inset-x-0 bottom-0 z-50 max-h-[90vh] bg-slate-900 border-t border-slate-200 rounded-t-2xl shadow-2xl shadow-black/50 overflow-hidden flex flex-col"
           >
             {/* === WIZARD HEADER === */}
             <WizardHeader
@@ -443,15 +443,15 @@ function WizardHeader({
   onClose: () => void;
 }) {
   return (
-    <div className="flex-shrink-0 border-b border-slate-700/50 p-4">
+    <div className="flex-shrink-0 border-b border-slate-200 p-4">
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-lg font-semibold text-slate-200">
+        <h2 className="text-lg font-semibold text-slate-800">
           Gửi báo cáo thiên tai
         </h2>
         <button
           onClick={isSubmitting ? undefined : onClose}
           disabled={isSubmitting}
-          className="p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-700/50 transition-colors disabled:opacity-50"
+          className="p-2 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-200 transition-colors disabled:opacity-50"
         >
           <X className="w-5 h-5" />
         </button>
@@ -528,7 +528,7 @@ function Step1DisasterType({
   return (
     <div className="space-y-4">
       <div>
-        <h3 className="text-base font-semibold text-slate-200 mb-1">
+        <h3 className="text-base font-semibold text-slate-800 mb-1">
           Chọn loại thiên tai
         </h3>
         <p className="text-sm text-slate-500">
@@ -558,14 +558,14 @@ function Step1DisasterType({
                 "flex flex-col items-center gap-2 p-4 rounded-xl border transition-all",
                 isSelected
                   ? "border-blue-500/50 bg-blue-500/10 ring-1 ring-blue-500/30"
-                  : "border-slate-700/50 bg-slate-800/50 hover:border-slate-600/70 hover:bg-slate-700/50"
+                  : "border-slate-200 bg-slate-100 hover:border-slate-600/70 hover:bg-slate-200"
               )}
             >
               <span className="text-3xl">{config.icon}</span>
               <span
                 className={clsx(
                   "text-sm font-medium",
-                  isSelected ? "text-blue-400" : "text-slate-300"
+                  isSelected ? "text-blue-400" : "text-slate-700"
                 )}
               >
                 {config.label}
@@ -588,8 +588,8 @@ function Step1DisasterType({
                 onClick={() => onUseTemplate(template.id)}
                 className={clsx(
                   "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs border transition-colors",
-                  "border-slate-700/50 bg-slate-800/50 text-slate-400",
-                  "hover:border-slate-600/70 hover:text-slate-300"
+                  "border-slate-200 bg-slate-100 text-slate-500",
+                  "hover:border-slate-600/70 hover:text-slate-700"
                 )}
               >
                 <span>{template.icon}</span>
@@ -626,7 +626,7 @@ function Step2Location({
   return (
     <div className="space-y-4">
       <div>
-        <h3 className="text-base font-semibold text-slate-200 mb-1">
+        <h3 className="text-base font-semibold text-slate-800 mb-1">
           Vị trí thiên tai
         </h3>
         <p className="text-sm text-slate-500">
@@ -661,7 +661,7 @@ function Step2Location({
 
       {/* Province select */}
       <div>
-        <label className="block text-sm font-medium text-slate-400 mb-1.5">
+        <label className="block text-sm font-medium text-slate-500 mb-1.5">
           Tỉnh/Thành phố *
         </label>
         <select
@@ -670,9 +670,9 @@ function Step2Location({
             onUpdateLocation({ province: e.target.value, district: "" })
           }
           className={clsx(
-            "w-full px-3 py-2.5 rounded-lg bg-slate-800 border text-sm text-slate-200",
+            "w-full px-3 py-2.5 rounded-lg bg-slate-200 border text-sm text-slate-800",
             "focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-colors",
-            errors.province ? "border-red-500/50" : "border-slate-700/50"
+            errors.province ? "border-red-500/50" : "border-slate-200"
           )}
         >
           <option value="">Chọn tỉnh/thành phố</option>
@@ -689,7 +689,7 @@ function Step2Location({
 
       {/* District input */}
       <div>
-        <label className="block text-sm font-medium text-slate-400 mb-1.5">
+        <label className="block text-sm font-medium text-slate-500 mb-1.5">
           Quận/Huyện *
         </label>
         <input
@@ -698,9 +698,9 @@ function Step2Location({
           onChange={(e) => onUpdateLocation({ district: e.target.value })}
           placeholder="Nhập quận/huyện"
           className={clsx(
-            "w-full px-3 py-2.5 rounded-lg bg-slate-800 border text-sm text-slate-200 placeholder:text-slate-600",
+            "w-full px-3 py-2.5 rounded-lg bg-slate-200 border text-sm text-slate-800 placeholder:text-slate-600",
             "focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-colors",
-            errors.district ? "border-red-500/50" : "border-slate-700/50"
+            errors.district ? "border-red-500/50" : "border-slate-200"
           )}
         />
         {errors.district && (
@@ -710,7 +710,7 @@ function Step2Location({
 
       {/* Address input */}
       <div>
-        <label className="block text-sm font-medium text-slate-400 mb-1.5">
+        <label className="block text-sm font-medium text-slate-500 mb-1.5">
           Địa chỉ chi tiết *
         </label>
         <textarea
@@ -719,9 +719,9 @@ function Step2Location({
           placeholder="Số nhà, tên đường, phường/xã..."
           rows={2}
           className={clsx(
-            "w-full px-3 py-2.5 rounded-lg bg-slate-800 border text-sm text-slate-200 placeholder:text-slate-600 resize-none",
+            "w-full px-3 py-2.5 rounded-lg bg-slate-200 border text-sm text-slate-800 placeholder:text-slate-600 resize-none",
             "focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-colors",
-            errors.address ? "border-red-500/50" : "border-slate-700/50"
+            errors.address ? "border-red-500/50" : "border-slate-200"
           )}
         />
         {errors.address && (
@@ -762,7 +762,7 @@ function Step3Details({
   return (
     <div className="space-y-4">
       <div>
-        <h3 className="text-base font-semibold text-slate-200 mb-1">
+        <h3 className="text-base font-semibold text-slate-800 mb-1">
           Chi tiết thiên tai
         </h3>
         <p className="text-sm text-slate-500">
@@ -772,7 +772,7 @@ function Step3Details({
 
       {/* Title */}
       <div>
-        <label className="block text-sm font-medium text-slate-400 mb-1.5">
+        <label className="block text-sm font-medium text-slate-500 mb-1.5">
           Tiêu đề *
         </label>
         <input
@@ -782,9 +782,9 @@ function Step3Details({
           placeholder="Ví dụ: Lũ lụt nghiêm trọng tại quận Hải Châu"
           maxLength={REPORT_CONFIG.MAX_TITLE_LENGTH}
           className={clsx(
-            "w-full px-3 py-2.5 rounded-lg bg-slate-800 border text-sm text-slate-200 placeholder:text-slate-600",
+            "w-full px-3 py-2.5 rounded-lg bg-slate-200 border text-sm text-slate-800 placeholder:text-slate-600",
             "focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-colors",
-            errors.title ? "border-red-500/50" : "border-slate-700/50"
+            errors.title ? "border-red-500/50" : "border-slate-200"
           )}
         />
         <div className="flex items-center justify-between mt-1">
@@ -803,7 +803,7 @@ function Step3Details({
 
       {/* Severity */}
       <div>
-        <label className="block text-sm font-medium text-slate-400 mb-1.5">
+        <label className="block text-sm font-medium text-slate-500 mb-1.5">
           Mức độ nghiêm trọng *
         </label>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -820,7 +820,7 @@ function Step3Details({
                     "flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border text-sm font-medium transition-all",
                     isSelected
                       ? "border-blue-500/50 bg-blue-500/10 text-blue-400"
-                      : "border-slate-700/50 bg-slate-800/50 text-slate-400 hover:border-slate-600/70"
+                      : "border-slate-200 bg-slate-100 text-slate-500 hover:border-slate-600/70"
                   )}
                 >
                   <span
@@ -840,7 +840,7 @@ function Step3Details({
 
       {/* Description */}
       <div>
-        <label className="block text-sm font-medium text-slate-400 mb-1.5">
+        <label className="block text-sm font-medium text-slate-500 mb-1.5">
           Mô tả chi tiết *
         </label>
         <textarea
@@ -850,9 +850,9 @@ function Step3Details({
           rows={5}
           maxLength={REPORT_CONFIG.MAX_DESCRIPTION_LENGTH}
           className={clsx(
-            "w-full px-3 py-2.5 rounded-lg bg-slate-800 border text-sm text-slate-200 placeholder:text-slate-600 resize-none",
+            "w-full px-3 py-2.5 rounded-lg bg-slate-200 border text-sm text-slate-800 placeholder:text-slate-600 resize-none",
             "focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-colors",
-            errors.description ? "border-red-500/50" : "border-slate-700/50"
+            errors.description ? "border-red-500/50" : "border-slate-200"
           )}
         />
         <div className="flex items-center justify-between mt-1">
@@ -914,7 +914,7 @@ function Step4Photos({
   return (
     <div className="space-y-4">
       <div>
-        <h3 className="text-base font-semibold text-slate-200 mb-1">
+        <h3 className="text-base font-semibold text-slate-800 mb-1">
           Ảnh chụp thiên tai
         </h3>
         <p className="text-sm text-slate-500">
@@ -942,18 +942,18 @@ function Step4Photos({
         onDragOver={(e) => e.preventDefault()}
         className={clsx(
           "border-2 border-dashed rounded-xl p-8 text-center transition-colors",
-          "border-slate-700/50 hover:border-slate-600/70",
-          "bg-slate-800/30"
+          "border-slate-200 hover:border-slate-600/70",
+          "bg-slate-50"
         )}
       >
         <Camera className="w-10 h-10 text-slate-600 mx-auto mb-3" />
-        <p className="text-sm text-slate-400 mb-2">
+        <p className="text-sm text-slate-500 mb-2">
           Kéo thả ảnh vào đây hoặc
         </p>
         <label
           className={clsx(
             "inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm cursor-pointer transition-colors",
-            "bg-slate-700/50 border border-slate-600/30 text-slate-300",
+            "bg-slate-700/50 border border-slate-600/30 text-slate-700",
             "hover:bg-slate-600/50"
           )}
         >
@@ -986,7 +986,7 @@ function Step4Photos({
           {photos.map((photo) => (
             <div
               key={photo.id}
-              className="relative group rounded-lg overflow-hidden bg-slate-800"
+              className="relative group rounded-lg overflow-hidden bg-slate-200"
             >
               <img
                 src={photo.thumbnail}
@@ -1029,7 +1029,7 @@ function Step5Contact({
   return (
     <div className="space-y-4">
       <div>
-        <h3 className="text-base font-semibold text-slate-200 mb-1">
+        <h3 className="text-base font-semibold text-slate-800 mb-1">
           Thông tin liên hệ
         </h3>
         <p className="text-sm text-slate-500">
@@ -1038,11 +1038,11 @@ function Step5Contact({
       </div>
 
       {/* Anonymous toggle */}
-      <div className="flex items-center justify-between p-3 rounded-lg bg-slate-800/50 border border-slate-700/30">
+      <div className="flex items-center justify-between p-3 rounded-lg bg-slate-100 border border-slate-200">
         <div className="flex items-center gap-3">
-          <User className="w-5 h-5 text-slate-400" />
+          <User className="w-5 h-5 text-slate-500" />
           <div>
-            <p className="text-sm font-medium text-slate-300">Ẩn danh</p>
+            <p className="text-sm font-medium text-slate-700">Ẩn danh</p>
             <p className="text-xs text-slate-500">
               Không hiển thị tên trong báo cáo
             </p>
@@ -1079,7 +1079,7 @@ function Step5Contact({
           >
             <div className="space-y-3">
               <div>
-                <label className="block text-sm font-medium text-slate-400 mb-1.5">
+                <label className="block text-sm font-medium text-slate-500 mb-1.5">
                   Họ và tên *
                 </label>
                 <input
@@ -1088,9 +1088,9 @@ function Step5Contact({
                   onChange={(e) => onUpdateReporter({ name: e.target.value })}
                   placeholder="Nguyễn Văn A"
                   className={clsx(
-                    "w-full px-3 py-2.5 rounded-lg bg-slate-800 border text-sm text-slate-200 placeholder:text-slate-600",
+                    "w-full px-3 py-2.5 rounded-lg bg-slate-200 border text-sm text-slate-800 placeholder:text-slate-600",
                     "focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-colors",
-                    errors.name ? "border-red-500/50" : "border-slate-700/50"
+                    errors.name ? "border-red-500/50" : "border-slate-200"
                   )}
                 />
                 {errors.name && (
@@ -1099,7 +1099,7 @@ function Step5Contact({
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-400 mb-1.5">
+                <label className="block text-sm font-medium text-slate-500 mb-1.5">
                   Số điện thoại
                 </label>
                 <input
@@ -1108,9 +1108,9 @@ function Step5Contact({
                   onChange={(e) => onUpdateReporter({ phone: e.target.value })}
                   placeholder="0912345678"
                   className={clsx(
-                    "w-full px-3 py-2.5 rounded-lg bg-slate-800 border text-sm text-slate-200 placeholder:text-slate-600",
+                    "w-full px-3 py-2.5 rounded-lg bg-slate-200 border text-sm text-slate-800 placeholder:text-slate-600",
                     "focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-colors",
-                    errors.phone ? "border-red-500/50" : "border-slate-700/50"
+                    errors.phone ? "border-red-500/50" : "border-slate-200"
                   )}
                 />
                 {errors.phone && (
@@ -1154,7 +1154,7 @@ function Step6Review({
   return (
     <div className="space-y-4">
       <div>
-        <h3 className="text-base font-semibold text-slate-200 mb-1">
+        <h3 className="text-base font-semibold text-slate-800 mb-1">
           Xác nhận thông tin
         </h3>
         <p className="text-sm text-slate-500">
@@ -1163,14 +1163,14 @@ function Step6Review({
       </div>
 
       {/* Summary card */}
-      <div className="rounded-xl bg-slate-800/50 border border-slate-700/30 p-4 space-y-3">
+      <div className="rounded-xl bg-slate-100 border border-slate-200 p-4 space-y-3">
         {/* Type + Title */}
         <div className="flex items-start gap-2">
           {disasterConfig && (
             <span className="text-2xl">{disasterConfig.icon}</span>
           )}
           <div>
-            <h4 className="text-sm font-semibold text-slate-200">
+            <h4 className="text-sm font-semibold text-slate-800">
               {data.title || "(Chưa có tiêu đề)"}
             </h4>
             <span
@@ -1187,7 +1187,7 @@ function Step6Review({
         </div>
 
         {/* Location */}
-        <div className="flex items-center gap-2 text-xs text-slate-400">
+        <div className="flex items-center gap-2 text-xs text-slate-500">
           <MapPin className="w-3 h-3" />
           <span>
             {data.location.address}, {data.location.district},{" "}
@@ -1196,20 +1196,20 @@ function Step6Review({
         </div>
 
         {/* Description */}
-        <p className="text-sm text-slate-400 line-clamp-3">
+        <p className="text-sm text-slate-500 line-clamp-3">
           {data.description || "(Chưa có mô tả)"}
         </p>
 
         {/* Photos */}
         {data.photos.length > 0 && (
-          <div className="flex items-center gap-2 text-xs text-slate-400">
+          <div className="flex items-center gap-2 text-xs text-slate-500">
             <Camera className="w-3 h-3" />
             <span>{data.photos.length} ảnh đính kèm</span>
           </div>
         )}
 
         {/* Reporter */}
-        <div className="flex items-center gap-2 text-xs text-slate-400">
+        <div className="flex items-center gap-2 text-xs text-slate-500">
           <User className="w-3 h-3" />
           <span>
             {data.reporter.isAnonymous
@@ -1220,15 +1220,15 @@ function Step6Review({
       </div>
 
       {/* Confirmation checkbox */}
-      <label className="flex items-start gap-3 p-3 rounded-lg bg-slate-800/50 border border-slate-700/30 cursor-pointer hover:bg-slate-700/30 transition-colors">
+      <label className="flex items-start gap-3 p-3 rounded-lg bg-slate-100 border border-slate-200 cursor-pointer hover:bg-slate-700/30 transition-colors">
         <input
           type="checkbox"
           checked={data.confirmed}
           onChange={(e) => onConfirm(e.target.checked)}
-          className="mt-0.5 w-4 h-4 rounded border-slate-600 bg-slate-800 text-blue-500 focus:ring-blue-500/50"
+          className="mt-0.5 w-4 h-4 rounded border-slate-600 bg-slate-200 text-blue-500 focus:ring-blue-500/50"
         />
         <div>
-          <p className="text-sm text-slate-300">
+          <p className="text-sm text-slate-700">
             Tôi xác nhận thông tin trên là chính xác
           </p>
           <p className="text-xs text-slate-500 mt-0.5">
@@ -1285,7 +1285,7 @@ function WizardNavigation({
   onSubmit: () => void;
 }) {
   return (
-    <div className="flex-shrink-0 border-t border-slate-700/50 p-4">
+    <div className="flex-shrink-0 border-t border-slate-200 p-4">
       <div className="flex items-center gap-3">
         {/* Back button */}
         {currentStep > 1 && (
@@ -1294,8 +1294,8 @@ function WizardNavigation({
             disabled={isSubmitting}
             className={clsx(
               "inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm transition-colors",
-              "bg-slate-700/50 border border-slate-600/30 text-slate-400",
-              "hover:bg-slate-600/50 hover:text-slate-300 disabled:opacity-50"
+              "bg-slate-700/50 border border-slate-600/30 text-slate-500",
+              "hover:bg-slate-600/50 hover:text-slate-700 disabled:opacity-50"
             )}
           >
             <ChevronLeft className="w-4 h-4" />
@@ -1355,7 +1355,7 @@ function SuccessOverlay({
       variants={successVariants}
       initial="hidden"
       animate="visible"
-      className="absolute inset-0 z-20 bg-slate-900/95 flex flex-col items-center justify-center"
+      className="absolute inset-0 z-20 bg-white/95 flex flex-col items-center justify-center"
     >
       <motion.div
         initial={{ scale: 0 }}
@@ -1370,7 +1370,7 @@ function SuccessOverlay({
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="text-xl font-semibold text-slate-200 mb-2"
+        className="text-xl font-semibold text-slate-800 mb-2"
       >
         Báo cáo đã gửi thành công!
       </motion.h3>
@@ -1379,7 +1379,7 @@ function SuccessOverlay({
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-        className="text-sm text-slate-400 mb-8 text-center max-w-md"
+        className="text-sm text-slate-500 mb-8 text-center max-w-md"
       >
         Cảm ơn bạn đã đóng góp. Báo cáo sẽ được cộng đồng xác minh.
       </motion.p>
@@ -1391,7 +1391,7 @@ function SuccessOverlay({
         onClick={onClose}
         className={clsx(
           "inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium transition-colors",
-          "bg-slate-700/50 border border-slate-600/30 text-slate-300",
+          "bg-slate-700/50 border border-slate-600/30 text-slate-700",
           "hover:bg-slate-600/50"
         )}
       >

@@ -63,7 +63,7 @@ export default function MapControls({
           "absolute top-4 right-4 z-[1000] p-2.5 rounded-xl transition-all",
           showLayers
             ? "bg-blue-500/20 border border-blue-500/30 text-blue-400"
-            : "glass text-slate-400 hover:text-white"
+            : "glass text-slate-500 hover:text-white"
         )}
       >
         <Layers className="w-5 h-5" />
@@ -79,7 +79,7 @@ export default function MapControls({
           "absolute top-4 right-16 z-[1000] p-2.5 rounded-xl transition-all",
           showFilters
             ? "bg-blue-500/20 border border-blue-500/30 text-blue-400"
-            : "glass text-slate-400 hover:text-white"
+            : "glass text-slate-500 hover:text-white"
         )}
       >
         <Filter className="w-5 h-5" />
@@ -99,7 +99,7 @@ export default function MapControls({
               <h3 className="text-sm font-semibold text-white">Lớp bản đồ</h3>
               <button
                 onClick={() => setShowLayers(false)}
-                className="text-slate-400 hover:text-white"
+                className="text-slate-500 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -113,7 +113,7 @@ export default function MapControls({
                     "w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-all",
                     layer.visible
                       ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-                      : "text-slate-400 hover:text-white hover:bg-slate-800/50"
+                      : "text-slate-500 hover:text-white hover:bg-slate-100"
                   )}
                 >
                   {layer.type === "heatmap" && <Flame className="w-4 h-4" />}
@@ -149,7 +149,7 @@ export default function MapControls({
               <h3 className="text-sm font-semibold text-white">Bộ lọc</h3>
               <button
                 onClick={() => setShowFilters(false)}
-                className="text-slate-400 hover:text-white"
+                className="text-slate-500 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -157,7 +157,7 @@ export default function MapControls({
 
             {/* Disaster Types */}
             <div className="mb-4">
-              <h4 className="text-xs font-medium text-slate-400 mb-2">
+              <h4 className="text-xs font-medium text-slate-500 mb-2">
                 Loại thiên tai
               </h4>
               <div className="flex flex-wrap gap-1.5">
@@ -170,7 +170,7 @@ export default function MapControls({
                         "px-2.5 py-1 rounded-full text-xs font-medium transition-all border",
                         activeTypes.includes(type)
                           ? "border-blue-500/30 bg-blue-500/10 text-blue-400"
-                          : "border-slate-700 text-slate-400 hover:border-slate-600"
+                          : "border-slate-700 text-slate-500 hover:border-slate-600"
                       )}
                     >
                       {config.icon} {config.label}
@@ -182,7 +182,7 @@ export default function MapControls({
 
             {/* Severity Levels */}
             <div>
-              <h4 className="text-xs font-medium text-slate-400 mb-2">
+              <h4 className="text-xs font-medium text-slate-500 mb-2">
                 Mức độ nghiêm trọng
               </h4>
               <div className="flex flex-wrap gap-1.5">
@@ -195,7 +195,7 @@ export default function MapControls({
                         "px-2.5 py-1 rounded-full text-xs font-medium transition-all border",
                         activeSeverities.includes(severity)
                           ? "border-opacity-30 bg-opacity-10"
-                          : "border-slate-700 text-slate-400 hover:border-slate-600"
+                          : "border-slate-700 text-slate-500 hover:border-slate-600"
                       )}
                       style={
                         activeSeverities.includes(severity)
@@ -231,7 +231,7 @@ export default function MapControls({
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onLocateUser}
-            className="w-10 h-10 rounded-xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center text-slate-300 hover:text-white hover:border-slate-500 transition-all shadow-lg"
+            className="w-10 h-10 rounded-xl bg-white/90 backdrop-blur-xl border border-slate-200 flex items-center justify-center text-slate-700 hover:text-white hover:border-slate-500 transition-all shadow-lg"
             title="Vị trí của tôi"
           >
             <Locate className="w-4 h-4" />
@@ -244,7 +244,7 @@ export default function MapControls({
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onToggleFullscreen}
-            className="w-10 h-10 rounded-xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center text-slate-300 hover:text-white hover:border-slate-500 transition-all shadow-lg"
+            className="w-10 h-10 rounded-xl bg-white/90 backdrop-blur-xl border border-slate-200 flex items-center justify-center text-slate-700 hover:text-white hover:border-slate-500 transition-all shadow-lg"
             title={isFullscreen ? "Thoát toàn màn hình" : "Toàn màn hình"}
           >
             {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
@@ -255,7 +255,7 @@ export default function MapControls({
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-10 h-10 rounded-xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center text-slate-300 hover:text-white hover:border-slate-500 transition-all shadow-lg"
+          className="w-10 h-10 rounded-xl bg-white/90 backdrop-blur-xl border border-slate-200 flex items-center justify-center text-slate-700 hover:text-white hover:border-slate-500 transition-all shadow-lg"
           title="Hướng Bắc"
         >
           <Navigation className="w-4 h-4" />

@@ -60,7 +60,7 @@ function GlassGaugeComponent({
       {/* Title */}
       {(title || titleVi) && (
         <div className="mb-2 text-center">
-          {titleVi && <h3 className="text-xs font-semibold text-slate-200">{titleVi}</h3>}
+          {titleVi && <h3 className="text-xs font-semibold text-slate-800">{titleVi}</h3>}
         </div>
       )}
 

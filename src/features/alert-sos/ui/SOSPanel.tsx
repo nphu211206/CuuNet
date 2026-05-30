@@ -201,7 +201,7 @@ function GPSIndicator({
         "rounded-xl p-4 border",
         location
           ? "bg-blue-500/10 border-blue-500/30"
-          : "bg-slate-800/40 border-slate-700/40"
+          : "bg-slate-100 border-slate-200"
       )}
     >
       <div className="flex items-center justify-between">
@@ -219,11 +219,11 @@ function GPSIndicator({
             <Navigation className="w-5 h-5" />
           </div>
           <div>
-            <p className="text-sm font-medium text-slate-200">
+            <p className="text-sm font-medium text-slate-800">
               {location ? "GPS đã xác định" : "Đang lấy vị trí..."}
             </p>
             {location && (
-              <p className="text-xs text-slate-400 mt-0.5">
+              <p className="text-xs text-slate-500 mt-0.5">
                 {location.lat.toFixed(5)}, {location.lng.toFixed(5)}
                 <span className="ml-2" style={{ color: accuracyColor }}>
                   ±{Math.round(location.accuracy)}m
@@ -252,7 +252,7 @@ function GPSIndicator({
               "px-3 py-1.5 rounded-lg text-xs font-medium",
               "transition-all duration-200",
               location
-                ? "bg-slate-700/50 text-slate-300 hover:bg-slate-700/70"
+                ? "bg-slate-700/50 text-slate-700 hover:bg-slate-700/70"
                 : "bg-blue-500/20 text-blue-400 hover:bg-blue-500/30",
               "disabled:opacity-50"
             )}
@@ -288,8 +288,8 @@ function PeopleCountStepper({
         onClick={() => onChange(Math.max(1, value - 1))}
         className={clsx(
           "w-10 h-10 rounded-xl flex items-center justify-center",
-          "bg-slate-800/60 border border-slate-700/50",
-          "text-slate-300 hover:bg-slate-700/60 hover:text-white",
+          "bg-slate-100 border border-slate-200",
+          "text-slate-700 hover:bg-slate-200 hover:text-white",
           "transition-all duration-200",
           "disabled:opacity-30"
         )}
@@ -305,8 +305,8 @@ function PeopleCountStepper({
         onClick={() => onChange(Math.min(50, value + 1))}
         className={clsx(
           "w-10 h-10 rounded-xl flex items-center justify-center",
-          "bg-slate-800/60 border border-slate-700/50",
-          "text-slate-300 hover:bg-slate-700/60 hover:text-white",
+          "bg-slate-100 border border-slate-200",
+          "text-slate-700 hover:bg-slate-200 hover:text-white",
           "transition-all duration-200",
           "disabled:opacity-30"
         )}
@@ -344,7 +344,7 @@ function ToggleChip({
         "border transition-all duration-200",
         active
           ? "border-opacity-50"
-          : "bg-slate-800/30 border-slate-700/30 text-slate-400 hover:border-slate-600/50"
+          : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
       )}
       style={
         active
@@ -546,7 +546,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
             >
               <div className="text-center mb-4">
                 <h3 className="text-lg font-bold text-white">Bạn đang gặp tình huống gì?</h3>
-                <p className="text-xs text-slate-400 mt-1">Chọn loại tình huống khẩn cấp</p>
+                <p className="text-xs text-slate-500 mt-1">Chọn loại tình huống khẩn cấp</p>
               </div>
 
               {/* SOS Types Grid */}
@@ -568,7 +568,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
                       "border transition-all duration-200",
                       sosType === type
                         ? "border-opacity-60 shadow-lg"
-                        : "bg-slate-900/40 border-slate-700/30 hover:border-slate-600/50"
+                        : "bg-white border-slate-200 hover:border-slate-300"
                     )}
                     style={
                       sosType === type
@@ -606,12 +606,12 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
                   "border transition-all duration-200",
                   sosType === "other"
                     ? "bg-slate-600/15 border-slate-500/60"
-                    : "bg-slate-900/40 border-slate-700/30 hover:border-slate-600/50"
+                    : "bg-white border-slate-200 hover:border-slate-300"
                 )}
               >
                 <span className="text-2xl">❓</span>
                 <div className="text-left">
-                  <p className="text-sm font-semibold text-slate-200">Tình huống khác</p>
+                  <p className="text-sm font-semibold text-slate-800">Tình huống khác</p>
                   <p className="text-[10px] text-slate-500">Other</p>
                 </div>
               </motion.button>
@@ -631,7 +631,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
             >
               <div className="text-center mb-2">
                 <h3 className="text-lg font-bold text-white">Mức độ nghiêm trọng</h3>
-                <p className="text-xs text-slate-400 mt-1">
+                <p className="text-xs text-slate-500 mt-1">
                   {sosType && SOS_TYPE_CONFIG[sosType].icon} {sosType && SOS_TYPE_CONFIG[sosType].labelVi}
                 </p>
               </div>
@@ -648,7 +648,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
                       "border transition-all duration-200",
                       emergencyLevel === level
                         ? "shadow-lg"
-                        : "bg-slate-900/30 border-slate-700/30 hover:border-slate-600/50"
+                        : "bg-white border-slate-200 hover:border-slate-300"
                     )}
                     style={
                       emergencyLevel === level
@@ -677,11 +677,11 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
               </div>
 
               {/* People Count */}
-              <div className="flex items-center justify-between p-4 rounded-xl bg-slate-800/30 border border-slate-700/30">
+              <div className="flex items-center justify-between p-4 rounded-xl bg-slate-50 border border-slate-200">
                 <div className="flex items-center gap-3">
                   <Users className="w-5 h-5 text-blue-400" />
                   <div>
-                    <p className="text-sm font-medium text-slate-200">Số người cần cứu</p>
+                    <p className="text-sm font-medium text-slate-800">Số người cần cứu</p>
                     <p className="text-[10px] text-slate-500">Bao gồm cả bạn</p>
                   </div>
                 </div>
@@ -690,7 +690,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
 
               {/* Special Needs */}
               <div className="space-y-2">
-                <p className="text-xs text-slate-400 font-medium">Tình trạng đặc biệt:</p>
+                <p className="text-xs text-slate-500 font-medium">Tình trạng đặc biệt:</p>
                 <div className="flex flex-wrap gap-2">
                   <ToggleChip
                     icon={<Baby className="w-3.5 h-3.5" />}
@@ -745,7 +745,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
             >
               <div className="text-center mb-2">
                 <h3 className="text-lg font-bold text-white">Vị trí & Liên hệ</h3>
-                <p className="text-xs text-slate-400 mt-1">Xác định vị trí và thông tin liên hệ</p>
+                <p className="text-xs text-slate-500 mt-1">Xác định vị trí và thông tin liên hệ</p>
               </div>
 
               {/* GPS */}
@@ -757,7 +757,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
 
               {/* Contact Info */}
               <div className="space-y-3">
-                <p className="text-xs text-slate-400 font-medium flex items-center gap-1.5">
+                <p className="text-xs text-slate-500 font-medium flex items-center gap-1.5">
                   <Phone className="w-3.5 h-3.5" />
                   Thông tin liên hệ (tùy chọn)
                 </p>
@@ -769,8 +769,8 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
                     onChange={(e) => setContactName(e.target.value)}
                     className={clsx(
                       "px-3 py-2.5 rounded-xl text-sm",
-                      "bg-slate-800/40 border border-slate-700/40",
-                      "text-slate-200 placeholder-slate-600",
+                      "bg-slate-100 border border-slate-200",
+                      "text-slate-800 placeholder-slate-600",
                       "focus:outline-none focus:border-blue-500/50",
                       "transition-colors"
                     )}
@@ -782,8 +782,8 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
                     onChange={(e) => setContactPhone(e.target.value)}
                     className={clsx(
                       "px-3 py-2.5 rounded-xl text-sm",
-                      "bg-slate-800/40 border border-slate-700/40",
-                      "text-slate-200 placeholder-slate-600",
+                      "bg-slate-100 border border-slate-200",
+                      "text-slate-800 placeholder-slate-600",
                       "focus:outline-none focus:border-blue-500/50",
                       "transition-colors"
                     )}
@@ -793,7 +793,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
 
               {/* Description */}
               <div className="space-y-2">
-                <p className="text-xs text-slate-400 font-medium flex items-center gap-1.5">
+                <p className="text-xs text-slate-500 font-medium flex items-center gap-1.5">
                   <FileText className="w-3.5 h-3.5" />
                   Mô tả tình huống (tùy chọn)
                 </p>
@@ -805,8 +805,8 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
                   maxLength={500}
                   className={clsx(
                     "w-full px-3 py-2.5 rounded-xl text-sm resize-none",
-                    "bg-slate-800/40 border border-slate-700/40",
-                    "text-slate-200 placeholder-slate-600",
+                    "bg-slate-100 border border-slate-200",
+                    "text-slate-800 placeholder-slate-600",
                     "focus:outline-none focus:border-blue-500/50",
                     "transition-colors"
                   )}
@@ -831,11 +831,11 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
             >
               <div className="text-center mb-2">
                 <h3 className="text-lg font-bold text-white">Xác nhận gửi SOS</h3>
-                <p className="text-xs text-slate-400 mt-1">Kiểm tra thông tin trước khi gửi</p>
+                <p className="text-xs text-slate-500 mt-1">Kiểm tra thông tin trước khi gửi</p>
               </div>
 
               {/* Summary Card */}
-              <div className="rounded-xl bg-slate-800/40 border border-slate-700/40 overflow-hidden">
+              <div className="rounded-xl bg-slate-100 border border-slate-200 overflow-hidden">
                 {/* Type Header */}
                 {sosType && (
                   <div
@@ -847,7 +847,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
                       <p className="text-sm font-bold" style={{ color: SOS_TYPE_CONFIG[sosType].color }}>
                         {SOS_TYPE_CONFIG[sosType].labelVi}
                       </p>
-                      <p className="text-[10px] text-slate-400">
+                      <p className="text-[10px] text-slate-500">
                         {SOS_EMERGENCY_LEVEL_CONFIG[emergencyLevel].labelVi}
                       </p>
                     </div>
@@ -858,13 +858,13 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
                 <div className="px-4 py-3 space-y-2.5">
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-slate-500">Số người</span>
-                    <span className="text-xs font-medium text-slate-200">{peopleCount} người</span>
+                    <span className="text-xs font-medium text-slate-800">{peopleCount} người</span>
                   </div>
 
                   {location && (
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-slate-500">Vị trí GPS</span>
-                      <span className="text-xs font-medium text-slate-200">
+                      <span className="text-xs font-medium text-slate-800">
                         {location.lat.toFixed(4)}, {location.lng.toFixed(4)}
                       </span>
                     </div>
@@ -906,15 +906,15 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
                   {contactName && (
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-slate-500">Liên hệ</span>
-                      <span className="text-xs font-medium text-slate-200">
+                      <span className="text-xs font-medium text-slate-800">
                         {contactName} {contactPhone && `• ${contactPhone}`}
                       </span>
                     </div>
                   )}
 
                   {description && (
-                    <div className="pt-2 border-t border-slate-700/30">
-                      <p className="text-xs text-slate-400">{description}</p>
+                    <div className="pt-2 border-t border-slate-200">
+                      <p className="text-xs text-slate-500">{description}</p>
                     </div>
                   )}
                 </div>
@@ -942,8 +942,8 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
             onClick={goPrev}
             className={clsx(
               "flex items-center gap-2 px-4 py-3 rounded-xl",
-              "bg-slate-800/60 border border-slate-700/50",
-              "text-slate-300 hover:text-white hover:border-slate-600/70",
+              "bg-slate-100 border border-slate-200",
+              "text-slate-700 hover:text-white hover:border-slate-600/70",
               "transition-all duration-200"
             )}
           >
@@ -963,7 +963,7 @@ function SOSPanelComponent({ onSubmit, isSubmitting, className }: SOSPanelProps)
               "font-medium transition-all duration-200",
               canProceed
                 ? "bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-500/20"
-                : "bg-slate-800/60 text-slate-500 cursor-not-allowed"
+                : "bg-slate-100 text-slate-500 cursor-not-allowed"
             )}
           >
             <span className="text-sm">Tiếp theo</span>

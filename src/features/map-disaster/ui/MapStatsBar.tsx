@@ -183,7 +183,7 @@ export default function MapStatsBar({
                 suffix={stat.suffix ?? ""}
               />
             </div>
-            <div className="text-xs text-slate-400">{stat.label}</div>
+            <div className="text-xs text-slate-500">{stat.label}</div>
           </div>
         </motion.div>
       ))}

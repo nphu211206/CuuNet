@@ -166,7 +166,7 @@ function ChecklistItemRow({
         "transition-all duration-200",
         completed
           ? "bg-green-500/5 border border-green-500/15"
-          : "bg-slate-900/30 border border-slate-700/20 hover:border-slate-600/40"
+          : "bg-white border border-slate-200 hover:border-slate-600/40"
       )}
     >
       {/* Checkbox */}
@@ -185,7 +185,7 @@ function ChecklistItemRow({
           <h4
             className={clsx(
               "text-sm font-medium",
-              completed ? "text-slate-500 line-through" : "text-slate-200"
+              completed ? "text-slate-500 line-through" : "text-slate-800"
             )}
           >
             {item.title}
@@ -239,12 +239,12 @@ function CategoryGroup({
         onClick={() => setIsExpanded(!isExpanded)}
         className={clsx(
           "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl",
-          "bg-slate-800/30 border border-slate-700/20",
+          "bg-slate-50 border border-slate-200",
           "hover:border-slate-600/40 transition-all duration-200"
         )}
       >
         <span className="text-base">{config.icon}</span>
-        <span className="text-sm font-semibold text-slate-200 flex-1 text-left">
+        <span className="text-sm font-semibold text-slate-800 flex-1 text-left">
           {config.labelVi}
         </span>
         <span className="text-xs text-slate-500">
@@ -371,11 +371,11 @@ function ChecklistManagerComponent({
   return (
     <div className={clsx("space-y-4", className)}>
       {/* Header with Progress */}
-      <div className="flex items-center gap-5 p-4 rounded-xl bg-slate-900/40 border border-slate-700/30">
+      <div className="flex items-center gap-5 p-4 rounded-xl bg-white border border-slate-200">
         <CircularProgress percentage={stats.completionPercentage} />
         <div className="flex-1">
           <h3 className="text-lg font-bold text-white">Checklist chuẩn bị</h3>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-500 mt-1">
             {stats.completedItems}/{stats.totalItems} mục hoàn thành
           </p>
           {stats.essentialRemaining > 0 && (
@@ -409,7 +409,7 @@ function ChecklistManagerComponent({
                   "text-[10px] font-medium transition-all duration-200 border",
                   season === key
                     ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                    : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                    : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
                 )}
               >
                 <span>{config.icon}</span>
@@ -422,14 +422,14 @@ function ChecklistManagerComponent({
         {/* Actions */}
         <button
           onClick={handlePrint}
-          className="p-2 rounded-lg bg-slate-800/40 border border-slate-700/40 text-slate-400 hover:text-slate-200 transition-colors"
+          className="p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-500 hover:text-slate-800 transition-colors"
           title="In checklist"
         >
           <Printer className="w-4 h-4" />
         </button>
         <button
           onClick={onReset}
-          className="p-2 rounded-lg bg-slate-800/40 border border-slate-700/40 text-slate-400 hover:text-red-400 transition-colors"
+          className="p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-500 hover:text-red-400 transition-colors"
           title="Reset"
         >
           <RotateCcw className="w-4 h-4" />

@@ -97,7 +97,7 @@ function ViewTabs({
               "transition-all duration-200 border whitespace-nowrap",
               isActive
                 ? "border-opacity-40 text-opacity-100 bg-opacity-15"
-                : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50 hover:text-slate-300"
+                : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-700"
             )}
             style={
               isActive
@@ -179,7 +179,7 @@ function FilterBarComponent({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: 0.2 }}
       className={clsx(
-        "rounded-xl bg-slate-900/40 border border-slate-700/30 p-3",
+        "rounded-xl bg-white border border-slate-200 p-3",
         className
       )}
     >
@@ -187,8 +187,8 @@ function FilterBarComponent({
       <div className="flex items-center gap-3 flex-wrap">
         {/* Filter icon */}
         <div className="flex items-center gap-1.5">
-          <Filter className="w-4 h-4 text-slate-400" />
-          <span className="text-[11px] font-semibold text-slate-300">Bộ lọc</span>
+          <Filter className="w-4 h-4 text-slate-500" />
+          <span className="text-[11px] font-semibold text-slate-700">Bộ lọc</span>
         </div>
 
         {/* Time Range */}
@@ -203,7 +203,7 @@ function FilterBarComponent({
                   "px-2 py-1 rounded-md text-[10px] font-medium transition-colors border",
                   filter.timeRange === key
                     ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                    : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:text-slate-300"
+                    : "bg-slate-50 border-slate-200 text-slate-500 hover:text-slate-700"
                 )}
               >
                 {config.labelVi}
@@ -218,7 +218,7 @@ function FilterBarComponent({
           <select
             value={filter.region}
             onChange={(e) => handleRegionChange(e.target.value as VietnamRegion)}
-            className="bg-slate-800/50 border border-slate-700/30 rounded-md px-2 py-1 text-[10px] text-slate-300 focus:outline-none focus:border-blue-500/50"
+            className="bg-slate-100 border border-slate-200 rounded-md px-2 py-1 text-[10px] text-slate-700 focus:outline-none focus:border-blue-500/50"
           >
             {Object.entries(REGION_CONFIG).map(([key, config]) => (
               <option key={key} value={key}>{config.labelVi}</option>
@@ -232,7 +232,7 @@ function FilterBarComponent({
           <select
             value={filter.disasterType}
             onChange={(e) => handleTypeChange(e.target.value as DisasterType | "all")}
-            className="bg-slate-800/50 border border-slate-700/30 rounded-md px-2 py-1 text-[10px] text-slate-300 focus:outline-none focus:border-blue-500/50"
+            className="bg-slate-100 border border-slate-200 rounded-md px-2 py-1 text-[10px] text-slate-700 focus:outline-none focus:border-blue-500/50"
           >
             <option value="all">Tất cả</option>
             {Object.entries(DISASTER_TYPE_DASHBOARD_CONFIG).map(([key, config]) => (
@@ -244,7 +244,7 @@ function FilterBarComponent({
         {/* Expand/Collapse */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center gap-1 px-2 py-1 rounded-md text-[10px] text-slate-500 hover:text-slate-300 transition-colors"
+          className="flex items-center gap-1 px-2 py-1 rounded-md text-[10px] text-slate-500 hover:text-slate-700 transition-colors"
         >
           <ChevronDown className={clsx("w-3 h-3 transition-transform", isExpanded && "rotate-180")} />
           Mở rộng
@@ -271,14 +271,14 @@ function FilterBarComponent({
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden"
           >
-            <div className="pt-3 mt-3 border-t border-slate-700/20 grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="pt-3 mt-3 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-3">
               {/* Province selector */}
               <div>
                 <label className="text-[10px] text-slate-500 block mb-1">Tỉnh/Thành phố</label>
                 <select
                   value={filter.province}
                   onChange={(e) => handleProvinceChange(e.target.value)}
-                  className="w-full bg-slate-800/50 border border-slate-700/30 rounded-md px-2 py-1.5 text-[10px] text-slate-300 focus:outline-none focus:border-blue-500/50"
+                  className="w-full bg-slate-100 border border-slate-200 rounded-md px-2 py-1.5 text-[10px] text-slate-700 focus:outline-none focus:border-blue-500/50"
                 >
                   <option value="all">Tất cả</option>
                   {provinces.map((p) => (
@@ -293,7 +293,7 @@ function FilterBarComponent({
                 <select
                   value={filter.severityLevel === "all" ? "all" : filter.severityLevel}
                   onChange={(e) => onFilterChange({ severityLevel: e.target.value === "all" ? "all" : parseInt(e.target.value) as any })}
-                  className="w-full bg-slate-800/50 border border-slate-700/30 rounded-md px-2 py-1.5 text-[10px] text-slate-300 focus:outline-none focus:border-blue-500/50"
+                  className="w-full bg-slate-100 border border-slate-200 rounded-md px-2 py-1.5 text-[10px] text-slate-700 focus:outline-none focus:border-blue-500/50"
                 >
                   <option value="all">Tất cả</option>
                   <option value="1">1 - Nhẹ</option>
@@ -372,7 +372,7 @@ function ExportButtons({
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/40 text-slate-400 text-[11px] font-medium hover:border-slate-600/50 transition-colors"
+        className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-500 text-[11px] font-medium hover:border-slate-300 transition-colors"
       >
         <Download className="w-3.5 h-3.5" />
         Xuất
@@ -384,18 +384,18 @@ function ExportButtons({
             initial={{ opacity: 0, y: -4, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -4, scale: 0.95 }}
-            className="absolute top-full right-0 mt-1 w-36 bg-slate-900/95 backdrop-blur-xl rounded-xl border border-slate-700/50 shadow-lg overflow-hidden z-50"
+            className="absolute top-full right-0 mt-1 w-36 bg-white/95 backdrop-blur-xl rounded-xl border border-slate-200 shadow-lg overflow-hidden z-50"
           >
             <button
               onClick={() => { onExportCSV(); setIsOpen(false); }}
-              className="w-full flex items-center gap-2 px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-800/50 transition-colors"
+              className="w-full flex items-center gap-2 px-3 py-2 text-[11px] text-slate-700 hover:bg-slate-100 transition-colors"
             >
               <FileSpreadsheet className="w-3.5 h-3.5 text-green-400" />
               Xuất CSV
             </button>
             <button
               onClick={() => { onExportPNG(); setIsOpen(false); }}
-              className="w-full flex items-center gap-2 px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-800/50 transition-colors"
+              className="w-full flex items-center gap-2 px-3 py-2 text-[11px] text-slate-700 hover:bg-slate-100 transition-colors"
             >
               <Image className="w-3.5 h-3.5 text-blue-400" />
               Xuất PNG

@@ -97,7 +97,7 @@ function KitItemRow({
         "flex items-start gap-3 p-3 rounded-xl cursor-pointer transition-all duration-200",
         checked
           ? "bg-green-500/5 border border-green-500/15"
-          : "bg-slate-900/30 border border-slate-700/20 hover:border-slate-600/40"
+          : "bg-white border border-slate-200 hover:border-slate-600/40"
       )}
     >
       {/* Checkbox */}
@@ -116,7 +116,7 @@ function KitItemRow({
           <h4
             className={clsx(
               "text-sm font-medium",
-              checked ? "text-slate-500 line-through" : "text-slate-200"
+              checked ? "text-slate-500 line-through" : "text-slate-800"
             )}
           >
             {item.nameVi}
@@ -172,12 +172,12 @@ function CategoryGroup({
         onClick={() => setIsExpanded(!isExpanded)}
         className={clsx(
           "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl",
-          "bg-slate-800/30 border border-slate-700/20",
+          "bg-slate-50 border border-slate-200",
           "hover:border-slate-600/40 transition-all duration-200"
         )}
       >
         <span className="text-base">{config.icon}</span>
-        <span className="text-sm font-semibold text-slate-200 flex-1 text-left">
+        <span className="text-sm font-semibold text-slate-800 flex-1 text-left">
           {config.labelVi}
         </span>
         <span className="text-xs text-slate-500">
@@ -260,7 +260,7 @@ function EmergencyKitBuilderComponent({
   return (
     <div className={clsx("space-y-4", className)}>
       {/* Header with progress */}
-      <div className="flex items-center gap-5 p-4 rounded-xl bg-slate-900/40 border border-slate-700/30">
+      <div className="flex items-center gap-5 p-4 rounded-xl bg-white border border-slate-200">
         {/* Progress gauge */}
         <div className="relative inline-flex items-center justify-center">
           <svg width={80} height={80} className="-rotate-90">
@@ -282,7 +282,7 @@ function EmergencyKitBuilderComponent({
 
         <div className="flex-1">
           <h3 className="text-lg font-bold text-white">Bộ đồ 72 giờ</h3>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-500 mt-1">
             {checkedIds.size}/{items.length} mục đã chuẩn bị
           </p>
           {essentialChecked < essentialItems.length && (
@@ -330,7 +330,7 @@ function EmergencyKitBuilderComponent({
       {/* Reset */}
       <button
         onClick={onReset}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800/40 border border-slate-700/40 text-slate-400 text-xs font-medium hover:text-red-400 transition-colors"
+        className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-500 text-xs font-medium hover:text-red-400 transition-colors"
       >
         <RotateCcw className="w-3.5 h-3.5" />
         Reset checklist

@@ -224,7 +224,7 @@ function ReportDetailModalComponent({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-lg bg-slate-900 border-l border-slate-700/50 shadow-2xl shadow-black/50 overflow-y-auto"
+            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-lg bg-slate-900 border-l border-slate-200 shadow-2xl shadow-black/50 overflow-y-auto"
           >
             {/* === HEADER === */}
             <motion.div
@@ -232,7 +232,7 @@ function ReportDetailModalComponent({
               variants={sectionVariants}
               initial="hidden"
               animate="visible"
-              className="sticky top-0 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 p-4"
+              className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-slate-200 p-4"
             >
               <div className="flex items-start gap-3">
                 {/* Type icon */}
@@ -245,7 +245,7 @@ function ReportDetailModalComponent({
 
                 {/* Title + badges */}
                 <div className="flex-1 min-w-0">
-                  <h2 className="text-lg font-semibold text-slate-200 leading-tight mb-1.5">
+                  <h2 className="text-lg font-semibold text-slate-800 leading-tight mb-1.5">
                     {report.title}
                   </h2>
                   <div className="flex items-center gap-2 flex-wrap">
@@ -281,7 +281,7 @@ function ReportDetailModalComponent({
                 {/* Close button */}
                 <button
                   onClick={onClose}
-                  className="flex-shrink-0 p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-700/50 transition-colors"
+                  className="flex-shrink-0 p-2 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-200 transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -370,7 +370,7 @@ function ReportDetailModalComponent({
               variants={sectionVariants}
               initial="hidden"
               animate="visible"
-              className="sticky bottom-0 bg-slate-900/95 backdrop-blur-sm border-t border-slate-700/50 p-4"
+              className="sticky bottom-0 bg-white/95 backdrop-blur-sm border-t border-slate-200 p-4"
             >
               <ActionButtons
                 onVerify={() => handleVote("up")}
@@ -423,7 +423,7 @@ function PhotoGallery({
 }) {
   return (
     <div>
-      <h3 className="text-sm font-medium text-slate-400 mb-2 flex items-center gap-1.5">
+      <h3 className="text-sm font-medium text-slate-500 mb-2 flex items-center gap-1.5">
         <Camera className="w-4 h-4" />
         Ảnh chụp ({photos.length})
       </h3>
@@ -432,7 +432,7 @@ function PhotoGallery({
           <button
             key={photo.id}
             onClick={() => onPhotoClick(index)}
-            className="flex-shrink-0 relative group rounded-lg overflow-hidden bg-slate-800 hover:ring-2 hover:ring-blue-500/50 transition-all"
+            className="flex-shrink-0 relative group rounded-lg overflow-hidden bg-slate-200 hover:ring-2 hover:ring-blue-500/50 transition-all"
           >
             <img
               src={photo.thumbnail}
@@ -556,12 +556,12 @@ function DetailLocation({
 
   return (
     <div>
-      <h3 className="text-sm font-medium text-slate-400 mb-2 flex items-center gap-1.5">
+      <h3 className="text-sm font-medium text-slate-500 mb-2 flex items-center gap-1.5">
         <MapPin className="w-4 h-4" />
         Vị trí
       </h3>
-      <div className="rounded-lg bg-slate-800/50 border border-slate-700/30 p-3">
-        <p className="text-sm text-slate-300 mb-1">{location.address}</p>
+      <div className="rounded-lg bg-slate-100 border border-slate-200 p-3">
+        <p className="text-sm text-slate-700 mb-1">{location.address}</p>
         <p className="text-xs text-slate-500 mb-2">
           {location.district}, {location.province}
         </p>
@@ -601,14 +601,14 @@ function DetailDescription({
 }) {
   return (
     <div>
-      <h3 className="text-sm font-medium text-slate-400 mb-2">
+      <h3 className="text-sm font-medium text-slate-500 mb-2">
         Mô tả chi tiết
       </h3>
-      <div className="rounded-lg bg-slate-800/50 border border-slate-700/30 p-3">
-        <p className="text-sm text-slate-300 leading-relaxed whitespace-pre-wrap">
+      <div className="rounded-lg bg-slate-100 border border-slate-200 p-3">
+        <p className="text-sm text-slate-700 leading-relaxed whitespace-pre-wrap">
           {description}
         </p>
-        <div className="mt-3 pt-2 border-t border-slate-700/30 flex items-center gap-1.5 text-xs text-slate-500">
+        <div className="mt-3 pt-2 border-t border-slate-200 flex items-center gap-1.5 text-xs text-slate-500">
           <Clock className="w-3 h-3" />
           {createdAt}
         </div>
@@ -633,11 +633,11 @@ function VerificationSection({
 }) {
   return (
     <div>
-      <h3 className="text-sm font-medium text-slate-400 mb-2 flex items-center gap-1.5">
+      <h3 className="text-sm font-medium text-slate-500 mb-2 flex items-center gap-1.5">
         <Shield className="w-4 h-4" />
         Xác minh cộng đồng
       </h3>
-      <div className="rounded-lg bg-slate-800/50 border border-slate-700/30 p-4">
+      <div className="rounded-lg bg-slate-100 border border-slate-200 p-4">
         <div className="flex items-center gap-6">
           {/* Trust Gauge */}
           <TrustGauge
@@ -652,7 +652,7 @@ function VerificationSection({
               {/* Upvotes */}
               <div className="flex items-center gap-1.5">
                 <ThumbsUp className="w-4 h-4 text-green-400" />
-                <span className="text-sm font-medium text-slate-300">
+                <span className="text-sm font-medium text-slate-700">
                   {verification.upvotes}
                 </span>
                 <span className="text-xs text-slate-500">xác nhận</span>
@@ -660,7 +660,7 @@ function VerificationSection({
               {/* Downvotes */}
               <div className="flex items-center gap-1.5">
                 <ThumbsDown className="w-4 h-4 text-red-400" />
-                <span className="text-sm font-medium text-slate-300">
+                <span className="text-sm font-medium text-slate-700">
                   {verification.downvotes}
                 </span>
                 <span className="text-xs text-slate-500">phản đối</span>
@@ -783,11 +783,11 @@ function ReporterSection({
 }) {
   return (
     <div>
-      <h3 className="text-sm font-medium text-slate-400 mb-2 flex items-center gap-1.5">
+      <h3 className="text-sm font-medium text-slate-500 mb-2 flex items-center gap-1.5">
         <User className="w-4 h-4" />
         Người báo cáo
       </h3>
-      <div className="rounded-lg bg-slate-800/50 border border-slate-700/30 p-3">
+      <div className="rounded-lg bg-slate-100 border border-slate-200 p-3">
         <div className="flex items-center gap-3">
           {/* Avatar */}
           <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center">
@@ -795,7 +795,7 @@ function ReporterSection({
           </div>
           {/* Info */}
           <div>
-            <p className="text-sm font-medium text-slate-300">
+            <p className="text-sm font-medium text-slate-700">
               {reporter.isAnonymous ? "Ẩn danh" : reporter.name}
             </p>
             <p className="text-xs text-slate-500">
@@ -873,7 +873,7 @@ function TimelineSection({
 
   return (
     <div>
-      <h3 className="text-sm font-medium text-slate-400 mb-2">
+      <h3 className="text-sm font-medium text-slate-500 mb-2">
         Lịch sử
       </h3>
       <div className="relative pl-6">
@@ -898,7 +898,7 @@ function TimelineSection({
             />
             {/* Content */}
             <div className="text-xs">
-              <span className="text-slate-400">{event.label}</span>
+              <span className="text-slate-500">{event.label}</span>
               <span className="text-slate-600 ml-2">
                 {new Date(event.time).toLocaleDateString("vi-VN", {
                   day: "2-digit",
@@ -964,8 +964,8 @@ function ActionButtons({
         onClick={onShare}
         className={clsx(
           "inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-sm transition-colors",
-          "bg-slate-700/50 border border-slate-600/30 text-slate-400",
-          "hover:bg-slate-600/50 hover:text-slate-300"
+          "bg-slate-700/50 border border-slate-600/30 text-slate-500",
+          "hover:bg-slate-600/50 hover:text-slate-700"
         )}
       >
         <Share2 className="w-4 h-4" />

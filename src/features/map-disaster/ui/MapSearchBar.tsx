@@ -54,7 +54,7 @@ export default function MapSearchBar({ onProvinceSelect }: MapSearchBarProps) {
           }}
           onFocus={() => setIsOpen(true)}
           placeholder="Tìm tỉnh/thành phố..."
-          className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all shadow-lg"
+          className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-white/90 backdrop-blur-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all shadow-lg"
         />
         {query && (
           <button
@@ -63,7 +63,7 @@ export default function MapSearchBar({ onProvinceSelect }: MapSearchBarProps) {
               setIsOpen(false);
               inputRef.current?.focus();
             }}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-700 transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
@@ -77,13 +77,13 @@ export default function MapSearchBar({ onProvinceSelect }: MapSearchBarProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
             transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-1 bg-slate-900/95 backdrop-blur-2xl border border-slate-700/50 rounded-xl shadow-2xl overflow-hidden"
+            className="mt-1 bg-white/95 backdrop-blur-2xl border border-slate-200 rounded-xl shadow-2xl overflow-hidden"
           >
             {results.map((province, i) => (
               <button
                 key={province.name}
                 onClick={() => handleSelect(province)}
-                className="w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm text-slate-300 hover:bg-slate-800/50 hover:text-white transition-colors"
+                className="w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm text-slate-700 hover:bg-slate-100 hover:text-white transition-colors"
               >
                 <MapPin className="w-4 h-4 text-blue-400 shrink-0" />
                 <span className="font-medium">{province.name}</span>

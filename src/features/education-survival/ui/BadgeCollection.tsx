@@ -68,8 +68,8 @@ function BadgeCard({
       className={clsx(
         "relative p-3 rounded-xl border transition-all duration-200",
         isEarned
-          ? "bg-slate-900/60 border-slate-700/40"
-          : "bg-slate-900/20 border-slate-800/30 opacity-60"
+          ? "bg-white border-slate-200"
+          : "bg-white border-slate-200 opacity-60"
       )}
     >
       {/* Rarity glow */}
@@ -93,7 +93,7 @@ function BadgeCard({
         </div>
 
         {/* Name */}
-        <h4 className={clsx("text-[11px] font-semibold", isEarned ? "text-slate-200" : "text-slate-600")}>
+        <h4 className={clsx("text-[11px] font-semibold", isEarned ? "text-slate-800" : "text-slate-600")}>
           {badge.nameVi}
         </h4>
 
@@ -116,7 +116,7 @@ function BadgeCard({
         {/* Progress bar for unearned */}
         {!isEarned && progress.target > 0 && (
           <div className="mt-2">
-            <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
+            <div className="h-1 bg-slate-200 rounded-full overflow-hidden">
               <div
                 className="h-full rounded-full bg-slate-600"
                 style={{ width: `${progress.percent}%` }}
@@ -154,7 +154,7 @@ function BadgeCollectionComponent({ progress, badges, className }: BadgeCollecti
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Trophy className="w-5 h-5 text-amber-400" />
-          <h3 className="text-sm font-semibold text-slate-200">Bộ sưu tập huy hiệu</h3>
+          <h3 className="text-sm font-semibold text-slate-800">Bộ sưu tập huy hiệu</h3>
         </div>
         <span className="text-[10px] text-slate-500">
           {earnedCount}/{badges.length} đã đạt
@@ -169,7 +169,7 @@ function BadgeCollectionComponent({ progress, badges, className }: BadgeCollecti
             "px-2.5 py-1.5 rounded-lg text-[10px] font-medium border transition-colors whitespace-nowrap",
             categoryFilter === "all"
               ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-              : "bg-slate-800/30 border-slate-700/30 text-slate-500"
+              : "bg-slate-50 border-slate-200 text-slate-500"
           )}
         >
           Tất cả
@@ -182,7 +182,7 @@ function BadgeCollectionComponent({ progress, badges, className }: BadgeCollecti
               "flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[10px] font-medium border transition-colors whitespace-nowrap",
               categoryFilter === key
                 ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                : "bg-slate-800/30 border-slate-700/30 text-slate-500"
+                : "bg-slate-50 border-slate-200 text-slate-500"
             )}
           >
             {config.icon} {config.labelVi}
@@ -223,7 +223,7 @@ export const BadgeCollection = memo(BadgeCollectionComponent);
 function LeaderboardComponent({ entries, currentUserId, className }: LeaderboardProps) {
   const getRankIcon = (rank: number) => {
     if (rank === 1) return <Crown className="w-4 h-4 text-yellow-400" />;
-    if (rank === 2) return <Medal className="w-4 h-4 text-slate-300" />;
+    if (rank === 2) return <Medal className="w-4 h-4 text-slate-700" />;
     if (rank === 3) return <Medal className="w-4 h-4 text-amber-600" />;
     return <span className="text-xs text-slate-500 w-4 text-center">{rank}</span>;
   };
@@ -237,7 +237,7 @@ function LeaderboardComponent({ entries, currentUserId, className }: Leaderboard
       {/* Header */}
       <div className="flex items-center gap-2">
         <Users className="w-5 h-5 text-blue-400" />
-        <h3 className="text-sm font-semibold text-slate-200">Bảng xếp hạng</h3>
+        <h3 className="text-sm font-semibold text-slate-800">Bảng xếp hạng</h3>
       </div>
 
       {/* Top 3 podium */}
@@ -248,8 +248,8 @@ function LeaderboardComponent({ entries, currentUserId, className }: Leaderboard
             <div className="w-14 h-14 rounded-full bg-slate-300/10 border-2 border-slate-300/30 flex items-center justify-center text-lg mb-1">
               {entries[1].displayName.charAt(0)}
             </div>
-            <span className="text-[10px] text-slate-400 block">{entries[1].displayName}</span>
-            <span className="text-xs font-bold text-slate-300">{entries[1].xp.toLocaleString()} XP</span>
+            <span className="text-[10px] text-slate-500 block">{entries[1].displayName}</span>
+            <span className="text-xs font-bold text-slate-700">{entries[1].xp.toLocaleString()} XP</span>
             <div className="w-16 h-12 bg-slate-300/10 rounded-t-lg mt-1 flex items-center justify-center">
               <span className="text-lg">🥈</span>
             </div>
@@ -272,7 +272,7 @@ function LeaderboardComponent({ entries, currentUserId, className }: Leaderboard
             <div className="w-12 h-12 rounded-full bg-amber-600/10 border-2 border-amber-600/30 flex items-center justify-center mb-1">
               {entries[2].displayName.charAt(0)}
             </div>
-            <span className="text-[10px] text-slate-400 block">{entries[2].displayName}</span>
+            <span className="text-[10px] text-slate-500 block">{entries[2].displayName}</span>
             <span className="text-xs font-bold text-amber-600">{entries[2].xp.toLocaleString()} XP</span>
             <div className="w-16 h-10 bg-amber-600/10 rounded-t-lg mt-1 flex items-center justify-center">
               <span className="text-base">🥉</span>
@@ -297,7 +297,7 @@ function LeaderboardComponent({ entries, currentUserId, className }: Leaderboard
                 "flex items-center gap-3 p-2.5 rounded-xl transition-colors",
                 isCurrentUser
                   ? "bg-blue-500/10 border border-blue-500/20"
-                  : "bg-slate-900/30 border border-slate-700/20"
+                  : "bg-white border border-slate-200"
               )}
             >
               {/* Rank */}
@@ -317,7 +317,7 @@ function LeaderboardComponent({ entries, currentUserId, className }: Leaderboard
               {/* Info */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xs font-medium text-slate-200 truncate">
+                  <span className="text-xs font-medium text-slate-800 truncate">
                     {entry.displayName}
                   </span>
                   <span className="text-[9px]">{levelConfig.icon}</span>

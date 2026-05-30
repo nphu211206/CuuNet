@@ -22,7 +22,7 @@ export default function TileToggle({ currentMode, onModeChange }: TileToggleProp
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 h-10 rounded-xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center text-slate-300 hover:text-white hover:border-slate-500 transition-all shadow-lg"
+        className="w-10 h-10 rounded-xl bg-white/90 backdrop-blur-xl border border-slate-200 flex items-center justify-center text-slate-700 hover:text-white hover:border-slate-500 transition-all shadow-lg"
         title="Chế độ bản đồ"
       >
         {isOpen ? <X className="w-4 h-4" /> : <Layers className="w-4 h-4" />}
@@ -36,7 +36,7 @@ export default function TileToggle({ currentMode, onModeChange }: TileToggleProp
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.95 }}
             transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-12 right-0 bg-slate-900/95 backdrop-blur-2xl border border-slate-700/50 rounded-xl shadow-2xl overflow-hidden min-w-[160px]"
+            className="absolute top-12 right-0 bg-white/95 backdrop-blur-2xl border border-slate-200 rounded-xl shadow-2xl overflow-hidden min-w-[160px]"
           >
             <div className="p-2">
               <p className="text-[10px] text-slate-500 uppercase tracking-widest font-semibold px-2 py-1.5">
@@ -55,7 +55,7 @@ export default function TileToggle({ currentMode, onModeChange }: TileToggleProp
                     className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm transition-all ${
                       isActive
                         ? "bg-blue-500/15 text-blue-400 border border-blue-500/25"
-                        : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 border border-transparent"
+                        : "text-slate-500 hover:text-slate-800 hover:bg-slate-100 border border-transparent"
                     }`}
                   >
                     <span className="text-base">{option.icon}</span>

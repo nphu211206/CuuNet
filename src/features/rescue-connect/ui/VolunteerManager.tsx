@@ -71,7 +71,7 @@ function SkillBadges({ skills }: { skills: VolunteerSkill[] }) {
         return (
           <span
             key={skill}
-            className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-md text-[8px] font-medium bg-slate-800/50 text-slate-400 border border-slate-700/30"
+            className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-md text-[8px] font-medium bg-slate-100 text-slate-500 border border-slate-200"
           >
             {config.icon} {config.labelVi}
           </span>
@@ -128,7 +128,7 @@ function VolunteerCard({
   return (
     <motion.div
       variants={cardVariants}
-      className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 hover:border-slate-600/50 transition-colors"
+      className="p-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition-colors"
     >
       <div className="flex items-start gap-3">
         {/* Avatar */}
@@ -146,7 +146,7 @@ function VolunteerCard({
         {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-0.5">
-            <h4 className="text-xs font-semibold text-slate-200 truncate">{volunteer.name}</h4>
+            <h4 className="text-xs font-semibold text-slate-800 truncate">{volunteer.name}</h4>
             {volunteer.isVerified && (
               <CheckCircle2 className="w-3 h-3 text-blue-400 shrink-0" />
             )}
@@ -209,7 +209,7 @@ function VolunteerCard({
           )}
 
           {/* Actions */}
-          <div className="flex items-center gap-2 mt-2 pt-2 border-t border-slate-700/20">
+          <div className="flex items-center gap-2 mt-2 pt-2 border-t border-slate-200">
             {canAssign && (
               <button
                 onClick={() => {
@@ -294,7 +294,7 @@ function VolunteerManagerComponent({
           { label: "Đang làm", value: stats.deployed, color: "#F59E0B" },
           { label: "Xác minh", value: stats.verified, color: "#8B5CF6" },
         ].map((stat) => (
-          <div key={stat.label} className="p-2 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+          <div key={stat.label} className="p-2 rounded-xl bg-white border border-slate-200 text-center">
             <span className="text-lg font-bold block" style={{ color: stat.color }}>{stat.value}</span>
             <span className="text-[9px] text-slate-500">{stat.label}</span>
           </div>
@@ -309,7 +309,7 @@ function VolunteerManagerComponent({
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Tìm theo tên, SĐT, tỉnh..."
-          className="w-full bg-slate-800/50 border border-slate-700/30 rounded-lg pl-9 pr-3 py-2 text-xs text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-colors"
+          className="w-full bg-slate-100 border border-slate-200 rounded-lg pl-9 pr-3 py-2 text-xs text-slate-800 placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-colors"
         />
       </div>
 
@@ -332,7 +332,7 @@ function VolunteerManagerComponent({
                 "transition-all duration-200 border whitespace-nowrap",
                 statusFilter === filter.id
                   ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                  : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                  : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
               )}
             >
               <span>{filter.icon}</span>
@@ -358,7 +358,7 @@ function VolunteerManagerComponent({
                 "transition-all duration-200 border whitespace-nowrap",
                 skillFilter === filter.id
                   ? "bg-purple-500/15 border-purple-500/40 text-purple-400"
-                  : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                  : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
               )}
             >
               <span>{filter.icon}</span>

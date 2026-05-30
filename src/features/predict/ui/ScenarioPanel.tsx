@@ -55,26 +55,26 @@ function ComparisonTooltip({ active, payload, label }: ComparisonTooltipProps) {
   const isIncrease = data.modifier > 1;
 
   return (
-    <div className="glass-card border border-slate-700/50 shadow-xl px-4 py-3 min-w-[200px]">
-      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-slate-700/50">
+    <div className="glass-card border border-slate-200 shadow-xl px-4 py-3 min-w-[200px]">
+      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-slate-200">
         <span className="text-base">{data.icon}</span>
-        <span className="text-sm font-semibold text-slate-200">{data.typeLabel}</span>
+        <span className="text-sm font-semibold text-slate-800">{data.typeLabel}</span>
       </div>
 
       <div className="space-y-1">
         <div className="flex justify-between text-xs">
-          <span className="text-slate-400">Bình thường:</span>
+          <span className="text-slate-500">Bình thường:</span>
           <span className="font-mono text-blue-400">{(data.normal * 100).toFixed(0)}%</span>
         </div>
         <div className="flex justify-between text-xs">
-          <span className="text-slate-400">Kịch bản:</span>
+          <span className="text-slate-500">Kịch bản:</span>
           <span className="font-mono text-amber-400">{(data.current * 100).toFixed(0)}%</span>
         </div>
-        <div className="flex justify-between text-xs pt-1 border-t border-slate-700/50">
-          <span className="text-slate-400">Thay đổi:</span>
+        <div className="flex justify-between text-xs pt-1 border-t border-slate-200">
+          <span className="text-slate-500">Thay đổi:</span>
           <span
             className={`font-mono font-semibold ${
-              isIncrease ? "text-red-400" : data.modifier < 1 ? "text-green-400" : "text-slate-400"
+              isIncrease ? "text-red-400" : data.modifier < 1 ? "text-green-400" : "text-slate-500"
             }`}
           >
             {isIncrease ? "+" : ""}{diffPercent}%
@@ -104,7 +104,7 @@ function ScenarioButton({ scenario, isActive, onClick }: ScenarioButtonProps) {
         border transition-all duration-300 cursor-pointer
         ${isActive
           ? "border-opacity-60 bg-opacity-15 shadow-lg"
-          : "border-slate-700/40 bg-slate-800/20 hover:border-slate-600/60 hover:bg-slate-800/40"
+          : "border-slate-200 bg-slate-50 hover:border-slate-300 hover:bg-slate-100"
         }
       `}
       style={
@@ -134,7 +134,7 @@ function ScenarioButton({ scenario, isActive, onClick }: ScenarioButtonProps) {
       <span className="text-xl relative z-10">{scenario.icon}</span>
       <span
         className={`text-xs font-semibold relative z-10 ${
-          isActive ? "text-slate-100" : "text-slate-400"
+          isActive ? "text-slate-100" : "text-slate-500"
         }`}
       >
         {scenario.name}
@@ -193,7 +193,7 @@ export default function ScenarioPanel({
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="text-sm font-semibold text-slate-200">
+          <h3 className="text-sm font-semibold text-slate-800">
             Kịch bản mô phỏng
           </h3>
           <p className="text-xs text-slate-500 mt-0.5">
@@ -202,7 +202,7 @@ export default function ScenarioPanel({
         </div>
         <button
           onClick={() => setShowDetails(!showDetails)}
-          className="text-xs text-slate-400 hover:text-slate-200 transition-colors px-2 py-1 rounded-lg hover:bg-slate-800/50"
+          className="text-xs text-slate-500 hover:text-slate-800 transition-colors px-2 py-1 rounded-lg hover:bg-slate-100"
         >
           {showDetails ? "Ẩn chi tiết" : "Xem chi tiết"}
         </button>
@@ -237,7 +237,7 @@ export default function ScenarioPanel({
               borderColor: `${activeColor}20`,
             }}
           >
-            <p className="text-xs text-slate-300 mb-1.5">
+            <p className="text-xs text-slate-700 mb-1.5">
               <span className="font-semibold">{currentScenario.name}</span>
               {" - "}
               {currentScenario.description}
@@ -266,7 +266,7 @@ export default function ScenarioPanel({
           return (
             <div
               key={type}
-              className="flex flex-col items-center gap-1 p-2 rounded-lg bg-slate-800/30"
+              className="flex flex-col items-center gap-1 p-2 rounded-lg bg-slate-50"
             >
               <span className="text-sm">{config.icon}</span>
               <span
@@ -275,7 +275,7 @@ export default function ScenarioPanel({
                     ? "text-red-400"
                     : isDecrease
                       ? "text-green-400"
-                      : "text-slate-400"
+                      : "text-slate-500"
                 }`}
               >
                 {isIncrease ? "+" : ""}

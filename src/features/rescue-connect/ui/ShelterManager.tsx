@@ -141,10 +141,10 @@ function SpecialNeedsDisplay({ specialNeeds }: { specialNeeds: Shelter["specialN
       {items.map((item) => (
         <div
           key={item.label}
-          className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-slate-800/30 border border-slate-700/20"
+          className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-slate-50 border border-slate-200"
         >
           <span className="text-xs">{item.icon}</span>
-          <span className="text-[9px] text-slate-400 flex-1">{item.label}</span>
+          <span className="text-[9px] text-slate-500 flex-1">{item.label}</span>
           <span className="text-[10px] font-bold" style={{ color: item.color }}>{item.count}</span>
         </div>
       ))}
@@ -174,7 +174,7 @@ function ShelterCard({
   return (
     <motion.div
       variants={cardVariants}
-      className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 hover:border-slate-600/50 transition-colors"
+      className="p-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition-colors"
     >
       <div className="flex items-start gap-3">
         {/* Occupancy gauge */}
@@ -184,7 +184,7 @@ function ShelterCard({
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-0.5">
             <span className="text-sm">{typeConfig.icon}</span>
-            <h4 className="text-xs font-semibold text-slate-200 truncate">{shelter.name}</h4>
+            <h4 className="text-xs font-semibold text-slate-800 truncate">{shelter.name}</h4>
           </div>
 
           <div className="flex items-center gap-2 mb-1">
@@ -217,14 +217,14 @@ function ShelterCard({
           <div className="mt-2">
             <div className="flex items-center justify-between mb-0.5">
               <span className="text-[9px] text-slate-500">Sức chứa</span>
-              <span className="text-[9px] font-medium text-slate-400">
+              <span className="text-[9px] font-medium text-slate-500">
                 {shelter.capacity.current}/{shelter.capacity.max}
                 {shelter.capacity.reserved > 0 && (
                   <span className="text-slate-600"> (+{shelter.capacity.reserved} dự trữ)</span>
                 )}
               </span>
             </div>
-            <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
+            <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${shelter.capacity.max > 0 ? (shelter.capacity.current / shelter.capacity.max) * 100 : 0}%` }}
@@ -248,7 +248,7 @@ function ShelterCard({
           <SpecialNeedsDisplay specialNeeds={shelter.specialNeeds} />
 
           {/* Check-in/out buttons */}
-          <div className="flex items-center gap-2 mt-2 pt-2 border-t border-slate-700/20">
+          <div className="flex items-center gap-2 mt-2 pt-2 border-t border-slate-200">
             {canCheckIn && (
               <button
                 onClick={() => onCheckIn(shelter.id, 1)}
@@ -261,7 +261,7 @@ function ShelterCard({
             {canCheckOut && (
               <button
                 onClick={() => onCheckOut(shelter.id, 1)}
-                className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-500/15 border border-slate-500/30 text-slate-400 text-[10px] font-medium hover:bg-slate-500/25 transition-colors"
+                className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-500/15 border border-slate-500/30 text-slate-500 text-[10px] font-medium hover:bg-slate-500/25 transition-colors"
               >
                 <Minus className="w-3 h-3" />
                 Check-out (-1)
@@ -309,15 +309,15 @@ function ShelterManagerComponent({
     <div className={clsx("space-y-3", className)}>
       {/* Stats */}
       <div className="grid grid-cols-3 gap-2">
-        <div className="p-2 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-2 rounded-xl bg-white border border-slate-200 text-center">
           <span className="text-lg font-bold text-cyan-400 block">{openCount}</span>
           <span className="text-[9px] text-slate-500">Đang mở</span>
         </div>
-        <div className="p-2 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-2 rounded-xl bg-white border border-slate-200 text-center">
           <span className="text-lg font-bold text-white block">{totalOccupied.toLocaleString()}</span>
           <span className="text-[9px] text-slate-500">Đang ở</span>
         </div>
-        <div className="p-2 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-2 rounded-xl bg-white border border-slate-200 text-center">
           <span className="text-lg font-bold text-green-400 block">{totalCapacity.toLocaleString()}</span>
           <span className="text-[9px] text-slate-500">Sức chứa</span>
         </div>
@@ -340,7 +340,7 @@ function ShelterManagerComponent({
               "transition-all duration-200 border whitespace-nowrap",
               statusFilter === filter.id
                 ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
             )}
           >
             <span>{filter.icon}</span>

@@ -135,7 +135,7 @@ export default function PredictStatsBar({
           value: 0,
           displayValue: "—",
           icon: <MapPin className="w-5 h-5" />,
-          color: "text-slate-400",
+          color: "text-slate-500",
           bgColor: "bg-slate-500/10",
           isText: true,
         },
@@ -144,7 +144,7 @@ export default function PredictStatsBar({
           value: 0,
           displayValue: "—",
           icon: <AlertTriangle className="w-5 h-5" />,
-          color: "text-slate-400",
+          color: "text-slate-500",
           bgColor: "bg-slate-500/10",
           isText: true,
         },
@@ -152,7 +152,7 @@ export default function PredictStatsBar({
           label: "Điểm TB toàn quốc",
           value: 0,
           icon: <Activity className="w-5 h-5" />,
-          color: "text-slate-400",
+          color: "text-slate-500",
           bgColor: "bg-slate-500/10",
           suffix: "%",
           decimals: 0,
@@ -162,7 +162,7 @@ export default function PredictStatsBar({
           value: 0,
           displayValue: "0/15",
           icon: <Shield className="w-5 h-5" />,
-          color: "text-slate-400",
+          color: "text-slate-500",
           bgColor: "bg-slate-500/10",
           isText: true,
         },
@@ -170,7 +170,7 @@ export default function PredictStatsBar({
           label: "Độ tin cậy TB",
           value: 0,
           icon: <Target className="w-5 h-5" />,
-          color: "text-slate-400",
+          color: "text-slate-500",
           bgColor: "bg-slate-500/10",
           suffix: "%",
           decimals: 0,
@@ -180,7 +180,7 @@ export default function PredictStatsBar({
           value: 0,
           displayValue: "—",
           icon: <TrendingUp className="w-5 h-5" />,
-          color: "text-slate-400",
+          color: "text-slate-500",
           bgColor: "bg-slate-500/10",
           isText: true,
         },
@@ -215,7 +215,7 @@ export default function PredictStatsBar({
     const increasingCount = allRisks.filter((r) => r.trend === "increasing").length;
     const decreasingCount = allRisks.filter((r) => r.trend === "decreasing").length;
     let trendLabel = "Ổn định";
-    let trendColor = "text-slate-400";
+    let trendColor = "text-slate-500";
     if (increasingCount > decreasingCount + 3) {
       trendLabel = "Tăng";
       trendColor = "text-red-400";

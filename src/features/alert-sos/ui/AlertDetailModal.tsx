@@ -125,7 +125,7 @@ function MetaRow({
 }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-slate-800/60 text-slate-400">
+      <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-slate-100 text-slate-500">
         {icon}
       </div>
       <div>
@@ -196,7 +196,7 @@ function AlertDetailModalComponent({
           onClick={(e) => e.stopPropagation()}
           className={clsx(
             "relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-2xl",
-            "bg-slate-900 border border-slate-700/50",
+            "bg-slate-900 border border-slate-200",
             "shadow-2xl shadow-black/50"
           )}
         >
@@ -206,7 +206,7 @@ function AlertDetailModalComponent({
             className={clsx(
               "absolute top-3 right-3 z-10 w-8 h-8 rounded-full",
               "bg-black/40 backdrop-blur-sm flex items-center justify-center",
-              "text-slate-400 hover:text-white transition-colors"
+              "text-slate-500 hover:text-white transition-colors"
             )}
           >
             <X className="w-4 h-4" />
@@ -255,7 +255,7 @@ function AlertDetailModalComponent({
               </h2>
 
               {/* Sender + time */}
-              <div className="flex items-center gap-3 mt-2 text-xs text-slate-400">
+              <div className="flex items-center gap-3 mt-2 text-xs text-slate-500">
                 <span className="flex items-center gap-1">
                   {senderConfig.icon} {senderConfig.labelVi}
                 </span>
@@ -272,7 +272,7 @@ function AlertDetailModalComponent({
           <div className="px-5 py-4 space-y-5">
             {/* Description */}
             <motion.div custom={0} variants={sectionVariants} initial="hidden" animate="visible">
-              <p className="text-sm text-slate-300 leading-relaxed">
+              <p className="text-sm text-slate-700 leading-relaxed">
                 {alert.info.description}
               </p>
             </motion.div>
@@ -365,7 +365,7 @@ function AlertDetailModalComponent({
               variants={sectionVariants}
               initial="hidden"
               animate="visible"
-              className="p-3.5 rounded-xl bg-slate-800/40 border border-slate-700/30"
+              className="p-3.5 rounded-xl bg-slate-100 border border-slate-200"
             >
               <p className="text-[10px] text-slate-500 uppercase tracking-wider font-medium mb-2">
                 Thống kê phát sóng
@@ -421,7 +421,7 @@ function AlertDetailModalComponent({
                   {alert.relatedAlerts.map((relatedId) => (
                     <span
                       key={relatedId}
-                      className="text-[10px] px-2 py-1 rounded bg-slate-800/60 text-slate-400 border border-slate-700/30"
+                      className="text-[10px] px-2 py-1 rounded bg-slate-100 text-slate-500 border border-slate-200"
                     >
                       {relatedId}
                     </span>
@@ -432,7 +432,7 @@ function AlertDetailModalComponent({
           </div>
 
           {/* Action Buttons */}
-          <div className="px-5 pb-5 pt-2 flex items-center gap-2 border-t border-slate-700/30">
+          <div className="px-5 pb-5 pt-2 flex items-center gap-2 border-t border-slate-200">
             {!isExpired && !isCancelled && (
               <>
                 <motion.button
@@ -456,8 +456,8 @@ function AlertDetailModalComponent({
                   onClick={() => onDismiss(alert.id)}
                   className={clsx(
                     "flex items-center justify-center gap-2 px-4 py-3 rounded-xl",
-                    "bg-slate-800/60 text-slate-300 font-medium",
-                    "border border-slate-700/50 hover:border-slate-600/70",
+                    "bg-slate-100 text-slate-700 font-medium",
+                    "border border-slate-200 hover:border-slate-600/70",
                     "transition-all duration-200"
                   )}
                 >
@@ -473,8 +473,8 @@ function AlertDetailModalComponent({
               onClick={handleShare}
               className={clsx(
                 "flex items-center justify-center gap-2 px-4 py-3 rounded-xl",
-                "bg-slate-800/60 text-slate-300 font-medium",
-                "border border-slate-700/50 hover:border-slate-600/70",
+                "bg-slate-100 text-slate-700 font-medium",
+                "border border-slate-200 hover:border-slate-600/70",
                 "transition-all duration-200"
               )}
             >

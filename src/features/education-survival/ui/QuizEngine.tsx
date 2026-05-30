@@ -117,8 +117,8 @@ function TimerDisplay({ timeLeft, timeLimit }: { timeLeft: number; timeLimit: nu
 
   return (
     <div className="flex items-center gap-2">
-      <Clock className={clsx("w-4 h-4", isCritical ? "text-red-400 animate-pulse" : isLow ? "text-amber-400" : "text-slate-400")} />
-      <div className="flex-1 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+      <Clock className={clsx("w-4 h-4", isCritical ? "text-red-400 animate-pulse" : isLow ? "text-amber-400" : "text-slate-500")} />
+      <div className="flex-1 h-1.5 bg-slate-200 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: "100%" }}
           animate={{ width: `${percent}%` }}
@@ -131,7 +131,7 @@ function TimerDisplay({ timeLeft, timeLimit }: { timeLeft: number; timeLimit: nu
       </div>
       <span className={clsx(
         "text-xs font-bold tabular-nums w-8 text-right",
-        isCritical ? "text-red-400" : isLow ? "text-amber-400" : "text-slate-400"
+        isCritical ? "text-red-400" : isLow ? "text-amber-400" : "text-slate-500"
       )}>
         {seconds}s
       </span>
@@ -184,7 +184,7 @@ function QuestionDisplay({
       </div>
 
       {/* Progress bar */}
-      <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
+      <div className="h-1 bg-slate-200 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
@@ -194,13 +194,13 @@ function QuestionDisplay({
       </div>
 
       {/* Question text */}
-      <h3 className="text-sm font-semibold text-slate-200 leading-relaxed">
+      <h3 className="text-sm font-semibold text-slate-800 leading-relaxed">
         {question.questionVi}
       </h3>
 
       {/* Image if present */}
       {question.imageUrl && (
-        <div className="rounded-xl overflow-hidden border border-slate-700/30">
+        <div className="rounded-xl overflow-hidden border border-slate-200">
           <img src={question.imageUrl} alt="Question" className="w-full h-auto" />
         </div>
       )}
@@ -296,7 +296,7 @@ function OptionButton({
           )}
         </div>
         <div className="flex-1">
-          <p className={clsx("text-xs", showFeedback && !isCorrect && !isSelected ? "text-slate-600" : "text-slate-200")}>
+          <p className={clsx("text-xs", showFeedback && !isCorrect && !isSelected ? "text-slate-600" : "text-slate-800")}>
             {option.icon && <span className="mr-1">{option.icon}</span>}
             {option.textVi}
           </p>
@@ -346,7 +346,7 @@ function FeedbackDisplay({
           <span className="text-[10px] font-bold text-green-400 ml-auto">+{xpEarned} XP</span>
         )}
       </div>
-      <p className="text-[11px] text-slate-300">{explanation}</p>
+      <p className="text-[11px] text-slate-700">{explanation}</p>
       <button
         onClick={onNext}
         className="mt-3 w-full py-2 rounded-lg bg-blue-500/15 border border-blue-500/30 text-blue-400 text-xs font-medium hover:bg-blue-500/25 transition-colors"
@@ -379,7 +379,7 @@ function QuizResultSummary({
       className="space-y-4"
     >
       {/* Score */}
-      <div className="p-6 rounded-xl bg-slate-900/60 border border-slate-700/30 text-center">
+      <div className="p-6 rounded-xl bg-white border border-slate-200 text-center">
         <Trophy className="w-12 h-12 mx-auto mb-3" style={{ color: scoreColor }} />
         <h3 className="text-3xl font-black tabular-nums" style={{ color: scoreColor }}>
           {result.score}%
@@ -392,17 +392,17 @@ function QuizResultSummary({
 
       {/* Stats */}
       <div className="grid grid-cols-3 gap-2">
-        <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
           <Zap className="w-4 h-4 text-amber-400 mx-auto mb-1" />
           <span className="text-sm font-bold text-amber-400">+{result.xpEarned}</span>
           <span className="text-[9px] text-slate-500 block">XP</span>
         </div>
-        <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
           <Clock className="w-4 h-4 text-blue-400 mx-auto mb-1" />
           <span className="text-sm font-bold text-blue-400">{Math.round(result.averageTimeMs / 1000)}s</span>
           <span className="text-[9px] text-slate-500 block">TB/câu</span>
         </div>
-        <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
           <Target className="w-4 h-4 text-green-400 mx-auto mb-1" />
           <span className="text-sm font-bold text-green-400">{result.correctAnswers}</span>
           <span className="text-[9px] text-slate-500 block">Đúng</span>
@@ -410,8 +410,8 @@ function QuizResultSummary({
       </div>
 
       {/* Bloom's distribution */}
-      <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30">
-        <h4 className="text-xs font-semibold text-slate-200 mb-2">📊 Phân bố Bloom's Taxonomy</h4>
+      <div className="p-3 rounded-xl bg-white border border-slate-200">
+        <h4 className="text-xs font-semibold text-slate-800 mb-2">📊 Phân bố Bloom's Taxonomy</h4>
         <div className="space-y-1.5">
           {Object.entries(result.bloomDistribution).map(([level, count]) => {
             const config = BLOOM_LEVEL_CONFIG[level as BloomLevel];
@@ -419,8 +419,8 @@ function QuizResultSummary({
             const percent = total > 0 ? Math.round((count / total) * 100) : 0;
             return (
               <div key={level} className="flex items-center gap-2">
-                <span className="text-[10px] text-slate-400 w-20">{config.icon} {config.labelVi}</span>
-                <div className="flex-1 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                <span className="text-[10px] text-slate-500 w-20">{config.icon} {config.labelVi}</span>
+                <div className="flex-1 h-1.5 bg-slate-200 rounded-full overflow-hidden">
                   <div
                     className="h-full rounded-full"
                     style={{ width: `${percent}%`, backgroundColor: config.color }}
@@ -528,10 +528,10 @@ function QuizEngineComponent({
   if (!session) {
     return (
       <div className={clsx("space-y-4", className)}>
-        <div className="p-6 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-6 rounded-xl bg-white border border-slate-200 text-center">
           <Brain className="w-12 h-12 text-purple-400 mx-auto mb-3" />
           <h3 className="text-lg font-bold text-white mb-2">Quiz thích ứng</h3>
-          <p className="text-xs text-slate-400 mb-4">
+          <p className="text-xs text-slate-500 mb-4">
             Câu hỏi điều chỉnh theo khả năng của bạn. Trả lời đúng → câu khó hơn. Sai → câu dễ hơn.
           </p>
           <button

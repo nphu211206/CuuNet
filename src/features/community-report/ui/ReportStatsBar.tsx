@@ -251,8 +251,8 @@ function StatCard({
       variants={itemVariants}
       onClick={onClick}
       className={clsx(
-        "relative rounded-xl p-3 border border-slate-700/30 overflow-hidden cursor-pointer",
-        "hover:border-slate-600/50 hover:shadow-lg hover:shadow-black/10 transition-all",
+        "relative rounded-xl p-3 border border-slate-200 overflow-hidden cursor-pointer",
+        "hover:border-slate-300 hover:shadow-lg hover:shadow-black/10 transition-all",
         bgColor
       )}
     >
@@ -291,7 +291,7 @@ function StatCard({
               {animatedValue}
             </span>
             {suffix && (
-              <span className="text-xs text-slate-400 truncate">{suffix}</span>
+              <span className="text-xs text-slate-500 truncate">{suffix}</span>
             )}
           </div>
         )}

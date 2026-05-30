@@ -120,7 +120,7 @@ export default function DisasterMap({
   const weatherLayer = layers.find((l) => l.id === "weather");
 
   return (
-    <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-800/50">
+    <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-200">
       <MapContainer
         center={MAP_CONFIG.center}
         zoom={MAP_CONFIG.zoom}
@@ -195,19 +195,19 @@ export default function DisasterMap({
         <div className="flex items-center gap-3 text-xs">
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
-            <span className="text-slate-400">Khẩn cấp</span>
+            <span className="text-slate-500">Khẩn cấp</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
-            <span className="text-slate-400">Nguy hiểm</span>
+            <span className="text-slate-500">Nguy hiểm</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
-            <span className="text-slate-400">Cảnh báo</span>
+            <span className="text-slate-500">Cảnh báo</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
-            <span className="text-slate-400">Thấp</span>
+            <span className="text-slate-500">Thấp</span>
           </div>
         </div>
       </div>

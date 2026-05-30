@@ -69,8 +69,8 @@ function ChannelList({
             className={clsx(
               "w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left transition-all duration-200",
               isActive
-                ? "bg-slate-800/60 text-slate-200"
-                : "text-slate-500 hover:bg-slate-800/30 hover:text-slate-300"
+                ? "bg-slate-100 text-slate-800"
+                : "text-slate-500 hover:bg-slate-50 hover:text-slate-700"
             )}
           >
             <span className="text-sm">{config.icon}</span>
@@ -98,7 +98,7 @@ function MessageBubble({ message }: { message: CommMessage }) {
   if (isSystem) {
     return (
       <motion.div variants={messageVariants} className="flex justify-center py-1">
-        <span className="text-[10px] text-slate-600 bg-slate-800/30 px-3 py-1 rounded-full">
+        <span className="text-[10px] text-slate-600 bg-slate-50 px-3 py-1 rounded-full">
           🤖 {message.content}
         </span>
       </motion.div>
@@ -108,14 +108,14 @@ function MessageBubble({ message }: { message: CommMessage }) {
   return (
     <motion.div variants={messageVariants} className="flex gap-2 py-1">
       {/* Avatar */}
-      <div className="w-7 h-7 rounded-full bg-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-400 shrink-0">
+      <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-500 shrink-0">
         {message.senderName.charAt(0)}
       </div>
 
       {/* Content */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-0.5">
-          <span className="text-[11px] font-semibold text-slate-200">{message.senderName}</span>
+          <span className="text-[11px] font-semibold text-slate-800">{message.senderName}</span>
           <span className="text-[9px] text-slate-600">
             {new Date(message.createdAt).toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" })}
           </span>
@@ -130,12 +130,12 @@ function MessageBubble({ message }: { message: CommMessage }) {
         </div>
 
         <div className={clsx(
-          "text-xs text-slate-300 rounded-lg px-2.5 py-1.5 inline-block",
+          "text-xs text-slate-700 rounded-lg px-2.5 py-1.5 inline-block",
           message.priority === "critical"
             ? "bg-red-500/10 border border-red-500/20"
             : message.priority === "urgent"
               ? "bg-amber-500/10 border border-amber-500/20"
-              : "bg-slate-800/30"
+              : "bg-slate-50"
         )}>
           {message.type === "resource_request" && (
             <span className="text-blue-400 mr-1">📦</span>
@@ -180,7 +180,7 @@ function MessageInput({
   );
 
   return (
-    <div className="p-3 border-t border-slate-700/30">
+    <div className="p-3 border-t border-slate-200">
       <div className="flex items-center gap-2">
         <input
           type="text"
@@ -188,7 +188,7 @@ function MessageInput({
           onChange={(e) => setText(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={`Nhắn tin vào #${channelName}...`}
-          className="flex-1 bg-slate-800/50 border border-slate-700/30 rounded-lg px-3 py-2 text-xs text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-colors"
+          className="flex-1 bg-slate-100 border border-slate-200 rounded-lg px-3 py-2 text-xs text-slate-800 placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 transition-colors"
         />
         <button
           onClick={handleSend}
@@ -197,7 +197,7 @@ function MessageInput({
             "p-2 rounded-lg transition-colors",
             text.trim()
               ? "bg-blue-500/20 text-blue-400 hover:bg-blue-500/30"
-              : "bg-slate-800/30 text-slate-600"
+              : "bg-slate-50 text-slate-600"
           )}
         >
           <Send className="w-4 h-4" />
@@ -225,7 +225,7 @@ function BroadcastCard({ broadcast }: { broadcast: Broadcast }) {
     >
       <div className="flex items-center gap-2 mb-1">
         <Volume2 className="w-3.5 h-3.5" style={{ color: priorityConfig.color }} />
-        <span className="text-[11px] font-semibold text-slate-200">{broadcast.title}</span>
+        <span className="text-[11px] font-semibold text-slate-800">{broadcast.title}</span>
         <span
           className="text-[8px] font-bold px-1 py-0.5 rounded ml-auto"
           style={{ backgroundColor: `${priorityConfig.color}15`, color: priorityConfig.color }}
@@ -233,7 +233,7 @@ function BroadcastCard({ broadcast }: { broadcast: Broadcast }) {
           {priorityConfig.labelVi}
         </span>
       </div>
-      <p className="text-[11px] text-slate-400">{broadcast.content}</p>
+      <p className="text-[11px] text-slate-500">{broadcast.content}</p>
       <div className="flex items-center gap-2 mt-1.5 text-[9px] text-slate-500">
         <span>Bởi: {broadcast.sentBy}</span>
         <span>•</span>
@@ -304,12 +304,12 @@ function CommunicationHubComponent({
   }, [channelMessages.length]);
 
   return (
-    <div className={clsx("flex h-[500px] rounded-xl bg-slate-900/40 border border-slate-700/30 overflow-hidden", className)}>
+    <div className={clsx("flex h-[500px] rounded-xl bg-white border border-slate-200 overflow-hidden", className)}>
       {/* Sidebar */}
-      <div className="w-48 border-r border-slate-700/30 flex flex-col">
-        <div className="p-2.5 border-b border-slate-700/30">
-          <h3 className="text-xs font-semibold text-slate-200 flex items-center gap-1.5">
-            <Hash className="w-3.5 h-3.5 text-slate-400" />
+      <div className="w-48 border-r border-slate-200 flex flex-col">
+        <div className="p-2.5 border-b border-slate-200">
+          <h3 className="text-xs font-semibold text-slate-800 flex items-center gap-1.5">
+            <Hash className="w-3.5 h-3.5 text-slate-500" />
             Kênh liên lạc
           </h3>
         </div>
@@ -325,11 +325,11 @@ function CommunicationHubComponent({
       {/* Main content */}
       <div className="flex-1 flex flex-col">
         {/* Header */}
-        <div className="p-2.5 border-b border-slate-700/30 flex items-center gap-2">
+        <div className="p-2.5 border-b border-slate-200 flex items-center gap-2">
           {activeChannel && (
             <>
               <span className="text-sm">{CHANNEL_TYPE_CONFIG[activeChannel.type].icon}</span>
-              <span className="text-xs font-semibold text-slate-200">{activeChannel.name}</span>
+              <span className="text-xs font-semibold text-slate-800">{activeChannel.name}</span>
               <span className="text-[10px] text-slate-500">
                 {activeChannel.participants.length} thành viên
               </span>
@@ -339,7 +339,7 @@ function CommunicationHubComponent({
 
         {/* Broadcasts */}
         {recentBroadcasts.length > 0 && (
-          <div className="p-2 border-b border-slate-700/20 space-y-1.5">
+          <div className="p-2 border-b border-slate-200 space-y-1.5">
             {recentBroadcasts.map((bc) => (
               <BroadcastCard key={bc.id} broadcast={bc} />
             ))}

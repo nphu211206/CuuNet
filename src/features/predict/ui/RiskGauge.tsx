@@ -327,7 +327,7 @@ export default function RiskGauge({
 
       {/* Optional label below */}
       {label && (
-        <span className="mt-1 text-xs text-slate-400 text-center">{label}</span>
+        <span className="mt-1 text-xs text-slate-500 text-center">{label}</span>
       )}
     </div>
   );

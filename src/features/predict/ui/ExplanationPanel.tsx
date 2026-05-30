@@ -84,7 +84,7 @@ function FactorBar({
       {/* Content */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between mb-1">
-          <span className="text-xs text-slate-300 font-medium">
+          <span className="text-xs text-slate-700 font-medium">
             {factor.label}
           </span>
           <span
@@ -96,7 +96,7 @@ function FactorBar({
         </div>
 
         {/* Progress bar */}
-        <div className="h-1.5 bg-slate-800/60 rounded-full overflow-hidden">
+        <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
           <motion.div
             className="h-full rounded-full"
             style={{ backgroundColor: color }}
@@ -181,7 +181,7 @@ function ContextualFactors({
           transition={{ delay: 0.5 + i * 0.1 }}
         >
           <span>{f.icon}</span>
-          <span className="text-slate-400">{f.label}</span>
+          <span className="text-slate-500">{f.label}</span>
           <span className="font-mono ml-auto" style={{ color: f.color }}>
             {f.value}
           </span>
@@ -208,7 +208,7 @@ export default function ExplanationPanel({
 
   return (
     <motion.div
-      className="rounded-xl border border-slate-700/40 overflow-hidden"
+      className="rounded-xl border border-slate-200 overflow-hidden"
       style={{ backgroundColor: `${color}05` }}
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -221,12 +221,12 @@ export default function ExplanationPanel({
       >
         <div className="flex items-center gap-2">
           <Info className="w-4 h-4" style={{ color }} />
-          <h4 className="text-sm font-semibold text-slate-200">
+          <h4 className="text-sm font-semibold text-slate-800">
             Giải thích rủi ro
           </h4>
         </div>
-        <p className="text-xs text-slate-400 mt-1">
-          <span className="font-medium text-slate-300">{province}</span> có rủi ro{" "}
+        <p className="text-xs text-slate-500 mt-1">
+          <span className="font-medium text-slate-700">{province}</span> có rủi ro{" "}
           <span className="font-semibold" style={{ color }}>
             {config.icon} {config.label}
           </span>{" "}
@@ -255,7 +255,7 @@ export default function ExplanationPanel({
 
       {/* Contextual factors */}
       <div className="px-4 pb-4">
-        <div className="p-3 rounded-lg bg-slate-800/30 border border-slate-700/30">
+        <div className="p-3 rounded-lg bg-slate-50 border border-slate-200">
           <p className="text-xs text-slate-500 font-medium mb-2">
             Yếu tố bối cảnh:
           </p>
@@ -276,7 +276,7 @@ export default function ExplanationPanel({
               <p className="text-xs text-blue-400 font-medium mb-1">
                 Phân tích AI:
               </p>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-500 leading-relaxed">
                 {riskScore.explanation}
               </p>
             </div>

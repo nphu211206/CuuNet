@@ -113,7 +113,7 @@ function OrganizationCard({ org }: { org: Organization }) {
   return (
     <motion.div
       variants={cardVariants}
-      className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 hover:border-slate-600/50 transition-colors"
+      className="p-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition-colors"
     >
       <div className="flex items-start gap-3">
         <div
@@ -123,7 +123,7 @@ function OrganizationCard({ org }: { org: Organization }) {
           {config.icon}
         </div>
         <div className="flex-1 min-w-0">
-          <h4 className="text-xs font-semibold text-slate-200 truncate">{org.name}</h4>
+          <h4 className="text-xs font-semibold text-slate-800 truncate">{org.name}</h4>
           <p className="text-[10px] font-medium mt-0.5" style={{ color: config.color }}>
             {org.acronym} • {config.labelVi}
           </p>
@@ -143,7 +143,7 @@ function OrganizationCard({ org }: { org: Organization }) {
               return (
                 <span
                   key={cluster}
-                  className="text-[8px] font-medium px-1.5 py-0.5 rounded bg-slate-800/50 text-slate-400 border border-slate-700/30"
+                  className="text-[8px] font-medium px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 border border-slate-200"
                 >
                   {clusterConfig.icon} {clusterConfig.labelVi}
                 </span>
@@ -176,7 +176,7 @@ function ClusterSummaryCard({
   return (
     <motion.div
       variants={cardVariants}
-      className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30"
+      className="p-3 rounded-xl bg-white border border-slate-200"
     >
       <div className="flex items-center gap-2 mb-2">
         <div
@@ -186,16 +186,16 @@ function ClusterSummaryCard({
           {config.icon}
         </div>
         <div>
-          <h4 className="text-xs font-semibold text-slate-200">{config.labelVi}</h4>
+          <h4 className="text-xs font-semibold text-slate-800">{config.labelVi}</h4>
           <p className="text-[9px] text-slate-500">{organizations} tổ chức</p>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-2">
-        <div className="p-1.5 rounded-lg bg-slate-800/30">
+        <div className="p-1.5 rounded-lg bg-slate-50">
           <span className="text-[9px] text-slate-500 block">Hoạt động</span>
           <span className="text-sm font-bold text-blue-400">{activities}</span>
         </div>
-        <div className="p-1.5 rounded-lg bg-slate-800/30">
+        <div className="p-1.5 rounded-lg bg-slate-50">
           <span className="text-[9px] text-slate-500 block">Tiếp cận</span>
           <span className="text-sm font-bold text-green-400">{beneficiaries.toLocaleString()}</span>
         </div>
@@ -215,12 +215,12 @@ function GapAnalysisCard({ gap }: { gap: FiveWGapAnalysis }) {
   return (
     <motion.div
       variants={cardVariants}
-      className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30"
+      className="p-3 rounded-xl bg-white border border-slate-200"
     >
       <div className="flex items-center gap-2 mb-2">
         <span className="text-sm">{clusterConfig.icon}</span>
         <div className="flex-1">
-          <h4 className="text-xs font-semibold text-slate-200">{clusterConfig.labelVi}</h4>
+          <h4 className="text-xs font-semibold text-slate-800">{clusterConfig.labelVi}</h4>
           <p className="text-[10px] text-slate-500">{gap.location.province}</p>
         </div>
         <span
@@ -232,7 +232,7 @@ function GapAnalysisCard({ gap }: { gap: FiveWGapAnalysis }) {
       </div>
 
       {/* Progress bar */}
-      <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden mb-2">
+      <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden mb-2">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${100 - gap.gapPercentage}%` }}
@@ -244,7 +244,7 @@ function GapAnalysisCard({ gap }: { gap: FiveWGapAnalysis }) {
       <div className="grid grid-cols-3 gap-1.5 text-center">
         <div>
           <span className="text-[9px] text-slate-500 block">Mục tiêu</span>
-          <span className="text-[11px] font-bold text-slate-300">{gap.targetPopulation.toLocaleString()}</span>
+          <span className="text-[11px] font-bold text-slate-700">{gap.targetPopulation.toLocaleString()}</span>
         </div>
         <div>
           <span className="text-[9px] text-slate-500 block">Đã tiếp cận</span>
@@ -329,22 +329,22 @@ function ThreeWDashboardComponent({
     <div className={clsx("space-y-4", className)}>
       {/* Summary stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
           <Building2 className="w-5 h-5 text-blue-400 mx-auto mb-1" />
           <span className="text-xl font-bold text-white block">{organizations.length}</span>
           <span className="text-[10px] text-slate-500">Tổ chức</span>
         </div>
-        <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
           <Target className="w-5 h-5 text-purple-400 mx-auto mb-1" />
           <span className="text-xl font-bold text-white block">{entries.length}</span>
           <span className="text-[10px] text-slate-500">Hoạt động</span>
         </div>
-        <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
           <Users className="w-5 h-5 text-green-400 mx-auto mb-1" />
           <span className="text-xl font-bold text-white block">{totalBeneficiaries.toLocaleString()}</span>
           <span className="text-[10px] text-slate-500">Đã tiếp cận</span>
         </div>
-        <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 flex items-center justify-center">
+        <div className="p-3 rounded-xl bg-white border border-slate-200 flex items-center justify-center">
           <CoverageGauge rate={coverageRate} label="Tỷ lệ phủ" />
         </div>
       </div>
@@ -366,7 +366,7 @@ function ThreeWDashboardComponent({
               "transition-all duration-200 border whitespace-nowrap",
               orgTypeFilter === filter.id
                 ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
             )}
           >
             <span>{filter.icon}</span>
@@ -383,7 +383,7 @@ function ThreeWDashboardComponent({
             <div key={type}>
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-sm">{config.icon}</span>
-                <span className="text-xs font-semibold text-slate-200">{config.labelVi}</span>
+                <span className="text-xs font-semibold text-slate-800">{config.labelVi}</span>
                 <span className="text-[10px] text-slate-500">({orgs.length})</span>
               </div>
               <motion.div
@@ -403,7 +403,7 @@ function ThreeWDashboardComponent({
 
       {/* Cluster summary */}
       <div>
-        <h3 className="text-sm font-semibold text-slate-200 mb-2">📊 Tổng hợp theo lĩnh vực</h3>
+        <h3 className="text-sm font-semibold text-slate-800 mb-2">📊 Tổng hợp theo lĩnh vực</h3>
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -425,7 +425,7 @@ function ThreeWDashboardComponent({
       {/* Gap analysis */}
       {gapAnalysis.length > 0 && (
         <div>
-          <h3 className="text-sm font-semibold text-slate-200 mb-2 flex items-center gap-2">
+          <h3 className="text-sm font-semibold text-slate-800 mb-2 flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-amber-400" />
             Phân tích khoảng cách (5W)
           </h3>

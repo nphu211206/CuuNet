@@ -80,7 +80,7 @@ function EmergencyNumbersComponent({ className }: EmergencyNumbersProps) {
             href={`tel:${num.number}`}
             whileHover={{ scale: 1.03, transition: { duration: 0.15 } }}
             whileTap={{ scale: 0.97 }}
-            className="p-4 rounded-xl bg-slate-900/60 border border-slate-700/30 hover:border-slate-600/50 transition-colors cursor-pointer block"
+            className="p-4 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition-colors cursor-pointer block"
           >
             <div className="flex items-center gap-3 mb-2">
               <div
@@ -93,7 +93,7 @@ function EmergencyNumbersComponent({ className }: EmergencyNumbersProps) {
                 <span className="text-2xl font-black tabular-nums block" style={{ color: num.color }}>
                   {num.number}
                 </span>
-                <span className="text-[10px] text-slate-400">{num.label}</span>
+                <span className="text-[10px] text-slate-500">{num.label}</span>
               </div>
             </div>
             <p className="text-[10px] text-slate-500">{num.description}</p>
@@ -133,13 +133,13 @@ function EmergencyNumbersComponent({ className }: EmergencyNumbersProps) {
 
       {/* Additional numbers */}
       <div>
-        <h4 className="text-xs font-semibold text-slate-300 mb-2">📞 Số hữu ích khác</h4>
+        <h4 className="text-xs font-semibold text-slate-700 mb-2">📞 Số hữu ích khác</h4>
         <div className="space-y-1.5">
           {additionalNumbers.map((num) => (
             <a
               key={num.number}
               href={`tel:${num.number}`}
-              className="flex items-center gap-3 p-2.5 rounded-xl bg-slate-900/40 border border-slate-700/30 hover:border-slate-600/50 transition-colors cursor-pointer block"
+              className="flex items-center gap-3 p-2.5 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition-colors cursor-pointer block"
             >
               <div
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-base"
@@ -149,8 +149,8 @@ function EmergencyNumbersComponent({ className }: EmergencyNumbersProps) {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-slate-200">{num.number}</span>
-                  <span className="text-[10px] text-slate-400">{num.label}</span>
+                  <span className="text-xs font-bold text-slate-800">{num.number}</span>
+                  <span className="text-[10px] text-slate-500">{num.label}</span>
                 </div>
                 <p className="text-[9px] text-slate-500">{num.description}</p>
               </div>

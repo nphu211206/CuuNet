@@ -307,7 +307,7 @@ function FlowLegend() {
       {items.map((item) => (
         <div key={item.label} className="flex items-center gap-1.5">
           <div className="w-3 h-3 rounded" style={{ backgroundColor: item.color }} />
-          <span className="text-[10px] text-slate-400">{item.label}</span>
+          <span className="text-[10px] text-slate-500">{item.label}</span>
         </div>
       ))}
     </div>
@@ -330,7 +330,7 @@ function ResourceFlowComponent({ flowData, incidents, className }: ResourceFlowP
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Package className="w-5 h-5 text-blue-400" />
-          <h3 className="text-sm font-semibold text-slate-200">Dòng tài nguyên</h3>
+          <h3 className="text-sm font-semibold text-slate-800">Dòng tài nguyên</h3>
         </div>
         <div className="flex items-center gap-2 text-[10px] text-slate-500">
           <span>Tổng: {totalFlow} đơn vị</span>
@@ -341,7 +341,7 @@ function ResourceFlowComponent({ flowData, incidents, className }: ResourceFlowP
       <FlowLegend />
 
       {/* Sankey diagram */}
-      <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-700/30 overflow-x-auto">
+      <div className="p-4 rounded-xl bg-white border border-slate-200 overflow-x-auto">
         {flowData.nodes.length > 0 ? (
           <SankeySVG data={flowData} width={700} height={300} />
         ) : (
@@ -359,11 +359,11 @@ function ResourceFlowComponent({ flowData, incidents, className }: ResourceFlowP
           .map((node) => (
             <div
               key={node.id}
-              className="p-2.5 rounded-xl bg-slate-900/40 border border-slate-700/30"
+              className="p-2.5 rounded-xl bg-white border border-slate-200"
             >
               <div className="flex items-center gap-2 mb-1">
                 <Building2 className="w-3.5 h-3.5 text-blue-400" />
-                <span className="text-[10px] font-semibold text-slate-200">{node.name}</span>
+                <span className="text-[10px] font-semibold text-slate-800">{node.name}</span>
               </div>
               <span className="text-lg font-bold text-blue-400">{node.value}</span>
               <span className="text-[9px] text-slate-500 ml-1">đơn vị</span>

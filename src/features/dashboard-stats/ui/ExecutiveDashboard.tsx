@@ -209,7 +209,7 @@ function ExecutiveDashboardComponent({
           animate="visible"
           className="space-y-4"
         >
-          <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-4 flex items-center justify-center">
+          <div className="rounded-xl bg-white border border-slate-200 p-4 flex items-center justify-center">
             <GlassGauge
               data={riskGauge}
               titleVi="Chỉ số rủi ro thiên tai"
@@ -217,30 +217,30 @@ function ExecutiveDashboardComponent({
               strokeWidth={12}
             />
           </div>
-          <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-3">
-            <h4 className="text-xs font-semibold text-slate-200 mb-2">📊 Thống kê nhanh</h4>
+          <div className="rounded-xl bg-white border border-slate-200 p-3">
+            <h4 className="text-xs font-semibold text-slate-800 mb-2">📊 Thống kê nhanh</h4>
             <div className="space-y-1.5">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] text-slate-400">TB sự kiện/năm</span>
+                <span className="text-[10px] text-slate-500">TB sự kiện/năm</span>
                 <span className="text-[11px] font-bold text-blue-400">{Math.round(stats.totalEvents / yearlyData.length)}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-[10px] text-slate-400">TB chết/năm</span>
+                <span className="text-[10px] text-slate-500">TB chết/năm</span>
                 <span className="text-[11px] font-bold text-red-400">{stats.averageDeathsPerYear}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-[10px] text-slate-400">TB thiệt hại/năm</span>
+                <span className="text-[10px] text-slate-500">TB thiệt hại/năm</span>
                 <span className="text-[11px] font-bold text-amber-400">{formatVNDBillionShort(stats.averageDamagePerYear)}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-[10px] text-slate-400">Năm chết nhiều nhất</span>
+                <span className="text-[10px] text-slate-500">Năm chết nhiều nhất</span>
                 <span className="text-[11px] font-bold text-red-400">{stats.mostDeadlyYear.year} ({stats.mostDeadlyYear.deaths})</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-[10px] text-slate-400">Xu hướng</span>
+                <span className="text-[10px] text-slate-500">Xu hướng</span>
                 <span className={clsx(
                   "text-[11px] font-bold",
-                  stats.trendDirection === "decreasing" ? "text-green-400" : stats.trendDirection === "increasing" ? "text-red-400" : "text-slate-400"
+                  stats.trendDirection === "decreasing" ? "text-green-400" : stats.trendDirection === "increasing" ? "text-red-400" : "text-slate-500"
                 )}>
                   {stats.trendDirection === "decreasing" ? "↓ Giảm" : stats.trendDirection === "increasing" ? "↑ Tăng" : "→ Ổn định"} {Math.abs(stats.trendPercent)}%
                 </span>

@@ -115,15 +115,15 @@ function ReportFiltersComponent({
       initial="hidden"
       animate="visible"
       className={clsx(
-        "rounded-xl bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 overflow-hidden",
+        "rounded-xl bg-white backdrop-blur-sm border border-slate-200 overflow-hidden",
         className
       )}
     >
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-slate-700/30">
+      <div className="flex items-center justify-between p-4 border-b border-slate-200">
         <div className="flex items-center gap-2">
-          <SlidersHorizontal className="w-4 h-4 text-slate-400" />
-          <h3 className="text-sm font-semibold text-slate-300">Bộ lọc</h3>
+          <SlidersHorizontal className="w-4 h-4 text-slate-500" />
+          <h3 className="text-sm font-semibold text-slate-700">Bộ lọc</h3>
           {activeFilterCount > 0 && (
             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold bg-blue-500 text-white">
               {activeFilterCount}
@@ -133,7 +133,7 @@ function ReportFiltersComponent({
         {activeFilterCount > 0 && (
           <button
             onClick={onReset}
-            className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-300 transition-colors"
+            className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-700 transition-colors"
           >
             <RotateCcw className="w-3 h-3" />
             Xóa bộ lọc
@@ -142,7 +142,7 @@ function ReportFiltersComponent({
       </div>
 
       {/* Search */}
-      <div className="p-4 border-b border-slate-700/30">
+      <div className="p-4 border-b border-slate-200">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
           <input
@@ -150,12 +150,12 @@ function ReportFiltersComponent({
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
             placeholder="Tìm kiếm báo cáo..."
-            className="w-full pl-9 pr-8 py-2 rounded-lg bg-slate-800/50 border border-slate-700/50 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-colors"
+            className="w-full pl-9 pr-8 py-2 rounded-lg bg-slate-100 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-colors"
           />
           {searchQuery && (
             <button
               onClick={() => handleSearch("")}
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded text-slate-500 hover:text-slate-300 transition-colors"
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded text-slate-500 hover:text-slate-700 transition-colors"
             >
               <X className="w-3 h-3" />
             </button>
@@ -254,7 +254,7 @@ function ReportFiltersComponent({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-sm">✅</span>
-              <span className="text-sm text-slate-300">Chỉ hiện đã xác minh</span>
+              <span className="text-sm text-slate-700">Chỉ hiện đã xác minh</span>
             </div>
             <button
               onClick={() => onFilterChange({ verifiedOnly: !filters.verifiedOnly })}
@@ -318,11 +318,11 @@ function FilterSection({
       {/* Section header */}
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-4 py-3 hover:bg-slate-800/30 transition-colors"
+        className="w-full flex items-center justify-between px-4 py-3 hover:bg-slate-50 transition-colors"
       >
         <div className="flex items-center gap-2">
           <span className="text-sm">{icon}</span>
-          <span className="text-sm font-medium text-slate-300">{title}</span>
+          <span className="text-sm font-medium text-slate-700">{title}</span>
           {activeCount > 0 && (
             <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/20 text-blue-400">
               {activeCount}
@@ -459,7 +459,7 @@ function FilterProvinceSection({
           value={provinceSearch}
           onChange={(e) => setProvinceSearch(e.target.value)}
           placeholder="Tìm tỉnh..."
-          className="w-full pl-7 pr-3 py-1.5 rounded bg-slate-800/50 border border-slate-700/30 text-xs text-slate-300 placeholder:text-slate-600 focus:outline-none focus:ring-1 focus:ring-blue-500/50"
+          className="w-full pl-7 pr-3 py-1.5 rounded bg-slate-100 border border-slate-200 text-xs text-slate-700 placeholder:text-slate-600 focus:outline-none focus:ring-1 focus:ring-blue-500/50"
         />
       </div>
 
@@ -547,7 +547,7 @@ function FilterDateSection({
               "px-2.5 py-1 rounded text-xs font-medium transition-colors",
               isSelected
                 ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                : "bg-slate-800/50 text-slate-400 border border-slate-700/30 hover:bg-slate-700/50"
+                : "bg-slate-100 text-slate-500 border border-slate-200 hover:bg-slate-200"
             )}
           >
             {config.label}
@@ -583,7 +583,7 @@ function FilterCheckbox({
         "w-full flex items-center gap-2 px-2 py-1.5 rounded text-xs transition-colors",
         isSelected
           ? "bg-blue-500/10 text-blue-400"
-          : "text-slate-400 hover:bg-slate-800/50 hover:text-slate-300"
+          : "text-slate-500 hover:bg-slate-100 hover:text-slate-700"
       )}
     >
       {/* Checkbox */}
@@ -592,7 +592,7 @@ function FilterCheckbox({
           "w-4 h-4 rounded border flex items-center justify-center flex-shrink-0 transition-colors",
           isSelected
             ? "bg-blue-500 border-blue-500"
-            : "border-slate-600 bg-slate-800/50"
+            : "border-slate-600 bg-slate-100"
         )}
       >
         {isSelected && <Check className="w-3 h-3 text-white" />}

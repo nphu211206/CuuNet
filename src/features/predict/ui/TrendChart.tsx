@@ -42,8 +42,8 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   const isPrediction = data.isPrediction;
 
   return (
-    <div className="glass-card px-4 py-3 border border-slate-700/50 shadow-xl min-w-[180px]">
-      <p className="text-sm font-semibold text-slate-200 mb-2 border-b border-slate-700/50 pb-2">
+    <div className="glass-card px-4 py-3 border border-slate-200 shadow-xl min-w-[180px]">
+      <p className="text-sm font-semibold text-slate-800 mb-2 border-b border-slate-200 pb-2">
         {label}
         {isPrediction && (
           <span className="ml-2 text-xs text-blue-400 bg-blue-500/10 px-1.5 py-0.5 rounded">
@@ -56,7 +56,7 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
         <div className="flex items-center justify-between text-xs mb-1">
           <span className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-green-500" />
-            <span className="text-slate-400">Thực tế:</span>
+            <span className="text-slate-500">Thực tế:</span>
           </span>
           <span className="font-mono text-green-400">
             {(data.actual * 100).toFixed(1)}%
@@ -67,7 +67,7 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
       <div className="flex items-center justify-between text-xs mb-1">
         <span className="flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-blue-500" />
-          <span className="text-slate-400">Dự đoán:</span>
+          <span className="text-slate-500">Dự đoán:</span>
         </span>
         <span className="font-mono text-blue-400">
           {(data.predicted * 100).toFixed(1)}%
@@ -75,9 +75,9 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
       </div>
 
       {data.lower !== undefined && data.upper !== undefined && (
-        <div className="flex items-center justify-between text-xs mt-1 pt-1 border-t border-slate-700/50">
+        <div className="flex items-center justify-between text-xs mt-1 pt-1 border-t border-slate-200">
           <span className="text-slate-500">Khoảng tin cậy:</span>
-          <span className="font-mono text-slate-400">
+          <span className="font-mono text-slate-500">
             {(data.lower * 100).toFixed(0)}% - {(data.upper * 100).toFixed(0)}%
           </span>
         </div>
@@ -98,7 +98,7 @@ function CustomLegend({ payload }: CustomLegendProps) {
   return (
     <div className="flex items-center justify-center gap-4 mt-2">
       {payload.map((entry, i) => (
-        <div key={i} className="flex items-center gap-1.5 text-xs text-slate-400">
+        <div key={i} className="flex items-center gap-1.5 text-xs text-slate-500">
           {entry.type === "line" ? (
             <span
               className="w-4 h-0.5 rounded"
@@ -184,7 +184,7 @@ export default function TrendChart({
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <span className="text-lg">{config?.icon}</span>
-          <h3 className="text-sm font-semibold text-slate-200">
+          <h3 className="text-sm font-semibold text-slate-800">
             Xu hướng {config?.label ?? disasterType}
           </h3>
         </div>

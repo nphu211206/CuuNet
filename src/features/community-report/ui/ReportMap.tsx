@@ -122,7 +122,7 @@ function ReportMapComponent({
   return (
     <div
       className={clsx(
-        "relative rounded-xl overflow-hidden border border-slate-700/50",
+        "relative rounded-xl overflow-hidden border border-slate-200",
         isFullscreen
           ? "fixed inset-0 z-40 rounded-none"
           : "h-[400px] md:h-[500px]",
@@ -161,7 +161,7 @@ function ReportMapComponent({
       {/* Fullscreen toggle */}
       <button
         onClick={toggleFullscreen}
-        className="absolute top-3 right-3 z-10 p-2 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 text-slate-400 hover:text-slate-200 transition-colors"
+        className="absolute top-3 right-3 z-10 p-2 rounded-lg bg-slate-200/80 backdrop-blur-sm border border-slate-200 text-slate-500 hover:text-slate-800 transition-colors"
         title={isFullscreen ? "Thu nhỏ" : "Phóng to"}
       >
         {isFullscreen ? (
@@ -172,7 +172,7 @@ function ReportMapComponent({
       </button>
 
       {/* Report count */}
-      <div className="absolute bottom-3 left-3 z-10 px-2.5 py-1 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 text-xs text-slate-400">
+      <div className="absolute bottom-3 left-3 z-10 px-2.5 py-1 rounded-lg bg-slate-200/80 backdrop-blur-sm border border-slate-200 text-xs text-slate-500">
         <MapPin className="w-3 h-3 inline mr-1" />
         {reports.length} báo cáo
       </div>
@@ -269,14 +269,14 @@ function MapLegend() {
     <div className="absolute top-3 left-3 z-10">
       <div
         className={clsx(
-          "rounded-lg bg-slate-800/90 backdrop-blur-sm border border-slate-700/50 overflow-hidden transition-all",
+          "rounded-lg bg-white/95 backdrop-blur-sm border border-slate-200 overflow-hidden transition-all",
           isExpanded ? "w-40" : "w-8"
         )}
       >
         {/* Toggle button */}
         <button
           onClick={() => setIsExpanded((prev) => !prev)}
-          className="w-full flex items-center gap-1.5 px-2 py-1.5 text-[10px] text-slate-400 hover:text-slate-300 transition-colors"
+          className="w-full flex items-center gap-1.5 px-2 py-1.5 text-[10px] text-slate-500 hover:text-slate-700 transition-colors"
         >
           <Layers className="w-3 h-3" />
           {isExpanded && <span>Mức độ nghiêm trọng</span>}
@@ -302,7 +302,7 @@ function MapLegend() {
                         boxShadow: `0 0 6px ${markerConfig.glow}`,
                       }}
                     />
-                    <span className="text-[10px] text-slate-400">
+                    <span className="text-[10px] text-slate-500">
                       {config.label}
                     </span>
                   </div>

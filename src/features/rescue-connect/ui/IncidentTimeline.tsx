@@ -126,12 +126,12 @@ function EventCard({ event }: { event: TimelineEvent }) {
         >
           {config.icon}
         </div>
-        <div className="w-0.5 flex-1 bg-slate-800 mt-1" />
+        <div className="w-0.5 flex-1 bg-slate-200 mt-1" />
       </div>
 
       {/* Content */}
       <div className="flex-1 pb-4 min-w-0">
-        <div className="p-2.5 rounded-xl bg-slate-900/40 border border-slate-700/30 group-hover:border-slate-600/50 transition-colors">
+        <div className="p-2.5 rounded-xl bg-white border border-slate-200 group-hover:border-slate-300 transition-colors">
           {/* Header */}
           <div className="flex items-center gap-2 mb-1">
             <span
@@ -146,11 +146,11 @@ function EventCard({ event }: { event: TimelineEvent }) {
           </div>
 
           {/* Title */}
-          <h4 className="text-xs font-medium text-slate-200 mb-0.5">{event.title}</h4>
+          <h4 className="text-xs font-medium text-slate-800 mb-0.5">{event.title}</h4>
 
           {/* Description */}
           {event.description && (
-            <p className="text-[11px] text-slate-400 mb-1.5">{event.description}</p>
+            <p className="text-[11px] text-slate-500 mb-1.5">{event.description}</p>
           )}
 
           {/* Actor */}
@@ -200,13 +200,13 @@ function IncidentTimelineComponent({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Calendar className="w-4 h-4 text-slate-400" />
-          <h3 className="text-sm font-semibold text-slate-200">Dòng thời gian</h3>
+          <Calendar className="w-4 h-4 text-slate-500" />
+          <h3 className="text-sm font-semibold text-slate-800">Dòng thời gian</h3>
           <span className="text-[10px] text-slate-500">({filteredEvents.length} sự kiện)</span>
         </div>
         <button
           onClick={() => setIsFilterOpen(!isFilterOpen)}
-          className="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-slate-800/40 border border-slate-700/40 text-slate-400 text-[10px] font-medium hover:border-slate-600/50 transition-colors"
+          className="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-medium hover:border-slate-300 transition-colors"
         >
           <Filter className="w-3 h-3" />
           Lọc
@@ -235,7 +235,7 @@ function IncidentTimelineComponent({
                       "transition-all duration-200 border",
                       isActive
                         ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
-                        : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                        : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
                     )}
                   >
                     <span>{filter.icon}</span>
@@ -260,8 +260,8 @@ function IncidentTimelineComponent({
             <div key={dateLabel}>
               {/* Date header */}
               <div className="flex items-center gap-2 mb-2 px-1">
-                <span className="text-[10px] font-semibold text-slate-400">{dateLabel}</span>
-                <div className="flex-1 h-px bg-slate-800" />
+                <span className="text-[10px] font-semibold text-slate-500">{dateLabel}</span>
+                <div className="flex-1 h-px bg-slate-200" />
                 <span className="text-[9px] text-slate-600">{dateEvents.length} sự kiện</span>
               </div>
 

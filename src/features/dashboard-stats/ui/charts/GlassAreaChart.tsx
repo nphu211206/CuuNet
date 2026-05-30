@@ -139,12 +139,12 @@ function GlassAreaChartComponent({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: DASHBOARD_ANIMATION.duration.slow }}
-      className={clsx("rounded-xl bg-slate-900/40 border border-slate-700/30 p-4", className)}
+      className={clsx("rounded-xl bg-white border border-slate-200 p-4", className)}
     >
       {/* Title */}
       {(title || titleVi) && (
         <div className="mb-3">
-          {titleVi && <h3 className="text-sm font-semibold text-slate-200">{titleVi}</h3>}
+          {titleVi && <h3 className="text-sm font-semibold text-slate-800">{titleVi}</h3>}
           {title && <p className="text-[10px] text-slate-500">{title}</p>}
         </div>
       )}

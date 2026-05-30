@@ -133,7 +133,7 @@ export default function TimelineSlider({
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className={cn(
-        "fixed bottom-0 left-0 right-0 z-[1000] bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/50 transition-all",
+        "fixed bottom-0 left-0 right-0 z-[1000] bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 transition-all",
         isExpanded ? "h-40" : "h-20"
       )}
     >
@@ -141,7 +141,7 @@ export default function TimelineSlider({
         {/* Toggle Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="absolute -top-8 left-1/2 -translate-x-1/2 px-3 py-1 bg-slate-900/90 border border-slate-700/50 rounded-t-lg text-slate-400 hover:text-white transition-colors"
+          className="absolute -top-8 left-1/2 -translate-x-1/2 px-3 py-1 bg-white/95 border border-slate-200 rounded-t-lg text-slate-500 hover:text-white transition-colors"
         >
           {isExpanded ? (
             <ChevronDown className="w-4 h-4" />
@@ -155,7 +155,7 @@ export default function TimelineSlider({
           <div className="flex items-center gap-2">
             <button
               onClick={handleReset}
-              className="p-1.5 text-slate-400 hover:text-white transition-colors"
+              className="p-1.5 text-slate-500 hover:text-white transition-colors"
             >
               <SkipBack className="w-4 h-4" />
             </button>
@@ -171,7 +171,7 @@ export default function TimelineSlider({
             </button>
             <button
               onClick={handleEnd}
-              className="p-1.5 text-slate-400 hover:text-white transition-colors"
+              className="p-1.5 text-slate-500 hover:text-white transition-colors"
             >
               <SkipForward className="w-4 h-4" />
             </button>
@@ -181,7 +181,7 @@ export default function TimelineSlider({
           <div className="flex-1 relative">
             <div
               ref={trackRef}
-              className="relative h-2 rounded-full overflow-hidden bg-slate-800/50 cursor-pointer"
+              className="relative h-2 rounded-full overflow-hidden bg-slate-100 cursor-pointer"
               onClick={handleTrackClick}
             >
               {/* Severity segments */}
@@ -219,7 +219,7 @@ export default function TimelineSlider({
           </div>
 
           {/* Time info */}
-          <div className="flex items-center gap-2 text-xs text-slate-400">
+          <div className="flex items-center gap-2 text-xs text-slate-500">
             <Clock className="w-3.5 h-3.5" />
             <span>
               {currentDisaster
@@ -255,12 +255,12 @@ export default function TimelineSlider({
                     {currentDisaster.title}
                   </span>
                 </div>
-                <span className="text-slate-400">•</span>
-                <span className="text-slate-400">
+                <span className="text-slate-500">•</span>
+                <span className="text-slate-500">
                   {currentDisaster.location.province}
                 </span>
-                <span className="text-slate-400">•</span>
-                <span className="text-slate-400">
+                <span className="text-slate-500">•</span>
+                <span className="text-slate-500">
                   {currentDisaster.affectedPeople.toLocaleString("vi-VN")} người
                   ảnh hưởng
                 </span>

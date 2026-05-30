@@ -43,7 +43,7 @@ const GEO_ICONS: Record<string, string> = {
 const TREND_CONFIG = {
   increasing: { icon: TrendingUp, label: "Tăng", color: "text-red-400", bgColor: "bg-red-500/10" },
   decreasing: { icon: TrendingDown, label: "Giảm", color: "text-green-400", bgColor: "bg-green-500/10" },
-  stable: { icon: Minus, label: "Ổn định", color: "text-slate-400", bgColor: "bg-slate-500/10" },
+  stable: { icon: Minus, label: "Ổn định", color: "text-slate-500", bgColor: "bg-slate-500/10" },
 };
 
 // === RISK BAR ===
@@ -69,9 +69,9 @@ function RiskBar({
       transition={{ delay, duration: 0.3 }}
     >
       <span className="text-sm w-6 text-center">{config.icon}</span>
-      <span className="text-xs text-slate-400 w-16 truncate">{config.label}</span>
+      <span className="text-xs text-slate-500 w-16 truncate">{config.label}</span>
 
-      <div className="flex-1 h-2 bg-slate-800/60 rounded-full overflow-hidden">
+      <div className="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
         <motion.div
           className="h-full rounded-full"
           style={{ backgroundColor: color }}
@@ -172,17 +172,17 @@ export default function ProvinceRiskCard({
     >
       {/* Collapsed Header */}
       <div
-        className="flex items-center gap-4 p-4 cursor-pointer hover:bg-slate-800/20 transition-colors"
+        className="flex items-center gap-4 p-4 cursor-pointer hover:bg-slate-50 transition-colors"
         onClick={toggle}
       >
         {/* Province info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
             <MapPin className="w-4 h-4 text-slate-500 flex-shrink-0" />
-            <h3 className="text-sm font-semibold text-slate-200 truncate">
+            <h3 className="text-sm font-semibold text-slate-800 truncate">
               {province}
             </h3>
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-800/60 text-slate-500 flex-shrink-0">
+            <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 flex-shrink-0">
               {GEO_ICONS[geoType]} {GEO_LABELS[geoType]}
             </span>
           </div>
@@ -224,7 +224,7 @@ export default function ProvinceRiskCard({
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-4 pb-4 border-t border-slate-700/30">
+            <div className="px-4 pb-4 border-t border-slate-200">
               {/* Risk bars for all types */}
               <div className="mt-4 space-y-2.5">
                 <div className="flex items-center justify-between mb-2">
@@ -241,8 +241,8 @@ export default function ProvinceRiskCard({
                     key={item.type}
                     className={`rounded-lg p-2 cursor-pointer transition-colors ${
                       selectedType === item.type
-                        ? "bg-slate-800/40 ring-1 ring-slate-700/50"
-                        : "hover:bg-slate-800/20"
+                        ? "bg-slate-100 ring-1 ring-slate-700/50"
+                        : "hover:bg-slate-50"
                     }`}
                     onClick={(e) => {
                       e.stopPropagation();
@@ -282,7 +282,7 @@ export default function ProvinceRiskCard({
               {/* Overall explanation (if no type selected) */}
               {!selectedType && (
                 <motion.div
-                  className="mt-4 p-3 rounded-lg bg-slate-800/30 border border-slate-700/30"
+                  className="mt-4 p-3 rounded-lg bg-slate-50 border border-slate-200"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
@@ -293,7 +293,7 @@ export default function ProvinceRiskCard({
                       style={{ color: overallColor }}
                     />
                     <div>
-                      <p className="text-xs text-slate-300 font-medium mb-1">
+                      <p className="text-xs text-slate-700 font-medium mb-1">
                         Tổng quan rủi ro {province}
                       </p>
                       <p className="text-xs text-slate-500">

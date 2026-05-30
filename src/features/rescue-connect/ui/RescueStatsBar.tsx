@@ -158,9 +158,9 @@ function StatCard({
       custom={index}
       className={clsx(
         "relative overflow-hidden rounded-xl p-3",
-        "bg-slate-900/60 backdrop-blur-xl",
-        "border border-slate-700/40",
-        "hover:border-slate-600/60 transition-colors duration-300"
+        "bg-white backdrop-blur-xl",
+        "border border-slate-200",
+        "hover:border-slate-300 transition-colors duration-300"
       )}
     >
       {/* Glow effect */}
@@ -181,7 +181,7 @@ function StatCard({
           >
             <div style={{ color }}>{icon}</div>
           </div>
-          <span className="text-[10px] font-medium text-slate-400 leading-tight">
+          <span className="text-[10px] font-medium text-slate-500 leading-tight">
             {label}
           </span>
         </div>

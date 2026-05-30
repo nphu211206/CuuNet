@@ -54,7 +54,7 @@ function CourseProgressBar({ percent, color }: { percent: number; color: string 
         <span className="text-[9px] text-slate-500">Tiến trình</span>
         <span className="text-[10px] font-bold" style={{ color }}>{percent}%</span>
       </div>
-      <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
+      <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${percent}%` }}
@@ -95,8 +95,8 @@ function CourseCard({
       className={clsx(
         "relative overflow-hidden rounded-xl p-4 border transition-all duration-200",
         isUnlocked
-          ? "bg-slate-900/50 border-slate-700/30 hover:border-slate-600/50 cursor-pointer"
-          : "bg-slate-900/30 border-slate-800/30 opacity-60 cursor-not-allowed"
+          ? "bg-white border-slate-200 hover:border-slate-300 cursor-pointer"
+          : "bg-white border-slate-200 opacity-60 cursor-not-allowed"
       )}
     >
       {/* Glow effect */}
@@ -116,7 +116,7 @@ function CourseCard({
             {isCompleted ? "✅" : isUnlocked ? topicConfig.icon : "🔒"}
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-sm font-semibold text-slate-200 truncate">{course.titleVi}</h3>
+            <h3 className="text-sm font-semibold text-slate-800 truncate">{course.titleVi}</h3>
             <p className="text-[10px] text-slate-500 line-clamp-1">{course.descriptionVi}</p>
           </div>
           {isUnlocked && <ChevronRight className="w-4 h-4 text-slate-600 shrink-0 mt-1" />}
@@ -197,7 +197,7 @@ function CourseBrowserComponent({ courses, progress, onCourseSelect, className }
           <div key={level}>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-sm">{levelConfig?.icon}</span>
-              <h3 className="text-sm font-semibold text-slate-200">
+              <h3 className="text-sm font-semibold text-slate-800">
                 {levelConfig?.nameVi} - Level {level}
               </h3>
               <span className="text-[10px] text-slate-500">
@@ -252,13 +252,13 @@ function LessonViewerComponent({ lesson, course, isCompleted, onComplete, onBack
       {/* Back button */}
       <button
         onClick={onBack}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/40 border border-slate-700/40 text-slate-400 text-[11px] font-medium hover:border-slate-600/50 transition-colors"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-500 text-[11px] font-medium hover:border-slate-300 transition-colors"
       >
         ← Quay lại {course.titleVi}
       </button>
 
       {/* Lesson header */}
-      <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-700/30">
+      <div className="p-4 rounded-xl bg-white border border-slate-200">
         <div className="flex items-center gap-3 mb-2">
           <div
             className="w-10 h-10 rounded-xl flex items-center justify-center text-lg"
@@ -285,13 +285,13 @@ function LessonViewerComponent({ lesson, course, isCompleted, onComplete, onBack
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.1, duration: 0.3 }}
-          className="p-4 rounded-xl bg-slate-900/40 border border-slate-700/30"
+          className="p-4 rounded-xl bg-white border border-slate-200"
         >
           <div className="flex items-center gap-2 mb-2">
             {section.icon && <span className="text-base">{section.icon}</span>}
-            <h3 className="text-sm font-semibold text-slate-200">{section.titleVi}</h3>
+            <h3 className="text-sm font-semibold text-slate-800">{section.titleVi}</h3>
           </div>
-          <p className="text-xs text-slate-400 leading-relaxed">{section.content}</p>
+          <p className="text-xs text-slate-500 leading-relaxed">{section.content}</p>
           {section.tips && section.tips.length > 0 && (
             <div className="mt-2 p-2 rounded-lg bg-blue-500/5 border border-blue-500/15">
               <p className="text-[10px] font-medium text-blue-400 mb-1">💡 Mẹo:</p>

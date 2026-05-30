@@ -159,8 +159,8 @@ function ComparisonView({ provinceData }: { provinceData: AnalyticalDashboardPro
           innerRadius={50}
           outerRadius={90}
         />
-        <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-4">
-          <h3 className="text-sm font-semibold text-slate-200 mb-3">📊 So sánh chi tiết</h3>
+        <div className="rounded-xl bg-white border border-slate-200 p-4">
+          <h3 className="text-sm font-semibold text-slate-800 mb-3">📊 So sánh chi tiết</h3>
           <div className="space-y-2">
             {typeDist.slice(0, 5).map((t) => (
               <div key={t.type} className="flex items-center gap-3">
@@ -169,10 +169,10 @@ function ComparisonView({ provinceData }: { provinceData: AnalyticalDashboardPro
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-0.5">
-                    <span className="text-xs text-slate-200">{t.labelVi}</span>
+                    <span className="text-xs text-slate-800">{t.labelVi}</span>
                     <span className="text-[10px] font-bold" style={{ color: t.color }}>{t.percentage}%</span>
                   </div>
-                  <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${t.percentage}%` }}
@@ -209,16 +209,16 @@ function MultidimensionalView({ yearlyData }: { yearlyData: AnalyticalDashboardP
         yKey="y"
         zKey="z"
       />
-      <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 p-4">
-        <h3 className="text-sm font-semibold text-slate-200 mb-2">📖 Hướng dẫn đọc biểu đồ</h3>
-        <div className="grid grid-cols-2 gap-4 text-[11px] text-slate-400">
+      <div className="rounded-xl bg-white border border-slate-200 p-4">
+        <h3 className="text-sm font-semibold text-slate-800 mb-2">📖 Hướng dẫn đọc biểu đồ</h3>
+        <div className="grid grid-cols-2 gap-4 text-[11px] text-slate-500">
           <div>
-            <p><strong className="text-slate-300">Trục X:</strong> Số sự kiện thiên tai/năm</p>
-            <p><strong className="text-slate-300">Trục Y:</strong> Số người chết</p>
+            <p><strong className="text-slate-700">Trục X:</strong> Số sự kiện thiên tai/năm</p>
+            <p><strong className="text-slate-700">Trục Y:</strong> Số người chết</p>
           </div>
           <div>
-            <p><strong className="text-slate-300">Kích thước:</strong> Thiệt hại kinh tế (tỷ VND)</p>
-            <p><strong className="text-slate-300">Màu sắc:</strong> Loại thiên tai chính</p>
+            <p><strong className="text-slate-700">Kích thước:</strong> Thiệt hại kinh tế (tỷ VND)</p>
+            <p><strong className="text-slate-700">Màu sắc:</strong> Loại thiên tai chính</p>
           </div>
         </div>
       </div>
@@ -251,25 +251,25 @@ function ProvinceTable({ provinceData }: { provinceData: AnalyticalDashboardProp
   }, [sortBy]);
 
   return (
-    <div className="rounded-xl bg-slate-900/40 border border-slate-700/30 overflow-hidden">
-      <div className="p-3 border-b border-slate-700/30">
-        <h3 className="text-sm font-semibold text-slate-200">📋 Bảng chi tiết tỉnh</h3>
+    <div className="rounded-xl bg-white border border-slate-200 overflow-hidden">
+      <div className="p-3 border-b border-slate-200">
+        <h3 className="text-sm font-semibold text-slate-800">📋 Bảng chi tiết tỉnh</h3>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-slate-700/30">
-              <th className="px-3 py-2 text-left text-[10px] font-semibold text-slate-400">Tỉnh</th>
-              <th className="px-3 py-2 text-right text-[10px] font-semibold text-slate-400 cursor-pointer hover:text-slate-200" onClick={() => handleSort("totalEvents")}>
+            <tr className="border-b border-slate-200">
+              <th className="px-3 py-2 text-left text-[10px] font-semibold text-slate-500">Tỉnh</th>
+              <th className="px-3 py-2 text-right text-[10px] font-semibold text-slate-500 cursor-pointer hover:text-slate-800" onClick={() => handleSort("totalEvents")}>
                 Sự kiện {sortBy === "totalEvents" && (sortDir === "desc" ? "↓" : "↑")}
               </th>
-              <th className="px-3 py-2 text-right text-[10px] font-semibold text-slate-400 cursor-pointer hover:text-slate-200" onClick={() => handleSort("totalDeaths")}>
+              <th className="px-3 py-2 text-right text-[10px] font-semibold text-slate-500 cursor-pointer hover:text-slate-800" onClick={() => handleSort("totalDeaths")}>
                 Chết {sortBy === "totalDeaths" && (sortDir === "desc" ? "↓" : "↑")}
               </th>
-              <th className="px-3 py-2 text-right text-[10px] font-semibold text-slate-400 cursor-pointer hover:text-slate-200" onClick={() => handleSort("totalDamageBillionVND")}>
+              <th className="px-3 py-2 text-right text-[10px] font-semibold text-slate-500 cursor-pointer hover:text-slate-800" onClick={() => handleSort("totalDamageBillionVND")}>
                 Thiệt hại {sortBy === "totalDamageBillionVND" && (sortDir === "desc" ? "↓" : "↑")}
               </th>
-              <th className="px-3 py-2 text-right text-[10px] font-semibold text-slate-400 cursor-pointer hover:text-slate-200" onClick={() => handleSort("riskScore")}>
+              <th className="px-3 py-2 text-right text-[10px] font-semibold text-slate-500 cursor-pointer hover:text-slate-800" onClick={() => handleSort("riskScore")}>
                 Rủi ro {sortBy === "riskScore" && (sortDir === "desc" ? "↓" : "↑")}
               </th>
             </tr>
@@ -281,12 +281,12 @@ function ProvinceTable({ provinceData }: { provinceData: AnalyticalDashboardProp
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: i * 0.03 }}
-                className="border-b border-slate-700/20 hover:bg-slate-800/30 transition-colors"
+                className="border-b border-slate-200 hover:bg-slate-50 transition-colors"
               >
                 <td className="px-3 py-2">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] text-slate-500 w-5">{i + 1}</span>
-                    <span className="text-xs text-slate-200">{p.province}</span>
+                    <span className="text-xs text-slate-800">{p.province}</span>
                   </div>
                 </td>
                 <td className="px-3 py-2 text-right text-xs text-blue-400 tabular-nums">{p.totalEvents}</td>
@@ -338,7 +338,7 @@ function AnalyticalDashboardComponent({
               "transition-all duration-200 border whitespace-nowrap",
               activeViz === tab.id
                 ? "bg-purple-500/15 border-purple-500/40 text-purple-400"
-                : "bg-slate-800/30 border-slate-700/30 text-slate-500 hover:border-slate-600/50"
+                : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
             )}
           >
             {tab.icon}

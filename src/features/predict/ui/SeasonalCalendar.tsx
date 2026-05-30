@@ -69,13 +69,13 @@ function TooltipCard({ data }: { data: CellTooltip }) {
       initial={{ opacity: 0, scale: 0.9, y: 5 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9 }}
-      className="glass-card border border-slate-700/50 shadow-2xl p-4 min-w-[220px] pointer-events-none z-50"
+      className="glass-card border border-slate-200 shadow-2xl p-4 min-w-[220px] pointer-events-none z-50"
       style={{ position: "fixed", left: data.x + 12, top: data.y - 10 }}
     >
-      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-slate-700/50">
+      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-slate-200">
         <span className="text-lg">{config.icon}</span>
         <div>
-          <p className="text-sm font-semibold text-slate-200">
+          <p className="text-sm font-semibold text-slate-800">
             {config.label} - {MONTH_NAMES_SHORT[data.month]}
           </p>
           <p className="text-xs text-slate-500">
@@ -86,14 +86,14 @@ function TooltipCard({ data }: { data: CellTooltip }) {
 
       <div className="space-y-1.5">
         <div className="flex items-center justify-between text-xs">
-          <span className="text-slate-400">Hệ số mùa vụ:</span>
+          <span className="text-slate-500">Hệ số mùa vụ:</span>
           <span className="font-mono" style={{ color: riskToTextColor(data.multiplier) }}>
             {data.multiplier.toFixed(2)}
           </span>
         </div>
 
         <div className="flex items-center justify-between text-xs">
-          <span className="text-slate-400">Mức rủi ro:</span>
+          <span className="text-slate-500">Mức rủi ro:</span>
           <span className="font-semibold" style={{ color: riskToTextColor(data.multiplier) }}>
             {riskLabel}
           </span>
@@ -101,15 +101,15 @@ function TooltipCard({ data }: { data: CellTooltip }) {
 
         {data.riskScore > 0 && (
           <div className="flex items-center justify-between text-xs">
-            <span className="text-slate-400">Điểm rủi ro:</span>
-            <span className="font-mono text-slate-200">
+            <span className="text-slate-500">Điểm rủi ro:</span>
+            <span className="font-mono text-slate-800">
               {(data.riskScore * 100).toFixed(0)}%
             </span>
           </div>
         )}
       </div>
 
-      <div className="mt-2 pt-2 border-t border-slate-700/50">
+      <div className="mt-2 pt-2 border-t border-slate-200">
         <p className="text-xs text-slate-500">
           {getSeasonDescription(data.month)}
         </p>
@@ -182,7 +182,7 @@ export default function SeasonalCalendar({
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="text-sm font-semibold text-slate-200">
+          <h3 className="text-sm font-semibold text-slate-800">
             Phân tích mùa vụ thiên tai
           </h3>
           <p className="text-xs text-slate-500 mt-0.5">
@@ -241,7 +241,7 @@ export default function SeasonalCalendar({
                 {/* Row label */}
                 <div className="flex items-center gap-1.5 pr-2">
                   <span className="text-sm">{config.icon}</span>
-                  <span className="text-[10px] text-slate-400 truncate">
+                  <span className="text-[10px] text-slate-500 truncate">
                     {config.label}
                   </span>
                 </div>
@@ -300,13 +300,13 @@ export default function SeasonalCalendar({
       {/* Selected month info */}
       {selectedMonth !== undefined && (
         <motion.div
-          className="mt-4 pt-3 border-t border-slate-700/50"
+          className="mt-4 pt-3 border-t border-slate-200"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <p className="text-xs text-slate-400">
-            <span className="text-slate-300 font-semibold">
+          <p className="text-xs text-slate-500">
+            <span className="text-slate-700 font-semibold">
               {MONTH_NAMES_SHORT[selectedMonth]}:
             </span>{" "}
             {getSeasonDescription(selectedMonth)}

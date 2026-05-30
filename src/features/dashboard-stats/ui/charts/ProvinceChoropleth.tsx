@@ -179,7 +179,7 @@ function MapControls({
             "px-2 py-1.5 rounded-lg text-[10px] font-medium border transition-colors",
             metric === m.id
               ? "bg-blue-500/20 border-blue-500/40 text-blue-400"
-              : "bg-slate-900/80 border-slate-700/50 text-slate-400 hover:border-slate-600/60"
+              : "bg-white/90 border-slate-200 text-slate-500 hover:border-slate-300"
           )}
         >
           {m.icon} {m.label}
@@ -203,15 +203,15 @@ function ChoroplethLegend({ metric }: { metric: string }) {
   ];
 
   return (
-    <div className="absolute bottom-3 left-3 z-[1000] bg-slate-900/80 backdrop-blur-xl rounded-xl border border-slate-700/50 p-2.5">
-      <h4 className="text-[9px] font-semibold text-slate-400 mb-1.5">
+    <div className="absolute bottom-3 left-3 z-[1000] bg-white/90 backdrop-blur-xl rounded-xl border border-slate-200 p-2.5">
+      <h4 className="text-[9px] font-semibold text-slate-500 mb-1.5">
         {metric === "deaths" ? "Thương vong" : metric === "damage" ? "Thiệt hại" : metric === "events" ? "Sự kiện" : "Mức rủi ro"}
       </h4>
       <div className="space-y-1">
         {levels.map((level) => (
           <div key={level.label} className="flex items-center gap-1.5">
             <div className="w-3 h-2 rounded" style={{ backgroundColor: level.color }} />
-            <span className="text-[9px] text-slate-400">{level.label}</span>
+            <span className="text-[9px] text-slate-500">{level.label}</span>
           </div>
         ))}
       </div>
@@ -244,7 +244,7 @@ function ProvinceChoroplethComponent({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: DASHBOARD_ANIMATION.duration.slow }}
-      className={clsx("relative rounded-xl overflow-hidden border border-slate-700/30", className)}
+      className={clsx("relative rounded-xl overflow-hidden border border-slate-200", className)}
     >
       <MapContainer
         center={MAP_CENTER}
@@ -272,8 +272,8 @@ function ProvinceChoroplethComponent({
 
       {/* Info */}
       <div className="absolute top-3 right-3 z-[1000]">
-        <div className="bg-slate-900/80 backdrop-blur-xl rounded-lg border border-slate-700/50 px-2 py-1.5">
-          <span className="text-[9px] text-slate-400">
+        <div className="bg-white/90 backdrop-blur-xl rounded-lg border border-slate-200 px-2 py-1.5">
+          <span className="text-[9px] text-slate-500">
             Nhấp vào tỉnh để xem chi tiết
           </span>
         </div>

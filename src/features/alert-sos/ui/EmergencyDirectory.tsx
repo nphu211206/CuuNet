@@ -86,16 +86,16 @@ function ProvinceSelector({
         onClick={() => setIsOpen(!isOpen)}
         className={clsx(
           "w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl",
-          "bg-slate-800/50 border border-slate-700/40",
-          "text-sm font-medium text-slate-200",
-          "hover:border-slate-600/60 transition-all duration-200"
+          "bg-slate-100 border border-slate-200",
+          "text-sm font-medium text-slate-800",
+          "hover:border-slate-300 transition-all duration-200"
         )}
       >
         <div className="flex items-center gap-2">
           <MapPin className="w-4 h-4 text-blue-400" />
           {value || "Chọn tỉnh/thành phố"}
         </div>
-        <ChevronDown className={clsx("w-4 h-4 text-slate-400 transition-transform", isOpen && "rotate-180")} />
+        <ChevronDown className={clsx("w-4 h-4 text-slate-500 transition-transform", isOpen && "rotate-180")} />
       </button>
 
       <AnimatePresence>
@@ -106,8 +106,8 @@ function ProvinceSelector({
             exit={{ opacity: 0, y: -5 }}
             className={clsx(
               "absolute top-full left-0 right-0 mt-1 max-h-60 overflow-y-auto rounded-xl z-50",
-              "bg-slate-900/95 backdrop-blur-xl",
-              "border border-slate-700/50",
+              "bg-white/95 backdrop-blur-xl",
+              "border border-slate-200",
               "shadow-xl shadow-black/40"
             )}
           >
@@ -123,7 +123,7 @@ function ProvinceSelector({
                   "text-sm transition-colors",
                   value === province
                     ? "bg-blue-500/15 text-blue-400"
-                    : "text-slate-300 hover:bg-slate-800/60"
+                    : "text-slate-700 hover:bg-slate-100"
                 )}
               >
                 <MapPin className="w-3.5 h-3.5" />
@@ -161,9 +161,9 @@ function ContactCard({ contact }: { contact: EmergencyContact }) {
       whileHover={{ scale: 1.01 }}
       className={clsx(
         "flex items-center gap-3 p-3.5 rounded-xl",
-        "bg-slate-900/50 backdrop-blur-sm",
-        "border border-slate-700/30",
-        "hover:border-slate-600/50",
+        "bg-white backdrop-blur-sm",
+        "border border-slate-200",
+        "hover:border-slate-300",
         "transition-all duration-200 group"
       )}
     >
@@ -178,7 +178,7 @@ function ContactCard({ contact }: { contact: EmergencyContact }) {
       {/* Info */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <h4 className="text-sm font-semibold text-slate-200 truncate">
+          <h4 className="text-sm font-semibold text-slate-800 truncate">
             {contact.nameVi}
           </h4>
           {contact.available24_7 && (
@@ -290,8 +290,8 @@ function EmergencyDirectoryComponent({
           onChange={(e) => setSearchQuery(e.target.value)}
           className={clsx(
             "w-full pl-10 pr-4 py-2.5 rounded-xl text-sm",
-            "bg-slate-800/40 border border-slate-700/40",
-            "text-slate-200 placeholder-slate-600",
+            "bg-slate-100 border border-slate-200",
+            "text-slate-800 placeholder-slate-600",
             "focus:outline-none focus:border-blue-500/50",
             "transition-colors"
           )}
@@ -303,7 +303,7 @@ function EmergencyDirectoryComponent({
         <div>
           <div className="flex items-center gap-2 mb-2">
             <Shield className="w-4 h-4 text-blue-400" />
-            <h3 className="text-sm font-semibold text-slate-300">Số khẩn cấp quốc gia</h3>
+            <h3 className="text-sm font-semibold text-slate-700">Số khẩn cấp quốc gia</h3>
           </div>
           <motion.div
             variants={containerVariants}
@@ -323,7 +323,7 @@ function EmergencyDirectoryComponent({
         <div>
           <div className="flex items-center gap-2 mb-2">
             <Building2 className="w-4 h-4 text-amber-400" />
-            <h3 className="text-sm font-semibold text-slate-300">
+            <h3 className="text-sm font-semibold text-slate-700">
               Liên hệ địa phương {selectedProvince && `- ${selectedProvince}`}
             </h3>
           </div>
@@ -334,7 +334,7 @@ function EmergencyDirectoryComponent({
               <div key={type} className="mb-4">
                 <div className="flex items-center gap-2 mb-1.5 ml-1">
                   <span className="text-sm">{config.icon}</span>
-                  <span className="text-xs font-medium text-slate-400">{config.labelVi}</span>
+                  <span className="text-xs font-medium text-slate-500">{config.labelVi}</span>
                   <span className="text-[10px] text-slate-600">({typeContacts.length})</span>
                 </div>
                 <motion.div
@@ -357,7 +357,7 @@ function EmergencyDirectoryComponent({
       {filteredNational.length === 0 && filteredLocal.length === 0 && (
         <div className="text-center py-12">
           <Phone className="w-10 h-10 text-slate-600 mx-auto mb-3" />
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-slate-500">
             {searchQuery ? "Không tìm thấy liên hệ" : "Chọn tỉnh để xem danh bạ"}
           </p>
         </div>

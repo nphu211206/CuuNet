@@ -69,28 +69,28 @@ function GlassTooltip({
 
       <div className="space-y-1">
         <div className="flex items-center justify-between">
-          <span className="text-[10px] text-slate-400">Sự kiện:</span>
+          <span className="text-[10px] text-slate-500">Sự kiện:</span>
           <span className="text-[11px] font-medium text-blue-400">{formatNumber(data.details.events)}</span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-[10px] text-slate-400">Thương vong:</span>
+          <span className="text-[10px] text-slate-500">Thương vong:</span>
           <span className="text-[11px] font-medium text-red-400">{formatNumber(data.details.deaths)}</span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-[10px] text-slate-400">Mất tích:</span>
+          <span className="text-[10px] text-slate-500">Mất tích:</span>
           <span className="text-[11px] font-medium text-amber-400">{formatNumber(data.details.missing)}</span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-[10px] text-slate-400">受影响:</span>
+          <span className="text-[10px] text-slate-500">受影响:</span>
           <span className="text-[11px] font-medium text-purple-400">{formatCompact(data.details.affected * 1000)}</span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-[10px] text-slate-400">Thiệt hại:</span>
+          <span className="text-[10px] text-slate-500">Thiệt hại:</span>
           <span className="text-[11px] font-medium text-amber-300">{formatNumber(data.details.damageBillionVND)} tỷ</span>
         </div>
       </div>
 
-      <div className="mt-2 pt-2 border-t border-slate-700/30">
+      <div className="mt-2 pt-2 border-t border-slate-200">
         <span className="text-[9px] text-slate-500">
           Loại chính: {data.type === "flood" ? "Lũ lụt" : data.type === "storm" ? "Bão" : data.type === "landslide" ? "Sạt lở" : data.type === "drought" ? "Hạn hán" : "Khác"}
         </span>
@@ -133,12 +133,12 @@ function GlassScatterChartComponent({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: DASHBOARD_ANIMATION.duration.slow }}
-      className={clsx("rounded-xl bg-slate-900/40 border border-slate-700/30 p-4", className)}
+      className={clsx("rounded-xl bg-white border border-slate-200 p-4", className)}
     >
       {/* Title */}
       {(title || titleVi) && (
         <div className="mb-3">
-          {titleVi && <h3 className="text-sm font-semibold text-slate-200">{titleVi}</h3>}
+          {titleVi && <h3 className="text-sm font-semibold text-slate-800">{titleVi}</h3>}
           {title && <p className="text-[10px] text-slate-500">{title}</p>}
         </div>
       )}
@@ -221,19 +221,19 @@ function GlassScatterChartComponent({
       <div className="flex items-center justify-center gap-4 mt-2">
         <div className="flex items-center gap-1.5">
           <div className="w-2 h-2 rounded-full bg-blue-500" />
-          <span className="text-[10px] text-slate-400">Lũ lụt</span>
+          <span className="text-[10px] text-slate-500">Lũ lụt</span>
         </div>
         <div className="flex items-center gap-1.5">
           <div className="w-2 h-2 rounded-full bg-purple-500" />
-          <span className="text-[10px] text-slate-400">Bão</span>
+          <span className="text-[10px] text-slate-500">Bão</span>
         </div>
         <div className="flex items-center gap-1.5">
           <div className="w-2 h-2 rounded-full bg-amber-700" />
-          <span className="text-[10px] text-slate-400">Sạt lở</span>
+          <span className="text-[10px] text-slate-500">Sạt lở</span>
         </div>
         <div className="flex items-center gap-1.5">
           <div className="w-2 h-2 rounded-full bg-amber-500" />
-          <span className="text-[10px] text-slate-400">Hạn hán</span>
+          <span className="text-[10px] text-slate-500">Hạn hán</span>
         </div>
       </div>
 

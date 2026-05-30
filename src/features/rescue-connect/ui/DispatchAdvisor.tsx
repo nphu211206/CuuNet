@@ -152,7 +152,7 @@ function RecommendationCard({
         "p-3 rounded-xl border transition-all duration-200",
         rank === 0
           ? "bg-green-500/5 border-green-500/20"
-          : "bg-slate-900/40 border-slate-700/30"
+          : "bg-white border-slate-200"
       )}
     >
       <div className="flex items-start gap-3">
@@ -163,7 +163,7 @@ function RecommendationCard({
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
             <span className="text-base">{typeConfig.icon}</span>
-            <h4 className="text-xs font-semibold text-slate-200 truncate">{recommendation.unitName}</h4>
+            <h4 className="text-xs font-semibold text-slate-800 truncate">{recommendation.unitName}</h4>
             {rank === 0 && (
               <span className="text-[8px] font-bold px-1.5 py-0.5 rounded bg-green-500/20 text-green-400">
                 ĐỀ XUẤT
@@ -228,16 +228,16 @@ function SOSSelector({
 
   if (pendingSOS.length === 0) {
     return (
-      <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+      <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
         <CheckCircle2 className="w-6 h-6 text-green-400 mx-auto mb-1" />
-        <p className="text-xs text-slate-400">Tất cả SOS đã được xử lý</p>
+        <p className="text-xs text-slate-500">Tất cả SOS đã được xử lý</p>
       </div>
     );
   }
 
   return (
     <div className="space-y-1.5">
-      <h4 className="text-xs font-semibold text-slate-300">Chọn SOS để đề xuất</h4>
+      <h4 className="text-xs font-semibold text-slate-700">Chọn SOS để đề xuất</h4>
       <div className="space-y-1 max-h-40 overflow-y-auto">
         {pendingSOS.map((sos) => {
           const triageConfig = TRIAGE_COLOR_CONFIG[sos.triage.color];
@@ -251,7 +251,7 @@ function SOSSelector({
                 "w-full flex items-center gap-2 p-2 rounded-lg text-left transition-all duration-200 border",
                 isSelected
                   ? "bg-blue-500/10 border-blue-500/30"
-                  : "bg-slate-900/40 border-slate-700/30 hover:border-slate-600/50"
+                  : "bg-white border-slate-200 hover:border-slate-300"
               )}
             >
               <div
@@ -261,7 +261,7 @@ function SOSSelector({
                 {sos.triage.score}
               </div>
               <div className="flex-1 min-w-0">
-                <span className="text-[11px] text-slate-200 truncate block">{sos.id}</span>
+                <span className="text-[11px] text-slate-800 truncate block">{sos.id}</span>
                 <span className="text-[9px] text-slate-500">
                   {sos.location.district} • {sos.situation.peopleCount} người
                 </span>
@@ -320,7 +320,7 @@ function DispatchAdvisorComponent({
       {/* Header */}
       <div className="flex items-center gap-2">
         <Target className="w-5 h-5 text-blue-400" />
-        <h3 className="text-sm font-semibold text-slate-200">Đề xuất triển khai</h3>
+        <h3 className="text-sm font-semibold text-slate-800">Đề xuất triển khai</h3>
       </div>
 
       {/* SOS Selector */}
@@ -344,7 +344,7 @@ function DispatchAdvisorComponent({
       {/* Recommendations */}
       {currentRecommendations.length > 0 ? (
         <div>
-          <h4 className="text-xs font-semibold text-slate-300 mb-2 flex items-center gap-2">
+          <h4 className="text-xs font-semibold text-slate-700 mb-2 flex items-center gap-2">
             <Trophy className="w-4 h-4 text-amber-400" />
             Top {currentRecommendations.length} đề xuất
           </h4>
@@ -365,12 +365,12 @@ function DispatchAdvisorComponent({
           </motion.div>
         </div>
       ) : selectedSOSId ? (
-        <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-4 rounded-xl bg-white border border-slate-200 text-center">
           <Target className="w-8 h-8 text-slate-700 mx-auto mb-2" />
           <p className="text-xs text-slate-500">Nhấn "Tính toán đề xuất" để xem kết quả</p>
         </div>
       ) : (
-        <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-700/30 text-center">
+        <div className="p-4 rounded-xl bg-white border border-slate-200 text-center">
           <Send className="w-8 h-8 text-slate-700 mx-auto mb-2" />
           <p className="text-xs text-slate-500">Chọn một SOS để xem đề xuất triển khai</p>
         </div>

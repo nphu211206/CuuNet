@@ -165,8 +165,8 @@ function ReportCardComponent({
       onClick={handleCardClick}
       className={clsx(
         "group relative rounded-xl border transition-all duration-200",
-        "bg-slate-900/60 backdrop-blur-sm",
-        "border-slate-700/50 hover:border-slate-600/70",
+        "bg-white backdrop-blur-sm",
+        "border-slate-200 hover:border-slate-600/70",
         "hover:shadow-lg hover:shadow-black/20",
         "cursor-pointer overflow-hidden",
         isCompact ? "p-3" : "p-4",
@@ -285,7 +285,7 @@ function ReportCardHeader({
       <div className="flex-1 min-w-0">
         <h3
           className={clsx(
-            "font-semibold text-slate-200 leading-tight truncate",
+            "font-semibold text-slate-800 leading-tight truncate",
             isCompact ? "text-sm" : "text-base"
           )}
         >
@@ -337,7 +337,7 @@ function ReportCardBody({
   return (
     <div className="mb-3">
       {/* Location */}
-      <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-1">
+      <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-1">
         <MapPin className="w-3 h-3 flex-shrink-0 text-slate-500" />
         <span className="truncate">
           {location.district}, {location.province}
@@ -351,7 +351,7 @@ function ReportCardBody({
       </div>
 
       {/* Description (truncated) */}
-      <p className="text-sm text-slate-400 line-clamp-2 leading-relaxed">
+      <p className="text-sm text-slate-500 line-clamp-2 leading-relaxed">
         {description}
       </p>
     </div>
@@ -389,7 +389,7 @@ function ReportCardMeta({
   onExpandToggle: (e: React.MouseEvent) => void;
 }) {
   return (
-    <div className="flex items-center justify-between gap-2 mt-2 pt-2 border-t border-slate-700/30">
+    <div className="flex items-center justify-between gap-2 mt-2 pt-2 border-t border-slate-200">
       {/* Left: Photo count + Reporter */}
       <div className="flex items-center gap-3 text-xs text-slate-500">
         {/* Photo count */}
@@ -460,7 +460,7 @@ function ReportCardMeta({
         {/* Expand button */}
         <button
           onClick={onExpandToggle}
-          className="p-1 rounded text-slate-500 hover:text-slate-300 hover:bg-slate-700/50 transition-colors"
+          className="p-1 rounded text-slate-500 hover:text-slate-700 hover:bg-slate-200 transition-colors"
           title={isExpanded ? "Thu gọn" : "Xem thêm"}
         >
           {isExpanded ? (
@@ -573,13 +573,13 @@ function TimeAgo({ dateString }: { dateString: string }) {
  */
 function ExpandedContent({ report }: { report: CommunityReport }) {
   return (
-    <div className="mt-3 pt-3 border-t border-slate-700/30 space-y-3">
+    <div className="mt-3 pt-3 border-t border-slate-200 space-y-3">
       {/* Full description */}
       <div>
-        <h4 className="text-xs font-medium text-slate-400 mb-1">
+        <h4 className="text-xs font-medium text-slate-500 mb-1">
           Mô tả chi tiết
         </h4>
-        <p className="text-sm text-slate-300 leading-relaxed">
+        <p className="text-sm text-slate-700 leading-relaxed">
           {report.description}
         </p>
       </div>
@@ -587,14 +587,14 @@ function ExpandedContent({ report }: { report: CommunityReport }) {
       {/* Photos preview */}
       {report.photos.length > 0 && (
         <div>
-          <h4 className="text-xs font-medium text-slate-400 mb-1.5">
+          <h4 className="text-xs font-medium text-slate-500 mb-1.5">
             Ảnh đính kèm ({report.photos.length})
           </h4>
           <div className="flex gap-2 overflow-x-auto pb-1">
             {report.photos.slice(0, 3).map((photo) => (
               <div
                 key={photo.id}
-                className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-slate-800"
+                className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-slate-200"
               >
                 <img
                   src={photo.thumbnail}
@@ -605,7 +605,7 @@ function ExpandedContent({ report }: { report: CommunityReport }) {
               </div>
             ))}
             {report.photos.length > 3 && (
-              <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-slate-800 flex items-center justify-center text-xs text-slate-400">
+              <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-slate-200 flex items-center justify-center text-xs text-slate-500">
                 +{report.photos.length - 3}
               </div>
             )}
@@ -614,7 +614,7 @@ function ExpandedContent({ report }: { report: CommunityReport }) {
       )}
 
       {/* Verification details */}
-      <div className="flex items-center gap-4 text-xs text-slate-400">
+      <div className="flex items-center gap-4 text-xs text-slate-500">
         <span className="inline-flex items-center gap-1">
           <Shield className="w-3 h-3" />
           Tin cậy: {Math.round(report.verification.trustScore * 100)}%

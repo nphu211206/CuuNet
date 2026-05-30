@@ -103,7 +103,7 @@ function KPICardComponent({ kpi, index, className }: KPICardProps) {
         "relative overflow-hidden rounded-xl p-3",
         "bg-white",
         "border border-slate-200",
-        "hover:border-slate-600/60 transition-colors duration-300",
+        "hover:border-slate-300 transition-colors duration-300",
         className
       )}
     >
@@ -125,7 +125,7 @@ function KPICardComponent({ kpi, index, className }: KPICardProps) {
           >
             {kpi.icon}
           </div>
-          <span className="text-[10px] font-medium text-slate-400 leading-tight flex-1">
+          <span className="text-[10px] font-medium text-slate-500 leading-tight flex-1">
             {kpi.labelVi}
           </span>
         </div>

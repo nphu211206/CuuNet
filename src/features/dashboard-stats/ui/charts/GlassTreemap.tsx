@@ -129,11 +129,11 @@ function TreemapTooltip({
     >
       <div className="flex items-center gap-2 mb-1">
         <div className="w-2.5 h-2.5 rounded" style={{ backgroundColor: data.color }} />
-        <p className="text-xs font-semibold text-slate-200">
+        <p className="text-xs font-semibold text-slate-800">
           {data.nameVi || data.name}
         </p>
       </div>
-      <p className="text-[11px] text-slate-300">
+      <p className="text-[11px] text-slate-700">
         {formatNumber(data.value)} tỷ VND
       </p>
     </div>
@@ -156,12 +156,12 @@ function GlassTreemapComponent({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: DASHBOARD_ANIMATION.duration.slow }}
-      className={clsx("rounded-xl bg-slate-900/40 border border-slate-700/30 p-4 relative", className)}
+      className={clsx("rounded-xl bg-white border border-slate-200 p-4 relative", className)}
     >
       {/* Title */}
       {(title || titleVi) && (
         <div className="mb-3">
-          {titleVi && <h3 className="text-sm font-semibold text-slate-200">{titleVi}</h3>}
+          {titleVi && <h3 className="text-sm font-semibold text-slate-800">{titleVi}</h3>}
           {title && <p className="text-[10px] text-slate-500">{title}</p>}
         </div>
       )}
@@ -183,7 +183,7 @@ function GlassTreemapComponent({
         {data.map((item, i) => (
           <div key={i} className="flex items-center gap-1.5">
             <div className="w-2 h-2 rounded" style={{ backgroundColor: item.color }} />
-            <span className="text-[10px] text-slate-400">
+            <span className="text-[10px] text-slate-500">
               {item.nameVi || item.name}
             </span>
           </div>

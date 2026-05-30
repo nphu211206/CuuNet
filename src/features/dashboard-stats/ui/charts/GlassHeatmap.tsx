@@ -114,12 +114,12 @@ function GlassHeatmapComponent({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: DASHBOARD_ANIMATION.duration.slow }}
-      className={clsx("rounded-xl bg-slate-900/40 border border-slate-700/30 p-4 relative", className)}
+      className={clsx("rounded-xl bg-white border border-slate-200 p-4 relative", className)}
     >
       {/* Title */}
       {(title || titleVi) && (
         <div className="mb-3">
-          {titleVi && <h3 className="text-sm font-semibold text-slate-200">{titleVi}</h3>}
+          {titleVi && <h3 className="text-sm font-semibold text-slate-800">{titleVi}</h3>}
           {title && <p className="text-[10px] text-slate-500">{title}</p>}
         </div>
       )}
@@ -235,7 +235,7 @@ function GlassHeatmapComponent({
             backdropFilter: "blur(12px)",
           }}
         >
-          <p className="text-xs font-semibold text-slate-200">{hoveredCell.label}</p>
+          <p className="text-xs font-semibold text-slate-800">{hoveredCell.label}</p>
           <p className="text-[11px] text-blue-400">{hoveredCell.value} sự kiện</p>
         </div>
       )}
