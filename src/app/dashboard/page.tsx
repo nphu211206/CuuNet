@@ -217,7 +217,7 @@ function ProvinceDetailView({
         {[
           { label: "Tổng sự kiện", value: province.totalEvents, color: "#3B82F6" },
           { label: "Tổng chết", value: province.totalDeaths, color: "#EF4444" },
-          { label: "Tổng受影响", value: province.totalAffected, color: "#8B5CF6" },
+          { label: "Ảnh hưởng", value: province.totalAffected, color: "#8B5CF6" },
           { label: "Thiệt hại (tỷ)", value: province.totalDamageBillionVND, color: "#F59E0B" },
         ].map((stat) => (
           <div key={stat.label} className="p-3 rounded-xl bg-white border border-slate-200 text-center">
@@ -313,7 +313,7 @@ function OperationalDashboardSimple() {
           <span className="text-lg">⚠️</span>
           <h3 className="text-sm font-semibold text-amber-400">Giám sát thời gian thực</h3>
         </div>
-        <p className="text-[11px] text-amber-300/70">
+        <p className="text-[11px] text-amber-600">
           Chế độ giám sát hiển thị dữ liệu thời gian thực khi có sự cố đang xảy ra.
           Hiện tại không có sự cố lớn nào đang hoạt động.
         </p>
@@ -325,7 +325,7 @@ function OperationalDashboardSimple() {
           { label: "Sự kiện 2024", value: 21, color: "#3B82F6" },
           { label: "Thương vong 2024", value: 158, color: "#EF4444" },
           { label: "Thiệt hại (tỷ)", value: 13000, color: "#F59E0B" },
-          { label: "受影响 (K)", value: 4100, color: "#8B5CF6" },
+          { label: "Ảnh hưởng (K)", value: 4100, color: "#8B5CF6" },
         ].map((stat) => (
           <div key={stat.label} className="p-3 rounded-xl bg-white border border-slate-200 text-center">
             <span className="text-xl font-bold block" style={{ color: stat.color }}>
