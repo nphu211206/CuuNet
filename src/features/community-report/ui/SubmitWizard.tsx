@@ -313,7 +313,7 @@ function SubmitWizardComponent({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed inset-x-0 bottom-0 z-50 max-h-[90vh] bg-slate-900 border-t border-slate-200 rounded-t-2xl shadow-2xl shadow-black/50 overflow-hidden flex flex-col"
+            className="fixed inset-x-0 bottom-0 z-50 max-h-[90vh] bg-white border-t border-slate-200 rounded-t-2xl shadow-2xl shadow-black/10 overflow-hidden flex flex-col"
           >
             {/* === WIZARD HEADER === */}
             <WizardHeader
@@ -468,8 +468,8 @@ function WizardHeader({
                 currentStep === step.step
                   ? "bg-blue-500 text-white scale-110"
                   : currentStep > step.step
-                  ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                  : "bg-slate-700/50 text-slate-500 border border-slate-600/30"
+                    ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                    : "bg-slate-700/50 text-slate-500 border border-slate-600/30"
               )}
             >
               {currentStep > step.step ? (
@@ -485,8 +485,8 @@ function WizardHeader({
                 currentStep === step.step
                   ? "text-blue-400 font-medium"
                   : currentStep > step.step
-                  ? "text-green-400"
-                  : "text-slate-600"
+                    ? "text-green-400"
+                    : "text-slate-600"
               )}
             >
               {step.label}

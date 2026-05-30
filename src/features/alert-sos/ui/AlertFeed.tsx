@@ -129,10 +129,10 @@ function FilterChip({
       style={
         active
           ? {
-              backgroundColor: `${color || "#3B82F6"}18`,
-              borderColor: `${color || "#3B82F6"}50`,
-              color: color || "#3B82F6",
-            }
+            backgroundColor: `${color || "#3B82F6"}18`,
+            borderColor: `${color || "#3B82F6"}50`,
+            color: color || "#3B82F6",
+          }
           : undefined
       }
     >
@@ -170,7 +170,7 @@ function AlertCard({
         "relative flex gap-3 p-3.5 rounded-xl cursor-pointer",
         "bg-white backdrop-blur-sm",
         "border border-slate-200",
-        "hover:border-slate-300 hover:bg-slate-900/70",
+        "hover:border-slate-300 hover:bg-slate-100",
         "transition-all duration-200 group",
         isExpired && "opacity-50",
         isCancelled && "opacity-40"

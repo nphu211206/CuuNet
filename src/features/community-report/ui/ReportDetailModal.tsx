@@ -224,7 +224,7 @@ function ReportDetailModalComponent({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-lg bg-slate-900 border-l border-slate-200 shadow-2xl shadow-black/50 overflow-y-auto"
+            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-lg bg-white border-l border-slate-200 shadow-2xl shadow-black/10 overflow-y-auto"
           >
             {/* === HEADER === */}
             <motion.div

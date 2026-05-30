@@ -133,7 +133,7 @@ export default function TimelineSlider({
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className={cn(
-        "fixed bottom-0 left-0 right-0 z-[1000] bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 transition-all",
+        "fixed bottom-0 left-0 right-0 z-[1000] bg-white/95 backdrop-blur-xl border-t border-slate-200 transition-all",
         isExpanded ? "h-40" : "h-20"
       )}
     >
@@ -224,9 +224,9 @@ export default function TimelineSlider({
             <span>
               {currentDisaster
                 ? new Date(currentDisaster.startDate).toLocaleDateString(
-                    "vi-VN",
-                    { day: "2-digit", month: "2-digit" }
-                  )
+                  "vi-VN",
+                  { day: "2-digit", month: "2-digit" }
+                )
                 : "--/--"}
             </span>
           </div>

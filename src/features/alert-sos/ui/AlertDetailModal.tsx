@@ -196,8 +196,8 @@ function AlertDetailModalComponent({
           onClick={(e) => e.stopPropagation()}
           className={clsx(
             "relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-2xl",
-            "bg-slate-900 border border-slate-200",
-            "shadow-2xl shadow-black/50"
+            "bg-white border border-slate-200",
+            "shadow-2xl shadow-black/10"
           )}
         >
           {/* Close button */}
