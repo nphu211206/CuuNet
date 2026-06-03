@@ -1,0 +1,16 @@
+case_study,region,disaster_type,model,MAE,RMSE
+1,Quang Binh Province,Flood,Moving Average (MA),0.2396,0.3076
+1,Quang Binh Province,Flood,Linear Regression (LR),0.2742,0.3022
+1,Quang Binh Province,Flood,Seasonal Decomposition (SD),0.1622,0.1977
+1,Quang Binh Province,Flood,Proposed Ensemble (MA+LR+SD),0.1676,0.1932
+1,Quang Binh Province,Flood,Proposed ST-AtLSTM (TF.js),0.1687,0.1911
+2,Lao Cai Province,Landslide,Moving Average (MA),0.2502,0.3252
+2,Lao Cai Province,Landslide,Linear Regression (LR),0.2899,0.3188
+2,Lao Cai Province,Landslide,Seasonal Decomposition (SD),0.1670,0.2066
+2,Lao Cai Province,Landslide,Proposed Ensemble (MA+LR+SD),0.1770,0.2020
+2,Lao Cai Province,Landslide,Proposed ST-AtLSTM (TF.js),0.1779,0.1996
+3,Can Tho Province,Drought,Moving Average (MA),0.3604,0.4113
+3,Can Tho Province,Drought,Linear Regression (LR),0.2740,0.3275
+3,Can Tho Province,Drought,Seasonal Decomposition (SD),0.1632,0.1840
+3,Can Tho Province,Drought,Proposed Ensemble (MA+LR+SD),0.1867,0.2086
+3,Can Tho Province,Drought,Proposed ST-AtLSTM (TF.js),0.1971,0.2209

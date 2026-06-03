@@ -1,0 +1,12 @@
+report_id,reporter_type,latitude,longitude,timestamp_utc,severity_level,reported_flood_depth_cm,description,reputation_score_Ri,plausibility_tau_i,is_sybil_bot,dbscan_label
+r1,Honest Volunteer,21.0285,105.8542,2025-09-07T14:30:00Z,HIGH,45,Flooding on Dinh Tien Hoang street near Hoan Kiem Lake. Water reaching knee level.,0.85,0.92,FALSE,CORE
+r2,Honest Volunteer,21.0301,105.8510,2025-09-07T14:45:00Z,HIGH,50,Road flooded near Hang Khay intersection. Traffic blocked.,0.78,0.89,FALSE,CORE
+r3,Honest Volunteer,21.0265,105.8561,2025-09-07T14:22:00Z,HIGH,40,Water pooling at Ly Thai To garden. Benches submerged.,0.91,0.95,FALSE,CORE
+r4,Honest Volunteer,21.0850,105.7890,2025-09-07T18:00:00Z,MEDIUM,20,Minor flooding reported near West Lake area.,0.74,0.55,FALSE,NOISE
+r5,Honest Volunteer,21.0312,105.8498,2025-09-07T14:55:00Z,HIGH,55,Severe flooding at Ba Trieu and Tran Hung Dao crossroad.,0.82,0.91,FALSE,CORE
+r6,Sybil Bot,21.0290,105.8535,2025-09-07T14:48:00Z,NONE,0,No flooding detected in the area. Situation is normal.,0.12,0.08,TRUE,CORE
+r7,Sybil Bot,21.0278,105.8548,2025-09-07T14:51:00Z,NONE,0,Streets are clear. No emergency.,0.10,0.06,TRUE,CORE
+r8,Sybil Bot,21.0295,105.8530,2025-09-07T14:53:00Z,NONE,0,Conditions are normal. No flood risk.,0.15,0.09,TRUE,CORE
+r9,Honest Volunteer,21.0255,105.8575,2025-09-07T15:05:00Z,HIGH,42,Flash flood at Nguyen Huu Huan street. Motorcycles stranded.,0.76,0.88,FALSE,CORE
+r10,Honest Volunteer,21.0320,105.8520,2025-09-07T15:10:00Z,CRITICAL,70,Severe flooding near Hoa Lo Prison area. Dangerous water depth.,0.89,0.94,FALSE,CORE
+r11,Honest Volunteer,21.0270,105.8555,2025-09-07T14:40:00Z,HIGH,48,Flooding worsening at Dinh Le street. Emergency services needed.,0.80,0.90,FALSE,CORE

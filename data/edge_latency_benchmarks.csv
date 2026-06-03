@@ -1,0 +1,8 @@
+device_tier,device_spec,browser,backend,avg_inference_latency_ms,memory_consumption_mb
+High-end Desktop,Intel i9 + RTX 4090,Chrome v120,WebGL (GPU Accelerated),4.2,12
+High-end Desktop,Intel i9,Firefox v119,WebAssembly (WASM CPU),12.8,8
+Mid-range Laptop,Intel i5 + Iris Xe,Chrome v120,WebGL (GPU Accelerated),14.5,15
+Mid-range Laptop,Intel i5,Safari v17,WebGL (GPU Accelerated),18.2,14
+Smartphone High-end,Apple iPhone 13 (A15 Bionic),Safari Mobile,WebGL (GPU Accelerated),28.5,22
+Smartphone High-end,Apple iPhone 13 (A15 Bionic),Safari Mobile,WebAssembly (WASM CPU),65.4,18
+Smartphone Budget,Xiaomi Redmi 9 (Helio G80),Chrome Mobile,CPU Fallback,142.1,30
