@@ -1,0 +1,29 @@
+# TA-LSTM (Temporal Attention LSTM) Model Configuration
+# Manuscript: HYDRO-D-26-00188 - Journal of Hydroinformatics
+model:
+  name: TA-LSTM
+  full_name: Temporal Attention Long Short-Term Memory
+  attention: Bahdanau additive attention (Bahdanau et al., 2015)
+  units: 64
+  dropout: 0.2
+  recurrent_dropout: 0.0
+  timesteps: 12
+  features: 6
+  output_dim: 1
+training:
+  optimizer: Adam
+  learning_rate: 0.001
+  batch_size: 32
+  max_epochs: 200
+  patience: 15
+  seeds: [42, 123, 456, 789, 1011]
+data_split:
+  train: 0.72  # 2000-2017
+  validation: 0.08  # 2018-2019
+  test_id: 0.16  # 2020-2023
+  test_ood: 0.04  # 2024
+  periods:
+    train: "2000-2017"
+    validation: "2018-2019"
+    test_id: "2020-2023"
+    test_ood: "2024"

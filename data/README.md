@@ -87,3 +87,15 @@ If you use this dataset, please cite the associated paper (citation details to b
 ## Contact
 
 Nguyen Phu Toan — nphu211206@gmail.com
+
+
+## Simulation Scripts
+
+Located in `src/simulation/`:
+
+| Script | Description |
+|--------|-------------|
+| `sybil_rigorous_sim.py` | Monte Carlo Sybil attack simulation (2000 trials). Implements DST-based reputation scoring (Tables 7–10 of manuscript). |
+| `adversarial_r2_tests.py` | Adversarial robustness tests for Reviewer #2 — tests manipulation resistance of the reputation system. |
+| `audit_reviewer2_r2.py` | Audit script verifying reviewer response claims against simulation results. |
+| `model_config.yaml` | TA-LSTM hyperparameter configuration used for all experiments in manuscript Tables 2–6. |
