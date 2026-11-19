@@ -3,27 +3,34 @@
 model:
   name: TA-LSTM
   full_name: Temporal Attention Long Short-Term Memory
-  attention: Bahdanau additive attention (Bahdanau et al., 2015)
+  architecture: Single LSTM (H=64) + Bahdanau Temporal Attention (Bahdanau et al., 2015)
   units: 64
+  attention_units: 64
   dropout: 0.2
   recurrent_dropout: 0.0
   timesteps: 12
   features: 6
+  feature_names: ["S_raw", "H", "E", "V", "month_sin", "month_cos"]
   output_dim: 1
+  total_params: 26561
+
 training:
   optimizer: Adam
   learning_rate: 0.001
-  batch_size: 32
-  max_epochs: 200
-  patience: 15
-  seeds: [42, 123, 456, 789, 1011]
+  batch_size: 16
+  max_epochs: 100
+  early_stopping_patience: 20
+  seeds: [42, 123, 456, 789, 2024]
+  loss: MSE
+  metrics: ["mae"]
+
 data_split:
-  train: 0.72  # 2000-2017
-  validation: 0.08  # 2018-2019
-  test_id: 0.16  # 2020-2023
-  test_ood: 0.04  # 2024
+  train: 0.72  # 2000-2017 (216 months)
+  validation: 0.08  # 2018-2019 (24 months)
+  test: 0.16  # 2020-2023 (48 months)
+  simulation_test_year: 0.04  # 2024 (12 months out-of-sample holdout)
   periods:
     train: "2000-2017"
     validation: "2018-2019"
-    test_id: "2020-2023"
-    test_ood: "2024"
+    test: "2020-2023"
+    holdout_stress_test: "2024"

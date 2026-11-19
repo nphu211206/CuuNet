@@ -1,0 +1,204 @@
+{
+  "manuscript_ref": "HYDRO-D-26-00188",
+  "generated_at": "2026-11-19T10:14:35.404253",
+  "platform": "Kaggle T4 GPU",
+  "tensorflow": "2.21.0",
+  "seeds_used": [
+    42,
+    123,
+    456,
+    789,
+    2024
+  ],
+  "model": {
+    "name": "TA-LSTM (Temporal Attention LSTM)",
+    "architecture": "Single LSTM (H=64) + Bahdanau Attention (Bahdanau et al. 2015)",
+    "total_params": 26561,
+    "lookback_months": 12,
+    "features": 6,
+    "feature_names": [
+      "S_raw",
+      "H",
+      "E",
+      "V",
+      "month_sin",
+      "month_cos"
+    ],
+    "dropout": 0.2,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "loss": "MSE",
+    "max_epochs": 100,
+    "batch_size": 16,
+    "early_stopping_patience": 20
+  },
+  "data": {
+    "train": "2000-01 to 2017-12",
+    "val": "2018-01 to 2019-12",
+    "test": "2020-01 to 2023-12",
+    "scaler": "MinMaxScaler fit on training data only (no leakage)",
+    "sources": [
+      "DesInventar VNM \u2014 annual disaster event counts + deaths (2000-2023)",
+      "GSO Vietnam \u2014 population census, poverty rate",
+      "INFORM JRC \u2014 sub-national vulnerability proxy",
+      "VDMA \u2014 peak hazard season definitions (Table 1)"
+    ]
+  },
+  "per_seed_results": {
+    "Quang_Binh": [
+      {
+        "seed": 42,
+        "avg_mae": 0.0998,
+        "avg_rmse": 0.129,
+        "peak_mae": 0.2782,
+        "val_mae": 0.0392,
+        "epochs_trained": 100
+      },
+      {
+        "seed": 123,
+        "avg_mae": 0.125,
+        "avg_rmse": 0.1587,
+        "peak_mae": 0.3208,
+        "val_mae": 0.0464,
+        "epochs_trained": 65
+      },
+      {
+        "seed": 456,
+        "avg_mae": 0.1173,
+        "avg_rmse": 0.1478,
+        "peak_mae": 0.2996,
+        "val_mae": 0.0421,
+        "epochs_trained": 77
+      },
+      {
+        "seed": 789,
+        "avg_mae": 0.1334,
+        "avg_rmse": 0.1683,
+        "peak_mae": 0.3477,
+        "val_mae": 0.0476,
+        "epochs_trained": 62
+      },
+      {
+        "seed": 2024,
+        "avg_mae": 0.1196,
+        "avg_rmse": 0.151,
+        "peak_mae": 0.3139,
+        "val_mae": 0.0461,
+        "epochs_trained": 88
+      }
+    ],
+    "Lao_Cai": [
+      {
+        "seed": 42,
+        "avg_mae": 0.1688,
+        "avg_rmse": 0.2033,
+        "peak_mae": 0.3958,
+        "val_mae": 0.0423,
+        "epochs_trained": 46
+      },
+      {
+        "seed": 123,
+        "avg_mae": 0.1649,
+        "avg_rmse": 0.1995,
+        "peak_mae": 0.3956,
+        "val_mae": 0.0431,
+        "epochs_trained": 49
+      },
+      {
+        "seed": 456,
+        "avg_mae": 0.1489,
+        "avg_rmse": 0.1833,
+        "peak_mae": 0.3722,
+        "val_mae": 0.0403,
+        "epochs_trained": 80
+      },
+      {
+        "seed": 789,
+        "avg_mae": 0.1684,
+        "avg_rmse": 0.2027,
+        "peak_mae": 0.3898,
+        "val_mae": 0.0423,
+        "epochs_trained": 50
+      },
+      {
+        "seed": 2024,
+        "avg_mae": 0.1597,
+        "avg_rmse": 0.193,
+        "peak_mae": 0.3751,
+        "val_mae": 0.0406,
+        "epochs_trained": 67
+      }
+    ],
+    "Can_Tho": [
+      {
+        "seed": 42,
+        "avg_mae": 0.1013,
+        "avg_rmse": 0.1205,
+        "peak_mae": 0.2059,
+        "val_mae": 0.0485,
+        "epochs_trained": 57
+      },
+      {
+        "seed": 123,
+        "avg_mae": 0.1022,
+        "avg_rmse": 0.123,
+        "peak_mae": 0.2197,
+        "val_mae": 0.049,
+        "epochs_trained": 49
+      },
+      {
+        "seed": 456,
+        "avg_mae": 0.1068,
+        "avg_rmse": 0.1283,
+        "peak_mae": 0.2267,
+        "val_mae": 0.0488,
+        "epochs_trained": 100
+      },
+      {
+        "seed": 789,
+        "avg_mae": 0.0994,
+        "avg_rmse": 0.1203,
+        "peak_mae": 0.2084,
+        "val_mae": 0.0482,
+        "epochs_trained": 59
+      },
+      {
+        "seed": 2024,
+        "avg_mae": 0.1055,
+        "avg_rmse": 0.1227,
+        "peak_mae": 0.2067,
+        "val_mae": 0.0491,
+        "epochs_trained": 55
+      }
+    ]
+  },
+  "summary": {
+    "Quang_Binh": {
+      "avg_mae_mean": 0.119,
+      "avg_mae_std": 0.0111,
+      "avg_rmse_mean": 0.1509,
+      "avg_rmse_std": 0.0131,
+      "peak_mae_mean": 0.312,
+      "peak_mae_std": 0.023,
+      "best_seed": 42
+    },
+    "Lao_Cai": {
+      "avg_mae_mean": 0.1621,
+      "avg_mae_std": 0.0074,
+      "avg_rmse_mean": 0.1963,
+      "avg_rmse_std": 0.0075,
+      "peak_mae_mean": 0.3857,
+      "peak_mae_std": 0.0101,
+      "best_seed": 456
+    },
+    "Can_Tho": {
+      "avg_mae_mean": 0.103,
+      "avg_mae_std": 0.0027,
+      "avg_rmse_mean": 0.1229,
+      "avg_rmse_std": 0.0029,
+      "peak_mae_mean": 0.2135,
+      "peak_mae_std": 0.0083,
+      "best_seed": 789
+    }
+  }
+}

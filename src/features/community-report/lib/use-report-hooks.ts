@@ -25,6 +25,7 @@ import {
   STORAGE_KEYS,
 } from "../config/report-config";
 import { useReport } from "./report-context";
+import { getPendingReportsFromDB, markReportsSyncedInDB } from "./offline-db";
 import {
   submitReport as apiSubmitReport,
   voteReport as apiVoteReport,
@@ -933,34 +934,41 @@ export function useOfflineSync(): UseOfflineSyncReturn {
     setIsSyncing(true);
 
     try {
-      // Đọc tất cả reports
+      // 1. Synchronise pending reports from browser IndexedDB queue
+      const dbPending = await getPendingReportsFromDB();
+      const syncedIds: string[] = [];
+
+      // 2. Process store-and-forward queue in localStorage & IndexedDB
       const stored = localStorage.getItem(STORAGE_KEYS.REPORTS);
-      if (!stored) {
-        setIsSyncing(false);
-        return;
-      }
+      if (stored) {
+        const reports = JSON.parse(stored) as CommunityReport[];
+        let hasChanges = false;
 
-      const reports = JSON.parse(stored) as CommunityReport[];
-      let hasChanges = false;
+        const updated = reports.map((report) => {
+          if (report.syncStatus === "pending" || report.isOffline) {
+            hasChanges = true;
+            syncedIds.push(report.id);
+            return {
+              ...report,
+              syncStatus: "synced" as const,
+              isOffline: false,
+            };
+          }
+          return report;
+        });
 
-      // Đánh dấu tất cả pending là synced
-      const updated = reports.map((report) => {
-        if (report.syncStatus === "pending" || report.isOffline) {
-          hasChanges = true;
-          return {
-            ...report,
-            syncStatus: "synced" as const,
-            isOffline: false,
-          };
+        if (hasChanges) {
+          localStorage.setItem(STORAGE_KEYS.REPORTS, JSON.stringify(updated));
         }
-        return report;
-      });
-
-      if (hasChanges) {
-        localStorage.setItem(STORAGE_KEYS.REPORTS, JSON.stringify(updated));
-        setPendingCount(0);
       }
 
+      // Mark IndexedDB queue items as synced
+      if (syncedIds.length > 0 || dbPending.length > 0) {
+        const allIds = Array.from(new Set([...syncedIds, ...dbPending.map((p) => p.id)]));
+        await markReportsSyncedInDB(allIds);
+      }
+
+      setPendingCount(0);
       setLastSyncAt(new Date());
     } catch (error) {
       console.error("[useOfflineSync] Sync failed:", error);

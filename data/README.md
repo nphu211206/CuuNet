@@ -81,6 +81,34 @@ This directory contains simulation datasets and reference benchmarks used in the
 
 ---
 
+
+---
+
+### 5. `training_log.json`
+**Description:** Machine-readable audit trail of the 5-seed TA-LSTM training benchmark on Kaggle T4 GPU, recording exact loss/MAE/RMSE progression, hyperparameter settings, seeds (42, 123, 456, 789, 2024), and platform metadata.
+
+---
+
+### 6. `all_seed_results.csv` & `training_statistics_5seeds.csv`
+**Description:** Full tabular results across all 15 training runs (3 geographic zones × 5 initialisation seeds) reporting Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and Peak Hazard Season MAE (October for Quảng Bình, September for Lào Cai, March for Cần Thơ).
+
+---
+
+### 7. Monthly Composite Risk Index Datasets (`*_monthly_risk_index.csv`)
+**Description:** Historical monthly composite risk indices $S_{raw}(t)$ (2000–2023, 288 months each) calculated according to the INFORM methodology formula in manuscript Section 3.2:
+- `Quang_Binh_monthly_risk_index.csv` (Flood hazard)
+- `Lao_Cai_monthly_risk_index.csv` (Landslide hazard)
+- `Can_Tho_monthly_risk_index.csv` (Agricultural drought / saline water intrusion)
+
+---
+
+### 8. Client-Side Neural Model Artifacts (`public/models/`)
+**Description:** Pre-trained, 8-bit integer post-training quantised (INT8) Temporal Attention LSTM (TA-LSTM) models in TensorFlow.js layers format (`model.json` + `group1-shard1of1.bin`), ready for offline client-side edge browser execution:
+- `public/models/Quang_Binh/`
+- `public/models/Lao_Cai/`
+- `public/models/Can_Tho/`
+- `public/models/disaster-predict/` (default operational model)
+
 ## Code Availability
 
 The CuuNet repository contains a **demonstration prototype** of the offline-first browser-based framework. The research training pipeline, trained model artifacts, and full simulation outputs are available upon reasonable request from the corresponding author (nphu211206@gmail.com).
