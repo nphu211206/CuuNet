@@ -1,32 +1,32 @@
 # CuuNet — Research Data Repository
 
-This directory contains all datasets used in the paper:
+This directory contains simulation datasets and reference benchmarks used in the paper:
 
-> **"A Spatio-Temporal Edge AI Framework with Sybil Defence for Crowdsourced Disaster Forecasting: A Case Study in Vietnam"**  
-> *Submitted to Spatial Information Research (Springer)*
+> **"An Offline-First Edge AI Framework for Composite Disaster Risk-Index Forecasting and Crowdsourced Alert Verification: A Case Study in Vietnam"**  
+> *Submitted to Journal of Hydroinformatics (IWA Publishing)* — Manuscript Reference: HYDRO-D-26-00188
 
 ---
 
 ## Dataset Files
 
 ### 1. `prediction_accuracy.csv`
-**Description:** Forecasting accuracy (MAE and RMSE) for the ST-AtLSTM model and baseline models across three Vietnamese disaster case studies.
+**Description:** Forecasting accuracy (MAE and RMSE) for the Temporal Attention LSTM (TA-LSTM) model and baseline statistical models (Moving Average, Linear Regression, Seasonal Decomposition) across three Vietnamese disaster case studies.
 
 | Column | Description |
 |--------|-------------|
 | `case_study` | Case study index (1=Quảng Bình, 2=Lào Cai, 3=Cần Thơ) |
 | `region` | Vietnamese province name |
-| `disaster_type` | Type of disaster (Flood, Landslide, Drought) |
+| `disaster_type` | Type of disaster (Flood/Landslide, Drought/Salinity) |
 | `model` | Forecasting model name |
-| `MAE` | Mean Absolute Error |
+| `MAE` | Mean Absolute Error (on composite risk index, 0–1 scale) |
 | `RMSE` | Root Mean Squared Error |
 
-**Source:** Derived from historical disaster records provided by the Vietnam Meteorological and Hydrological Administration (VNMHA) and the General Statistics Office of Vietnam (GSO), 2000–2024.
+**Source:** Derived from historical disaster records provided by the Vietnam Disaster Management Authority (VDMA) and the General Statistics Office of Vietnam (GSO), 2000–2024.
 
 ---
 
 ### 2. `edge_latency_benchmarks.csv`
-**Description:** Client-side inference latency of the quantised ST-AtLSTM model (TensorFlow.js) across various device tiers and browser backends.
+**Description:** Client-side inference latency of the quantised TA-LSTM model (TensorFlow.js) across various device tiers and browser backends.
 
 | Column | Description |
 |--------|-------------|
@@ -34,20 +34,25 @@ This directory contains all datasets used in the paper:
 | `device_spec` | Hardware specification |
 | `browser` | Browser and version tested |
 | `backend` | TensorFlow.js execution backend (WebGL / WASM / CPU) |
+| `precision` | Computation precision (FP32 or INT8) |
 | `avg_inference_latency_ms` | Average inference time in milliseconds |
 | `memory_consumption_mb` | Peak RAM usage in megabytes |
+
+**Note on latency values:** The 142.1 ms benchmark corresponds to FP32 CPU-fallback execution on a Redmi 9 (MediaTek Helio G80), where WebGL driver instability forced CPU fallback. The 65.4 ms benchmark corresponds to INT8/WASM execution on an iPhone 13 Pro. These two values should not be directly compared as they reflect different precision modes and hardware classes.
 
 ---
 
 ### 3. `hoan_kiem_vgi_simulation.csv`
-**Description:** Simulated Volunteered Geographic Information (VGI) flood reports used in the consensus verification experiment (Section 4.3), representing a pluvial flooding scenario in Hoan Kiem District, Hanoi during Super Typhoon Yagi (September 2025).
+**Description:** Simulated Volunteered Geographic Information (VGI) flood reports used in the crowdsourced verification experiment (Section 4.3), representing a hypothetical pluvial flooding scenario in Hoan Kiem District, Hanoi.
+
+> **Important:** The timestamps in this file (2025-09-07) are **synthetic demonstration timestamps** assigned during dataset generation and do **not** represent actual field observations. This simulation dataset is a methodological demonstration of the DBSCAN–DST pipeline. It is independent of the Super Typhoon Yagi (September 2024) historical event, which is used only as motivating meteorological context in the manuscript.
 
 | Column | Description |
 |--------|-------------|
 | `report_id` | Unique report identifier |
 | `reporter_type` | Honest Volunteer or Sybil Bot |
 | `latitude` / `longitude` | WGS84 coordinates of the report |
-| `timestamp_utc` | ISO 8601 submission timestamp |
+| `timestamp_utc` | ISO 8601 submission timestamp (synthetic) |
 | `severity_level` | Reporter-declared severity (NONE/MEDIUM/HIGH/CRITICAL) |
 | `reported_flood_depth_cm` | Self-reported flood depth in centimetres |
 | `description` | Free-text report content |
@@ -59,7 +64,7 @@ This directory contains all datasets used in the paper:
 ---
 
 ### 4. `dst_sybil_defense_results.csv`
-**Description:** Dempster-Shafer Theory (DST) belief computation results under two scenarios — honest sources only, and a coordinated Sybil attack.
+**Description:** Dempster-Shafer Theory (DST) belief computation results under selected scenarios from the Monte Carlo stress-test (Table 11). Full results across 2,000 trials are reported in the manuscript.
 
 | Column | Description |
 |--------|-------------|
@@ -72,12 +77,26 @@ This directory contains all datasets used in the paper:
 | `conflict_coefficient_K` | Dempster conflict coefficient |
 | `validation_decision` | Final framework decision |
 
+**Note:** This CSV contains a representative subset of scenarios. Table 11 in the manuscript reports full Monte Carlo statistics across all 21 adversarial scenarios × 2,000 trials.
+
+---
+
+## Code Availability
+
+The CuuNet repository contains a **demonstration prototype** of the offline-first browser-based framework. The research training pipeline, trained model artifacts, and full simulation outputs are available upon reasonable request from the corresponding author (nphu211206@gmail.com).
+
+The app prototype demonstrates:
+- Client-side statistical ensemble forecasting (MA + LR + Seasonal Decomposition)
+- DBSCAN spatial clustering of VGI reports
+- DST evidential fusion with dynamic reputation scoring
+- Offline store-and-forward draft queue (localStorage with planned IndexedDB migration)
+
 ---
 
 ## Data Sources & License
 
-- **Historical climate data:** Vietnam Meteorological and Hydrological Administration (VNMHA), General Statistics Office of Vietnam (GSO). Available upon request from the respective agencies.
-- **VGI simulation data:** Synthetically generated to represent a realistic Super Typhoon Yagi scenario in Hoan Kiem District, Hanoi (September 2025). Coordinates are within WGS84 bounds of the district.
+- **Historical climate/disaster data:** Vietnam Disaster Management Authority (VDMA), General Statistics Office of Vietnam (GSO). Available upon request from the respective agencies.
+- **VGI simulation data:** Synthetically generated to demonstrate the DBSCAN–DST verification pipeline. Coordinates are within WGS84 bounds of Hoan Kiem District, Hanoi. Timestamps are synthetic and do not correspond to actual events.
 - **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — Free to use with attribution.
 
 ## Citation
@@ -95,7 +114,7 @@ Located in `src/simulation/`:
 
 | Script | Description |
 |--------|-------------|
-| `sybil_rigorous_sim.py` | Monte Carlo Sybil attack simulation (2000 trials). Implements DST-based reputation scoring (Tables 7–10 of manuscript). |
-| `adversarial_r2_tests.py` | Adversarial robustness tests for Reviewer #2 — tests manipulation resistance of the reputation system. |
+| `sybil_rigorous_sim.py` | Monte Carlo Sybil attack simulation (2,000 trials). Implements DST-based reputation scoring (Tables 7–11 of manuscript). |
+| `adversarial_r2_tests.py` | Adversarial robustness tests — tests manipulation resistance of the reputation system. |
 | `audit_reviewer2_r2.py` | Audit script verifying reviewer response claims against simulation results. |
 | `model_config.yaml` | TA-LSTM hyperparameter configuration used for all experiments in manuscript Tables 2–6. |
