@@ -1,0 +1,411 @@
+{
+  "source": "E:\\Luu_Tru_O_C\\CuuNet\\analysis\\final_revision_20261125\\task4_5_english\\source_backup_20261125\\HYDRO_D_26_00188_Response_to_Reviewers.docx",
+  "source_sha256": "bd89a86f026d57c093007aa72bdb982bc76b8a9f8355ab6b262ab5f6b48ae2f5",
+  "older_comparison": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\HYDRO_D_26_00188_Response_to_Reviewers.docx.bak",
+  "author_changed_paragraphs": [
+    5,
+    9,
+    15,
+    19,
+    23,
+    25,
+    30,
+    32,
+    36,
+    45,
+    56,
+    58,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "all_author_changed_paragraphs_included": true,
+  "source_paragraph_placement": {
+    "5": [
+      "Opening"
+    ],
+    "6": [
+      "Opening"
+    ],
+    "9": [
+      "R1 1"
+    ],
+    "11": [
+      "R1 2"
+    ],
+    "13": [
+      "R1 3"
+    ],
+    "15": [
+      "R1 4"
+    ],
+    "17": [
+      "R1 5"
+    ],
+    "19": [
+      "R1 6"
+    ],
+    "21": [
+      "R1 7"
+    ],
+    "23": [
+      "R1 8"
+    ],
+    "25": [
+      "R1 9"
+    ],
+    "27": [
+      "R1 10"
+    ],
+    "30": [
+      "R2 M1"
+    ],
+    "32": [
+      "R2 M2"
+    ],
+    "34": [
+      "R2 M3"
+    ],
+    "36": [
+      "R2 M4"
+    ],
+    "38": [
+      "R2 M5"
+    ],
+    "40": [
+      "R2 M6"
+    ],
+    "49": [
+      "R2 N1"
+    ],
+    "45": [
+      "R2 N3"
+    ],
+    "47": [
+      "R2 N4"
+    ],
+    "43": [
+      "R2 N5"
+    ],
+    "52": [
+      "R2 L1"
+    ],
+    "54": [
+      "R2 L3"
+    ],
+    "58": [
+      "R2 S1"
+    ],
+    "56": [
+      "R2 S2"
+    ],
+    "60": [
+      "Checklist"
+    ],
+    "61": [
+      "Checklist"
+    ],
+    "62": [
+      "Checklist"
+    ],
+    "63": [
+      "Checklist"
+    ],
+    "64": [
+      "Checklist"
+    ],
+    "65": [
+      "Checklist"
+    ],
+    "66": [
+      "Checklist"
+    ]
+  },
+  "targeted_scientific_and_reference_corrections": [
+    {
+      "source_paragraph": 6,
+      "item": "Opening",
+      "old": "the supplied 19 November clean manuscript with this replacement draft",
+      "new": "the supplied original English Clean manuscript in source_backup (22 November 2026) with the revised manuscript",
+      "reason": "Use the author-requested English baseline, rather than the previous 19 November comparison."
+    },
+    {
+      "source_paragraph": 6,
+      "item": "Opening",
+      "old": "It is a genuine whole-manuscript redline, not a comparison against an unavailable original submission.",
+      "new": "Accepting all revisions reproduces the revised Clean manuscript. The comparison does not assert that the supplied baseline was the journal’s initial submission.",
+      "reason": "State the reproducible acceptance requirement and the actual baseline identity."
+    },
+    {
+      "source_paragraph": 9,
+      "item": "R1 1",
+      "old": "45 neural models, 96,000–98,000 independent validation checks per station with zero failures",
+      "new": "45 neural models and matching baselines",
+      "reason": "The stated per-station audit totals are not the physical-metric checks in scientific_evidence.json."
+    },
+    {
+      "source_paragraph": 9,
+      "item": "R1 1",
+      "old": "Forecasting results demonstrate that simple baselines (persistence and moving averages) remain formidable on aggregate MAE, while neural architectures improve RMSE and peak runoff subsets.",
+      "new": "Forecasting results demonstrate that simple baselines (persistence and moving averages) remain strong on aggregate MAE. The no-attention LSTM has the lowest point RMSE in the three Vietnam regions; persistence has the lowest MAE, RMSE and high-subset MAE at the Iowa gauges.",
+      "reason": "Restrict neural benefits to their supported Vietnam comparison and retain adverse Iowa results."
+    },
+    {
+      "source_paragraph": 9,
+      "item": "R1 1",
+      "old": "Abstract, Table 3, and Conclusions report these audited physical metrics",
+      "new": "The Abstract, Tables 4–5 and Conclusions report these audited physical metrics",
+      "reason": "Update the revised table numbering."
+    },
+    {
+      "source_paragraph": 11,
+      "item": "R1 2",
+      "old": "Sections 3.6–3.8 and 4.3",
+      "new": "Sections 3.6–3.8 and 4.5–4.6",
+      "reason": "Update result-section numbering."
+    },
+    {
+      "source_paragraph": 11,
+      "item": "R1 2",
+      "old": "Table 4 and Figures 4–5",
+      "new": "Table 13 and Figures 8–9",
+      "reason": "Update verification table and figure numbering."
+    },
+    {
+      "source_paragraph": 15,
+      "item": "R1 4",
+      "old": "alongside the weaker moving-average comparator",
+      "new": "alongside moving average and linear trend",
+      "reason": "The new physical-target results include a moving-average winner, so it is not universally weak."
+    },
+    {
+      "source_paragraph": 15,
+      "item": "R1 4",
+      "old": "Table 3 has explicit physical-unit result slots",
+      "new": "Tables 4–5 contain the completed physical-unit results",
+      "reason": "Replace stale result-slot wording with completed tables."
+    },
+    {
+      "source_paragraph": 19,
+      "item": "R1 6",
+      "old": "lead times 1, 3, and 7 days across 208 origins",
+      "new": "lead times 1, 3 and 7 days across 208 scheduled origins per Vietnam region and 104 per Iowa gauge",
+      "reason": "Use the distinct canonical Vietnam and Iowa origin counts."
+    },
+    {
+      "source_paragraph": 19,
+      "item": "R1 6",
+      "old": "The censored-input variant significantly reduces degradation under 7-day frozen outages (by 26.4% to 61.1% compared to standard attention LSTM).",
+      "new": "The censored-input variant reduces seven-day MAE by 26.4% to 61.1% relative to ordinary TA-LSTM in Vietnam, with paired time intervals below zero. It increases MAE by 26.5% and 9.0% at Iowa gauges 06903900 and 05453520.",
+      "reason": "Report the actual loss and comparator, retain adverse Iowa effects and avoid independent-seed significance claims."
+    },
+    {
+      "source_paragraph": 19,
+      "item": "R1 6",
+      "old": "with mean physical divergence of 0.0304–0.0672 mm/day relative to FP32",
+      "new": "with physical differences of 0.0304–0.0672 mm/day relative to FP32 on the single repeated Vietnam timing input",
+      "reason": "This range describes the repeated timing input, not mean divergence over the complete test set."
+    },
+    {
+      "source_paragraph": 25,
+      "item": "R1 9",
+      "old": "Sections 3.5, 4.2 and 5.3",
+      "new": "Sections 3.5, 4.4 and 5.4",
+      "reason": "Update result and discussion references."
+    },
+    {
+      "source_paragraph": 25,
+      "item": "R1 9",
+      "old": "3 basins x 2 precisions x 2 backends",
+      "new": "3 regions × 2 storage variants × 2 backends",
+      "reason": "Distinguish weight storage from arithmetic precision."
+    },
+    {
+      "source_paragraph": 25,
+      "item": "R1 9",
+      "old": "Active memory is strictly reported as TensorFlow.js runtime tensor buffer allocation (2.16 MB via tf.memory().numBytes)",
+      "new": "Memory is reported as TensorFlow.js runtime tensor allocation (2,260,756 bytes, or 2.26 MB and 2.16 MiB, via tf.memory().numBytes)",
+      "reason": "Correct decimal MB versus binary MiB."
+    },
+    {
+      "source_paragraph": 25,
+      "item": "R1 9",
+      "old": "JavaScript heap (26–35 MB)",
+      "new": "JavaScript heap (25.99–35.93 MB)",
+      "reason": "Use the recorded heap range."
+    },
+    {
+      "source_paragraph": 27,
+      "item": "R1 10",
+      "old": "a shorter account distinguishing protocol, completed simulations and pending measurements",
+      "new": "an account distinguishing protocol, completed forecasting and simulation results, desktop measurements and unmeasured operational effects",
+      "reason": "Replace stale unfinished-result wording while retaining the actual limitations."
+    },
+    {
+      "source_paragraph": 27,
+      "item": "R1 10",
+      "old": "PENDING AUTHOR requires final human verification, author metadata and CRediT confirmation.",
+      "new": "The author must complete final human verification, author metadata and CRediT confirmation before submission. Affiliation and ORCID remain blank.",
+      "reason": "Keep the author’s final-review requirement without a submission placeholder."
+    },
+    {
+      "source_paragraph": 30,
+      "item": "R2 M1",
+      "old": "whereas recurrent models reduce RMSE and peak errors",
+      "new": "whereas the no-attention LSTM has the lowest point RMSE in Vietnam. Persistence also has the lowest Iowa RMSE and high-subset MAE",
+      "reason": "Prevent a Vietnam-only neural benefit from being applied to Iowa."
+    },
+    {
+      "source_paragraph": 32,
+      "item": "R2 M2",
+      "old": "Table 3 reports audited results alongside seasonal decomposition and persistence",
+      "new": "Tables 4–5 report audited results alongside all constituents, seasonal decomposition, LSTM and persistence",
+      "reason": "Update completed result tables and make the LSTM comparison explicit."
+    },
+    {
+      "source_paragraph": 34,
+      "item": "R2 M3",
+      "old": "Sections 3.8 and 4.3",
+      "new": "Sections 3.8 and 4.5–4.6",
+      "reason": "Update result-section numbering."
+    },
+    {
+      "source_paragraph": 34,
+      "item": "R2 M3",
+      "old": "Table 4 and Figure 5",
+      "new": "Table 13 and Figure 9",
+      "reason": "Update verification table and trajectory figure numbering."
+    },
+    {
+      "source_paragraph": 36,
+      "item": "R2 M4",
+      "old": "retains all six imported models in IndexedDB",
+      "new": "retains the two imported Bảo Hà models (FP32 and uint8 storage) in IndexedDB",
+      "reason": "The cited reload audit verifies two models; a separate earlier integration log contains six."
+    },
+    {
+      "source_paragraph": 36,
+      "item": "R2 M4",
+      "old": "produces offline recursive forecasts",
+      "new": "produces offline forecasts with frozen physical inputs",
+      "reason": "The audited primary rollout does not recursively inject predicted physical targets."
+    },
+    {
+      "source_paragraph": 36,
+      "item": "R2 M4",
+      "old": "the application reloads reliably from cache",
+      "new": "the application reloads from previously populated cache in the audited session",
+      "reason": "Avoid extending one emulated reload to universal cache reliability."
+    },
+    {
+      "source_paragraph": 40,
+      "item": "R2 M6",
+      "old": "Section 4.4 characterises",
+      "new": "Section 4.6 characterises",
+      "reason": "Update the sensitivity-section reference."
+    },
+    {
+      "source_paragraph": 49,
+      "item": "R2 N1",
+      "old": "simulation and pending-measurement limitations",
+      "new": "simulation and desktop-only deployment limitations",
+      "reason": "Physical forecasts and desktop measurements are complete, while mobile/energy/field evidence is absent."
+    },
+    {
+      "source_paragraph": 45,
+      "item": "R2 N3",
+      "old": "paired 30-day block bootstrap intervals with 2,000 samples",
+      "new": "paired block-bootstrap intervals with 2,000 resamples and thirty retained reference-date positions for ordinary forecasts or five retained origin positions for interruptions",
+      "reason": "Describe the actual position-based blocks, including gaps in observed references."
+    },
+    {
+      "source_paragraph": 58,
+      "item": "R2 S1",
+      "old": "all trained model weights (FP32 and uint8 storage bundles)",
+      "new": "all neural fit artifacts and the selected FP32 and uint8 deployment bundles",
+      "reason": "Distinguish ninety fitted neural models from the six selected deployment exports."
+    },
+    {
+      "source_paragraph": 58,
+      "item": "R2 S1",
+      "old": "PENDING RELEASE requires an immutable release identifier and verification that every claimed public artefact is actually available upon repository deposit.",
+      "new": "The revision artifacts are publicly available in the immutable GitHub Release v2.0-revision1 at https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1. The tag, public access and source-archive checksum have been verified.",
+      "reason": "Record the verified immutable public deposit instead of the superseded pending-release status."
+    },
+    {
+      "source_paragraph": 58,
+      "item": "R2 S1",
+      "old": "Local existence is distinguished from public release.",
+      "new": "The public snapshot contains the canonical revision artifacts, with the upstream archive attached once as a Release asset.",
+      "reason": "Replace the superseded local-only archive status."
+    },
+    {
+      "source_paragraph": 58,
+      "item": "R2 S1",
+      "old": "No unauthorized upload or premature publication has been performed.",
+      "new": "The author authorised the public repository deposit.",
+      "reason": "Reflect the author-authorised completed public deposit."
+    },
+    {
+      "source_paragraph": 56,
+      "item": "R2 S2",
+      "old": "complete and audited (96,287 to 98,067 checks per station, zero failures)",
+      "new": "complete and audited",
+      "reason": "The per-station totals are not the canonical physical-metric audit figures in the supplied evidence."
+    },
+    {
+      "source_paragraph": 62,
+      "item": "Checklist",
+      "old": "leads 1, 3, 7 days across 208 origins per basin",
+      "new": "leads 1, 3 and 7 days across 208 scheduled origins per Vietnam region and 104 per Iowa gauge",
+      "reason": "Correct the origin counts in the author’s completion checklist."
+    },
+    {
+      "source_paragraph": 62,
+      "item": "Checklist",
+      "old": "censored-input training significantly mitigates multi-day outage degradation",
+      "new": "censored-input training reduces seven-day MAE relative to ordinary TA-LSTM in Vietnam and has mixed Iowa effects",
+      "reason": "Retain completion while correcting the scope and adverse benchmark effects."
+    },
+    {
+      "source_paragraph": 63,
+      "item": "Checklist",
+      "old": "active tensor memory confirmed at 2.16 MB",
+      "new": "runtime tensor allocation logged as 2.26 MB (2.16 MiB), with unreliable=true on CPU",
+      "reason": "Correct memory units and retain the CPU measurement limitation."
+    },
+    {
+      "source_paragraph": 64,
+      "item": "Checklist",
+      "old": "persistence remains strongest on aggregate MAE",
+      "new": "persistence and the moving average remain strong on aggregate MAE",
+      "reason": "Include the Cần Thơ moving-average winner."
+    },
+    {
+      "source_paragraph": 64,
+      "item": "Checklist",
+      "old": "censored training robustly protects against telemetry freezing",
+      "new": "censored training improves seven-day Vietnam interruption MAE relative to ordinary TA-LSTM and has mixed Iowa effects",
+      "reason": "Avoid a universal robustness claim contradicted by the Iowa results."
+    },
+    {
+      "source_paragraph": 65,
+      "item": "Checklist",
+      "old": "PENDING AUTHOR:",
+      "new": "Author review before submission:",
+      "reason": "Replace a placeholder with the author’s explicit remaining review action."
+    },
+    {
+      "source_paragraph": 66,
+      "item": "Checklist",
+      "old": "PENDING RELEASE: confirm permissions and actual public artefact availability, then insert a fixed release identifier (DOI/URL).",
+      "new": "PUBLIC RELEASE VERIFIED: v2.0-revision1 at https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1. The fixed tag, public access and WaterBench-Iowa archive SHA256 are verified; the repository deposit was authorised by the author.",
+      "reason": "Replace the completed release action with the verified immutable public identifier."
+    }
+  ],
+  "preservation_method": "Original English paragraph XML is cloned; only documented character ranges are replaced, retaining surrounding runs and formatting."
+}

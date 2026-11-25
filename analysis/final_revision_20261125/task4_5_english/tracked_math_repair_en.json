@@ -1,0 +1,8 @@
+{
+  "equations": 8,
+  "native_multiline_arrays": 6,
+  "old_text_fragments_preserved": true,
+  "representation": "One native OMML math object per equation with eqArr rows for multiline formulas",
+  "model_results_changed": false,
+  "tracked_sha256": "31c0aca1b2afda09a7e89eb6af44467b5ab8fc1a0e377a2bdf331a4c43481ac5"
+}

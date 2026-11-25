@@ -19,6 +19,28 @@ try {
     $trackingDocument.TrackRevisions = $false
     $trackingCountAfter = $trackingDocument.Revisions.Count
     if ($trackingCountAfter -ne 0) { throw 'Word did not accept every revision.' }
+    $referenceHeadingAlignment = $null
+    $referenceEntryAlignments = @()
+    $referenceHeadingIndex = 0
+    for ($paragraphIndex = 1; $paragraphIndex -le $trackingDocument.Paragraphs.Count; $paragraphIndex++) {
+        if ($trackingDocument.Paragraphs.Item($paragraphIndex).Range.Text.Trim() -eq 'References') {
+            $referenceHeadingIndex = $paragraphIndex
+            $referenceHeadingAlignment = $trackingDocument.Paragraphs.Item($paragraphIndex).Format.Alignment
+            break
+        }
+    }
+    if ($referenceHeadingIndex -eq 0) { throw 'References heading was not found.' }
+    for ($paragraphIndex = $referenceHeadingIndex + 1; $paragraphIndex -le $trackingDocument.Paragraphs.Count; $paragraphIndex++) {
+        $referenceText = $trackingDocument.Paragraphs.Item($paragraphIndex).Range.Text.Trim()
+        if ($referenceText -and $referenceEntryAlignments.Count -lt 25) {
+            $referenceEntryAlignments += $trackingDocument.Paragraphs.Item($paragraphIndex).Format.Alignment
+        }
+        if ($referenceEntryAlignments.Count -eq 25) { break }
+    }
+    if ($referenceHeadingAlignment -ne 0 -or $referenceEntryAlignments.Count -ne 25 -or
+        @($referenceEntryAlignments | Where-Object { $_ -ne 0 }).Count -gt 0) {
+        throw 'References alignment is not Word LEFT (0).'
+    }
     $trackingDocument.SaveAs2($trackingAccepted, 16)
     if ((Get-FileHash -LiteralPath $trackingInput -Algorithm SHA256).Hash.ToLowerInvariant() -ne $trackingHash) {
         throw 'The tracked input changed during acceptance proof.'
@@ -31,6 +53,8 @@ try {
         revisions_after = $trackingCountAfter
         accepted = $trackingAccepted
         tracked_input_unchanged = $true
+        references_heading_alignment_word = $referenceHeadingAlignment
+        reference_entry_alignments_word = $referenceEntryAlignments
     }
     $trackingRecord | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $TaskRoot 'word_acceptance_proof_en.json') -Encoding utf8
     $trackingRecord | ConvertTo-Json

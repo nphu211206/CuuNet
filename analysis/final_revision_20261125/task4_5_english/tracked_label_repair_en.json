@@ -1,0 +1,34 @@
+{
+  "scope": "Repair inserted region labels generated incorrectly by the native comparison engine",
+  "repairs": [
+    {
+      "table": 4,
+      "row_including_header": 2,
+      "old_inserted_label": "Bảo Hà",
+      "correct_authored_label": "Bảo Hà"
+    },
+    {
+      "table": 4,
+      "row_including_header": 5,
+      "old_inserted_label": "Bảo Hà",
+      "correct_authored_label": "Bảo Hà"
+    },
+    {
+      "table": 4,
+      "row_including_header": 22,
+      "old_inserted_label": "Cần Thơ",
+      "correct_authored_label": "Cần Thơ"
+    },
+    {
+      "table": 4,
+      "row_including_header": 25,
+      "old_inserted_label": "Cần Thơ",
+      "correct_authored_label": "Cần Thơ"
+    }
+  ],
+  "all_baseline_deletion_text_unchanged": true,
+  "all_numeric_cells_unchanged": true,
+  "other_package_parts_unchanged": true,
+  "tracked_source_sha256": "216b7608d9fdf6f0668aa29a04cad1d84ad8d0618e8aa9eac6bcd5baf4c487c2",
+  "tracked_repaired_sha256": "92b008c5a3e8fc5e3b39928f49df7ec0ff87c7b4ed6ebfba313b60c10707f720"
+}

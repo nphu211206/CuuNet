@@ -21,6 +21,17 @@ def main():
     with ZipFile(path) as archive:
         parts = {n: archive.read(n) for n in archive.namelist()}
     root = parse_xml(parts['word/document.xml'])
+    # Native comparison may inherit the old heading alignment. Restore the
+    # authored References paragraph properties without changing either text view.
+    authored_references = next(p for p in authored.paragraphs if p.text == 'References')
+    tracked_references = [p for p in root.xpath('./w:body/w:p')
+                          if projection(p, True) == 'References']
+    assert len(tracked_references) == 1
+    reference_p = tracked_references[0]
+    old_properties = reference_p.find(qn('w:pPr'))
+    if old_properties is not None:
+        reference_p.remove(old_properties)
+    reference_p.insert(0, deepcopy(authored_references._p.pPr))
     tracked_equations = root.xpath('./w:body/w:p[w:pPr/w:pStyle[@w:val="Equation"]]')
     assert len(tracked_equations) == 8
     counter = max(int(x.get(qn('w:id'))) for x in root.xpath('.//*[@w:id]') if x.get(qn('w:id'),'').isdigit())

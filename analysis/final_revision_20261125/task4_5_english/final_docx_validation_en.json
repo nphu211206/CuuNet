@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "checks": {
+    "HYDRO_D_26_00188_Revision1_Clean.docx ZIP integrity": true,
+    "HYDRO_D_26_00188_Revision1_Clean.docx no current PENDING RELEASE": true,
+    "HYDRO_D_26_00188_Revision1_Clean.docx English metadata": true,
+    "HYDRO_D_26_00188_TrackedChanges.docx ZIP integrity": true,
+    "HYDRO_D_26_00188_TrackedChanges.docx no current PENDING RELEASE": true,
+    "HYDRO_D_26_00188_TrackedChanges.docx English metadata": true,
+    "HYDRO_D_26_00188_Response_to_Reviewers.docx ZIP integrity": true,
+    "HYDRO_D_26_00188_Response_to_Reviewers.docx no current PENDING RELEASE": true,
+    "HYDRO_D_26_00188_Response_to_Reviewers.docx English metadata": true,
+    "HYDRO_D_26_00188_AltText.docx ZIP integrity": true,
+    "HYDRO_D_26_00188_AltText.docx no current PENDING RELEASE": true,
+    "HYDRO_D_26_00188_AltText.docx English metadata": true,
+    "Cover_Letter.docx ZIP integrity": true,
+    "Cover_Letter.docx no current PENDING RELEASE": true,
+    "Cover_Letter.docx English metadata": true,
+    "15 editable tables": true,
+    "Table 7 grid widths": true,
+    "Table 7 every cell width": true,
+    "Table 11 grid widths": true,
+    "Table 11 every cell width": true,
+    "Table B1 grid widths": true,
+    "Table B1 every cell width": true,
+    "Figure 7 caption keeps together": true,
+    "Figure 8 caption keeps together": true,
+    "Table 12 notes keep together": true,
+    "Table 12 last row keeps with notes": true,
+    "References heading effective LEFT": true,
+    "25 left aligned reference entries": true,
+    "AltText Equation 8 title keeps with description": true,
+    "AltText Equation 8 description keeps with equation": true,
+    "AltText Equation 8 native equation keeps together": true,
+    "accepted_clean_fidelity passed": true,
+    "Clean byte identical to real Word AcceptAll": true,
+    "Word accepted all revisions": true,
+    "Word acceptance proof identifies current TrackedChanges": true,
+    "Word COM confirms References LEFT (0)": true,
+    "All authored scientific table values unchanged": true,
+    "All accepted scientific table values match registry": true,
+    "All selected scientific source artifacts unchanged": true,
+    "Published Release is immutable": true,
+    "HYDRO_D_26_00188_Revision1_Clean.docx contains verified Release URL": true,
+    "HYDRO_D_26_00188_Response_to_Reviewers.docx contains verified Release URL": true,
+    "Cover_Letter.docx contains verified Release URL": true
+  },
+  "table_widths": {
+    "7": {
+      "actual_twips": [
+        1474,
+        737,
+        1247,
+        1247,
+        1361,
+        3231
+      ],
+      "expected_twips": [
+        1474,
+        737,
+        1247,
+        1247,
+        1361,
+        3231
+      ]
+    },
+    "11": {
+      "actual_twips": [
+        1531,
+        907,
+        1757,
+        1644,
+        2211,
+        1247
+      ],
+      "expected_twips": [
+        1531,
+        907,
+        1757,
+        1644,
+        2211,
+        1247
+      ]
+    },
+    "B1": {
+      "actual_twips": [
+        1531,
+        737,
+        3288,
+        1871,
+        1871
+      ],
+      "expected_twips": [
+        1531,
+        737,
+        3288,
+        1871,
+        1871
+      ]
+    }
+  },
+  "scientific_files_unchanged": 1291,
+  "release_url": "https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1",
+  "release_immutable": true,
+  "sha256": {
+    "HYDRO_D_26_00188_Revision1_Clean.docx": "3536dc955763838f7dbe68053fd93fc74f8c2cdca453c0b11e56da69e6b32a01",
+    "HYDRO_D_26_00188_TrackedChanges.docx": "31c0aca1b2afda09a7e89eb6af44467b5ab8fc1a0e377a2bdf331a4c43481ac5",
+    "HYDRO_D_26_00188_Response_to_Reviewers.docx": "1f6f01826601595029c1b71da9941e3844bdd6103c12bfcce3cda36844f0ed0d",
+    "HYDRO_D_26_00188_AltText.docx": "d99d189a9170072d2a2db989d44dde2cf94da31b806b5e8dcebfed340aa7b52c",
+    "Cover_Letter.docx": "7653a281ea0bde42be5335a917daf3bbff5a82aaff5378de968f8557a62df1c6"
+  },
+  "experiments_rerun": false,
+  "scientific_data_modified": false,
+  "png_or_pdf_rendering_performed": false
+}

@@ -1,0 +1,19 @@
+{
+  "source": "E:\\Luu_Tru_O_C\\CuuNet\\analysis\\final_revision_20261125\\task4_5_english\\source_backup_20261125\\HYDRO_D_26_00188_Revision1_Clean.docx",
+  "source_sha256": "de828b0b9c35d77dd4460442bcba634c2d9b50577669b7655fa2413538add0e4",
+  "source_date": "22 November 2026",
+  "source_is_confirmed_initial_journal_submission": false,
+  "comparison_engine": "Microsoft Word native CompareDocuments",
+  "word_version": "16.0",
+  "comparison_granularity": "word",
+  "compare_formatting_tables_headers_fields_and_comments": true,
+  "compare_moves": false,
+  "revisions": 1696,
+  "accepted_with": "Microsoft Word Revisions.AcceptAll",
+  "remaining_revisions_after_acceptance": 0,
+  "authored_clean": "E:\\Luu_Tru_O_C\\CuuNet\\analysis\\final_revision_20261125\\task4_5_english\\qa_word\\authored_clean_before_word.docx",
+  "tracked": "E:\\Luu_Tru_O_C\\CuuNet\\analysis\\final_revision_20261125\\task4_5_english\\staged\\HYDRO_D_26_00188_TrackedChanges.docx",
+  "accepted": "E:\\Luu_Tru_O_C\\CuuNet\\analysis\\final_revision_20261125\\task4_5_english\\qa_word\\accepted_by_microsoft_word.docx",
+  "source_unchanged": true,
+  "experiments_rerun": false
+}

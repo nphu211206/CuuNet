@@ -1,0 +1,188 @@
+[
+  {
+    "code": "R1 1",
+    "title": "Physical hydrological target",
+    "comment_summary": "A self-constructed risk index does not demonstrate hydrological forecasting skill. Replace it with an observed or reanalysis physical quantity, or independently validate disaster impacts.",
+    "locations": "Abstract; Sections 2.1–2.3, 4.1, 5.1 and 6; Tables 1–5; Figures 1–2 and 4–5."
+  },
+  {
+    "code": "R1 2",
+    "title": "Systematic Sybil evaluation",
+    "comment_summary": "Seven reports cannot support a general defence claim. Vary attacker count, reputation, spatial/temporal pattern, sparse reports and thresholds, and include numerical comparators.",
+    "locations": "Sections 3.6–3.8, 4.5–4.6 and 5.3; Table 13; Figures 8–9."
+  },
+  {
+    "code": "R1 3",
+    "title": "Contribution and prior browser hydrology",
+    "comment_summary": "Standard temporal attention, forecast combination and DBSCAN are established. Position the integration against browser and edge hydrological work.",
+    "locations": "Sections 1, 3.2–3.3, 3.7 and 5.2–5.3; Cover Letter."
+  },
+  {
+    "code": "R1 4",
+    "title": "Strong baselines and adverse results",
+    "comment_summary": "Avoid selective improvement percentages against a weak moving-average baseline. Retain seasonal decomposition, all constituents and stronger alternatives even when they win.",
+    "locations": "Abstract; Sections 3.1–3.2 and 4.1–4.3; Tables 4–6, 9–10 and A1."
+  },
+  {
+    "code": "R1 5",
+    "title": "Simulated Typhoon Yagi motivation",
+    "comment_summary": "Distinguish simulated Yagi scenarios from real event-specific VGI, losses and deployment outcomes.",
+    "locations": "Abstract; Sections 1, 5.4 and 6; Cover Letter."
+  },
+  {
+    "code": "R1 6",
+    "title": "Attention storage terrain and retention ablations",
+    "comment_summary": "Evaluate attention removal, quantisation error, the terrain factor and reputation retention with appropriate uncertainty.",
+    "locations": "Sections 3.3, 4.1, 4.3–4.4 and 4.6; Tables 6, 10–11; Figures 6–7."
+  },
+  {
+    "code": "R1 7",
+    "title": "Equation numbering and complete branches",
+    "comment_summary": "Repair numbering, additive-attention attribution, candidate-state notation and the malformed reputation penalty branch.",
+    "locations": "Sections 3.2–3.3 and 3.6–3.7; Equations 1–8; AltText document."
+  },
+  {
+    "code": "R1 8",
+    "title": "Parameter justification and sensitivity",
+    "comment_summary": "Unsupported risk weights and empirical spatial, reputation and decision parameters require reasons and sensitivity analysis.",
+    "locations": "Sections 3.2 and 3.6–3.8, 4.2 and 4.6; Tables 7 and B1; campaign manifest."
+  },
+  {
+    "code": "R1 9",
+    "title": "Event driven inference and energy evidence",
+    "comment_summary": "A proposed reduction of battery drain and thermal throttling requires measurements or a narrower claim.",
+    "locations": "Sections 3.5, 4.4 and 5.4; Tables 11–12."
+  },
+  {
+    "code": "R1 10",
+    "title": "Concision author responsibility and AI disclosure",
+    "comment_summary": "Shorten repetitive writing and classical derivations, ensure human scientific review and correct the generative-AI declaration.",
+    "locations": "Entire manuscript; Author and publishing declarations."
+  },
+  {
+    "code": "R2 M1",
+    "title": "Physical quantities and scope",
+    "comment_summary": "Replace dimensionless risk-index errors with physical hydrological evaluation or narrow every claim, including the Abstract.",
+    "locations": "Abstract; Sections 2, 3.1, 4.1, 5.1 and 6; Tables 1–5."
+  },
+  {
+    "code": "R2 M2",
+    "title": "Expected MSE and ensemble benchmarking",
+    "comment_summary": "Include forecast bias, describe covariance estimation and constraints, and report comparisons against seasonal decomposition, LSTM and strong baselines.",
+    "locations": "Sections 3.1–3.2, 4.1–4.2 and 5.2; Equations 1–2; Tables 4–7, A1 and B1."
+  },
+  {
+    "code": "R2 M3",
+    "title": "Neutral reputation attacks and numerical baselines",
+    "comment_summary": "Sweep attacker counts and neutral initial reputation, report false and missed alerts, include majority and discuss observed failures.",
+    "locations": "Sections 3.7–3.8, 4.5–4.6 and 5.3; Table 13; Figures 8–9."
+  },
+  {
+    "code": "R2 M4",
+    "title": "Offline local processing and report transport",
+    "comment_summary": "Explain how verification operates with zero connectivity and identify transport or reconciliation requirements without implying shared offline consensus.",
+    "locations": "Sections 3.5, 4.4 and 5.4; Figure 3; offline_reload_persistence_audit.json."
+  },
+  {
+    "code": "R2 M5",
+    "title": "Simulated Yagi and deployment readiness",
+    "comment_summary": "Label every Yagi reference as simulation and withdraw claims of community use, completed pilots or operational capability.",
+    "locations": "Abstract; Sections 1, 5.4 and 6; Cover Letter."
+  },
+  {
+    "code": "R2 M6",
+    "title": "Unsupported index and terrain parameters",
+    "comment_summary": "Justify empirical index weights and undefined slope/elevation coefficients or remove them and quantify remaining assumptions.",
+    "locations": "Sections 2.1, 3.1, 3.6 and 4.6; Equation 4."
+  },
+  {
+    "code": "R2 N1",
+    "title": "Prominent limitations in the Abstract",
+    "comment_summary": "The Abstract must disclose the observational, geographic, simulation and deployment limitations.",
+    "locations": "Abstract; Section 6."
+  },
+  {
+    "code": "R2 N2",
+    "title": "Aim before research questions",
+    "comment_summary": "Place one concise research-aim statement immediately before the three research questions.",
+    "locations": "Section 1, immediately before RQ1–RQ3."
+  },
+  {
+    "code": "R2 N3",
+    "title": "Repeated training and chronological reproducibility",
+    "comment_summary": "Provide repeated-seed uncertainty, exact partitions and matched LSTM ablation hyperparameters; remove the inconsistent split description.",
+    "locations": "Sections 2.3, 3.3 and 3.8; Tables 3–6, 9–10; complete source tables."
+  },
+  {
+    "code": "R2 N4",
+    "title": "Equation housekeeping",
+    "comment_summary": "Repair equation cross-references, candidate-state notation, the penalty branch and the attention citation.",
+    "locations": "Equations 1–8; Section 3; AltText document."
+  },
+  {
+    "code": "R2 N5",
+    "title": "Temporal attention and calibrated defence terminology",
+    "comment_summary": "Either implement a spatial mechanism or rename the model, and replace unrestricted confidence/defence claims with scenario-specific results.",
+    "locations": "Title; Abstract; Sections 3.3, 3.7–3.8 and 4.5–4.6."
+  },
+  {
+    "code": "R2 N6",
+    "title": "Input channels and miscellaneous citation details",
+    "comment_summary": "Explain earthquake/tsunami inputs, remove unnecessary year letters, correct INFORM attribution and Adger, cite or remove Abozweita, and unify availability statements.",
+    "locations": "Sections 3.1 and 3.6; References; Data and code availability; responses R2 L1–L4 and S1."
+  },
+  {
+    "code": "R2 N7",
+    "title": "Balanced Discussion and supported literature comparison",
+    "comment_summary": "Synthesise relevant verified literature and operational boundaries instead of repeating favourable results; discuss the relationship to reporting and server-side systems.",
+    "locations": "Sections 5.1–5.4."
+  },
+  {
+    "code": "R2 N8",
+    "title": "Verifiable desktop execution and memory",
+    "comment_summary": "Retain useful feasibility measurements with identifiable workloads, devices, numerical equivalence and correctly defined memory.",
+    "locations": "Sections 3.5, 4.4 and 5.4; Tables 11–12."
+  },
+  {
+    "code": "R2 L1",
+    "title": "Correct Sit and Adger metadata",
+    "comment_summary": "Correct the author/venue of the Sit review and the exact title of Adger’s article, with DOI or stable URL.",
+    "locations": "Section 1; References."
+  },
+  {
+    "code": "R2 L2",
+    "title": "Attention combination and browser sources",
+    "comment_summary": "Attribute additive attention correctly, acknowledge Bates–Granger, and cite direct browser hydrology precedents.",
+    "locations": "Sections 1, 3.2–3.3 and 5.2; References."
+  },
+  {
+    "code": "R2 L3",
+    "title": "Unverifiable entries and inconsistent keys",
+    "comment_summary": "Remove articles that cannot be verified as cited; a real author or a different paper does not validate a disputed reference.",
+    "locations": "References; verified_bibliography.runoff.csv and retained_references_en.json."
+  },
+  {
+    "code": "R2 L4",
+    "title": "Verify and cite Abozweita",
+    "comment_summary": "Verify Abozweita et al. (2024) and cite it in the text or remove the uncited entry.",
+    "locations": "Section 5.2; References."
+  },
+  {
+    "code": "R2 L5",
+    "title": "Retraction screening remains distinct",
+    "comment_summary": "Do not report an inconclusive screening state as a clean retraction record; distinguish metadata and full-text verification.",
+    "locations": "Reference scope in Sections 1 and 5; bibliography audit records."
+  },
+  {
+    "code": "R2 S1",
+    "title": "Repository and a single availability statement",
+    "comment_summary": "Retain the real GitHub asset in Methods, consolidate availability statements and remove the obsolete anonymous link.",
+    "locations": "Sections 3.1–3.5; Data and code availability."
+  },
+  {
+    "code": "R2 S2",
+    "title": "Weights configurations traces and actual availability",
+    "comment_summary": "Ensure the exact products underlying the tables are present before asserting public availability, including weights and configuration files.",
+    "locations": "Section 4; Data and code availability; complete result CSVs, configurations, weights, traces and audits."
+  }
+]

@@ -296,8 +296,14 @@ def response():
          'all neural fit artifacts and the selected FP32 and uint8 deployment bundles',
          'Distinguish ninety fitted neural models from the six selected deployment exports.'),
         ('PENDING RELEASE requires an immutable release identifier and verification that every claimed public artefact is actually available upon repository deposit.',
-         'The complete revision package has no immutable public release identifier yet. Every claimed public artifact must be verified as available when the repository deposit is made.',
-         'Retain the author’s release requirement and actual local/public distinction without a placeholder.')])
+         'The revision artifacts are publicly available in the immutable GitHub Release v2.0-revision1 at https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1. The tag, public access and source-archive checksum have been verified.',
+         'Record the verified immutable public deposit instead of the superseded pending-release status.'),
+        ('Local existence is distinguished from public release.',
+         'The public snapshot contains the canonical revision artifacts, with the upstream archive attached once as a Release asset.',
+         'Replace the superseded local-only archive status.'),
+        ('No unauthorized upload or premature publication has been performed.',
+         'The author authorised the public repository deposit.',
+         'Reflect the author-authorised completed public deposit.')])
     location(d, loc)
 
     loc = 'Section 4; Data and code availability; complete result CSVs, configurations, weights, traces and audits.'
@@ -305,7 +311,7 @@ def response():
     author_paragraph(d, 56, 'R2 S2', [
         ('complete and audited (96,287 to 98,067 checks per station, zero failures)',
          'complete and audited', 'The per-station totals are not the canonical physical-metric audit figures in the supplied evidence.')])
-    prose(d, 'The existing canonical archive contains ninety neural fits, per-seed predictions, baseline predictions, ensemble estimation matrices/weights, four shrinkage settings, selected FP32/uint8 exports, raw Sybil traces and audits, and saved browser/offline logs. Source hashes match the supplied evidence. Local completeness is not public deposit: the complete revision artifacts have not yet received an immutable release or DOI, and the manuscript states that limitation. The author must confirm permissions and final public availability before making a public-availability claim.')
+    prose(d, 'The existing canonical archive contains ninety neural fits, per-seed predictions, baseline predictions, ensemble estimation matrices/weights, four shrinkage settings, selected FP32/uint8 exports, raw Sybil traces and audits, and saved browser/offline logs. Source hashes match the supplied evidence. These artifacts are publicly deposited in the immutable GitHub Release v2.0-revision1 at https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1. The tagged repository includes the canonical outputs and the Release provides one unchanged WaterBench-Iowa source archive; the public URLs and archive checksum were verified. No archival DOI is claimed.')
     location(d, loc)
 
     heading(d, 'Author checks before submission')
@@ -328,8 +334,11 @@ def response():
          'censored training improves seven-day Vietnam interruption MAE relative to ordinary TA-LSTM and has mixed Iowa effects',
          'Avoid a universal robustness claim contradicted by the Iowa results.')])
     author_paragraph(d, 65, 'Checklist', [('PENDING AUTHOR:', 'Author review before submission:', 'Replace a placeholder with the author’s explicit remaining review action.')])
-    author_paragraph(d, 66, 'Checklist', [('PENDING RELEASE:', 'Public archive before an availability claim:', 'Preserve the pending public-release requirement as an explicit action.')])
-    para(d, 'Affiliation and ORCID remain blank for author completion. The revision deadline recorded in the editorial letter is 6 December 2026. The remaining human checks include the final scientific interpretation, declaration accuracy, reference/retraction review and artifact release status.')
+    author_paragraph(d, 66, 'Checklist', [(
+        'PENDING RELEASE: confirm permissions and actual public artefact availability, then insert a fixed release identifier (DOI/URL).',
+        'PUBLIC RELEASE VERIFIED: v2.0-revision1 at https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1. The fixed tag, public access and WaterBench-Iowa archive SHA256 are verified; the repository deposit was authorised by the author.',
+        'Replace the completed release action with the verified immutable public identifier.')])
+    para(d, 'Affiliation and ORCID remain blank for author completion. The revision deadline recorded in the editorial letter is 6 December 2026. The remaining human checks include the final scientific interpretation, declaration accuracy, reference/retraction review and final submission readiness.')
     para(d, 'Sincerely,\n' + AUTHOR + '\n' + EMAIL).alignment = WD_ALIGN_PARAGRAPH.LEFT
     d.save(STAGE / NAMES['response'])
     changed = [i for i,p in enumerate(SOURCE.paragraphs)
@@ -378,13 +387,13 @@ def alt():
 def cover():
     d = newdoc('Revision cover letter')
     para(d, 'Revision cover letter', 'Title')
-    para(d, '25 November 2026')
+    para(d, '26 November 2026')
     para(d, 'Journal of Hydroinformatics | HYDRO-D-26-00188')
     para(d, 'Dear Professor Gabriele Freni,')
     para(d, 'Please consider the revised manuscript entitled ' + FULL_TITLE + '. The revision evaluates browser deployment for physical-target forecasting under input interruptions and local crowdsourced evidence aggregation, with the contribution positioned as systems integration and empirical assessment.')
     para(d, 'The completed study uses ERA5-Land runoff depth for three Vietnam regions (mm/day) and a supplementary observed discharge benchmark at three WaterBench-Iowa USGS gauges (m³/s). Ninety neural fits and seven statistical comparators are reported across fixed chronological partitions. Persistence and moving-average strengths are retained. Censored-input training improves seven-day Vietnam interruption MAE relative to ordinary TA-LSTM but has mixed Iowa effects; temporal attention is not presented as a universal accuracy benefit.')
     para(d, 'The synthetic verification campaign comprises 71 configurations, 1,000 matched trials per configuration, six numerical methods and three feedback regimes. It reports conditional pooling benefits, abstention and failures under neutral honest cold starts or self-consensus feedback. Saved desktop Chrome measurements and an offline reload audit support local execution and persistence. Typhoon Yagi only motivates simulated outages; no observed Vietnam flood validation, mobile or energy benefit, or field deployment is claimed.')
-    para(d, 'The package contains the Clean manuscript, tracked comparison against the supplied original English Clean dated 22 November 2026, a point-by-point response and alternative text matching nine figures and eight equations. The manuscript states the current local/public artifact availability and acknowledges established attention, forecast-combination and browser methods. The AI disclosure accurately describes assistance during this revision; I retain responsibility for scientific accuracy and the final text.')
+    para(d, 'The package contains the Clean manuscript, tracked comparison against the supplied original English Clean dated 22 November 2026, a point-by-point response and alternative text matching nine figures and eight equations. The revision artifacts are publicly available in the immutable GitHub Release v2.0-revision1 at https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1. The manuscript acknowledges established attention, forecast-combination and browser methods. The AI disclosure accurately describes assistance during this revision; I retain responsibility for scientific accuracy and the final text.')
     para(d, 'Sincerely,\n' + AUTHOR + '\n' + EMAIL).alignment = WD_ALIGN_PARAGRAPH.LEFT
     para(d, 'Affiliation: ')
     para(d, 'ORCID: ')

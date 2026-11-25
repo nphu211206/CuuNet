@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "name": "HYDRO_D_26_00188_Revision1_Clean.docx",
+      "staged_sha256": "3536dc955763838f7dbe68053fd93fc74f8c2cdca453c0b11e56da69e6b32a01",
+      "submission_sha256": "3536dc955763838f7dbe68053fd93fc74f8c2cdca453c0b11e56da69e6b32a01",
+      "byte_identical": true
+    },
+    {
+      "name": "HYDRO_D_26_00188_TrackedChanges.docx",
+      "staged_sha256": "31c0aca1b2afda09a7e89eb6af44467b5ab8fc1a0e377a2bdf331a4c43481ac5",
+      "submission_sha256": "31c0aca1b2afda09a7e89eb6af44467b5ab8fc1a0e377a2bdf331a4c43481ac5",
+      "byte_identical": true
+    },
+    {
+      "name": "HYDRO_D_26_00188_Response_to_Reviewers.docx",
+      "staged_sha256": "1f6f01826601595029c1b71da9941e3844bdd6103c12bfcce3cda36844f0ed0d",
+      "submission_sha256": "1f6f01826601595029c1b71da9941e3844bdd6103c12bfcce3cda36844f0ed0d",
+      "byte_identical": true
+    },
+    {
+      "name": "HYDRO_D_26_00188_AltText.docx",
+      "staged_sha256": "d99d189a9170072d2a2db989d44dde2cf94da31b806b5e8dcebfed340aa7b52c",
+      "submission_sha256": "d99d189a9170072d2a2db989d44dde2cf94da31b806b5e8dcebfed340aa7b52c",
+      "byte_identical": true
+    },
+    {
+      "name": "Cover_Letter.docx",
+      "staged_sha256": "7653a281ea0bde42be5335a917daf3bbff5a82aaff5378de968f8557a62df1c6",
+      "submission_sha256": "7653a281ea0bde42be5335a917daf3bbff5a82aaff5378de968f8557a62df1c6",
+      "byte_identical": true
+    }
+  ]
+}

@@ -166,7 +166,9 @@ def build():
         if block.startswith('### '):
             heading(d, block[4:], 2)
         elif block.startswith('## '):
-            heading(d, block[3:])
+            section_heading = heading(d, block[3:])
+            if block[3:] == 'References':
+                section_heading.alignment = WD_ALIGN_PARAGRAPH.LEFT
         elif block.startswith('TABLE|'):
             build_table(d, block.split('|')[1])
         elif block.startswith('FIG|'):

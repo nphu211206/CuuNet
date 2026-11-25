@@ -1,0 +1,12 @@
+{
+  "scope": "Join Word comparison fragments of Table 5 into the intended single six-column table",
+  "tracked_source_sha256": "7d2d5107dc65131feca488237e0cf3d327de97b8d867ef793e72d9762501dbf8",
+  "tracked_repaired_sha256": "f15ef7dc47fae0bef6dfe80539344e297405e1cd407aea40ed7125458a15c088",
+  "rows_in_tracked_table": 32,
+  "fully_deleted_legacy_rows": 1,
+  "expected_rows_after_acceptance": 31,
+  "row_text_unchanged": true,
+  "all_document_text_and_deletion_text_unchanged": true,
+  "moved_rows": 20,
+  "other_package_parts_unchanged": true
+}
