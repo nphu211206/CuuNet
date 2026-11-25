@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "description": "Deliberately altered Python reference was rejected by the parity checker",
+  "unexpected_success": false,
+  "wrong_reference_detected": true
+}

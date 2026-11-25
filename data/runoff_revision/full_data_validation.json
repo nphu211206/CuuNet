@@ -1,0 +1,69 @@
+{
+  "validation_passed": true,
+  "source_contract_passed": true,
+  "zones": [
+    {
+      "zone": "Bao_Ha_Runoff",
+      "rows": 9132,
+      "features": 8,
+      "start": "2000-01-01",
+      "end": "2024-12-31",
+      "target_missing": 0
+    },
+    {
+      "zone": "Can_Tho_Runoff",
+      "rows": 9132,
+      "features": 8,
+      "start": "2000-01-01",
+      "end": "2024-12-31",
+      "target_missing": 0
+    },
+    {
+      "zone": "Gianh_Runoff",
+      "rows": 9132,
+      "features": 8,
+      "start": "2000-01-01",
+      "end": "2024-12-31",
+      "target_missing": 0
+    }
+  ],
+  "combined_rows": 27396,
+  "splits": {
+    "train_start": "2000-01-01",
+    "train_end": "2017-12-31",
+    "validation_end": "2020-12-31",
+    "test_end": "2024-12-31"
+  },
+  "archive": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\kaggle_revision\\CuuNet_ERA5Land_L7_2000_2024_inputs.zip",
+  "archive_bytes": 1370629,
+  "archive_sha256": "aaed2e86b60c30e56d515f028135110af14d8d362e0cf5e86bc3e7b464c81c06",
+  "files": {
+    "CuuNet_ERA5Land_L7_daily_2000.csv": "57b6be8b9e311fb96aff95e6d09bfa3b3e3c8e21bb6e6f8a95fd7da8121e1d00",
+    "CuuNet_ERA5Land_L7_daily_2001.csv": "39563ee78a7ed85d2971e11e74c5629ab3de88cdf02fb89f4b79e621a99dec73",
+    "CuuNet_ERA5Land_L7_daily_2002.csv": "9b96075c0dbeb5d8372dba7b0a39d2c71999615e2a69a2f296da206ed5d638cd",
+    "CuuNet_ERA5Land_L7_daily_2003.csv": "fe3fab2785d6fd749b8a6c8d092793a5eda33d5502e7d23ea548ab2a6afe77b5",
+    "CuuNet_ERA5Land_L7_daily_2004.csv": "db034a392521449c0555024be8c11d2dd19fc66c5ef4a4a35fa825a8015f3577",
+    "CuuNet_ERA5Land_L7_daily_2005.csv": "cd87e7a498f2cebe6ebb9c23a47b56ffd5ab271d0d1dbd9c7e0c803e78c397b4",
+    "CuuNet_ERA5Land_L7_daily_2006.csv": "43390d6a571fa8887c20296addb9d0f6b87177f38a99dfa2f2b00d06d8b77082",
+    "CuuNet_ERA5Land_L7_daily_2007.csv": "8e0f1fa924504a308cbf1b4af7fade7801e82f146e73f928ca0213028ca10796",
+    "CuuNet_ERA5Land_L7_daily_2008.csv": "6c0c85773409400270a636e23299298ee92fdd5df949aa95ddb0d0cd9798d155",
+    "CuuNet_ERA5Land_L7_daily_2009.csv": "6af2b6ee18ca6a2247297f50694a216643bab800c74216fe1ca7e115c2cd203a",
+    "CuuNet_ERA5Land_L7_daily_2010.csv": "32b8b3d7fd21ba095a904a4ac9c5252001fe3cd3a513a383e4318bd3ee3ace17",
+    "CuuNet_ERA5Land_L7_daily_2011.csv": "e85c3276a32d06417b033bbe68b8dc9e1b3775af3df0dce896f6b52c201f6e18",
+    "CuuNet_ERA5Land_L7_daily_2012.csv": "70d87f0838b65330f4544a023fdba4ec707ad1695e612e15dd8bd3a764d5ee03",
+    "CuuNet_ERA5Land_L7_daily_2013.csv": "41a5962957da8953ccb3f073d011901acd4ec1de373e9681ae5c51b38be30f5b",
+    "CuuNet_ERA5Land_L7_daily_2014.csv": "094be19b6e2a9748a999ec8079e25653749fc759f658880ddbd7d5072f4129b4",
+    "CuuNet_ERA5Land_L7_daily_2015.csv": "8afc62bd563f9ead377151c601a8cae996f306f481ccda7e96cd0bff1d275460",
+    "CuuNet_ERA5Land_L7_daily_2016.csv": "26d79c766b1cc71c4dd349a6c102c5a9517476af9c90a53fedb6d647c86f8409",
+    "CuuNet_ERA5Land_L7_daily_2017.csv": "e9c97872d78b6d41a779e1c73bfef02f1db12efef37941f661806c1193eeebdc",
+    "CuuNet_ERA5Land_L7_daily_2018.csv": "87e240cbb95cb3959157d65a67febb7c97c9e7e6cab1dd90198a176b42173651",
+    "CuuNet_ERA5Land_L7_daily_2019.csv": "e40cc89b75ee7fd39c15a83f2c3e21c336be9e119abb071ea6602fc5472668e6",
+    "CuuNet_ERA5Land_L7_daily_2020.csv": "d0540705b53e8ffe704aed55547cf72f987b0ae80252f47605a83ac05178eba4",
+    "CuuNet_ERA5Land_L7_daily_2021.csv": "24450c0916831c3c9dd40bf75fa73f5bea4c97074bb1c466961646abee22893e",
+    "CuuNet_ERA5Land_L7_daily_2022.csv": "8814cfb07417e761e8b41854f71f468b0bf7684c5e7b91d7ae808a986a5c87bb",
+    "CuuNet_ERA5Land_L7_daily_2023.csv": "c600e2c04b6ef507e3a6c1ff8d32ce4eba270a9d549b2f244f2cef29dc3d8e1a",
+    "CuuNet_ERA5Land_L7_daily_2024.csv": "49d4273247acc02384db331bdc619e778e1075b7fcf4099cc12780182d9468e5",
+    "CuuNet_ERA5Land_L7_basins.geojson": "ec3f2dc45af690cb41551926affaf8e0e7a6e74c04012615867c20bacb11eacf"
+  },
+  "scope": "validated input data only; forecast accuracy and browser execution remain untested"
+}

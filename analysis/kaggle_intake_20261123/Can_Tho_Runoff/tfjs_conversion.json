@@ -1,0 +1,30 @@
+[
+  {
+    "zone": "Can_Tho_Runoff",
+    "selected_seed": 789,
+    "source_model": "/kaggle/working/CuuNet_revision_results_20261122_205334/vietnam_Can_Tho_Runoff/models/Can_Tho_Runoff/ta_lstm_outage_seed_789.keras",
+    "inference_export": {
+      "mode": "training=False; dropout disabled only in a separate export model",
+      "copied_weight_arrays": 8,
+      "trained_model_max_abs_scaled_difference": 2.9802322387695312e-08,
+      "variable_write_operations": []
+    },
+    "float_destination": "/kaggle/working/CuuNet_revision_results_20261122_205334/vietnam_Can_Tho_Runoff/tfjs_models_float/Can_Tho_Runoff",
+    "quantized_destination": "/kaggle/working/CuuNet_revision_results_20261122_205334/vietnam_Can_Tho_Runoff/tfjs_models/Can_Tho_Runoff",
+    "float_return_code": 0,
+    "quantized_return_code": 0,
+    "float_command": [
+      "/kaggle/working/CuuNet_revision/.runtime_py312_v2/bin/tensorflowjs_converter",
+      "--input_format=tf_saved_model",
+      "--output_format=tfjs_graph_model",
+      "/kaggle/working/CuuNet_revision_results_20261122_205334/vietnam_Can_Tho_Runoff/saved_models/Can_Tho_Runoff",
+      "/kaggle/working/CuuNet_revision_results_20261122_205334/vietnam_Can_Tho_Runoff/tfjs_models_float/Can_Tho_Runoff"
+    ],
+    "float_stdout": "",
+    "float_stderr": "2026-11-22 22:56:39.170718: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nE0000 00:00:1795388199.193253   13435 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered\nE0000 00:00:1795388199.200128   13435 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered\nW0000 00:00:1795388199.218927   13435 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\nW0000 00:00:1795388199.218951   13435 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\nW0000 00:00:1795388199.218954   13435 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\nW0000 00:00:1795388199.218956   13435 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n\ud83c\udf32 Try https://ydf.readthedocs.io, the successor of TensorFlow Decision Forests with more features and faster training!\nI0000 00:00:1795388203.328435   13435 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 13576 MB memory:  -> device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5\nI0000 00:00:1795388203.551017   13435 devices.cc:67] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 1\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1795388203.551315   13435 single_machine.cc:374] Starting new session\nI0000 00:00:1795388203.559204   13435 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 13576 MB memory:  -> device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5\n",
+    "quantized_stdout": "",
+    "quantized_stderr": "2026-11-22 22:56:45.455119: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nE0000 00:00:1795388205.480133   13467 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered\nE0000 00:00:1795388205.486950   13467 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered\nW0000 00:00:1795388205.503957   13467 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\nW0000 00:00:1795388205.504005   13467 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\nW0000 00:00:1795388205.504010   13467 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\nW0000 00:00:1795388205.504014   13467 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.\n\ud83c\udf32 Try https://ydf.readthedocs.io, the successor of TensorFlow Decision Forests with more features and faster training!\nI0000 00:00:1795388209.577109   13467 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 13576 MB memory:  -> device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5\nI0000 00:00:1795388209.794652   13467 devices.cc:67] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 1\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1795388209.794914   13467 single_machine.cc:374] Starting new session\nI0000 00:00:1795388209.803074   13467 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 13576 MB memory:  -> device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5\n",
+    "quantization_scope": "uint8 weight storage; float arithmetic after dequantization",
+    "integer_only_inference": false
+  }
+]

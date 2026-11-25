@@ -1,0 +1,635 @@
+{
+  "format": "cuunet-browser-log-v1",
+  "protocol_version": "v7.1-audited",
+  "verified_at_utc": "2026-11-23T04:51:46.616Z",
+  "zones_audited": [
+    "Bao_Ha_Runoff",
+    "Gianh_Runoff",
+    "Can_Tho_Runoff"
+  ],
+  "summaries": [
+    {
+      "zone": "Bao_Ha_Runoff",
+      "zoneLabel": "Bảo Hà",
+      "precision": "fp32",
+      "modelId": "Bao_Ha_Runoff / FP32",
+      "backend": "cpu",
+      "coldMs": 9.644999999552965,
+      "meanMs": 4.896100000031293,
+      "sdMs": 0.6204099122560826,
+      "medianMs": 4.710000000428408,
+      "p95Ms": 6.231000000424683,
+      "minMs": 4.009999999776483,
+      "maxMs": 6.634999999776483,
+      "tensorBytes": 2260756,
+      "jsHeap": 27303866,
+      "kerasPhys": 0.5463690635068875,
+      "predPhys": 0.5463700911265094,
+      "diffPhys": 0.0000010276196218406142
+    },
+    {
+      "zone": "Bao_Ha_Runoff",
+      "zoneLabel": "Bảo Hà",
+      "precision": "uint8",
+      "modelId": "Bao_Ha_Runoff / uint8 storage",
+      "backend": "cpu",
+      "coldMs": 6.305000000633299,
+      "meanMs": 4.554399999994785,
+      "sdMs": 0.5895844610213686,
+      "medianMs": 4.372500000055879,
+      "p95Ms": 5.490999999875203,
+      "minMs": 3.985000000335276,
+      "maxMs": 7.09499999973923,
+      "tensorBytes": 2260756,
+      "jsHeap": 26672557,
+      "kerasPhys": 0.5463690635068875,
+      "predPhys": 0.47913494041671734,
+      "diffPhys": 0.06723412309017018
+    },
+    {
+      "zone": "Gianh_Runoff",
+      "zoneLabel": "Sông Gianh",
+      "precision": "fp32",
+      "modelId": "Gianh_Runoff / FP32",
+      "backend": "cpu",
+      "coldMs": 13.105000000447035,
+      "meanMs": 4.89550000006333,
+      "sdMs": 0.7494258006216938,
+      "medianMs": 4.6700000003911555,
+      "p95Ms": 6.148249999992549,
+      "minMs": 4.205000000074506,
+      "maxMs": 8.65500000026077,
+      "tensorBytes": 2260756,
+      "jsHeap": 35530078,
+      "kerasPhys": 2.3053159549339957,
+      "predPhys": 2.305309221073357,
+      "diffPhys": 0.000006733860638874489
+    },
+    {
+      "zone": "Gianh_Runoff",
+      "zoneLabel": "Sông Gianh",
+      "precision": "uint8",
+      "modelId": "Gianh_Runoff / uint8 storage",
+      "backend": "cpu",
+      "coldMs": 5.394999999552965,
+      "meanMs": 5.538300000037998,
+      "sdMs": 0.8523841772800306,
+      "medianMs": 5.349999999627471,
+      "p95Ms": 6.967749999975785,
+      "minMs": 4.415000000037253,
+      "maxMs": 8.054999999701977,
+      "tensorBytes": 2260756,
+      "jsHeap": 26025017,
+      "kerasPhys": 2.3053159549339957,
+      "predPhys": 2.335709876248994,
+      "diffPhys": 0.030393921314998185
+    },
+    {
+      "zone": "Can_Tho_Runoff",
+      "zoneLabel": "Cần Thơ",
+      "precision": "fp32",
+      "modelId": "Can_Tho_Runoff / FP32",
+      "backend": "cpu",
+      "coldMs": 8.165000000037253,
+      "meanMs": 5.243300000000745,
+      "sdMs": 0.8701041516662607,
+      "medianMs": 5.067499999888241,
+      "p95Ms": 6.558500000322237,
+      "minMs": 4.064999999478459,
+      "maxMs": 8.004999999888241,
+      "tensorBytes": 2260756,
+      "jsHeap": 35228442,
+      "kerasPhys": 1.510190928679066,
+      "predPhys": 1.510191082460596,
+      "diffPhys": 1.537815299545997e-7
+    },
+    {
+      "zone": "Can_Tho_Runoff",
+      "zoneLabel": "Cần Thơ",
+      "precision": "uint8",
+      "modelId": "Can_Tho_Runoff / uint8 storage",
+      "backend": "cpu",
+      "coldMs": 5.459999999962747,
+      "meanMs": 5.220500000100583,
+      "sdMs": 0.8404488900857386,
+      "medianMs": 4.859999999869615,
+      "p95Ms": 7.1162500002887095,
+      "minMs": 4.245000000111759,
+      "maxMs": 7.630000000819564,
+      "tensorBytes": 2260756,
+      "jsHeap": 25986261,
+      "kerasPhys": 1.510190928679066,
+      "predPhys": 1.4549881266889293,
+      "diffPhys": 0.05520280199013672
+    },
+    {
+      "zone": "Bao_Ha_Runoff",
+      "zoneLabel": "Bảo Hà",
+      "precision": "fp32",
+      "modelId": "Bao_Ha_Runoff / FP32",
+      "backend": "webgl",
+      "coldMs": 2907.5099999997765,
+      "meanMs": 12.821400000043214,
+      "sdMs": 2.222018993665164,
+      "medianMs": 12.162500000093132,
+      "p95Ms": 17.10825000004843,
+      "minMs": 10.059999999590218,
+      "maxMs": 19.03500000014901,
+      "tensorBytes": 2260756,
+      "jsHeap": 35933470,
+      "kerasPhys": 0.5463690635068875,
+      "predPhys": 0.5463694961888336,
+      "diffPhys": 4.326819460498399e-7
+    },
+    {
+      "zone": "Bao_Ha_Runoff",
+      "zoneLabel": "Bảo Hà",
+      "precision": "uint8",
+      "modelId": "Bao_Ha_Runoff / uint8 storage",
+      "backend": "webgl",
+      "coldMs": 19.955000000074506,
+      "meanMs": 12.473599999975413,
+      "sdMs": 2.184348789073783,
+      "medianMs": 12.160000000149012,
+      "p95Ms": 15.86250000009313,
+      "minMs": 10.114999999292195,
+      "maxMs": 20.5,
+      "tensorBytes": 2260756,
+      "jsHeap": 34740721,
+      "kerasPhys": 0.5463690635068875,
+      "predPhys": 0.47913548126914995,
+      "diffPhys": 0.06723358223773757
+    },
+    {
+      "zone": "Gianh_Runoff",
+      "zoneLabel": "Sông Gianh",
+      "precision": "fp32",
+      "modelId": "Gianh_Runoff / FP32",
+      "backend": "webgl",
+      "coldMs": 22.595000000670552,
+      "meanMs": 12.254599999971688,
+      "sdMs": 1.8886011019502096,
+      "medianMs": 11.994999999646097,
+      "p95Ms": 16.54974999953992,
+      "minMs": 9.505000000819564,
+      "maxMs": 18.115000000223517,
+      "tensorBytes": 2260756,
+      "jsHeap": 31682045,
+      "kerasPhys": 2.3053159549339957,
+      "predPhys": 2.3053053731529913,
+      "diffPhys": 0.000010581781004326274
+    },
+    {
+      "zone": "Gianh_Runoff",
+      "zoneLabel": "Sông Gianh",
+      "precision": "uint8",
+      "modelId": "Gianh_Runoff / uint8 storage",
+      "backend": "webgl",
+      "coldMs": 20.575000000186265,
+      "meanMs": 11.748299999888987,
+      "sdMs": 1.2288727246320263,
+      "medianMs": 11.769999999552965,
+      "p95Ms": 13.72600000007078,
+      "minMs": 9.53000000026077,
+      "maxMs": 15.369999999180436,
+      "tensorBytes": 2260756,
+      "jsHeap": 30552113,
+      "kerasPhys": 2.3053159549339957,
+      "predPhys": 2.335711639879161,
+      "diffPhys": 0.030395684945165424
+    },
+    {
+      "zone": "Can_Tho_Runoff",
+      "zoneLabel": "Cần Thơ",
+      "precision": "fp32",
+      "modelId": "Can_Tho_Runoff / FP32",
+      "backend": "webgl",
+      "coldMs": 19.740000000223517,
+      "meanMs": 12.28390000006184,
+      "sdMs": 1.8090744307548252,
+      "medianMs": 11.93500000005588,
+      "p95Ms": 16.379250000184403,
+      "minMs": 9.705000000074506,
+      "maxMs": 18.03000000026077,
+      "tensorBytes": 2260756,
+      "jsHeap": 31084645,
+      "kerasPhys": 1.510190928679066,
+      "predPhys": 1.5101907748975363,
+      "diffPhys": 1.537815297325551e-7
+    },
+    {
+      "zone": "Can_Tho_Runoff",
+      "zoneLabel": "Cần Thơ",
+      "precision": "uint8",
+      "modelId": "Can_Tho_Runoff / uint8 storage",
+      "backend": "webgl",
+      "coldMs": 27.609999999403954,
+      "meanMs": 12.98599999986589,
+      "sdMs": 2.8327072937710405,
+      "medianMs": 12.044999999925494,
+      "p95Ms": 17.807499999832363,
+      "minMs": 10.025000000372529,
+      "maxMs": 21.84499999973923,
+      "tensorBytes": 2260756,
+      "jsHeap": 30477173,
+      "kerasPhys": 1.510190928679066,
+      "predPhys": 1.4549881266889293,
+      "diffPhys": 0.05520280199013672
+    }
+  ],
+  "rollout_audit": [
+    {
+      "modelId": "Bao_Ha_Runoff / FP32",
+      "horizon": 1,
+      "prediction": 0.5463700911265094,
+      "actual": 0.5662630742072844,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Bao_Ha_Runoff / FP32",
+      "horizon": 3,
+      "prediction": 1.3035687430380167,
+      "actual": 0.5483240097019089,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Bao_Ha_Runoff / FP32",
+      "horizon": 7,
+      "prediction": 1.3012325850406354,
+      "actual": 0.6355624433570303,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Bao_Ha_Runoff / uint8 storage",
+      "horizon": 1,
+      "prediction": 0.47913494041671734,
+      "actual": 0.5662630742072844,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Bao_Ha_Runoff / uint8 storage",
+      "horizon": 3,
+      "prediction": 1.296362857907973,
+      "actual": 0.5483240097019089,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Bao_Ha_Runoff / uint8 storage",
+      "horizon": 7,
+      "prediction": 1.25280606444177,
+      "actual": 0.6355624433570303,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Gianh_Runoff / FP32",
+      "horizon": 1,
+      "prediction": 2.305309221073357,
+      "actual": 2.1591035376312,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Gianh_Runoff / FP32",
+      "horizon": 3,
+      "prediction": 2.0638753056763948,
+      "actual": 2.0733093140139003,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Gianh_Runoff / FP32",
+      "horizon": 7,
+      "prediction": 2.7258708839931645,
+      "actual": 1.9124554367732,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Gianh_Runoff / uint8 storage",
+      "horizon": 1,
+      "prediction": 2.335709876248994,
+      "actual": 2.1591035376312,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Gianh_Runoff / uint8 storage",
+      "horizon": 3,
+      "prediction": 2.0805424124084406,
+      "actual": 2.0733093140139003,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Gianh_Runoff / uint8 storage",
+      "horizon": 7,
+      "prediction": 2.6373010563260966,
+      "actual": 1.9124554367732,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Can_Tho_Runoff / FP32",
+      "horizon": 1,
+      "prediction": 1.510191082460596,
+      "actual": 0.749153411027627,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Can_Tho_Runoff / FP32",
+      "horizon": 3,
+      "prediction": 1.631379385969638,
+      "actual": 0.7238914885670745,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Can_Tho_Runoff / FP32",
+      "horizon": 7,
+      "prediction": 1.6671520454442599,
+      "actual": 0.6786262072554723,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Can_Tho_Runoff / uint8 storage",
+      "horizon": 1,
+      "prediction": 1.4549881266889293,
+      "actual": 0.749153411027627,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Can_Tho_Runoff / uint8 storage",
+      "horizon": 3,
+      "prediction": 1.5838290604680925,
+      "actual": 0.7238914885670745,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    },
+    {
+      "modelId": "Can_Tho_Runoff / uint8 storage",
+      "horizon": 7,
+      "prediction": 1.619653082973686,
+      "actual": 0.6786262072554723,
+      "units": "mm day-1",
+      "physical_inputs_frozen_after": "2020-12-31"
+    }
+  ],
+  "sybil_audit": {
+    "scenarioA": {
+      "disaster": 0.9616206873639139,
+      "noDisaster": 0,
+      "uncertainty": 0.03837931263608609,
+      "action": 1,
+      "selected": 3,
+      "groups": 2,
+      "feedback": "frozen"
+    },
+    "scenarioB": {
+      "disaster": 0.48355295256771247,
+      "noDisaster": 0.44750852108625433,
+      "uncertainty": 0.06893852634603327,
+      "action": -1,
+      "selected": 4,
+      "groups": 1,
+      "feedback": "frozen"
+    },
+    "scenarioC": {
+      "disaster": 0,
+      "noDisaster": 0,
+      "uncertainty": 1,
+      "action": -1,
+      "selected": 0,
+      "groups": 0,
+      "feedback": "frozen"
+    },
+    "scenarioD_flat": {
+      "disaster": 0.9616206873639139,
+      "noDisaster": 0,
+      "uncertainty": 0.03837931263608609,
+      "action": 1,
+      "selected": 3,
+      "groups": 2,
+      "feedback": "frozen"
+    },
+    "scenarioD_terrain": {
+      "disaster": 0.9514183572164701,
+      "noDisaster": 0,
+      "uncertainty": 0.04858164278352992,
+      "action": 1,
+      "selected": 3,
+      "groups": 2,
+      "feedback": "frozen"
+    }
+  },
+  "offline_audit": {
+    "title": "CuuNet Research Demonstrator — Edge AI & Sybil Defence",
+    "cacheName": "cuunet-research-v4",
+    "indexedDbDatabase": "cuunet-research-v1",
+    "reportCount": "3 báo cáo đã lưu trong IndexedDB",
+    "persistedReportsCount": 3,
+    "persistedReports": [
+      {
+        "id": "rep-pub-20261123-001",
+        "x": 0.15,
+        "y": 0.08,
+        "reputation": 0.92,
+        "claim": true,
+        "description": "Bảo Hà gauge reach: water level rising +1.2m above bankfull"
+      },
+      {
+        "id": "rep-pub-20261123-002",
+        "x": 0.22,
+        "y": 0.14,
+        "reputation": 0.88,
+        "claim": true,
+        "description": "Bảo Hà bridge monitoring station: overflow observed"
+      },
+      {
+        "id": "rep-pub-20261123-003",
+        "x": 48.5,
+        "y": 52.1,
+        "reputation": 0.65,
+        "claim": false,
+        "description": "Remote mountain pass: normal conditions (distant outlier)"
+      }
+    ],
+    "totalModelsRetained": 6,
+    "models": [
+      "Bao_Ha_Runoff / FP32",
+      "Bao_Ha_Runoff / uint8 storage",
+      "Can_Tho_Runoff / FP32",
+      "Can_Tho_Runoff / uint8 storage",
+      "Gianh_Runoff / FP32",
+      "Gianh_Runoff / uint8 storage"
+    ],
+    "offlineInferences": [
+      {
+        "zone": "Bao_Ha_Runoff",
+        "model": "Bao_Ha_Runoff / FP32",
+        "result": {
+          "origin": "2020-12-31",
+          "target_date": "2021-01-01",
+          "horizon": 1,
+          "physical_inputs_frozen_after": "2020-12-31",
+          "prediction": 0.5463700911265094,
+          "actual": 0.5662630742072844,
+          "units": "mm day-1",
+          "scope": "retrospective input-interruption case",
+          "rolloutPoints": [
+            {
+              "lead": 1,
+              "date": "2021-01-01",
+              "prediction": 0.5463700911265094,
+              "actual": 0.5662630742072844
+            }
+          ]
+        }
+      },
+      {
+        "zone": "Gianh_Runoff",
+        "model": "Gianh_Runoff / FP32",
+        "result": {
+          "origin": "2020-12-31",
+          "target_date": "2021-01-01",
+          "horizon": 1,
+          "physical_inputs_frozen_after": "2020-12-31",
+          "prediction": 2.305309221073357,
+          "actual": 2.1591035376312,
+          "units": "mm day-1",
+          "scope": "retrospective input-interruption case",
+          "rolloutPoints": [
+            {
+              "lead": 1,
+              "date": "2021-01-01",
+              "prediction": 2.305309221073357,
+              "actual": 2.1591035376312
+            }
+          ]
+        }
+      },
+      {
+        "zone": "Can_Tho_Runoff",
+        "model": "Can_Tho_Runoff / FP32",
+        "result": {
+          "origin": "2020-12-31",
+          "target_date": "2021-01-01",
+          "horizon": 1,
+          "physical_inputs_frozen_after": "2020-12-31",
+          "prediction": 1.510191082460596,
+          "actual": 0.749153411027627,
+          "units": "mm day-1",
+          "scope": "retrospective input-interruption case",
+          "rolloutPoints": [
+            {
+              "lead": 1,
+              "date": "2021-01-01",
+              "prediction": 1.510191082460596,
+              "actual": 0.749153411027627
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "raw_logs": [
+    {
+      "time": "2026-11-23T04:51:45.380Z",
+      "kind": "load",
+      "model": "Bao_Ha_Runoff / FP32",
+      "backend": "cpu",
+      "load_ms": 8.270000000484288
+    },
+    {
+      "time": "2026-11-23T04:51:45.622Z",
+      "kind": "forecast",
+      "model": "Bao_Ha_Runoff / FP32",
+      "backend": "cpu",
+      "ms": 36.075000000186265,
+      "origin": "2020-12-31",
+      "target_date": "2021-01-01",
+      "horizon": 1,
+      "physical_inputs_frozen_after": "2020-12-31",
+      "prediction": 0.5463700911265094,
+      "actual": 0.5662630742072844,
+      "units": "mm day-1",
+      "scope": "retrospective input-interruption case",
+      "rolloutPoints": [
+        {
+          "lead": 1,
+          "date": "2021-01-01",
+          "prediction": 0.5463700911265094,
+          "actual": 0.5662630742072844
+        }
+      ]
+    },
+    {
+      "time": "2026-11-23T04:51:45.791Z",
+      "kind": "load",
+      "model": "Gianh_Runoff / FP32",
+      "backend": "cpu",
+      "load_ms": 2.900000000372529
+    },
+    {
+      "time": "2026-11-23T04:51:46.011Z",
+      "kind": "forecast",
+      "model": "Gianh_Runoff / FP32",
+      "backend": "cpu",
+      "ms": 19.149999999441206,
+      "origin": "2020-12-31",
+      "target_date": "2021-01-01",
+      "horizon": 1,
+      "physical_inputs_frozen_after": "2020-12-31",
+      "prediction": 2.305309221073357,
+      "actual": 2.1591035376312,
+      "units": "mm day-1",
+      "scope": "retrospective input-interruption case",
+      "rolloutPoints": [
+        {
+          "lead": 1,
+          "date": "2021-01-01",
+          "prediction": 2.305309221073357,
+          "actual": 2.1591035376312
+        }
+      ]
+    },
+    {
+      "time": "2026-11-23T04:51:46.197Z",
+      "kind": "load",
+      "model": "Can_Tho_Runoff / FP32",
+      "backend": "cpu",
+      "load_ms": 2.5499999998137355
+    },
+    {
+      "time": "2026-11-23T04:51:46.418Z",
+      "kind": "forecast",
+      "model": "Can_Tho_Runoff / FP32",
+      "backend": "cpu",
+      "ms": 7.7749999994412065,
+      "origin": "2020-12-31",
+      "target_date": "2021-01-01",
+      "horizon": 1,
+      "physical_inputs_frozen_after": "2020-12-31",
+      "prediction": 1.510191082460596,
+      "actual": 0.749153411027627,
+      "units": "mm day-1",
+      "scope": "retrospective input-interruption case",
+      "rolloutPoints": [
+        {
+          "lead": 1,
+          "date": "2021-01-01",
+          "prediction": 1.510191082460596,
+          "actual": 0.749153411027627
+        }
+      ]
+    }
+  ]
+}

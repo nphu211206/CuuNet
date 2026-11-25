@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": 281160,
+  "summary_rows": 25560,
+  "cases": 71,
+  "trials_per_setting": 1000,
+  "complete_primary_case_set": true,
+  "failures": [],
+  "scope": "All saved error, unresolved, coverage and belief summaries plus Wilson intervals recomputed from raw traces; not validation against field data"
+}

@@ -1,0 +1,42 @@
+{
+  "trials": 2000,
+  "seed": 42,
+  "primary_threshold": 0.75,
+  "bot_counts": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    10,
+    20,
+    30,
+    50,
+    100
+  ],
+  "honest_counts": [
+    3,
+    5,
+    10,
+    50
+  ],
+  "reputation_tiers": {
+    "decayed": 0.15,
+    "neutral": 0.5,
+    "compromised": 0.8
+  },
+  "thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9
+  ],
+  "dempster_rule": "Normalised Dempster combination. Pairwise conflict is removed through division by 1-K; uncertainty is not a general conflict sink. Total conflict uses an explicit uncertainty fallback.",
+  "baseline_note": "Symmetric Beta MAP with a 0.5 decision threshold is equivalent to unweighted majority voting for binary reports."
+}

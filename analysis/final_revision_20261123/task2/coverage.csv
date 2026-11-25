@@ -1,0 +1,7 @@
+zone,units,provenance,validation_selected_baseline,train_rows,validation_rows,test_rows,train_observed,validation_observed,test_observed,scheduled_outage_origins,outage_observed_by_horizon,peak_threshold_from_training
+Bao_Ha_Runoff,mm day-1,reanalysis,persistence,6575,1096,1461,6575,1096,1461,208,"{""1"": 208, ""3"": 208, ""7"": 208}",6.914488519523702
+Gianh_Runoff,mm day-1,reanalysis,persistence,6575,1096,1461,6575,1096,1461,208,"{""1"": 208, ""3"": 208, ""7"": 208}",3.9269191572739213
+Can_Tho_Runoff,mm day-1,reanalysis,persistence,6575,1096,1461,6575,1096,1461,208,"{""1"": 208, ""3"": 208, ""7"": 208}",5.164891631973621
+USGS_06903900,m3 s-1,observed,persistence,1461,366,730,1416,357,717,104,"{""1"": 103, ""3"": 101, ""7"": 104}",31.890521122056
+USGS_05421000,m3 s-1,observed,persistence,1461,366,730,1448,365,726,104,"{""1"": 103, ""3"": 103, ""7"": 103}",67.17640913078397
+USGS_05453520,m3 s-1,observed,persistence,1461,366,730,1414,364,730,104,"{""1"": 104, ""3"": 104, ""7"": 104}",171.60628465771202

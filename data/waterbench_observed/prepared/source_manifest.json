@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "id": "WaterBench-Iowa",
+      "doi": "10.5194/essd-14-5605-2022",
+      "url": "https://doi.org/10.5281/zenodo.7087806",
+      "repository_url": "https://github.com/uihilab/WaterBench",
+      "repository_commit": "46689cf41e4d3c6a09180c2ed17a162c26b87957",
+      "licence": "MIT repository licence; published data archive attribution retained",
+      "provenance": "USGS measured/reported hourly streamflow compiled by WaterBench; source units cubic feet per second (paper Section 2.2.5)",
+      "unit_conversion": {
+        "from": "ft3 s-1",
+        "to": "m3 s-1",
+        "factor": 0.028316846592
+      },
+      "clock_note": "Calendar days use the published source timestamps; no undocumented timezone conversion",
+      "daily_coverage": "at least 22 valid hourly streamflow values; missing reference days remain missing"
+    }
+  ]
+}

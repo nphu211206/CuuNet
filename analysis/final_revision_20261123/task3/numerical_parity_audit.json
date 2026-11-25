@@ -1,0 +1,6023 @@
+{
+  "passed": true,
+  "cases": 353,
+  "failures": [],
+  "max_absolute_mass_difference": 1.4210854715202004e-14,
+  "fixture_sha256": "2ea9ed82fa780ec86abebfeb5643e773d03ca08a55ff88c64bc7b78ba09aad9f",
+  "javascript_source_sha256": "10e98b5795344ebde4aba63d92ea9ac7fc1c2f2986423404a326621ee8c81cb5",
+  "python_source_sha256": {
+    "sybil_pipeline_campaign.py": "a44b6a694ea4b8307781ab2858399f1fc2e7f79075dc5fb6b44e38292dcd8a2f",
+    "dependence_aware_verification.py": "8608a284d8e5930d78dd742e8a16b2102d25e2dbf437f962c73eaf79f58a0df2",
+    "sybil_revision_experiments.py": "e2c80b111e1595e24d1072a9e4165e034bfe9f569c53c6e644988872eaa3598d"
+  },
+  "checker_sha256": "83046a11d4cc18b7a649d84947663604321ec2d46257a99b5812e65e8b35e36e",
+  "fixture_generator_sha256": "14b573aa0554bb3469fed151abcc587c646af7bb36cc7fa0fe0407fb914b0955",
+  "node_version": "v24.22.3",
+  "absolute_tolerance": 1e-9,
+  "relative_tolerance": 1e-9,
+  "scope": "static local-batch numerical parity; frozen feedback; synthetic geometry and terrain; not a new Sybil robustness experiment",
+  "publication_eligible": false,
+  "results": [
+    {
+      "id": "empty_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 0,
+        "groups": 0,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "empty_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 0,
+        "groups": 0,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "single_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 0,
+        "groups": 0,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "single_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 0,
+        "groups": 0,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "sparse_two_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 0,
+        "groups": 0,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "sparse_two_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 0,
+        "groups": 0,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "positive_terrain_0",
+      "actual": {
+        "disaster": 0.8704944904338053,
+        "noDisaster": 0,
+        "uncertainty": 0.1295055095661947,
+        "action": 1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "positive_terrain_1",
+      "actual": {
+        "disaster": 0.8704944904338053,
+        "noDisaster": 0,
+        "uncertainty": 0.1295055095661947,
+        "action": 1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "negative_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.8704944904338053,
+        "uncertainty": 0.1295055095661947,
+        "action": 0,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "negative_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.8704944904338053,
+        "uncertainty": 0.1295055095661947,
+        "action": 0,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "same_group_conflict_terrain_0",
+      "actual": {
+        "disaster": 0.4736842105263158,
+        "noDisaster": 0.4736842105263158,
+        "uncertainty": 0.05263157894736841,
+        "action": -1,
+        "selected": 6,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-17,
+        "noDisaster": 5.551115123125783e-17,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "same_group_conflict_terrain_1",
+      "actual": {
+        "disaster": 0.4736842105263158,
+        "noDisaster": 0.4736842105263158,
+        "uncertainty": 0.05263157894736841,
+        "action": -1,
+        "selected": 6,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-17,
+        "noDisaster": 5.551115123125783e-17,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "neutral_cold_start_terrain_0",
+      "actual": {
+        "disaster": 0.47959472855456914,
+        "noDisaster": 0,
+        "uncertainty": 0.520405271445431,
+        "action": -1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-17,
+        "noDisaster": 0,
+        "uncertainty": 1.1102230246251565e-16
+      }
+    },
+    {
+      "id": "neutral_cold_start_terrain_1",
+      "actual": {
+        "disaster": 0.47959472855456914,
+        "noDisaster": 0,
+        "uncertainty": 0.520405271445431,
+        "action": -1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-17,
+        "noDisaster": 0,
+        "uncertainty": 1.1102230246251565e-16
+      }
+    },
+    {
+      "id": "stale_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 0,
+        "groups": 0,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 0,
+        "groups": 0,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "age_boundary_terrain_0",
+      "actual": {
+        "disaster": 0.5525393057159724,
+        "noDisaster": 0,
+        "uncertainty": 0.44746069428402774,
+        "action": -1,
+        "selected": 3,
+        "groups": 2,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 5.551115123125783e-17
+      }
+    },
+    {
+      "id": "age_boundary_terrain_1",
+      "actual": {
+        "disaster": 0.5525393057159724,
+        "noDisaster": 0,
+        "uncertainty": 0.44746069428402774,
+        "action": -1,
+        "selected": 3,
+        "groups": 2,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 5.551115123125783e-17
+      }
+    },
+    {
+      "id": "epsilon_boundary_terrain_0",
+      "actual": {
+        "disaster": 0.955256141468694,
+        "noDisaster": 0,
+        "uncertainty": 0.04474385853130601,
+        "action": 1,
+        "selected": 3,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "epsilon_boundary_terrain_1",
+      "actual": {
+        "disaster": 0.955256141468694,
+        "noDisaster": 0,
+        "uncertainty": 0.04474385853130601,
+        "action": 1,
+        "selected": 3,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "epsilon_outside_terrain_0",
+      "actual": {
+        "disaster": 0.9105515751612957,
+        "noDisaster": 0,
+        "uncertainty": 0.08944842483870431,
+        "action": 1,
+        "selected": 2,
+        "groups": 2,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "epsilon_outside_terrain_1",
+      "actual": {
+        "disaster": 0.9105515751612957,
+        "noDisaster": 0,
+        "uncertainty": 0.08944842483870431,
+        "action": 1,
+        "selected": 2,
+        "groups": 2,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "cell_time_boundaries_terrain_0",
+      "actual": {
+        "disaster": 0.45311443943958635,
+        "noDisaster": 0.5421815849908785,
+        "uncertainty": 0.004703975569534989,
+        "action": -1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-16,
+        "noDisaster": 5.551115123125783e-16,
+        "uncertainty": 2.6020852139652106e-18
+      }
+    },
+    {
+      "id": "cell_time_boundaries_terrain_1",
+      "actual": {
+        "disaster": 0.45311443943958635,
+        "noDisaster": 0.5421815849908785,
+        "uncertainty": 0.004703975569534989,
+        "action": -1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-16,
+        "noDisaster": 5.551115123125783e-16,
+        "uncertainty": 2.6020852139652106e-18
+      }
+    },
+    {
+      "id": "cluster_tie_terrain_0",
+      "actual": {
+        "disaster": 0.9,
+        "noDisaster": 0,
+        "uncertainty": 0.09999999999999998,
+        "action": 1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "cluster_tie_terrain_1",
+      "actual": {
+        "disaster": 0.9,
+        "noDisaster": 0,
+        "uncertainty": 0.09999999999999998,
+        "action": 1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "zero_reputation_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "zero_reputation_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1,
+        "action": -1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "mass_cap_terrain_0",
+      "actual": {
+        "disaster": 0.95,
+        "noDisaster": 0,
+        "uncertainty": 0.05000000000000005,
+        "action": 1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "mass_cap_terrain_1",
+      "actual": {
+        "disaster": 0.95,
+        "noDisaster": 0,
+        "uncertainty": 0.05000000000000005,
+        "action": 1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "exact_alert_threshold_terrain_0",
+      "actual": {
+        "disaster": 0.75,
+        "noDisaster": 0,
+        "uncertainty": 0.25,
+        "action": 1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "exact_alert_threshold_terrain_1",
+      "actual": {
+        "disaster": 0.75,
+        "noDisaster": 0,
+        "uncertainty": 0.25,
+        "action": 1,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "exact_reject_threshold_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.75,
+        "uncertainty": 0.25,
+        "action": 0,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "exact_reject_threshold_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.75,
+        "uncertainty": 0.25,
+        "action": 0,
+        "selected": 3,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "500_repeated_reports_terrain_0",
+      "actual": {
+        "disaster": 0.95,
+        "noDisaster": 0,
+        "uncertainty": 0.05000000000000005,
+        "action": 1,
+        "selected": 500,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "500_repeated_reports_terrain_1",
+      "actual": {
+        "disaster": 0.95,
+        "noDisaster": 0,
+        "uncertainty": 0.05000000000000005,
+        "action": 1,
+        "selected": 500,
+        "groups": 1,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9988614405888521,
+        "uncertainty": 0.0011385594111480383,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 2.168404344971009e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9972496948228309,
+        "uncertainty": 0.002750305177169232,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9988614405888521,
+        "noDisaster": 0,
+        "uncertainty": 0.0011385594111480383,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.168404344971009e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9972496948228309,
+        "noDisaster": 0,
+        "uncertainty": 0.002750305177169232,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9988614405888521,
+        "uncertainty": 0.0011385594111480383,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 2.168404344971009e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9972496948228309,
+        "uncertainty": 0.002750305177169232,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9988614405888521,
+        "noDisaster": 0,
+        "uncertainty": 0.0011385594111480383,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.168404344971009e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9972496948228309,
+        "noDisaster": 0,
+        "uncertainty": 0.002750305177169232,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9988614405888521,
+        "uncertainty": 0.0011385594111480383,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 2.168404344971009e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9972496948228309,
+        "uncertainty": 0.002750305177169232,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9988614405888521,
+        "noDisaster": 0,
+        "uncertainty": 0.0011385594111480383,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.168404344971009e-19
+      }
+    },
+    {
+      "id": "mimic_bots_0_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9972496948228309,
+        "noDisaster": 0,
+        "uncertainty": 0.002750305177169232,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9987223150542024,
+        "uncertainty": 0.001277684945797578,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9968772206507293,
+        "uncertainty": 0.0031227793492707473,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9987223150542024,
+        "noDisaster": 0,
+        "uncertainty": 0.001277684945797578,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9968772206507293,
+        "noDisaster": 0,
+        "uncertainty": 0.0031227793492707473,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9987223150542024,
+        "uncertainty": 0.001277684945797578,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9968772206507293,
+        "uncertainty": 0.0031227793492707473,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9987223150542024,
+        "noDisaster": 0,
+        "uncertainty": 0.001277684945797578,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9968772206507293,
+        "noDisaster": 0,
+        "uncertainty": 0.0031227793492707473,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9987223150542024,
+        "uncertainty": 0.001277684945797578,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9968772206507293,
+        "uncertainty": 0.0031227793492707473,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9987223150542024,
+        "noDisaster": 0,
+        "uncertainty": 0.001277684945797578,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_0_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9968772206507293,
+        "noDisaster": 0,
+        "uncertainty": 0.0031227793492707473,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9999753329489828,
+        "uncertainty": 0.000024667051017243692,
+        "action": 0,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.404571325722362e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.999952350634683,
+        "uncertainty": 0.00004764936531704491,
+        "action": 0,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 9.486769009248164e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9999753329489828,
+        "noDisaster": 0,
+        "uncertainty": 0.000024667051017243692,
+        "action": 1,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.404571325722362e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.999952350634683,
+        "noDisaster": 0,
+        "uncertainty": 0.00004764936531704491,
+        "action": 1,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 9.486769009248164e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9999753329489828,
+        "uncertainty": 0.000024667051017243692,
+        "action": 0,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.404571325722362e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.999952350634683,
+        "uncertainty": 0.00004764936531704491,
+        "action": 0,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 9.486769009248164e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9999753329489828,
+        "noDisaster": 0,
+        "uncertainty": 0.000024667051017243692,
+        "action": 1,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.404571325722362e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.999952350634683,
+        "noDisaster": 0,
+        "uncertainty": 0.00004764936531704491,
+        "action": 1,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 9.486769009248164e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9999753329489828,
+        "uncertainty": 0.000024667051017243692,
+        "action": 0,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.404571325722362e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.999952350634683,
+        "uncertainty": 0.00004764936531704491,
+        "action": 0,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 9.486769009248164e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9999753329489828,
+        "noDisaster": 0,
+        "uncertainty": 0.000024667051017243692,
+        "action": 1,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.404571325722362e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_0_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.999952350634683,
+        "noDisaster": 0,
+        "uncertainty": 0.00004764936531704491,
+        "action": 1,
+        "selected": 5,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 9.486769009248164e-20
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9946728458365086,
+        "uncertainty": 0.005327154163491335,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 5.204170427930421e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9913809968893271,
+        "uncertainty": 0.008619003110672895,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9946728458365086,
+        "noDisaster": 0,
+        "uncertainty": 0.005327154163491335,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 5.204170427930421e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9913809968893271,
+        "noDisaster": 0,
+        "uncertainty": 0.008619003110672895,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9946728458365086,
+        "uncertainty": 0.005327154163491335,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 5.204170427930421e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9913809968893271,
+        "uncertainty": 0.008619003110672895,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9946728458365086,
+        "noDisaster": 0,
+        "uncertainty": 0.005327154163491335,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 5.204170427930421e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9913809968893271,
+        "noDisaster": 0,
+        "uncertainty": 0.008619003110672895,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9946728458365086,
+        "uncertainty": 0.005327154163491335,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 5.204170427930421e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9913809968893271,
+        "uncertainty": 0.008619003110672895,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9946728458365086,
+        "noDisaster": 0,
+        "uncertainty": 0.005327154163491335,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 5.204170427930421e-18
+      }
+    },
+    {
+      "id": "stale_bots_0_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9913809968893271,
+        "noDisaster": 0,
+        "uncertainty": 0.008619003110672895,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.00009422876727497795,
+        "noDisaster": 0.9992766575804781,
+        "uncertainty": 0.0006291136522469203,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.3552527156068805e-19,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.00020044697973857552,
+        "noDisaster": 0.9984551736441165,
+        "uncertainty": 0.0013443793761447368,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.5236570605778894e-19,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 2.6020852139652106e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9992766575804781,
+        "noDisaster": 0.00009422876727497795,
+        "uncertainty": 0.0006291136522469203,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.3552527156068805e-19,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9984551736441165,
+        "noDisaster": 0.00020044697973857552,
+        "uncertainty": 0.0013443793761447368,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 3.5236570605778894e-19,
+        "uncertainty": 2.6020852139652106e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.000482655900703243,
+        "noDisaster": 0.9988884748348906,
+        "uncertainty": 0.0006288692644060123,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.2468324983583301e-18,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 1.1926223897340549e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.001023779175305372,
+        "noDisaster": 0.9976329485412865,
+        "uncertainty": 0.0013432722834079054,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.5178830414797062e-18,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 2.8189256484623115e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9988884748348906,
+        "noDisaster": 0.000482655900703243,
+        "uncertainty": 0.0006288692644060123,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 1.2468324983583301e-18,
+        "uncertainty": 1.1926223897340549e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9976329485412865,
+        "noDisaster": 0.001023779175305372,
+        "uncertainty": 0.0013432722834079054,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 1.5178830414797062e-18,
+        "uncertainty": 2.8189256484623115e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.0014300569770048747,
+        "noDisaster": 0.9979416698377082,
+        "uncertainty": 0.0006282731852869569,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.469446951953614e-18,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 1.5178830414797062e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.0030122749729417303,
+        "noDisaster": 0.9956471265723511,
+        "uncertainty": 0.0013405984547071254,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.469446951953614e-18,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 1.951563910473908e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9979416698377082,
+        "noDisaster": 0.0014300569770048747,
+        "uncertainty": 0.0006282731852869569,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 3.469446951953614e-18,
+        "uncertainty": 1.5178830414797062e-18
+      }
+    },
+    {
+      "id": "mimic_bots_1_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9956471265723511,
+        "noDisaster": 0.0030122749729417303,
+        "uncertainty": 0.0013405984547071254,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 3.469446951953614e-18,
+        "uncertainty": 1.951563910473908e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9995567984475743,
+        "uncertainty": 0.0004432015524257521,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.998975270556443,
+        "uncertainty": 0.0010247294435570503,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9995567984475743,
+        "noDisaster": 0,
+        "uncertainty": 0.0004432015524257521,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.998975270556443,
+        "noDisaster": 0,
+        "uncertainty": 0.0010247294435570503,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9995567984475743,
+        "uncertainty": 0.0004432015524257521,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.998975270556443,
+        "uncertainty": 0.0010247294435570503,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9995567984475743,
+        "noDisaster": 0,
+        "uncertainty": 0.0004432015524257521,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.998975270556443,
+        "noDisaster": 0,
+        "uncertainty": 0.0010247294435570503,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9995567984475743,
+        "uncertainty": 0.0004432015524257521,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.998975270556443,
+        "uncertainty": 0.0010247294435570503,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9995567984475743,
+        "noDisaster": 0,
+        "uncertainty": 0.0004432015524257521,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_1_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.998975270556443,
+        "noDisaster": 0,
+        "uncertainty": 0.0010247294435570503,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9998877245306816,
+        "uncertainty": 0.00011227546931839811,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9997006230519102,
+        "uncertainty": 0.0002993769480898274,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 5.421010862427522e-19
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9998877245306816,
+        "noDisaster": 0,
+        "uncertainty": 0.00011227546931839811,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9997006230519102,
+        "noDisaster": 0,
+        "uncertainty": 0.0002993769480898274,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 5.421010862427522e-19
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9998877245306816,
+        "uncertainty": 0.00011227546931839811,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9997006230519102,
+        "uncertainty": 0.0002993769480898274,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 5.421010862427522e-19
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9998877245306816,
+        "noDisaster": 0,
+        "uncertainty": 0.00011227546931839811,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9997006230519102,
+        "noDisaster": 0,
+        "uncertainty": 0.0002993769480898274,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 5.421010862427522e-19
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9998877245306816,
+        "uncertainty": 0.00011227546931839811,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9997006230519102,
+        "uncertainty": 0.0002993769480898274,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 5.421010862427522e-19
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9998877245306816,
+        "noDisaster": 0,
+        "uncertainty": 0.00011227546931839811,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_1_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9997006230519102,
+        "noDisaster": 0,
+        "uncertainty": 0.0002993769480898274,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 5.421010862427522e-19
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9974753964521639,
+        "uncertainty": 0.002524603547836123,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9935991839998709,
+        "uncertainty": 0.0064008160001291226,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9974753964521639,
+        "noDisaster": 0,
+        "uncertainty": 0.002524603547836123,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9935991839998709,
+        "noDisaster": 0,
+        "uncertainty": 0.0064008160001291226,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9974753964521639,
+        "uncertainty": 0.002524603547836123,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9935991839998709,
+        "uncertainty": 0.0064008160001291226,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9974753964521639,
+        "noDisaster": 0,
+        "uncertainty": 0.002524603547836123,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9935991839998709,
+        "noDisaster": 0,
+        "uncertainty": 0.0064008160001291226,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9974753964521639,
+        "uncertainty": 0.002524603547836123,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9935991839998709,
+        "uncertainty": 0.0064008160001291226,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9974753964521639,
+        "noDisaster": 0,
+        "uncertainty": 0.002524603547836123,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_1_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9935991839998709,
+        "noDisaster": 0,
+        "uncertainty": 0.0064008160001291226,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.0003563064443358806,
+        "noDisaster": 0.9990146094404729,
+        "uncertainty": 0.0006290841151912533,
+        "action": 0,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.336808689942018e-19,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 3.2526065174565133e-19
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.0011986084686521031,
+        "noDisaster": 0.9966633440832809,
+        "uncertainty": 0.002138047448067196,
+        "action": 0,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 8.673617379884035e-19,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 1.3010426069826053e-18
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9990146094404729,
+        "noDisaster": 0.0003563064443358806,
+        "uncertainty": 0.0006290841151912533,
+        "action": 1,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 4.336808689942018e-19,
+        "uncertainty": 3.2526065174565133e-19
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9966633440832809,
+        "noDisaster": 0.0011986084686521031,
+        "uncertainty": 0.002138047448067196,
+        "action": 1,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 8.673617379884035e-19,
+        "uncertainty": 1.3010426069826053e-18
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.003432875221019126,
+        "noDisaster": 0.995939976774185,
+        "uncertainty": 0.0006271480047959376,
+        "action": 0,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 8.673617379884035e-19,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 2.168404344971009e-19
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.011316769257618925,
+        "noDisaster": 0.9865668423629111,
+        "uncertainty": 0.0021163883794701683,
+        "action": 0,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.734723475976807e-18,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.995939976774185,
+        "noDisaster": 0.003432875221019126,
+        "uncertainty": 0.0006271480047959376,
+        "action": 1,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 8.673617379884035e-19,
+        "uncertainty": 2.168404344971009e-19
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9865668423629111,
+        "noDisaster": 0.011316769257618925,
+        "uncertainty": 0.0021163883794701683,
+        "action": 1,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.3306690738754696e-16,
+        "noDisaster": 1.734723475976807e-18,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.03513529048326375,
+        "noDisaster": 0.9642575121063204,
+        "uncertainty": 0.0006071974104159169,
+        "action": 0,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.0816681711721685e-17,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.10385024508927826,
+        "noDisaster": 0.8942314449115385,
+        "uncertainty": 0.0019183099991834328,
+        "action": 0,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 8.326672684688674e-17,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9642575121063204,
+        "noDisaster": 0.03513529048326375,
+        "uncertainty": 0.0006071974104159169,
+        "action": 1,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 2.0816681711721685e-17,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_5_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.8942314449115385,
+        "noDisaster": 0.10385024508927826,
+        "uncertainty": 0.0019183099991834328,
+        "action": 1,
+        "selected": 10,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 8.326672684688674e-17,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.000052664539036565,
+        "noDisaster": 0.9996054833717047,
+        "uncertainty": 0.00034185208925863756,
+        "action": 0,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 9.486769009248164e-20,
+        "noDisaster": 0,
+        "uncertainty": 5.963111948670274e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.00008884685868485538,
+        "noDisaster": 0.9993261325734091,
+        "uncertainty": 0.00058502056790613,
+        "action": 0,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9996054833717047,
+        "noDisaster": 0.000052664539036565,
+        "uncertainty": 0.00034185208925863756,
+        "action": 1,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 9.486769009248164e-20,
+        "uncertainty": 5.963111948670274e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9993261325734091,
+        "noDisaster": 0.00008884685868485538,
+        "uncertainty": 0.00058502056790613,
+        "action": 1,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.0002740047867605455,
+        "noDisaster": 0.999384218793592,
+        "uncertainty": 0.0003417764196474103,
+        "action": 0,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.421010862427522e-20,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.0004585339137726882,
+        "noDisaster": 0.9989566618120691,
+        "uncertainty": 0.0005848042741581949,
+        "action": 0,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.7947076036992655e-19,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.999384218793592,
+        "noDisaster": 0.0002740047867605455,
+        "uncertainty": 0.0003417764196474103,
+        "action": 1,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 5.421010862427522e-20,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9989566618120691,
+        "noDisaster": 0.0004585339137726882,
+        "uncertainty": 0.0005848042741581949,
+        "action": 1,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 3.7947076036992655e-19,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.0008442743063361219,
+        "noDisaster": 0.9988141442321105,
+        "uncertainty": 0.00034158146155332473,
+        "action": 0,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 8.673617379884035e-19,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.0013841430019732595,
+        "noDisaster": 0.9980315942723378,
+        "uncertainty": 0.0005842627256888764,
+        "action": 0,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.168404344971009e-19,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 1.0842021724855044e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9988141442321105,
+        "noDisaster": 0.0008442743063361219,
+        "uncertainty": 0.00034158146155332473,
+        "action": 1,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 8.673617379884035e-19,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "dispersed_bots_5_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9980315942723378,
+        "noDisaster": 0.0013841430019732595,
+        "uncertainty": 0.0005842627256888764,
+        "action": 1,
+        "selected": 6,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 2.168404344971009e-19,
+        "uncertainty": 1.0842021724855044e-19
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9989208971037338,
+        "uncertainty": 0.001079102896266219,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.8189256484623115e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9983815507515725,
+        "uncertainty": 0.0016184492484274317,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9989208971037338,
+        "noDisaster": 0,
+        "uncertainty": 0.001079102896266219,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.8189256484623115e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9983815507515725,
+        "noDisaster": 0,
+        "uncertainty": 0.0016184492484274317,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9989208971037338,
+        "uncertainty": 0.001079102896266219,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.8189256484623115e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9983815507515725,
+        "uncertainty": 0.0016184492484274317,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9989208971037338,
+        "noDisaster": 0,
+        "uncertainty": 0.001079102896266219,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.8189256484623115e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9983815507515725,
+        "noDisaster": 0,
+        "uncertainty": 0.0016184492484274317,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9989208971037338,
+        "uncertainty": 0.001079102896266219,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.8189256484623115e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9983815507515725,
+        "uncertainty": 0.0016184492484274317,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9989208971037338,
+        "noDisaster": 0,
+        "uncertainty": 0.001079102896266219,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.8189256484623115e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_5_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9983815507515725,
+        "noDisaster": 0,
+        "uncertainty": 0.0016184492484274317,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9998406930268746,
+        "uncertainty": 0.00015930697312539944,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.710505431213761e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9997178320181777,
+        "uncertainty": 0.0002821679818223984,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.87890977618477e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9998406930268746,
+        "noDisaster": 0,
+        "uncertainty": 0.00015930697312539944,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.710505431213761e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9997178320181777,
+        "noDisaster": 0,
+        "uncertainty": 0.0002821679818223984,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.87890977618477e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9998406930268746,
+        "uncertainty": 0.00015930697312539944,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.710505431213761e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9997178320181777,
+        "uncertainty": 0.0002821679818223984,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.87890977618477e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9998406930268746,
+        "noDisaster": 0,
+        "uncertainty": 0.00015930697312539944,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.710505431213761e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9997178320181777,
+        "noDisaster": 0,
+        "uncertainty": 0.0002821679818223984,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.87890977618477e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9998406930268746,
+        "uncertainty": 0.00015930697312539944,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.710505431213761e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9997178320181777,
+        "uncertainty": 0.0002821679818223984,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.87890977618477e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9998406930268746,
+        "noDisaster": 0,
+        "uncertainty": 0.00015930697312539944,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.710505431213761e-19
+      }
+    },
+    {
+      "id": "stale_bots_5_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9997178320181777,
+        "noDisaster": 0,
+        "uncertainty": 0.0002821679818223984,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.87890977618477e-19
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.004740553357164047,
+        "noDisaster": 0.9927380314359032,
+        "uncertainty": 0.0025214152069327716,
+        "action": 0,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.336808689942018e-18,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 2.168404344971009e-18
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.007050838350908754,
+        "noDisaster": 0.989132631641767,
+        "uncertainty": 0.0038165300073241567,
+        "action": 0,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.469446951953614e-18,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9927380314359032,
+        "noDisaster": 0.004740553357164047,
+        "uncertainty": 0.0025214152069327716,
+        "action": 1,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 4.336808689942018e-18,
+        "uncertainty": 2.168404344971009e-18
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.989132631641767,
+        "noDisaster": 0.007050838350908754,
+        "uncertainty": 0.0038165300073241567,
+        "action": 1,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 3.469446951953614e-18,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.17202878967399046,
+        "noDisaster": 0.8258736073264495,
+        "uncertainty": 0.002097602999560095,
+        "action": 0,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 8.326672684688674e-17,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 1.3010426069826053e-18
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.22840763903817368,
+        "noDisaster": 0.7686266447773823,
+        "uncertainty": 0.0029657161844440917,
+        "action": 0,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 3.3306690738754696e-16,
+        "uncertainty": 2.6020852139652106e-18
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.8258736073264495,
+        "noDisaster": 0.17202878967399046,
+        "uncertainty": 0.002097602999560095,
+        "action": 1,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.440892098500626e-16,
+        "noDisaster": 5.551115123125783e-17,
+        "uncertainty": 3.0357660829594124e-18
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.7686266447773823,
+        "noDisaster": 0.22840763903817368,
+        "uncertainty": 0.0029657161844440917,
+        "action": 1,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.3306690738754696e-16,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 2.6020852139652106e-18
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.9774641770858017,
+        "noDisaster": 0.022478730096051,
+        "uncertainty": 0.00005709281814734214,
+        "action": 1,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.3306690738754696e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.0328790734103208e-19
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.9814244150038638,
+        "noDisaster": 0.018504187305016264,
+        "uncertainty": 0.00007139769112007043,
+        "action": 1,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.440892098500626e-16,
+        "noDisaster": 3.122502256758253e-17,
+        "uncertainty": 1.6263032587282567e-19
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.022478730096051,
+        "noDisaster": 0.9774641770858017,
+        "uncertainty": 0.00005709281814734214,
+        "action": 0,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 3.3306690738754696e-16,
+        "uncertainty": 2.0328790734103208e-19
+      }
+    },
+    {
+      "id": "mimic_bots_20_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.018504187305016264,
+        "noDisaster": 0.9814244150038638,
+        "uncertainty": 0.00007139769112007043,
+        "action": 0,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.734723475976807e-17,
+        "noDisaster": 4.440892098500626e-16,
+        "uncertainty": 4.0657581468206416e-20
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.00017827091895848931,
+        "noDisaster": 0.997432335041203,
+        "uncertainty": 0.0023893940398385222,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.710505431213761e-19,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.0003316138253661203,
+        "noDisaster": 0.9949510764629945,
+        "uncertainty": 0.004717309711639517,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.6263032587282567e-19,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 1.734723475976807e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.997432335041203,
+        "noDisaster": 0.00017827091895848931,
+        "uncertainty": 0.0023893940398385222,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 2.710505431213761e-19,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9949510764629945,
+        "noDisaster": 0.0003316138253661203,
+        "uncertainty": 0.004717309711639517,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 1.6263032587282567e-19,
+        "uncertainty": 1.734723475976807e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.000719102219836764,
+        "noDisaster": 0.996892796229825,
+        "uncertainty": 0.002388101550338355,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.2526065174565133e-19,
+        "noDisaster": 0,
+        "uncertainty": 1.3010426069826053e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.001320958087643335,
+        "noDisaster": 0.9939664007921832,
+        "uncertainty": 0.004712641120173446,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.336808689942018e-19,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.996892796229825,
+        "noDisaster": 0.000719102219836764,
+        "uncertainty": 0.002388101550338355,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 3.2526065174565133e-19,
+        "uncertainty": 1.3010426069826053e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9939664007921832,
+        "noDisaster": 0.001320958087643335,
+        "uncertainty": 0.004712641120173446,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 4.336808689942018e-19,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.001403314333870621,
+        "noDisaster": 0.9962102192596368,
+        "uncertainty": 0.002386466406492501,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 8.673617379884035e-19,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 2.168404344971009e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.002537759771436583,
+        "noDisaster": 0.9927553410428951,
+        "uncertainty": 0.004706899185668483,
+        "action": 0,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.168404344971009e-18,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9962102192596368,
+        "noDisaster": 0.001403314333870621,
+        "uncertainty": 0.002386466406492501,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 8.673617379884035e-19,
+        "uncertainty": 2.168404344971009e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_20_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9927553410428951,
+        "noDisaster": 0.002537759771436583,
+        "uncertainty": 0.004706899185668483,
+        "action": 1,
+        "selected": 6,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 2.168404344971009e-18,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.7006394823807716,
+        "noDisaster": 0,
+        "uncertainty": 0.29936051761922844,
+        "action": -1,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.5337159733859173,
+        "noDisaster": 0,
+        "uncertainty": 0.4662840266140827,
+        "action": -1,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.7006394823807716,
+        "uncertainty": 0.29936051761922844,
+        "action": -1,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.5337159733859173,
+        "uncertainty": 0.4662840266140827,
+        "action": -1,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.9934555744492273,
+        "noDisaster": 0,
+        "uncertainty": 0.006544425550772756,
+        "action": 1,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.9444708456222921,
+        "noDisaster": 0,
+        "uncertainty": 0.05552915437770792,
+        "action": 1,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9934555744492273,
+        "uncertainty": 0.006544425550772756,
+        "action": 0,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9444708456222921,
+        "uncertainty": 0.05552915437770792,
+        "action": 0,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.9999835421204755,
+        "noDisaster": 0,
+        "uncertainty": 0.000016457879524640122,
+        "action": 1,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.710505431213761e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.9950801431574172,
+        "noDisaster": 0,
+        "uncertainty": 0.004919856842582806,
+        "action": 1,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9999835421204755,
+        "uncertainty": 0.000016457879524640122,
+        "action": 0,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 2.710505431213761e-20
+      }
+    },
+    {
+      "id": "remote_cluster_bots_20_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9950801431574172,
+        "uncertainty": 0.004919856842582806,
+        "action": 0,
+        "selected": 20,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.999753201617156,
+        "uncertainty": 0.0002467983828441366,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9991014774212779,
+        "uncertainty": 0.0008985225787221655,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 7.589415207398531e-19
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.999753201617156,
+        "noDisaster": 0,
+        "uncertainty": 0.0002467983828441366,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9991014774212779,
+        "noDisaster": 0,
+        "uncertainty": 0.0008985225787221655,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 7.589415207398531e-19
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.999753201617156,
+        "uncertainty": 0.0002467983828441366,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9991014774212779,
+        "uncertainty": 0.0008985225787221655,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 7.589415207398531e-19
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.999753201617156,
+        "noDisaster": 0,
+        "uncertainty": 0.0002467983828441366,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9991014774212779,
+        "noDisaster": 0,
+        "uncertainty": 0.0008985225787221655,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 7.589415207398531e-19
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.999753201617156,
+        "uncertainty": 0.0002467983828441366,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9991014774212779,
+        "uncertainty": 0.0008985225787221655,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 7.589415207398531e-19
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.999753201617156,
+        "noDisaster": 0,
+        "uncertainty": 0.0002467983828441366,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 5.421010862427522e-20
+      }
+    },
+    {
+      "id": "stale_bots_20_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9991014774212779,
+        "noDisaster": 0,
+        "uncertainty": 0.0008985225787221655,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 7.589415207398531e-19
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.009708715886238313,
+        "noDisaster": 0.9861802113711352,
+        "uncertainty": 0.004111072742626606,
+        "action": 0,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 8.673617379884035e-18,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.015489737455382954,
+        "noDisaster": 0.9777721036616253,
+        "uncertainty": 0.006738158882991732,
+        "action": 0,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.7755575615628914e-17,
+        "noDisaster": 0,
+        "uncertainty": 1.214306433183765e-17
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9861802113711352,
+        "noDisaster": 0.009708715886238313,
+        "uncertainty": 0.004111072742626606,
+        "action": 1,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 8.673617379884035e-18,
+        "uncertainty": 4.336808689942018e-18
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9777721036616253,
+        "noDisaster": 0.015489737455382954,
+        "uncertainty": 0.006738158882991732,
+        "action": 1,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 1.3877787807814457e-17,
+        "uncertainty": 1.214306433183765e-17
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.39486105455242604,
+        "noDisaster": 0.6026267853750378,
+        "uncertainty": 0.0025121600725363353,
+        "action": -1,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.885780586188048e-16,
+        "noDisaster": 3.3306690738754696e-16,
+        "uncertainty": 1.734723475976807e-18
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.49295308698321005,
+        "noDisaster": 0.5035765960571607,
+        "uncertainty": 0.0034703169596292417,
+        "action": -1,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 9.43689570931383e-16,
+        "noDisaster": 4.440892098500626e-16,
+        "uncertainty": 5.204170427930421e-18
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.6026267853750378,
+        "noDisaster": 0.39486105455242604,
+        "uncertainty": 0.0025121600725363353,
+        "action": -1,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.3306690738754696e-16,
+        "noDisaster": 3.885780586188048e-16,
+        "uncertainty": 1.734723475976807e-18
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.5035765960571607,
+        "noDisaster": 0.49295308698321005,
+        "uncertainty": 0.0034703169596292417,
+        "action": -1,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.440892098500626e-16,
+        "noDisaster": 9.43689570931383e-16,
+        "uncertainty": 5.204170427930421e-18
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.9965084362552228,
+        "noDisaster": 0.00347706894635719,
+        "uncertainty": 0.000014494798419984648,
+        "action": 1,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.3306690738754696e-16,
+        "noDisaster": 1.734723475976807e-18,
+        "uncertainty": 1.1858461261560205e-20
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.9970405662872681,
+        "noDisaster": 0.002939178835440245,
+        "uncertainty": 0.00002025487729150505,
+        "action": 1,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 1.691355389077387e-17,
+        "uncertainty": 9.147955830346444e-20
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.00347706894635719,
+        "noDisaster": 0.9965084362552228,
+        "uncertainty": 0.000014494798419984648,
+        "action": 0,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.734723475976807e-18,
+        "noDisaster": 3.3306690738754696e-16,
+        "uncertainty": 1.1858461261560205e-20
+      }
+    },
+    {
+      "id": "mimic_bots_50_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.002939178835440245,
+        "noDisaster": 0.9970405662872681,
+        "uncertainty": 0.00002025487729150505,
+        "action": 0,
+        "selected": 55,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.691355389077387e-17,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 9.147955830346444e-20
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.36733569280927325,
+        "noDisaster": 0,
+        "uncertainty": 0.6326643071907267,
+        "action": -1,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-17,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.25414273681440136,
+        "noDisaster": 0,
+        "uncertainty": 0.7458572631855986,
+        "action": -1,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-17,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.36733569280927325,
+        "uncertainty": 0.6326643071907267,
+        "action": -1,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 5.551115123125783e-17,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.25414273681440136,
+        "uncertainty": 0.7458572631855986,
+        "action": -1,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 5.551115123125783e-17,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.8201993657495739,
+        "noDisaster": 0,
+        "uncertainty": 0.1798006342504262,
+        "action": 1,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.7755575615628914e-17
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.6489397309189413,
+        "noDisaster": 0,
+        "uncertainty": 0.35106026908105864,
+        "action": -1,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.8201993657495739,
+        "uncertainty": 0.1798006342504262,
+        "action": 0,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 2.7755575615628914e-17
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.6489397309189413,
+        "uncertainty": 0.35106026908105864,
+        "action": -1,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.9590182478798485,
+        "noDisaster": 0,
+        "uncertainty": 0.040981752120151566,
+        "action": 1,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.0816681711721685e-17
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.8345358429084431,
+        "noDisaster": 0,
+        "uncertainty": 0.16546415709155698,
+        "action": 1,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.7755575615628914e-17
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9590182478798485,
+        "uncertainty": 0.040981752120151566,
+        "action": 0,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 2.0816681711721685e-17
+      }
+    },
+    {
+      "id": "dispersed_bots_50_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.8345358429084431,
+        "uncertainty": 0.16546415709155698,
+        "action": 0,
+        "selected": 10,
+        "groups": 10,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 2.7755575615628914e-17
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.7034800427415921,
+        "noDisaster": 0,
+        "uncertainty": 0.2965199572584078,
+        "action": -1,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 5.551115123125783e-17
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.5364283018743993,
+        "noDisaster": 0,
+        "uncertainty": 0.46357169812560073,
+        "action": -1,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 5.551115123125783e-17
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.7034800427415921,
+        "uncertainty": 0.2965199572584078,
+        "action": -1,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 5.551115123125783e-17
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.5364283018743993,
+        "uncertainty": 0.46357169812560073,
+        "action": -1,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 5.551115123125783e-17
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.9938007585654692,
+        "noDisaster": 0,
+        "uncertainty": 0.006199241434530803,
+        "action": 1,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.9458990141966558,
+        "noDisaster": 0,
+        "uncertainty": 0.05410098580334425,
+        "action": 1,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9938007585654692,
+        "uncertainty": 0.006199241434530803,
+        "action": 0,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9458990141966558,
+        "uncertainty": 0.05410098580334425,
+        "action": 0,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.9999867027918259,
+        "noDisaster": 0,
+        "uncertainty": 0.000013297208174205359,
+        "action": 1,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.9953606510690036,
+        "noDisaster": 0,
+        "uncertainty": 0.00463934893099648,
+        "action": 1,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 7.806255641895632e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9999867027918259,
+        "uncertainty": 0.000013297208174205359,
+        "action": 0,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_50_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9953606510690036,
+        "uncertainty": 0.00463934893099648,
+        "action": 0,
+        "selected": 50,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 7.806255641895632e-18
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.999580320796475,
+        "uncertainty": 0.00041967920352506427,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9988751997984837,
+        "uncertainty": 0.0011248002015163145,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.999580320796475,
+        "noDisaster": 0,
+        "uncertainty": 0.00041967920352506427,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9988751997984837,
+        "noDisaster": 0,
+        "uncertainty": 0.0011248002015163145,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.999580320796475,
+        "uncertainty": 0.00041967920352506427,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9988751997984837,
+        "uncertainty": 0.0011248002015163145,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.999580320796475,
+        "noDisaster": 0,
+        "uncertainty": 0.00041967920352506427,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9988751997984837,
+        "noDisaster": 0,
+        "uncertainty": 0.0011248002015163145,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.999580320796475,
+        "uncertainty": 0.00041967920352506427,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9988751997984837,
+        "uncertainty": 0.0011248002015163145,
+        "action": 0,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.999580320796475,
+        "noDisaster": 0,
+        "uncertainty": 0.00041967920352506427,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.7947076036992655e-19
+      }
+    },
+    {
+      "id": "stale_bots_50_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9988751997984837,
+        "noDisaster": 0,
+        "uncertainty": 0.0011248002015163145,
+        "action": 1,
+        "selected": 5,
+        "groups": 4,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.0006661523165742638,
+        "noDisaster": 0.9990582608038082,
+        "uncertainty": 0.00027558687961774575,
+        "action": 0,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.3852447794681098e-18,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 7.589415207398531e-19
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.0018040411716919533,
+        "noDisaster": 0.9974318081917807,
+        "uncertainty": 0.0007641506365273037,
+        "action": 0,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.951563910473908e-18,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9990582608038082,
+        "noDisaster": 0.0006661523165742638,
+        "uncertainty": 0.00027558687961774575,
+        "action": 1,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 2.3852447794681098e-18,
+        "uncertainty": 7.589415207398531e-19
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9974318081917807,
+        "noDisaster": 0.0018040411716919533,
+        "uncertainty": 0.0007641506365273037,
+        "action": 1,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.951563910473908e-18,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.04526551296437713,
+        "noDisaster": 0.9544711993477742,
+        "uncertainty": 0.00026328768784878234,
+        "action": 0,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.5265566588595902e-16,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 9.215718466126788e-19
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.10727716724155327,
+        "noDisaster": 0.892039425142075,
+        "uncertainty": 0.000683407616371807,
+        "action": 0,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.8041124150158794e-16,
+        "noDisaster": 2.220446049250313e-16,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9544711993477742,
+        "noDisaster": 0.04526551296437713,
+        "uncertainty": 0.00026328768784878234,
+        "action": 1,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 6.661338147750939e-16,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 4.87890977618477e-19
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.892039425142075,
+        "noDisaster": 0.10727716724155327,
+        "uncertainty": 0.000683407616371807,
+        "action": 1,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 1.8041124150158794e-16,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.9628096681994291,
+        "noDisaster": 0.03718007580102009,
+        "uncertainty": 0.000010255999550727446,
+        "action": 1,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 6.661338147750939e-16,
+        "noDisaster": 2.0122792321330962e-16,
+        "uncertainty": 2.879912020664621e-20
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.9812409925851574,
+        "noDisaster": 0.018744646800246047,
+        "uncertainty": 0.000014360614596655645,
+        "action": 1,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.3306690738754696e-16,
+        "noDisaster": 3.469446951953614e-18,
+        "uncertainty": 3.3881317890172014e-21
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.03718007580102009,
+        "noDisaster": 0.9628096681994291,
+        "uncertainty": 0.000010255999550727446,
+        "action": 0,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.0122792321330962e-16,
+        "noDisaster": 6.661338147750939e-16,
+        "uncertainty": 2.879912020664621e-20
+      }
+    },
+    {
+      "id": "mimic_bots_100_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.018744646800246047,
+        "noDisaster": 0.9812409925851574,
+        "uncertainty": 0.000014360614596655645,
+        "action": 0,
+        "selected": 105,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.469446951953614e-18,
+        "noDisaster": 3.3306690738754696e-16,
+        "uncertainty": 3.3881317890172014e-21
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.012192597522017429,
+        "noDisaster": 0.9773953182597618,
+        "uncertainty": 0.010412084218220865,
+        "action": 0,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.3877787807814457e-17,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 1.734723475976807e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.012844925002178993,
+        "noDisaster": 0.9712171074087378,
+        "uncertainty": 0.01593796758908316,
+        "action": 0,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.204170427930421e-18,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 3.469446951953614e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9773953182597618,
+        "noDisaster": 0.012192597522017429,
+        "uncertainty": 0.010412084218220865,
+        "action": 1,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 1.3877787807814457e-17,
+        "uncertainty": 1.734723475976807e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.9712171074087378,
+        "noDisaster": 0.012844925002178993,
+        "uncertainty": 0.01593796758908316,
+        "action": 1,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 5.204170427930421e-18,
+        "uncertainty": 3.469446951953614e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.15344990536076658,
+        "noDisaster": 0.8376269474161866,
+        "uncertainty": 0.00892314722304686,
+        "action": 0,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-17,
+        "noDisaster": 3.3306690738754696e-16,
+        "uncertainty": 1.734723475976807e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.10936091248575706,
+        "noDisaster": 0.8762594046560009,
+        "uncertainty": 0.014379682858241838,
+        "action": 0,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.7755575615628914e-17,
+        "noDisaster": 0,
+        "uncertainty": 1.214306433183765e-17
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.8376269474161866,
+        "noDisaster": 0.15344990536076658,
+        "uncertainty": 0.00892314722304686,
+        "action": 1,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.8762594046560009,
+        "noDisaster": 0.10936091248575706,
+        "uncertainty": 0.014379682858241838,
+        "action": 1,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 2.7755575615628914e-17,
+        "uncertainty": 1.214306433183765e-17
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.6985837348701981,
+        "noDisaster": 0.29823915638431137,
+        "uncertainty": 0.003177108745490534,
+        "action": -1,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.3306690738754696e-16,
+        "noDisaster": 2.7755575615628914e-16,
+        "uncertainty": 3.903127820947816e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.41590508641637225,
+        "noDisaster": 0.5746644947594477,
+        "uncertainty": 0.009430418824179916,
+        "action": -1,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.6653345369377348e-16,
+        "noDisaster": 3.3306690738754696e-16,
+        "uncertainty": 8.673617379884035e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.29823915638431137,
+        "noDisaster": 0.6985837348701981,
+        "uncertainty": 0.003177108745490534,
+        "action": -1,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.7755575615628914e-16,
+        "noDisaster": 3.3306690738754696e-16,
+        "uncertainty": 3.903127820947816e-18
+      }
+    },
+    {
+      "id": "dispersed_bots_100_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.5746644947594477,
+        "noDisaster": 0.41590508641637225,
+        "uncertainty": 0.009430418824179916,
+        "action": -1,
+        "selected": 73,
+        "groups": 68,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 3.3306690738754696e-16,
+        "noDisaster": 1.6653345369377348e-16,
+        "uncertainty": 8.673617379884035e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.7076487114844294,
+        "noDisaster": 0,
+        "uncertainty": 0.29235128851557074,
+        "action": -1,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1.1102230246251565e-16
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.5404496132061731,
+        "noDisaster": 0,
+        "uncertainty": 0.45955038679382687,
+        "action": -1,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.7076487114844294,
+        "uncertainty": 0.29235128851557074,
+        "action": -1,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1.1102230246251565e-16
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.5404496132061731,
+        "uncertainty": 0.45955038679382687,
+        "action": -1,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.994252142060158,
+        "noDisaster": 0,
+        "uncertainty": 0.005747857939842073,
+        "action": 1,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 6.071532165918825e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.9479041568684858,
+        "noDisaster": 0,
+        "uncertainty": 0.052095843131514205,
+        "action": 1,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.994252142060158,
+        "uncertainty": 0.005747857939842073,
+        "action": 0,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 6.071532165918825e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9479041568684858,
+        "uncertainty": 0.052095843131514205,
+        "action": 0,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 6.938893903907228e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0.9999896608258785,
+        "noDisaster": 0,
+        "uncertainty": 0.000010339174121591835,
+        "action": 1,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 1.6940658945086007e-21
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0.9957234577813883,
+        "noDisaster": 0,
+        "uncertainty": 0.004276542218611686,
+        "action": 1,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.469446951953614e-18
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9999896608258785,
+        "uncertainty": 0.000010339174121591835,
+        "action": 0,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.1102230246251565e-16,
+        "uncertainty": 1.6940658945086007e-21
+      }
+    },
+    {
+      "id": "remote_cluster_bots_100_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9957234577813883,
+        "uncertainty": 0.004276542218611686,
+        "action": 0,
+        "selected": 100,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 3.469446951953614e-18
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.15_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9953319310340469,
+        "uncertainty": 0.0046680689659530285,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.15_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.991749252798402,
+        "uncertainty": 0.008250747201598033,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.15_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9953319310340469,
+        "noDisaster": 0,
+        "uncertainty": 0.0046680689659530285,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.15_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.991749252798402,
+        "noDisaster": 0,
+        "uncertainty": 0.008250747201598033,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.5_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9953319310340469,
+        "uncertainty": 0.0046680689659530285,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.5_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.991749252798402,
+        "uncertainty": 0.008250747201598033,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.5_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9953319310340469,
+        "noDisaster": 0,
+        "uncertainty": 0.0046680689659530285,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.5_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.991749252798402,
+        "noDisaster": 0,
+        "uncertainty": 0.008250747201598033,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.8_event_0_terrain_0",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.9953319310340469,
+        "uncertainty": 0.0046680689659530285,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.8_event_0_terrain_1",
+      "actual": {
+        "disaster": 0,
+        "noDisaster": 0.991749252798402,
+        "uncertainty": 0.008250747201598033,
+        "action": 0,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.8_event_1_terrain_0",
+      "actual": {
+        "disaster": 0.9953319310340469,
+        "noDisaster": 0,
+        "uncertainty": 0.0046680689659530285,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "stale_bots_100_R_0.8_event_1_terrain_1",
+      "actual": {
+        "disaster": 0.991749252798402,
+        "noDisaster": 0,
+        "uncertainty": 0.008250747201598033,
+        "action": 1,
+        "selected": 5,
+        "groups": 3,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "sensitivity_epsilon_0.5_terrain_0",
+      "actual": {
+        "disaster": 0.9719096956142704,
+        "noDisaster": 0.02800668015561372,
+        "uncertainty": 0.0000836242301158133,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 6.938893903907228e-17,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "sensitivity_epsilon_0.5_terrain_1",
+      "actual": {
+        "disaster": 0.9601716564446781,
+        "noDisaster": 0.0396838407426697,
+        "uncertainty": 0.00014450281265227928,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 0,
+        "uncertainty": 1.8973538018496328e-19
+      }
+    },
+    {
+      "id": "sensitivity_epsilon_1.5_terrain_0",
+      "actual": {
+        "disaster": 0.9867217166904017,
+        "noDisaster": 0.013256386245357021,
+        "uncertainty": 0.000021897064241357345,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 2.7755575615628914e-17,
+        "uncertainty": 2.710505431213761e-20
+      }
+    },
+    {
+      "id": "sensitivity_epsilon_1.5_terrain_1",
+      "actual": {
+        "disaster": 0.9798941137534471,
+        "noDisaster": 0.02006194385386572,
+        "uncertainty": 0.00004394239268700257,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 6.938893903907228e-17,
+        "uncertainty": 1.4907779871675686e-19
+      }
+    },
+    {
+      "id": "sensitivity_minSamples_1_terrain_0",
+      "actual": {
+        "disaster": 0.9846547457485071,
+        "noDisaster": 0.015316588162025966,
+        "uncertainty": 0.00002866608946672426,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.440892098500626e-16,
+        "noDisaster": 6.765421556309548e-17,
+        "uncertainty": 7.792703114739563e-20
+      }
+    },
+    {
+      "id": "sensitivity_minSamples_1_terrain_1",
+      "actual": {
+        "disaster": 0.9769098453153088,
+        "noDisaster": 0.02303488812418219,
+        "uncertainty": 0.00005526656050902048,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.0328790734103208e-20
+      }
+    },
+    {
+      "id": "sensitivity_minSamples_4_terrain_0",
+      "actual": {
+        "disaster": 0.9846547457485071,
+        "noDisaster": 0.015316588162025966,
+        "uncertainty": 0.00002866608946672426,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.440892098500626e-16,
+        "noDisaster": 6.765421556309548e-17,
+        "uncertainty": 7.792703114739563e-20
+      }
+    },
+    {
+      "id": "sensitivity_minSamples_4_terrain_1",
+      "actual": {
+        "disaster": 0.9769098453153088,
+        "noDisaster": 0.02303488812418219,
+        "uncertainty": 0.00005526656050902048,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.0328790734103208e-20
+      }
+    },
+    {
+      "id": "sensitivity_maxAge_0.25_terrain_0",
+      "actual": {
+        "disaster": 0.4638998989304306,
+        "noDisaster": 0.27734943760390207,
+        "uncertainty": 0.2587506634656674,
+        "action": -1,
+        "selected": 3,
+        "groups": 2,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-17,
+        "noDisaster": 0,
+        "uncertainty": 5.551115123125783e-17
+      }
+    },
+    {
+      "id": "sensitivity_maxAge_0.25_terrain_1",
+      "actual": {
+        "disaster": 0.45550958191667124,
+        "noDisaster": 0.27661677514445,
+        "uncertainty": 0.2678736429388787,
+        "action": -1,
+        "selected": 3,
+        "groups": 2,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-17,
+        "noDisaster": 5.551115123125783e-17,
+        "uncertainty": 0
+      }
+    },
+    {
+      "id": "sensitivity_maxAge_12.0_terrain_0",
+      "actual": {
+        "disaster": 0.9943814738865894,
+        "noDisaster": 0.005611382016612828,
+        "uncertainty": 0.00000714409679787988,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 1.1102230246251565e-16,
+        "noDisaster": 6.071532165918825e-18,
+        "uncertainty": 2.541098841762901e-21
+      }
+    },
+    {
+      "id": "sensitivity_maxAge_12.0_terrain_1",
+      "actual": {
+        "disaster": 0.9896524948555292,
+        "noDisaster": 0.010330408564833266,
+        "uncertainty": 0.000017096579637458006,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 1.5612511283791264e-17,
+        "uncertainty": 1.0164395367051604e-20
+      }
+    },
+    {
+      "id": "sensitivity_cell_0.1_terrain_0",
+      "actual": {
+        "disaster": 0.9591101626653163,
+        "noDisaster": 0.040888916258842875,
+        "uncertainty": 9.210758408381084e-7,
+        "action": 1,
+        "selected": 25,
+        "groups": 18,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 6.661338147750939e-16,
+        "noDisaster": 1.0408340855860843e-16,
+        "uncertainty": 5.293955920339377e-22
+      }
+    },
+    {
+      "id": "sensitivity_cell_0.1_terrain_1",
+      "actual": {
+        "disaster": 0.9566960323884304,
+        "noDisaster": 0.043301993238004044,
+        "uncertainty": 0.000001974373565720436,
+        "action": 1,
+        "selected": 25,
+        "groups": 18,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.440892098500626e-16,
+        "noDisaster": 3.469446951953614e-17,
+        "uncertainty": 4.658681209898652e-21
+      }
+    },
+    {
+      "id": "sensitivity_cell_0.5_terrain_0",
+      "actual": {
+        "disaster": 0.9925962833231675,
+        "noDisaster": 0.007374819386706086,
+        "uncertainty": 0.000028897290126246308,
+        "action": 1,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 2.949029909160572e-17,
+        "uncertainty": 9.147955830346444e-20
+      }
+    },
+    {
+      "id": "sensitivity_cell_0.5_terrain_1",
+      "actual": {
+        "disaster": 0.987396852644209,
+        "noDisaster": 0.012547287515535854,
+        "uncertainty": 0.00005585984025523303,
+        "action": 1,
+        "selected": 25,
+        "groups": 8,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 8.673617379884035e-18,
+        "uncertainty": 1.3552527156068805e-20
+      }
+    },
+    {
+      "id": "sensitivity_timeBin_0.1_terrain_0",
+      "actual": {
+        "disaster": 0.9748808220857044,
+        "noDisaster": 0.025118068177657812,
+        "uncertainty": 0.0000011097366379551044,
+        "action": 1,
+        "selected": 25,
+        "groups": 19,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-16,
+        "noDisaster": 4.5102810375396984e-17,
+        "uncertainty": 1.9058241313221758e-21
+      }
+    },
+    {
+      "id": "sensitivity_timeBin_0.1_terrain_1",
+      "actual": {
+        "disaster": 0.9705083104387275,
+        "noDisaster": 0.029489276671938833,
+        "uncertainty": 0.000002412889333555842,
+        "action": 1,
+        "selected": 25,
+        "groups": 19,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 5.551115123125783e-16,
+        "noDisaster": 2.7755575615628914e-17,
+        "uncertainty": 8.470329472543003e-22
+      }
+    },
+    {
+      "id": "sensitivity_timeBin_1.0_terrain_0",
+      "actual": {
+        "disaster": 0.9255771053668167,
+        "noDisaster": 0.07308788906139946,
+        "uncertainty": 0.001335005571784,
+        "action": 1,
+        "selected": 25,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 1.249000902703301e-16,
+        "uncertainty": 8.673617379884035e-19
+      }
+    },
+    {
+      "id": "sensitivity_timeBin_1.0_terrain_1",
+      "actual": {
+        "disaster": 0.9071556603675839,
+        "noDisaster": 0.09082329002336714,
+        "uncertainty": 0.0020210496090487732,
+        "action": 1,
+        "selected": 25,
+        "groups": 5,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 8.326672684688674e-17,
+        "uncertainty": 4.336808689942018e-19
+      }
+    },
+    {
+      "id": "sensitivity_cap_0.8_terrain_0",
+      "actual": {
+        "disaster": 0.8537127778716007,
+        "noDisaster": 0.1460139465913086,
+        "uncertainty": 0.00027327553709078137,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 1.6653345369377348e-16,
+        "uncertainty": 1.0842021724855044e-19
+      }
+    },
+    {
+      "id": "sensitivity_cap_0.8_terrain_1",
+      "actual": {
+        "disaster": 0.882038347761569,
+        "noDisaster": 0.11767930961750873,
+        "uncertainty": 0.0002823426209223973,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 0,
+        "noDisaster": 0,
+        "uncertainty": 1.6263032587282567e-19
+      }
+    },
+    {
+      "id": "sensitivity_cap_0.99_terrain_0",
+      "actual": {
+        "disaster": 0.9846547457485071,
+        "noDisaster": 0.015316588162025966,
+        "uncertainty": 0.00002866608946672426,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.440892098500626e-16,
+        "noDisaster": 6.765421556309548e-17,
+        "uncertainty": 7.792703114739563e-20
+      }
+    },
+    {
+      "id": "sensitivity_cap_0.99_terrain_1",
+      "actual": {
+        "disaster": 0.9769098453153088,
+        "noDisaster": 0.02303488812418219,
+        "uncertainty": 0.00005526656050902048,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.0328790734103208e-20
+      }
+    },
+    {
+      "id": "sensitivity_threshold_0.55_terrain_0",
+      "actual": {
+        "disaster": 0.9846547457485071,
+        "noDisaster": 0.015316588162025966,
+        "uncertainty": 0.00002866608946672426,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.440892098500626e-16,
+        "noDisaster": 6.765421556309548e-17,
+        "uncertainty": 7.792703114739563e-20
+      }
+    },
+    {
+      "id": "sensitivity_threshold_0.55_terrain_1",
+      "actual": {
+        "disaster": 0.9769098453153088,
+        "noDisaster": 0.02303488812418219,
+        "uncertainty": 0.00005526656050902048,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.0328790734103208e-20
+      }
+    },
+    {
+      "id": "sensitivity_threshold_0.9_terrain_0",
+      "actual": {
+        "disaster": 0.9846547457485071,
+        "noDisaster": 0.015316588162025966,
+        "uncertainty": 0.00002866608946672426,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 4.440892098500626e-16,
+        "noDisaster": 6.765421556309548e-17,
+        "uncertainty": 7.792703114739563e-20
+      }
+    },
+    {
+      "id": "sensitivity_threshold_0.9_terrain_1",
+      "actual": {
+        "disaster": 0.9769098453153088,
+        "noDisaster": 0.02303488812418219,
+        "uncertainty": 0.00005526656050902048,
+        "action": 1,
+        "selected": 25,
+        "groups": 9,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.220446049250313e-16,
+        "noDisaster": 0,
+        "uncertainty": 2.0328790734103208e-20
+      }
+    },
+    {
+      "id": "many_groups_numerical_stress",
+      "actual": {
+        "disaster": 1.426329709879238e-14,
+        "noDisaster": 0.9999999999999858,
+        "uncertainty": 4.888571839038006e-227,
+        "action": 0,
+        "selected": 500,
+        "groups": 499,
+        "feedback": "frozen"
+      },
+      "absolute_differences": {
+        "disaster": 2.0194839173657902e-28,
+        "noDisaster": 1.4210854715202004e-14,
+        "uncertainty": 1.1810112409428094e-239
+      }
+    }
+  ]
+}

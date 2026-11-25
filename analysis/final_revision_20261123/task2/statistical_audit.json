@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "regions_or_gauges": 6,
+  "trained_models": 90,
+  "forecast_summary_rows": 120,
+  "outage_summary_rows": 180,
+  "paired_comparisons": 246,
+  "independent_outage_audits": [
+    {
+      "zone": "Bao_Ha_Runoff",
+      "passed": true,
+      "checks": 627,
+      "raw_rows": 13728,
+      "metric_rows": 66,
+      "scheduled_origins": 208,
+      "observed_origins_by_horizon": {
+        "1": 208,
+        "3": 208,
+        "7": 208
+      },
+      "scope": "hashes, model histories, target/coverage/cutoff metadata and independent error recomputation; no model execution or field validation"
+    },
+    {
+      "zone": "Gianh_Runoff",
+      "passed": true,
+      "checks": 627,
+      "raw_rows": 13728,
+      "metric_rows": 66,
+      "scheduled_origins": 208,
+      "observed_origins_by_horizon": {
+        "1": 208,
+        "3": 208,
+        "7": 208
+      },
+      "scope": "hashes, model histories, target/coverage/cutoff metadata and independent error recomputation; no model execution or field validation"
+    },
+    {
+      "zone": "Can_Tho_Runoff",
+      "passed": true,
+      "checks": 627,
+      "raw_rows": 13728,
+      "metric_rows": 66,
+      "scheduled_origins": 208,
+      "observed_origins_by_horizon": {
+        "1": 208,
+        "3": 208,
+        "7": 208
+      },
+      "scope": "hashes, model histories, target/coverage/cutoff metadata and independent error recomputation; no model execution or field validation"
+    },
+    {
+      "zone": "USGS_06903900",
+      "passed": true,
+      "checks": 627,
+      "raw_rows": 6864,
+      "metric_rows": 66,
+      "scheduled_origins": 104,
+      "observed_origins_by_horizon": {
+        "1": 103,
+        "3": 101,
+        "7": 104
+      },
+      "scope": "hashes, model histories, target/coverage/cutoff metadata and independent error recomputation; no model execution or field validation"
+    },
+    {
+      "zone": "USGS_05421000",
+      "passed": true,
+      "checks": 627,
+      "raw_rows": 6864,
+      "metric_rows": 66,
+      "scheduled_origins": 104,
+      "observed_origins_by_horizon": {
+        "1": 103,
+        "3": 103,
+        "7": 103
+      },
+      "scope": "hashes, model histories, target/coverage/cutoff metadata and independent error recomputation; no model execution or field validation"
+    },
+    {
+      "zone": "USGS_05453520",
+      "passed": true,
+      "checks": 627,
+      "raw_rows": 6864,
+      "metric_rows": 66,
+      "scheduled_origins": 104,
+      "observed_origins_by_horizon": {
+        "1": 104,
+        "3": 104,
+        "7": 104
+      },
+      "scope": "hashes, model histories, target/coverage/cutoff metadata and independent error recomputation; no model execution or field validation"
+    }
+  ],
+  "input_hashes": {
+    "Bao_Ha_Runoff/forecasting_metrics.csv": "9821e8f15f3c221c9e5eca51af0b60c6881d2e99cfa5e3dbb067cca2c9ce8b82",
+    "Bao_Ha_Runoff/neural_metrics.csv": "dfd25e990e4fe6a1c2a0cde88b8e11d87b9b439558313d7bf22215372a78d822",
+    "Bao_Ha_Runoff/baseline_predictions.csv": "ce7c429136bf96be9d91f42eed0a612bae9297c30756161b51743ff735cf7ecf",
+    "Bao_Ha_Runoff/per_seed_predictions.csv": "0e5927aab19fa553d988719d0876f629c4f1446e4809625248a4fbf9f51c37d9",
+    "Bao_Ha_Runoff/forecast_combination_weights.csv": "7dc9ad22932f4a98a0bdaf8ac062663c8ea5a6a8c7b6819fa03765fee4617bd6",
+    "Bao_Ha_Runoff/covariance_shrinkage_sensitivity.csv": "52b9a91920a2a6d9febd4dfdadf5c0c62e1d482baed71f70fcfbbbe8b1b15023",
+    "Bao_Ha_Runoff/quantisation_equivalence.csv": "1fa03a19023dbca2a840c8ea96088e44db2f3215cee3d5b6a2be5ac96fa56735",
+    "Gianh_Runoff/forecasting_metrics.csv": "6c66ff14b025a57b4df60309df615578228cb55631093c4332f87a64984beb4b",
+    "Gianh_Runoff/neural_metrics.csv": "44671e192ce1cd5e3df829291cebe3c586425c3d63b9b8ad906321a3417c4fb0",
+    "Gianh_Runoff/baseline_predictions.csv": "bb67049dc8027d0b6c899693cde69c0dec88e440e2d7fb04a5b55fe262057944",
+    "Gianh_Runoff/per_seed_predictions.csv": "6f6ffcbc6c4c73a6f0da9083f4d8e96b3bea7ecca4ad676925dac09a0a459ff8",
+    "Gianh_Runoff/forecast_combination_weights.csv": "653e6d39afee45cc94927593fc4091805a0559a9464b2b73bded85442ac10f4d",
+    "Gianh_Runoff/covariance_shrinkage_sensitivity.csv": "72f1ad79db6585eabaccde26e0fd1920242cf4c8186da1fcf7a5f6e4630f8c24",
+    "Gianh_Runoff/quantisation_equivalence.csv": "aea32067e1d54cc09a29e5966eac8122f3650642afb54f9f48287db9dcefdb9c",
+    "Can_Tho_Runoff/forecasting_metrics.csv": "abe25365ea6614cb6a1873a438f6cd773f26171e22c2d414d5d585677d5d172b",
+    "Can_Tho_Runoff/neural_metrics.csv": "c1e40e3c8711c82403aca14f66867061ed72f0d3472d753f6e9e91a32cb48a40",
+    "Can_Tho_Runoff/baseline_predictions.csv": "0620c03215b253079e969ad7858e56647dfb0d2b14e5e299800564a7c91baba7",
+    "Can_Tho_Runoff/per_seed_predictions.csv": "719b2490bff9ffcd70b050478962e029e68dc41bdbb055a9316729d16e32f4d2",
+    "Can_Tho_Runoff/forecast_combination_weights.csv": "15192173fc822edb7f9ef866d0ee87a3c158350d1e2ba105a9f47fc37b6b66b7",
+    "Can_Tho_Runoff/covariance_shrinkage_sensitivity.csv": "fa47b00e176cff2d17eee493352f1824ef1276e739dce60a1d1b83c207509a00",
+    "Can_Tho_Runoff/quantisation_equivalence.csv": "483d1860b5ee1f11d6ec4c97450d2d1fc23b23b3e3ed209d7ee46bf0be904ac0",
+    "USGS_06903900/forecasting_metrics.csv": "424fa8af36a412b5969f2817bc7dae26d556a339fb5387cfdc4fa0d7617871de",
+    "USGS_06903900/neural_metrics.csv": "44df00625e56575b35fc484f63f4d5f5e09e3733c88998e7d5736b0447863523",
+    "USGS_06903900/baseline_predictions.csv": "748b11a1bc1cf888f156d562c4d6fba51b7a219abea22ab40ba96f0e3bddfa45",
+    "USGS_06903900/per_seed_predictions.csv": "2dbf1b3488c1852828f07d0a56e5832ee78e6eb3a7f5a639dafee86e84bf5bc2",
+    "USGS_06903900/forecast_combination_weights.csv": "4710a67b3e89c084bd12fe6e5cd3519322a407814411e42f348ab53babb8b302",
+    "USGS_06903900/covariance_shrinkage_sensitivity.csv": "68ff8769c807e57d33a8b8fdd283aeefe0b3b3f411eb59f88863a0093c84a402",
+    "USGS_06903900/quantisation_equivalence.csv": "bee3abc0f8b29c4dabcde09d8ffd9d1eb634dfdf677c7b19727f283d92896d77",
+    "USGS_05421000/forecasting_metrics.csv": "8c85505d22093f190a50ae820bffe3b0975f7538e3066c1220e0ff8b647379d2",
+    "USGS_05421000/neural_metrics.csv": "5472397a3badaaf97847e17616844cb693f268153743688d325a5508a8a559ca",
+    "USGS_05421000/baseline_predictions.csv": "f01087516d60a68dde2faac69d68c3b9ea8744182e8a0aadfbae76381736e9f4",
+    "USGS_05421000/per_seed_predictions.csv": "fdba77820e809e1e4aa92f79c347f1fa9536a274cb619370ca9eaab83c0a3466",
+    "USGS_05421000/forecast_combination_weights.csv": "e8dcff39289d7d35a374b31a6bf7b50429f2ae1cdd2d446ba99890e6fa2cd144",
+    "USGS_05421000/covariance_shrinkage_sensitivity.csv": "25ea8059ac0b0eb36a119c4cc4ec0abe8936537a1c377e56d11016f95388d646",
+    "USGS_05421000/quantisation_equivalence.csv": "f8f19e5619702cd2297fde73d71e4c42ace7f70b682a3af06209e67ef8f47428",
+    "USGS_05453520/forecasting_metrics.csv": "2f80359a147c98a8a7ed245396e8db1f46b1b02a98981b118ddb9d171bdc079c",
+    "USGS_05453520/neural_metrics.csv": "312e167956d29741802e306fbcccc754735f2779165b4475a28d1aae5f3b48a0",
+    "USGS_05453520/baseline_predictions.csv": "57518c461cc70a7e6fd1e3897d0d92b89c3a88c4b047be6ea67f2072554112e9",
+    "USGS_05453520/per_seed_predictions.csv": "dcbbf452f9199e5770d79f0a379596d53eeb506ac9eba9a3233a7acee7c83eba",
+    "USGS_05453520/forecast_combination_weights.csv": "ee6a0c0853ae774b16c4bc249265b2b7903b2f96201d0704b2d51b3a7d04733f",
+    "USGS_05453520/covariance_shrinkage_sensitivity.csv": "35af6f3a9d458484a123e8774b6a6ba6e82a7570839f81b32fe68616d12c8a64",
+    "USGS_05453520/quantisation_equivalence.csv": "7b26e6786f10b6e340a93ce07e5a5ec1a1d286e11cc43dac3db970363eb40105"
+  },
+  "outputs": {
+    "forecast_summary.csv": "6386aee13cd9a4c8cf2bcfd5360d2daef9f0e1e77693e07bfa63d2291a7bfed4",
+    "outage_summary.csv": "14f64bf875c4b8bcd7ad20622da612548c3806101d844ce13b629770de2f7b08",
+    "paired_comparisons.csv": "7af0e0d328ceb177c0405dece7cb83519856ca833e14146ffacaea302fb9f772",
+    "coverage.csv": "317392f922d915f48a866a10e65cacce27e94bd7ec0206d493ca71615a1ae399",
+    "combination_weights.csv": "2a0a7c60e148e51798b8334245f37a18f757e75418d75c0701713f43fc73446a",
+    "shrinkage_sensitivity.csv": "d93261cb9a591629203fb98640ab1ce0ae578fd51435a06efef785208948bd2a",
+    "quantisation_summary.csv": "dd29dffcffa3638837a98024d631f0ae21a6ccb1f28bacca69eef96572532e9a",
+    "runtime_summary.csv": "c29eb0d118b5c981983d67c0940648782987c086dc2f638f6c58e08c42bf31bb"
+  },
+  "analysis_source_sha256": "fab67c6ccbe1d187eb4906ed0deb307cd18e6dd1fa4afde97597eddca7ea611c",
+  "no_retraining": true,
+  "units_never_pooled": true,
+  "interval_definition": "2,000 paired circular-block resamples of ordered available references: 30 daily positions or 5 outage-origin positions; seed SD is separate; missing labels are not filled"
+}

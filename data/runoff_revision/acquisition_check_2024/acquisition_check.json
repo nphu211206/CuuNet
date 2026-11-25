@@ -1,0 +1,105 @@
+{
+  "acquisition_check_passed": true,
+  "publication_run_created": false,
+  "rows": 1098,
+  "start": "2024-01-01",
+  "end": "2024-12-31",
+  "zones": [
+    {
+      "zone": "Bao_Ha_Runoff",
+      "rows": 366,
+      "basin_id": "4051022750",
+      "date_start": "2024-01-01",
+      "date_end": "2024-12-31",
+      "negative_runoff_values_rectified": 0,
+      "negative_precipitation_values_rectified": 0,
+      "valid_area_m2_min": 35962729366.36863,
+      "valid_area_m2_max": 35962729366.36863,
+      "source_image_count": 366
+    },
+    {
+      "zone": "Can_Tho_Runoff",
+      "rows": 366,
+      "basin_id": "4050017020",
+      "date_start": "2024-01-01",
+      "date_end": "2024-12-31",
+      "negative_runoff_values_rectified": 0,
+      "negative_precipitation_values_rectified": 0,
+      "valid_area_m2_min": 20268369312.43922,
+      "valid_area_m2_max": 20268369312.43922,
+      "source_image_count": 366
+    },
+    {
+      "zone": "Gianh_Runoff",
+      "rows": 366,
+      "basin_id": "4050015270",
+      "date_start": "2024-01-01",
+      "date_end": "2024-12-31",
+      "negative_runoff_values_rectified": 0,
+      "negative_precipitation_values_rectified": 0,
+      "valid_area_m2_min": 76367773814.83923,
+      "valid_area_m2_max": 76367773814.83923,
+      "source_image_count": 366
+    }
+  ],
+  "geometry": {
+    "basin_geojson_sha256": "5f138442ded0bd8ac2a3b5637b1d0c12338fc11c5551f35e4f0718b3d15e4946",
+    "zones": [
+      {
+        "zone": "Bao_Ha_Runoff",
+        "basin_id": "4051022750",
+        "anchor_inside_polygon": true,
+        "geometry_type": "Polygon",
+        "polygon_parts": 1,
+        "bounds_lon_lat": [
+          103.5499982446605,
+          21.28333388106657,
+          105.98771302249504,
+          23.854518517381678
+        ],
+        "hydrobasins_sub_area_km2": 36067.6,
+        "valid_land_support_km2": 35962.72936636863,
+        "land_support_over_catalogue_area": 0.9970923866952232,
+        "interpretation": "enclosing level-5 regional drainage unit, not an asserted river-gauge catchment"
+      },
+      {
+        "zone": "Can_Tho_Runoff",
+        "basin_id": "4050017020",
+        "anchor_inside_polygon": true,
+        "geometry_type": "MultiPolygon",
+        "polygon_parts": 2,
+        "bounds_lon_lat": [
+          103.77083527149267,
+          9.611931242518393,
+          106.29639874720709,
+          12.050354962975339
+        ],
+        "hydrobasins_sub_area_km2": 20369.0,
+        "valid_land_support_km2": 20268.36931243922,
+        "land_support_over_catalogue_area": 0.9950596157120732,
+        "interpretation": "enclosing level-5 regional drainage unit, not an asserted river-gauge catchment"
+      },
+      {
+        "zone": "Gianh_Runoff",
+        "basin_id": "4050015270",
+        "anchor_inside_polygon": true,
+        "geometry_type": "MultiPolygon",
+        "polygon_parts": 59,
+        "bounds_lon_lat": [
+          105.59583380054825,
+          9.96666607235676,
+          109.47148826310182,
+          18.80886278414513
+        ],
+        "hydrobasins_sub_area_km2": 79690.4,
+        "valid_land_support_km2": 76367.77381483924,
+        "land_support_over_catalogue_area": 0.958305816194162,
+        "interpretation": "enclosing level-5 regional drainage unit, not an asserted river-gauge catchment"
+      }
+    ]
+  },
+  "input_sha256": {
+    "CuuNet_ERA5Land_daily_2024.csv": "d3dae4d630a57b1f4da3d039d8f194b8c0eaff32b6033ce2fb8ca7ec83bb6fc1"
+  },
+  "interpretation": "partial acquisition check only; complete chronological training data are still required"
+}

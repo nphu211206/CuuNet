@@ -1,0 +1,122 @@
+{
+  "zones": [
+    {
+      "zone": "USGS_06903900",
+      "derived_csv_sha256": "cd9ef1051493d72b44ea48ba8a5d71598863ad667ef99276466b347627123154",
+      "selection_uses_test_data": false,
+      "selection_period_end": "2015-09-30",
+      "selection_rule": "at least 95% training daily discharge availability; nearest static area to candidate 25th, 50th and 75th area percentiles; no test values, missingness or errors used to select stations",
+      "download_files": [
+        {
+          "path": "data/waterbench_observed/raw/data_time_series.zip",
+          "sha256": "64879ffce056c1183cf708ad68a3153f3f87155be93282831ff6105219a87316",
+          "request": {
+            "url": "https://raw.githubusercontent.com/uihilab/WaterBench/46689cf41e4d3c6a09180c2ed17a162c26b87957/data/rawData/data_time_series.zip",
+            "repository": "uihilab/WaterBench",
+            "commit": "46689cf41e4d3c6a09180c2ed17a162c26b87957",
+            "path": "data/rawData/data_time_series.zip"
+          },
+          "request_receipt": "data/waterbench_observed/raw/acquisition_receipt.json",
+          "request_receipt_sha256": "dc4ad2e40069f63be5a1480d8b0fe84ece15aa7f78814863f5e520993174271e"
+        }
+      ],
+      "missing_target_days": 67,
+      "evaluation_target_imputation": "none",
+      "input_imputation": "causal forward fill plus availability mask; masked zero only before first observation",
+      "source_station": {
+        "ifc_id": "579",
+        "usgs_id": "06903900",
+        "area_km2": 1402.0,
+        "hourly_rows": 61368,
+        "training_missing_discharge_days": 45,
+        "training_missing_precipitation_days": 0,
+        "post_training_missing_discharge_days": 22,
+        "post_training_missing_precipitation_days": 5,
+        "source_date_start": "2011-10-01 00:00:00",
+        "source_date_end": "2018-09-30 23:00:00",
+        "selection_area_quantile": 0.25
+      },
+      "cfs_to_m3s_factor": 0.028316846592
+    },
+    {
+      "zone": "USGS_05421000",
+      "derived_csv_sha256": "dae324e7225b6b17783446129b6059c4dc7fa89b5e05bb563868b4db7b60d46b",
+      "selection_uses_test_data": false,
+      "selection_period_end": "2015-09-30",
+      "selection_rule": "at least 95% training daily discharge availability; nearest static area to candidate 25th, 50th and 75th area percentiles; no test values, missingness or errors used to select stations",
+      "download_files": [
+        {
+          "path": "data/waterbench_observed/raw/data_time_series.zip",
+          "sha256": "64879ffce056c1183cf708ad68a3153f3f87155be93282831ff6105219a87316",
+          "request": {
+            "url": "https://raw.githubusercontent.com/uihilab/WaterBench/46689cf41e4d3c6a09180c2ed17a162c26b87957/data/rawData/data_time_series.zip",
+            "repository": "uihilab/WaterBench",
+            "commit": "46689cf41e4d3c6a09180c2ed17a162c26b87957",
+            "path": "data/rawData/data_time_series.zip"
+          },
+          "request_receipt": "data/waterbench_observed/raw/acquisition_receipt.json",
+          "request_receipt_sha256": "dc4ad2e40069f63be5a1480d8b0fe84ece15aa7f78814863f5e520993174271e"
+        }
+      ],
+      "missing_target_days": 18,
+      "evaluation_target_imputation": "none",
+      "input_imputation": "causal forward fill plus availability mask; masked zero only before first observation",
+      "source_station": {
+        "ifc_id": "592",
+        "usgs_id": "05421000",
+        "area_km2": 2723.0,
+        "hourly_rows": 61368,
+        "training_missing_discharge_days": 13,
+        "training_missing_precipitation_days": 0,
+        "post_training_missing_discharge_days": 5,
+        "post_training_missing_precipitation_days": 3,
+        "source_date_start": "2011-10-01 00:00:00",
+        "source_date_end": "2018-09-30 23:00:00",
+        "selection_area_quantile": 0.5
+      },
+      "cfs_to_m3s_factor": 0.028316846592
+    },
+    {
+      "zone": "USGS_05453520",
+      "derived_csv_sha256": "61ef27f3444c3361f8fa7d534d6493a50d50eb730ef739c89ad8654634042109",
+      "selection_uses_test_data": false,
+      "selection_period_end": "2015-09-30",
+      "selection_rule": "at least 95% training daily discharge availability; nearest static area to candidate 25th, 50th and 75th area percentiles; no test values, missingness or errors used to select stations",
+      "download_files": [
+        {
+          "path": "data/waterbench_observed/raw/data_time_series.zip",
+          "sha256": "64879ffce056c1183cf708ad68a3153f3f87155be93282831ff6105219a87316",
+          "request": {
+            "url": "https://raw.githubusercontent.com/uihilab/WaterBench/46689cf41e4d3c6a09180c2ed17a162c26b87957/data/rawData/data_time_series.zip",
+            "repository": "uihilab/WaterBench",
+            "commit": "46689cf41e4d3c6a09180c2ed17a162c26b87957",
+            "path": "data/rawData/data_time_series.zip"
+          },
+          "request_receipt": "data/waterbench_observed/raw/acquisition_receipt.json",
+          "request_receipt_sha256": "dc4ad2e40069f63be5a1480d8b0fe84ece15aa7f78814863f5e520993174271e"
+        }
+      ],
+      "missing_target_days": 49,
+      "evaluation_target_imputation": "none",
+      "input_imputation": "causal forward fill plus availability mask; masked zero only before first observation",
+      "source_station": {
+        "ifc_id": "540",
+        "usgs_id": "05453520",
+        "area_km2": 8067.0,
+        "hourly_rows": 61368,
+        "training_missing_discharge_days": 47,
+        "training_missing_precipitation_days": 0,
+        "post_training_missing_discharge_days": 2,
+        "post_training_missing_precipitation_days": 3,
+        "source_date_start": "2011-10-01 00:00:00",
+        "source_date_end": "2018-09-30 23:00:00",
+        "selection_area_quantile": 0.75
+      },
+      "cfs_to_m3s_factor": 0.028316846592
+    }
+  ],
+  "selection_artifact": "analysis/master_revision_20261121/waterbench_selection.json",
+  "selection_sha256": "416129212a71d311390931a35fc92f7f5f218083854811fc4884823ae7668796",
+  "daily_discharge_minimum_valid_hours": 22,
+  "evaluation_target_imputation": "none"
+}

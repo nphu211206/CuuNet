@@ -1,0 +1,5 @@
+zone,shrinkage,weights,test_mae,test_rmse,primary_setting,interpretation,run_id,provenance_class
+USGS_05421000,0.0,"[0.9192882387693373, 0.08071176123066275, 0.0]",23.899879191151904,52.614769679217375,False,pre-specified test sensitivity; never used to select the primary setting,d4e1d5090ba616535417,observed
+USGS_05421000,0.05,"[0.887467833770858, 0.11253216622914192, 0.0]",24.09024132272847,52.17924762981314,False,pre-specified test sensitivity; never used to select the primary setting,d4e1d5090ba616535417,observed
+USGS_05421000,0.1,"[0.8581244474682747, 0.12033024198412301, 0.021545310547602396]",24.175084865484518,51.83174204459362,True,pre-specified test sensitivity; never used to select the primary setting,d4e1d5090ba616535417,observed
+USGS_05421000,0.2,"[0.802946244553112, 0.13247618052626464, 0.06457757492062335]",24.38056469451145,51.42118827636715,False,pre-specified test sensitivity; never used to select the primary setting,d4e1d5090ba616535417,observed

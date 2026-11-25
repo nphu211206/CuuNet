@@ -1,0 +1,7 @@
+zone,primary_minutes,outage_minutes_after_primary,training_execution
+Bao_Ha_Runoff,120.04618375,10.4602069,"{""strategy"": ""single GPU canonical""}"
+Gianh_Runoff,120.7661403,10.333127350000002,"{""strategy"": ""single GPU canonical""}"
+Can_Tho_Runoff,121.20225141666667,10.294458200000001,"{""strategy"": ""single GPU canonical""}"
+USGS_06903900,49.73996345,6.803859166666667,"{""strategy"": ""two independent GPU worker processes; canonical serial scoring"", ""worker_gpu_ids"": [0, 1], ""one_gpu_per_model"": true, ""execution_report"": ""dual_gpu_execution.json""}"
+USGS_05421000,46.67914438333333,6.0510919,"{""strategy"": ""two independent GPU worker processes; canonical serial scoring"", ""worker_gpu_ids"": [0, 1], ""one_gpu_per_model"": true, ""execution_report"": ""dual_gpu_execution.json""}"
+USGS_05453520,45.74775913333334,5.8892847999999995,"{""strategy"": ""two independent GPU worker processes; canonical serial scoring"", ""worker_gpu_ids"": [0, 1], ""one_gpu_per_model"": true, ""execution_report"": ""dual_gpu_execution.json""}"

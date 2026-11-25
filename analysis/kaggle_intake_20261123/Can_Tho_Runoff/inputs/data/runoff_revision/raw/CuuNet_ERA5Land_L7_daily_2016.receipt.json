@@ -1,0 +1,20 @@
+{
+  "request": {
+    "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+    "frequency": "daily",
+    "start": "2000-01-01",
+    "end": "2024-12-31",
+    "source_bands": [
+      "runoff_sum",
+      "total_precipitation_sum",
+      "temperature_2m",
+      "volumetric_soil_water_layer_1"
+    ],
+    "aggregation": "valid_land_pixel_area_weighted_mean",
+    "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+    "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+  },
+  "download_sha256": "26d79c766b1cc71c4dd349a6c102c5a9517476af9c90a53fedb6d647c86f8409",
+  "recorded_at_utc": "2026-11-22T20:55:08.827235+00:00",
+  "acquisition": "author-supplied authenticated Earth Engine provider export; not a signed provider receipt"
+}

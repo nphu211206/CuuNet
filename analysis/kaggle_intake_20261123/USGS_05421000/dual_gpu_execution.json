@@ -1,0 +1,246 @@
+{
+  "strategy": "independent models in isolated GPU processes",
+  "status": "completed",
+  "gpu_ids": [
+    0,
+    1
+  ],
+  "per_model_gpu_count": 1,
+  "expected_models": 15,
+  "completed_models": 15,
+  "completed_tasks": [
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm",
+      "seed": 123,
+      "training_signature": "db42352565f477b427757083affa8f67a457fdb2916712ea2b32f816bc3d5490",
+      "model_file": "ta_lstm_seed_123.keras",
+      "history_file": "ta_lstm_seed_123.history.json",
+      "model_sha256": "80b6f1291f136aa8d6ef5d810bb0f02c39093a3426ca17341def0fa096f87911",
+      "history_sha256": "f32ebb6ef02559976cf369412b7416e0f993e4dd8721433e09c20c97ee751e81",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm",
+      "seed": 42,
+      "training_signature": "9148e72c26d2ca68e2dc0623f730ae3e19facb6688bf94ed263cb9339c2386d7",
+      "model_file": "ta_lstm_seed_42.keras",
+      "history_file": "ta_lstm_seed_42.history.json",
+      "model_sha256": "7f8b0cf92778a9c758a217ddaf5ffacc01e1e7a95bbb78a8df0fd70d21271ba3",
+      "history_sha256": "ce84580501f3bd93464eb4b39452cd4f397c9360ce1e4942bf4a54cb25b387e1",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm",
+      "seed": 456,
+      "training_signature": "728f11182d147e6723eac494b097fdac78abc04d303ced75ef7c029d8f488bc0",
+      "model_file": "ta_lstm_seed_456.keras",
+      "history_file": "ta_lstm_seed_456.history.json",
+      "model_sha256": "83599d0a0b1948c09b9a023850f085ea5139c2ee59a661082a4221935c5107fd",
+      "history_sha256": "54e7642a3e356860483445b323dd5e772fe3fa1175b22e2b33cf48a260b50446",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm",
+      "seed": 789,
+      "training_signature": "6c385ea261ef0a3844ca66305f139d3885a55c956a463150d40ec5d3ae58be2b",
+      "model_file": "ta_lstm_seed_789.keras",
+      "history_file": "ta_lstm_seed_789.history.json",
+      "model_sha256": "46ebba0d97f74b27cf39252f4dcc1cb4520850b3adace84a3130c768a2e948c9",
+      "history_sha256": "fe73d3205f0f82f3647d78cf462c420814642001a0f2994a46698a35140e68c2",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm",
+      "seed": 2024,
+      "training_signature": "2a4eb74b2196401e82dda63629e753b35574003efca1246b7bd1964c8e348afa",
+      "model_file": "ta_lstm_seed_2024.keras",
+      "history_file": "ta_lstm_seed_2024.history.json",
+      "model_sha256": "9b36370b0330ec3d9e8d061d23e2ac26afadd1463b6c726667c04edcb5c22baa",
+      "history_sha256": "f36fe5c45139afb3d8a0222f690b27431d44644b77e6be9b8c4ba45e645cc860",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "lstm_no_attention",
+      "seed": 42,
+      "training_signature": "697d412ea1149b368cb5bc23a25da37832e262bc7c7bca412c35de0c6fe0a200",
+      "model_file": "lstm_no_attention_seed_42.keras",
+      "history_file": "lstm_no_attention_seed_42.history.json",
+      "model_sha256": "da427c2755eb7d5bb97b8c0359159d1df695528be16682972bfca452f04a83de",
+      "history_sha256": "14cbd23fb3ee941089ab6f7a6ef3cb043f0dd8a020111c97ac7d11a32db75ee6",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "lstm_no_attention",
+      "seed": 123,
+      "training_signature": "e86b481d98ebfd44e408f2537fe0e75b6607253013dd58b4bb141fe29d94ce8c",
+      "model_file": "lstm_no_attention_seed_123.keras",
+      "history_file": "lstm_no_attention_seed_123.history.json",
+      "model_sha256": "4db4a32291c21a217491945569688a66b46c62d2bf06ed3320fedfcee02c4904",
+      "history_sha256": "1fad05d45fe1f3c62085c9c0f3ca51a96d92edfb8ac6db0f64e23d20d0d19f6e",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "lstm_no_attention",
+      "seed": 456,
+      "training_signature": "0cc2b7438e944139b423995b50541f550d6b5cc9068d90fb359cdb2760cace51",
+      "model_file": "lstm_no_attention_seed_456.keras",
+      "history_file": "lstm_no_attention_seed_456.history.json",
+      "model_sha256": "f686d77c68389605d6c6e57cb4f507cf5a3183cdf313a1a5c1da9033a03ae925",
+      "history_sha256": "c5a65e820b3cde0afa685f99c8f4c3ef4a072b2c8316141c31548b3e617e7d08",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "lstm_no_attention",
+      "seed": 789,
+      "training_signature": "0a5caba54d44b472aa6b9ec7442dfd4e1151e177a0a8284a66011f86ee05336d",
+      "model_file": "lstm_no_attention_seed_789.keras",
+      "history_file": "lstm_no_attention_seed_789.history.json",
+      "model_sha256": "9113113e73b644f923fc7edfc7eab20ad58d0ff21e4f0cb2de50bb70de5bda9a",
+      "history_sha256": "f92f1de172652e3aca3d860476098aefbd3ad575ee0771c87c768d63e852b8c4",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "lstm_no_attention",
+      "seed": 2024,
+      "training_signature": "201545a3d0ed0ac22bac3cc24a0d4dd9fc300daceab3f7a17174eb340a354f49",
+      "model_file": "lstm_no_attention_seed_2024.keras",
+      "history_file": "lstm_no_attention_seed_2024.history.json",
+      "model_sha256": "b58d3a2aba1a9416f439b0bf1429e797eb11a0a5fa571442e7da7dee9478a9a3",
+      "history_sha256": "8740db10afd6dc40980cbe070b5499b486a1dfbada09f8b7b232e86884de3053",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm_outage",
+      "seed": 42,
+      "training_signature": "0fe2b808372f60f2b28a4d243a5df60ddb6520b87a07529d7a22363a827c1878",
+      "model_file": "ta_lstm_outage_seed_42.keras",
+      "history_file": "ta_lstm_outage_seed_42.history.json",
+      "model_sha256": "1a694ffa984f60ee9ec5db25eaeaf309f54f002a5b7cf2d393e66bebe15ac96f",
+      "history_sha256": "2ec114acbf9b605f8f88f785d27caa62bbf62f9d1350a1efe837e0c5e8a6514e",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm_outage",
+      "seed": 123,
+      "training_signature": "0a3c95f13204bba1c603966e2225966d387b18cfd0f81f63de511cef5428aaf4",
+      "model_file": "ta_lstm_outage_seed_123.keras",
+      "history_file": "ta_lstm_outage_seed_123.history.json",
+      "model_sha256": "1b27c80763ac0ac4335d0e9342ffa5eb9d3344fe84d12cd08fb1e6f7fa2d9826",
+      "history_sha256": "0cc935625df9f465796ff95cfe662fc8a47225600fb19ab8c2c8c0809ebed16d",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm_outage",
+      "seed": 456,
+      "training_signature": "6813feff35209c0d69685c08eab642406d5cdf313a591245e6316b0cfab418c5",
+      "model_file": "ta_lstm_outage_seed_456.keras",
+      "history_file": "ta_lstm_outage_seed_456.history.json",
+      "model_sha256": "1778060d8cb86b6870b8006298b3b52831b9698d72fefb015d5aaf4d00bda15a",
+      "history_sha256": "dba238ea74acdd97884c3e71b6c0620d55977da986ede37f0ae293faa78438be",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm_outage",
+      "seed": 789,
+      "training_signature": "15c68916386f05e41aa882ae7b226a74041e8c40a2f3d00974e3dea4d69e2987",
+      "model_file": "ta_lstm_outage_seed_789.keras",
+      "history_file": "ta_lstm_outage_seed_789.history.json",
+      "model_sha256": "82e2637ac0505bc6c3771f3e3506a55c7c48639e8b8dcfa4dc708c70ab35ed9d",
+      "history_sha256": "84f5197d57a22e3d0a37ecd2deeade8006bba86568dd8167c2219e76d50d6828",
+      "reused": false
+    },
+    {
+      "zone": "USGS_05421000",
+      "model": "ta_lstm_outage",
+      "seed": 2024,
+      "training_signature": "675134f80ed148e6dbbd218f57859f8d9d648f9cbcd23034d92b1f6b169ccc71",
+      "model_file": "ta_lstm_outage_seed_2024.keras",
+      "history_file": "ta_lstm_outage_seed_2024.history.json",
+      "model_sha256": "6dd8154ca5daebbf80b15f351b82f4473cd7f4f47e0c1db9a1f072ac9dfc17bf",
+      "history_sha256": "7aba0eb38ce401b1b286abb0b3f5f22c2f9ffe1a5ebf5d13c19441d6f791ee4b",
+      "reused": false
+    }
+  ],
+  "worker_gpu_assignments": {
+    "0": [
+      {
+        "model": "ta_lstm",
+        "seed": 42
+      },
+      {
+        "model": "ta_lstm",
+        "seed": 456
+      },
+      {
+        "model": "ta_lstm",
+        "seed": 2024
+      },
+      {
+        "model": "lstm_no_attention",
+        "seed": 123
+      },
+      {
+        "model": "lstm_no_attention",
+        "seed": 789
+      },
+      {
+        "model": "ta_lstm_outage",
+        "seed": 42
+      },
+      {
+        "model": "ta_lstm_outage",
+        "seed": 456
+      },
+      {
+        "model": "ta_lstm_outage",
+        "seed": 2024
+      }
+    ],
+    "1": [
+      {
+        "model": "ta_lstm",
+        "seed": 123
+      },
+      {
+        "model": "ta_lstm",
+        "seed": 789
+      },
+      {
+        "model": "lstm_no_attention",
+        "seed": 42
+      },
+      {
+        "model": "lstm_no_attention",
+        "seed": 456
+      },
+      {
+        "model": "lstm_no_attention",
+        "seed": 2024
+      },
+      {
+        "model": "ta_lstm_outage",
+        "seed": 123
+      },
+      {
+        "model": "ta_lstm_outage",
+        "seed": 789
+      }
+    ]
+  },
+  "elapsed_seconds": 2686.086417267,
+  "checkpoint_scientific_source_unchanged": true
+}

@@ -1,0 +1,137 @@
+{
+  "audit_title": "CuuNet Offline PWA & Crowdsourced Report Persistence Audit",
+  "protocol": "HYDRO-D-26-00188-Revision",
+  "tested_at_utc": "2026-11-23T11:15:15.323Z",
+  "environment": {
+    "browser": "Google Chrome (HeadlessChromium 157.x)",
+    "os": "Windows 11 / Windows Server x64",
+    "url": "http://localhost:8787/index.html",
+    "cache_version": "cuunet-research-v4",
+    "indexeddb_database": "cuunet-research-v1"
+  },
+  "before_reload": {
+    "online": true,
+    "service_worker_controller": true,
+    "service_worker_state": "activated",
+    "caches": [
+      "cuunet-research-v4"
+    ],
+    "report_count_dom": "3 báo cáo đã lưu trong IndexedDB",
+    "saved_reports_count": 3,
+    "saved_reports": [
+      {
+        "id": "rep-pub-20261123-001",
+        "x": 0.15,
+        "y": 0.08,
+        "reputation": 0.92,
+        "claim": true,
+        "description": "Bảo Hà gauge reach: water level rising +1.2m above bankfull",
+        "timestamp": 1795432510878
+      },
+      {
+        "id": "rep-pub-20261123-002",
+        "x": 0.22,
+        "y": 0.14,
+        "reputation": 0.88,
+        "claim": true,
+        "description": "Bảo Hà bridge monitoring station: overflow observed",
+        "timestamp": 1795432510878
+      },
+      {
+        "id": "rep-pub-20261123-003",
+        "x": 48.5,
+        "y": 52.1,
+        "reputation": 0.65,
+        "claim": false,
+        "description": "Remote mountain pass: normal conditions (distant outlier)",
+        "timestamp": 1795432510878
+      }
+    ]
+  },
+  "offline_emulation": {
+    "severed_at_utc": "2026-11-23T11:15:15.323Z",
+    "offline_flag": true,
+    "download_throughput": 0,
+    "upload_throughput": 0,
+    "latency": 0
+  },
+  "after_reload": {
+    "page_title": "CuuNet Research Demonstrator — Edge AI & Sybil Defence",
+    "online": false,
+    "net_status_ui": "● Ngoại tuyến (Offline PWA Active)",
+    "service_worker_controller": true,
+    "service_worker_state": "activated",
+    "caches": [
+      "cuunet-research-v4"
+    ],
+    "report_count_dom": "3 báo cáo đã lưu trong IndexedDB",
+    "persisted_reports_count": 3,
+    "persisted_reports": [
+      {
+        "id": "rep-pub-20261123-001",
+        "x": 0.15,
+        "y": 0.08,
+        "reputation": 0.92,
+        "claim": true,
+        "description": "Bảo Hà gauge reach: water level rising +1.2m above bankfull",
+        "timestamp": 1795432510878
+      },
+      {
+        "id": "rep-pub-20261123-002",
+        "x": 0.22,
+        "y": 0.14,
+        "reputation": 0.88,
+        "claim": true,
+        "description": "Bảo Hà bridge monitoring station: overflow observed",
+        "timestamp": 1795432510878
+      },
+      {
+        "id": "rep-pub-20261123-003",
+        "x": 48.5,
+        "y": 52.1,
+        "reputation": 0.65,
+        "claim": false,
+        "description": "Remote mountain pass: normal conditions (distant outlier)",
+        "timestamp": 1795432510878
+      }
+    ],
+    "persisted_models_count": 2,
+    "persisted_models": [
+      "Bao_Ha_Runoff / FP32",
+      "Bao_Ha_Runoff / uint8 storage"
+    ],
+    "sybil_consensus": {
+      "disaster": 0,
+      "noDisaster": 0,
+      "uncertainty": 1,
+      "action": -1,
+      "selected": 0,
+      "groups": 0,
+      "feedback": "frozen"
+    },
+    "offline_inference": {
+      "origin": "2020-12-31",
+      "target_date": "2021-01-01",
+      "horizon": 1,
+      "physical_inputs_frozen_after": "2020-12-31",
+      "prediction": 0.5463700911265094,
+      "actual": 0.5662630742072844,
+      "units": "mm day-1",
+      "scope": "retrospective input-interruption case",
+      "rolloutPoints": [
+        {
+          "lead": 1,
+          "date": "2021-01-01",
+          "prediction": 0.5463700911265094,
+          "actual": 0.5662630742072844
+        }
+      ]
+    }
+  },
+  "verification_outcome": {
+    "passed_checks": 11,
+    "failed_checks": 0,
+    "report_persistence_proven": true,
+    "offline_inference_proven": true
+  }
+}

@@ -1,0 +1,2324 @@
+[
+  {
+    "number": "1",
+    "title": "HydroBASINS level 7 regional runoff supports",
+    "rows": 3,
+    "headers": [
+      "Region",
+      "HYBAS_ID",
+      "Catalogue area\n(km²)",
+      "Valid land support\n(km²)",
+      "Daily rows"
+    ],
+    "values": [
+      [
+        "Bảo Hà",
+        "4071015370",
+        "6294.1",
+        "6270.73",
+        "9,132"
+      ],
+      [
+        "Sông Gianh",
+        "4070015440",
+        "1841.1",
+        "1830.39",
+        "9,132"
+      ],
+      [
+        "Cần Thơ",
+        "4070017020",
+        "2827.5",
+        "2804.27",
+        "9,132"
+      ]
+    ]
+  },
+  {
+    "number": "2",
+    "title": "WaterBench Iowa gauges and missing daily reference outcomes",
+    "rows": 3,
+    "headers": [
+      "USGS gauge",
+      "IFC ID",
+      "Area\n(km²)",
+      "Missing days\n(full period)",
+      "Observed test\ndays"
+    ],
+    "values": [
+      [
+        "06903900",
+        "579",
+        "1,402",
+        "67",
+        "717/730"
+      ],
+      [
+        "05421000",
+        "592",
+        "2,723",
+        "18",
+        "726/730"
+      ],
+      [
+        "05453520",
+        "540",
+        "8,067",
+        "49",
+        "730/730"
+      ]
+    ]
+  },
+  {
+    "number": "3",
+    "title": "Fixed chronological forecasting protocol",
+    "rows": 9,
+    "headers": [
+      "Setting",
+      "Vietnam reanalysis",
+      "Observed Iowa"
+    ],
+    "values": [
+      [
+        "Target",
+        "Regional runoff generation (mm/day)",
+        "Daily mean discharge (m³/s)"
+      ],
+      [
+        "Training",
+        "1 Jan 2000–31 Dec 2017",
+        "1 Oct 2011–30 Sep 2015"
+      ],
+      [
+        "Validation",
+        "1 Jan 2018–31 Dec 2020",
+        "1 Oct 2015–30 Sep 2016"
+      ],
+      [
+        "Testing",
+        "1 Jan 2021–31 Dec 2024",
+        "1 Oct 2016–30 Sep 2018"
+      ],
+      [
+        "Calendar rows: train / validation / test",
+        "6,575 / 1,096 / 1,461 per region",
+        "1,461 / 366 / 730 per gauge"
+      ],
+      [
+        "Lookback and features",
+        "30 days; 8 features",
+        "30 days; 5 features"
+      ],
+      [
+        "Seeds per recurrent variant",
+        "42, 123, 456, 789, 2024",
+        "42, 123, 456, 789, 2024"
+      ],
+      [
+        "Interruption horizons",
+        "1, 3 and 7 days",
+        "1, 3 and 7 days"
+      ],
+      [
+        "Scheduled interruption origins",
+        "208 per region",
+        "104 per gauge"
+      ]
+    ]
+  },
+  {
+    "number": "4",
+    "title": "One day test forecasts in Vietnam (mm/day)",
+    "rows": 30,
+    "headers": [
+      "Region or gauge",
+      "Method",
+      "MAE",
+      "RMSE",
+      "NSE",
+      "KGE"
+    ],
+    "values": [
+      [
+        "Bảo Hà",
+        "Persistence",
+        "1.455",
+        "4.353",
+        "0.385",
+        "0.693"
+      ],
+      [
+        "Bảo Hà",
+        "Seasonal persistence",
+        "2.539",
+        "6.502",
+        "-0.372",
+        "0.300"
+      ],
+      [
+        "Bảo Hà",
+        "MA (7 days)",
+        "1.901",
+        "4.860",
+        "0.234",
+        "0.456"
+      ],
+      [
+        "Bảo Hà",
+        "Linear trend",
+        "3.151",
+        "5.617",
+        "-0.024",
+        "-0.282"
+      ],
+      [
+        "Bảo Hà",
+        "Seasonal decomposition",
+        "2.906",
+        "6.531",
+        "-0.384",
+        "0.299"
+      ],
+      [
+        "Bảo Hà",
+        "Equal-weight ensemble",
+        "2.168",
+        "4.943",
+        "0.207",
+        "0.262"
+      ],
+      [
+        "Bảo Hà",
+        "Expected-MSE ensemble",
+        "1.976",
+        "4.757",
+        "0.266",
+        "0.357"
+      ],
+      [
+        "Bảo Hà",
+        "LSTM",
+        "1.703 ± 0.217",
+        "4.036 ± 0.031",
+        "0.471",
+        "0.450"
+      ],
+      [
+        "Bảo Hà",
+        "TA-LSTM",
+        "1.833 ± 0.197",
+        "4.055 ± 0.100",
+        "0.466",
+        "0.453"
+      ],
+      [
+        "Bảo Hà",
+        "Censored TA-LSTM",
+        "1.660 ± 0.119",
+        "4.052 ± 0.235",
+        "0.466",
+        "0.438"
+      ],
+      [
+        "Sông Gianh",
+        "Persistence",
+        "1.807",
+        "8.578",
+        "0.103",
+        "0.551"
+      ],
+      [
+        "Sông Gianh",
+        "Seasonal persistence",
+        "2.953",
+        "11.944",
+        "-0.739",
+        "0.282"
+      ],
+      [
+        "Sông Gianh",
+        "MA (7 days)",
+        "2.175",
+        "8.543",
+        "0.110",
+        "0.307"
+      ],
+      [
+        "Sông Gianh",
+        "Linear trend",
+        "3.511",
+        "9.203",
+        "-0.033",
+        "-0.303"
+      ],
+      [
+        "Sông Gianh",
+        "Seasonal decomposition",
+        "3.436",
+        "11.660",
+        "-0.658",
+        "0.265"
+      ],
+      [
+        "Sông Gianh",
+        "Equal-weight ensemble",
+        "2.654",
+        "8.199",
+        "0.180",
+        "0.266"
+      ],
+      [
+        "Sông Gianh",
+        "Expected-MSE ensemble",
+        "2.387",
+        "8.141",
+        "0.192",
+        "0.227"
+      ],
+      [
+        "Sông Gianh",
+        "LSTM",
+        "1.836 ± 0.045",
+        "7.322 ± 0.073",
+        "0.346",
+        "0.334"
+      ],
+      [
+        "Sông Gianh",
+        "TA-LSTM",
+        "1.861 ± 0.013",
+        "7.365 ± 0.026",
+        "0.339",
+        "0.313"
+      ],
+      [
+        "Sông Gianh",
+        "Censored TA-LSTM",
+        "1.925 ± 0.073",
+        "7.735 ± 0.197",
+        "0.270",
+        "0.199"
+      ],
+      [
+        "Cần Thơ",
+        "Persistence",
+        "1.118",
+        "3.041",
+        "0.266",
+        "0.633"
+      ],
+      [
+        "Cần Thơ",
+        "Seasonal persistence",
+        "1.655",
+        "3.552",
+        "-0.002",
+        "0.458"
+      ],
+      [
+        "Cần Thơ",
+        "MA (7 days)",
+        "1.114",
+        "2.577",
+        "0.473",
+        "0.636"
+      ],
+      [
+        "Cần Thơ",
+        "Linear trend",
+        "2.334",
+        "3.603",
+        "-0.031",
+        "-0.207"
+      ],
+      [
+        "Cần Thơ",
+        "Seasonal decomposition",
+        "1.745",
+        "3.526",
+        "0.013",
+        "0.455"
+      ],
+      [
+        "Cần Thơ",
+        "Equal-weight ensemble",
+        "1.385",
+        "2.775",
+        "0.389",
+        "0.399"
+      ],
+      [
+        "Cần Thơ",
+        "Expected-MSE ensemble",
+        "1.130",
+        "2.545",
+        "0.486",
+        "0.593"
+      ],
+      [
+        "Cần Thơ",
+        "LSTM",
+        "1.364 ± 0.099",
+        "2.525 ± 0.025",
+        "0.494",
+        "0.471"
+      ],
+      [
+        "Cần Thơ",
+        "TA-LSTM",
+        "1.412 ± 0.209",
+        "2.551 ± 0.056",
+        "0.483",
+        "0.457"
+      ],
+      [
+        "Cần Thơ",
+        "Censored TA-LSTM",
+        "1.351 ± 0.252",
+        "2.579 ± 0.059",
+        "0.472",
+        "0.441"
+      ]
+    ]
+  },
+  {
+    "number": "5",
+    "title": "One day test forecasts in Iowa (m³/s)",
+    "rows": 30,
+    "headers": [
+      "Region or gauge",
+      "Method",
+      "MAE",
+      "RMSE",
+      "NSE",
+      "KGE"
+    ],
+    "values": [
+      [
+        "USGS 06903900",
+        "Persistence",
+        "0.251",
+        "1.471",
+        "0.955",
+        "0.977"
+      ],
+      [
+        "USGS 06903900",
+        "Seasonal persistence",
+        "11.198",
+        "18.708",
+        "-6.280",
+        "-2.345"
+      ],
+      [
+        "USGS 06903900",
+        "MA (7 days)",
+        "0.945",
+        "3.538",
+        "0.740",
+        "0.857"
+      ],
+      [
+        "USGS 06903900",
+        "Linear trend",
+        "5.037",
+        "8.440",
+        "-0.482",
+        "-0.169"
+      ],
+      [
+        "USGS 06903900",
+        "Seasonal decomposition",
+        "8.768",
+        "15.201",
+        "-3.806",
+        "-1.140"
+      ],
+      [
+        "USGS 06903900",
+        "Equal-weight ensemble",
+        "4.591",
+        "7.808",
+        "-0.268",
+        "-0.086"
+      ],
+      [
+        "USGS 06903900",
+        "Expected-MSE ensemble",
+        "1.141",
+        "3.533",
+        "0.740",
+        "0.832"
+      ],
+      [
+        "USGS 06903900",
+        "LSTM",
+        "4.471 ± 0.392",
+        "4.782 ± 0.358",
+        "0.522",
+        "-0.580"
+      ],
+      [
+        "USGS 06903900",
+        "TA-LSTM",
+        "4.494 ± 0.331",
+        "4.982 ± 0.238",
+        "0.483",
+        "-0.523"
+      ],
+      [
+        "USGS 06903900",
+        "Censored TA-LSTM",
+        "4.911 ± 0.525",
+        "5.424 ± 0.473",
+        "0.384",
+        "-0.666"
+      ],
+      [
+        "USGS 05421000",
+        "Persistence",
+        "8.100",
+        "22.717",
+        "0.873",
+        "0.937"
+      ],
+      [
+        "USGS 05421000",
+        "Seasonal persistence",
+        "48.987",
+        "90.666",
+        "-1.023",
+        "-0.109"
+      ],
+      [
+        "USGS 05421000",
+        "MA (7 days)",
+        "23.637",
+        "53.986",
+        "0.283",
+        "0.596"
+      ],
+      [
+        "USGS 05421000",
+        "Linear trend",
+        "40.121",
+        "64.653",
+        "-0.029",
+        "-0.354"
+      ],
+      [
+        "USGS 05421000",
+        "Seasonal decomposition",
+        "45.304",
+        "86.828",
+        "-0.856",
+        "-0.072"
+      ],
+      [
+        "USGS 05421000",
+        "Equal-weight ensemble",
+        "30.335",
+        "58.330",
+        "0.162",
+        "0.161"
+      ],
+      [
+        "USGS 05421000",
+        "Expected-MSE ensemble",
+        "24.175",
+        "51.832",
+        "0.339",
+        "0.546"
+      ],
+      [
+        "USGS 05421000",
+        "LSTM",
+        "10.866 ± 0.312",
+        "26.899 ± 0.869",
+        "0.822",
+        "0.682"
+      ],
+      [
+        "USGS 05421000",
+        "TA-LSTM",
+        "12.836 ± 0.325",
+        "30.300 ± 1.123",
+        "0.774",
+        "0.646"
+      ],
+      [
+        "USGS 05421000",
+        "Censored TA-LSTM",
+        "15.325 ± 1.060",
+        "34.873 ± 1.456",
+        "0.700",
+        "0.623"
+      ],
+      [
+        "USGS 05453520",
+        "Persistence",
+        "7.362",
+        "15.419",
+        "0.927",
+        "0.963"
+      ],
+      [
+        "USGS 05453520",
+        "Seasonal persistence",
+        "70.140",
+        "90.729",
+        "-1.528",
+        "-0.164"
+      ],
+      [
+        "USGS 05453520",
+        "MA (7 days)",
+        "18.268",
+        "29.294",
+        "0.736",
+        "0.849"
+      ],
+      [
+        "USGS 05453520",
+        "Linear trend",
+        "52.753",
+        "62.960",
+        "-0.217",
+        "-0.058"
+      ],
+      [
+        "USGS 05453520",
+        "Seasonal decomposition",
+        "70.081",
+        "93.750",
+        "-1.699",
+        "-0.134"
+      ],
+      [
+        "USGS 05453520",
+        "Equal-weight ensemble",
+        "41.733",
+        "52.999",
+        "0.137",
+        "0.271"
+      ],
+      [
+        "USGS 05453520",
+        "Expected-MSE ensemble",
+        "19.616",
+        "29.238",
+        "0.737",
+        "0.801"
+      ],
+      [
+        "USGS 05453520",
+        "LSTM",
+        "16.756 ± 1.576",
+        "22.494 ± 1.324",
+        "0.844",
+        "0.721"
+      ],
+      [
+        "USGS 05453520",
+        "TA-LSTM",
+        "20.506 ± 3.658",
+        "26.678 ± 3.934",
+        "0.778",
+        "0.680"
+      ],
+      [
+        "USGS 05453520",
+        "Censored TA-LSTM",
+        "25.407 ± 1.267",
+        "32.769 ± 0.775",
+        "0.670",
+        "0.594"
+      ]
+    ]
+  },
+  {
+    "number": "6",
+    "title": "Paired test error differences with 95% time intervals",
+    "rows": 12,
+    "headers": [
+      "Site and units",
+      "Comparison",
+      "ΔMAE [95% CI]",
+      "ΔRMSE [95% CI]"
+    ],
+    "values": [
+      [
+        "Bảo Hà\n(mm/day)",
+        "Expected-MSE − seasonal decomposition",
+        "-0.929 [-1.281, -0.626]",
+        "-1.774 [-2.978, -0.857]"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "TA-LSTM − LSTM",
+        "0.129 [0.085, 0.177]",
+        "0.018 [-0.012, 0.052]"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Expected-MSE − seasonal decomposition",
+        "-1.048 [-1.646, -0.526]",
+        "-3.519 [-5.943, -1.101]"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "TA-LSTM − LSTM",
+        "0.025 [-0.009, 0.060]",
+        "0.043 [-0.030, 0.099]"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Expected-MSE − seasonal decomposition",
+        "-0.614 [-0.790, -0.457]",
+        "-0.981 [-1.466, -0.612]"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "TA-LSTM − LSTM",
+        "0.049 [0.018, 0.082]",
+        "0.027 [0.008, 0.051]"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Expected-MSE − seasonal decomposition",
+        "-7.627 [-11.772, -4.190]",
+        "-11.668 [-16.484, -7.108]"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "TA-LSTM − LSTM",
+        "0.023 [-0.244, 0.275]",
+        "0.199 [-0.093, 0.433]"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Expected-MSE − seasonal decomposition",
+        "-21.129 [-32.525, -10.925]",
+        "-34.996 [-57.309, -15.304]"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "TA-LSTM − LSTM",
+        "1.971 [1.053, 2.918]",
+        "3.402 [1.505, 5.143]"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Expected-MSE − seasonal decomposition",
+        "-50.465 [-66.518, -36.268]",
+        "-64.512 [-83.402, -46.938]"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "TA-LSTM − LSTM",
+        "3.750 [2.186, 5.447]",
+        "4.184 [2.538, 5.848]"
+      ]
+    ]
+  },
+  {
+    "number": "7",
+    "title": "Validation fitted ensemble weights and bias",
+    "rows": 6,
+    "headers": [
+      "Site and bias units",
+      "n",
+      "w moving\naverage",
+      "w linear\ntrend",
+      "w seasonal\ndecomposition",
+      "Bias vector b\n(same order)"
+    ],
+    "values": [
+      [
+        "Bảo Hà\n(mm/day)",
+        "1096",
+        "0.6098",
+        "0.1809",
+        "0.2093",
+        "0.001; 0.114; -0.176"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "1096",
+        "0.6420",
+        "0.2719",
+        "0.0861",
+        "0.001; -0.442; -0.417"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "1096",
+        "0.8285",
+        "0.0651",
+        "0.1063",
+        "0.003; 0.207; -0.103"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "357",
+        "0.9692",
+        "0.0000",
+        "0.0308",
+        "0.223; 6.109; 7.933"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "365",
+        "0.8581",
+        "0.1203",
+        "0.0215",
+        "-3.136; -26.098; -30.959"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "364",
+        "0.9082",
+        "0.0918",
+        "0.0000",
+        "-1.213; -0.169; -26.152"
+      ]
+    ]
+  },
+  {
+    "number": "8",
+    "title": "Observed reference coverage for input interruptions",
+    "rows": 6,
+    "headers": [
+      "Region or gauge",
+      "Scheduled\norigins",
+      "1 day",
+      "3 days",
+      "7 days"
+    ],
+    "values": [
+      [
+        "Bảo Hà",
+        "208",
+        "208",
+        "208",
+        "208"
+      ],
+      [
+        "Sông Gianh",
+        "208",
+        "208",
+        "208",
+        "208"
+      ],
+      [
+        "Cần Thơ",
+        "208",
+        "208",
+        "208",
+        "208"
+      ],
+      [
+        "USGS 06903900",
+        "104",
+        "103",
+        "101",
+        "104"
+      ],
+      [
+        "USGS 05421000",
+        "104",
+        "103",
+        "103",
+        "103"
+      ],
+      [
+        "USGS 05453520",
+        "104",
+        "104",
+        "104",
+        "104"
+      ]
+    ]
+  },
+  {
+    "number": "9",
+    "title": "MAE with frozen physical inputs at all interruption horizons",
+    "rows": 60,
+    "headers": [
+      "Site and units",
+      "Method",
+      "1 day",
+      "3 days",
+      "7 days"
+    ],
+    "values": [
+      [
+        "Bảo Hà\n(mm/day)",
+        "Persistence",
+        "1.036",
+        "2.586",
+        "1.929"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Seasonal persistence",
+        "2.088",
+        "3.175",
+        "1.907"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "MA (7 days)",
+        "1.779",
+        "2.805",
+        "2.076"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Linear trend",
+        "2.890",
+        "3.848",
+        "2.931"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Seasonal decomposition",
+        "2.435",
+        "3.472",
+        "2.290"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Equal-weight ensemble",
+        "1.886",
+        "2.907",
+        "2.018"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Expected-MSE ensemble",
+        "1.763",
+        "2.789",
+        "1.937"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "LSTM",
+        "1.528 ± 0.230",
+        "3.215 ± 0.353",
+        "2.464 ± 0.509"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "TA-LSTM",
+        "1.656 ± 0.193",
+        "3.728 ± 1.263",
+        "4.628 ± 3.150"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Censored TA-LSTM",
+        "1.483 ± 0.132",
+        "2.819 ± 0.177",
+        "1.802 ± 0.241"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Persistence",
+        "1.552",
+        "3.289",
+        "2.023"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Seasonal persistence",
+        "2.269",
+        "3.674",
+        "2.674"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "MA (7 days)",
+        "1.999",
+        "3.343",
+        "2.277"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Linear trend",
+        "3.117",
+        "4.679",
+        "3.097"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Seasonal decomposition",
+        "2.857",
+        "4.259",
+        "2.816"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Equal-weight ensemble",
+        "2.332",
+        "3.750",
+        "2.320"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Expected-MSE ensemble",
+        "2.163",
+        "3.573",
+        "2.305"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "LSTM",
+        "1.713 ± 0.066",
+        "3.513 ± 0.150",
+        "2.431 ± 0.645"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "TA-LSTM",
+        "1.725 ± 0.021",
+        "4.392 ± 2.051",
+        "4.864 ± 4.796"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Censored TA-LSTM",
+        "1.739 ± 0.095",
+        "3.184 ± 0.159",
+        "1.944 ± 0.414"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Persistence",
+        "0.864",
+        "1.220",
+        "1.342"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Seasonal persistence",
+        "1.327",
+        "1.563",
+        "1.726"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "MA (7 days)",
+        "0.984",
+        "1.199",
+        "1.345"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Linear trend",
+        "2.195",
+        "2.269",
+        "2.362"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Seasonal decomposition",
+        "1.412",
+        "1.675",
+        "1.743"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Equal-weight ensemble",
+        "1.190",
+        "1.372",
+        "1.467"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Expected-MSE ensemble",
+        "0.984",
+        "1.206",
+        "1.332"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "LSTM",
+        "1.248 ± 0.098",
+        "1.150 ± 0.060",
+        "1.553 ± 0.244"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "TA-LSTM",
+        "1.299 ± 0.223",
+        "1.709 ± 0.287",
+        "1.908 ± 0.796"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Censored TA-LSTM",
+        "1.218 ± 0.271",
+        "1.386 ± 0.196",
+        "1.404 ± 0.188"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Persistence",
+        "0.395",
+        "0.526",
+        "1.602"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Seasonal persistence",
+        "11.732",
+        "11.094",
+        "11.202"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "MA (7 days)",
+        "1.168",
+        "1.308",
+        "2.214"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Linear trend",
+        "5.170",
+        "5.143",
+        "5.051"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Seasonal decomposition",
+        "8.953",
+        "8.077",
+        "8.350"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Equal-weight ensemble",
+        "4.709",
+        "4.402",
+        "4.688"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Expected-MSE ensemble",
+        "1.362",
+        "1.464",
+        "2.339"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "LSTM",
+        "4.610 ± 0.394",
+        "2.444 ± 1.022",
+        "3.926 ± 1.089"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "TA-LSTM",
+        "4.625 ± 0.330",
+        "2.184 ± 0.478",
+        "4.563 ± 0.926"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Censored TA-LSTM",
+        "5.055 ± 0.535",
+        "4.653 ± 0.435",
+        "5.770 ± 0.630"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Persistence",
+        "6.111",
+        "23.081",
+        "34.437"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Seasonal persistence",
+        "41.607",
+        "53.101",
+        "45.221"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "MA (7 days)",
+        "21.963",
+        "34.301",
+        "37.663"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Linear trend",
+        "37.413",
+        "41.817",
+        "39.507"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Seasonal decomposition",
+        "38.920",
+        "51.246",
+        "43.578"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Equal-weight ensemble",
+        "27.155",
+        "36.759",
+        "35.383"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Expected-MSE ensemble",
+        "22.768",
+        "33.523",
+        "36.669"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "LSTM",
+        "9.271 ± 0.334",
+        "22.823 ± 1.463",
+        "29.231 ± 0.985"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "TA-LSTM",
+        "11.455 ± 0.305",
+        "22.131 ± 1.051",
+        "29.289 ± 1.047"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Censored TA-LSTM",
+        "13.741 ± 0.954",
+        "22.218 ± 1.303",
+        "27.088 ± 0.853"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Persistence",
+        "6.483",
+        "14.542",
+        "30.071"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Seasonal persistence",
+        "70.085",
+        "69.068",
+        "70.799"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "MA (7 days)",
+        "19.361",
+        "21.053",
+        "31.710"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Linear trend",
+        "51.793",
+        "53.583",
+        "52.557"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Seasonal decomposition",
+        "68.725",
+        "67.706",
+        "69.946"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Equal-weight ensemble",
+        "41.006",
+        "42.437",
+        "44.535"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Expected-MSE ensemble",
+        "20.688",
+        "22.055",
+        "32.219"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "LSTM",
+        "15.924 ± 1.771",
+        "19.561 ± 0.749",
+        "30.087 ± 0.701"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "TA-LSTM",
+        "20.248 ± 4.108",
+        "21.010 ± 3.369",
+        "31.260 ± 1.156"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Censored TA-LSTM",
+        "26.068 ± 1.300",
+        "24.622 ± 1.160",
+        "34.083 ± 0.963"
+      ]
+    ]
+  },
+  {
+    "number": "10",
+    "title": "Censored TA-LSTM minus comparator at seven day interruption",
+    "rows": 12,
+    "headers": [
+      "Site and units",
+      "Comparator",
+      "ΔMAE [95% CI]",
+      "ΔRMSE [95% CI]"
+    ],
+    "values": [
+      [
+        "Bảo Hà\n(mm/day)",
+        "TA-LSTM",
+        "-2.826 [-2.977, -2.687]",
+        "-2.681 [-3.027, -2.358]"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Persistence",
+        "-0.127 [-0.597, 0.252]",
+        "-1.144 [-1.751, -0.491]"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "TA-LSTM",
+        "-2.920 [-3.213, -2.672]",
+        "-2.401 [-3.694, -1.914]"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Persistence",
+        "-0.079 [-0.909, 0.483]",
+        "-2.616 [-5.181, -0.240]"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "TA-LSTM",
+        "-0.504 [-0.572, -0.431]",
+        "-0.479 [-0.609, -0.345]"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Persistence",
+        "0.062 [-0.160, 0.273]",
+        "-0.383 [-0.650, -0.082]"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "TA-LSTM",
+        "1.207 [0.900, 1.492]",
+        "0.837 [0.368, 1.430]"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Persistence",
+        "4.167 [2.973, 5.168]",
+        "1.526 [0.079, 4.182]"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "TA-LSTM",
+        "-2.200 [-6.257, 0.751]",
+        "-6.295 [-11.826, -1.185]"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Persistence",
+        "-7.349 [-15.795, -1.805]",
+        "-14.933 [-28.544, -2.117]"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "TA-LSTM",
+        "2.824 [0.697, 5.061]",
+        "0.675 [-1.117, 2.972]"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Persistence",
+        "4.013 [-1.110, 9.711]",
+        "-2.768 [-7.123, 2.912]"
+      ]
+    ]
+  },
+  {
+    "number": "11",
+    "title": "Complete test evaluation of FP32 and uint8 weight storage",
+    "rows": 6,
+    "headers": [
+      "Site and units",
+      "Selected\nseed",
+      "Model MB\nFP32 / uint8",
+      "Mean absolute\ndifference",
+      "MAE\nFP32 / uint8",
+      "ΔMAE\n(%)"
+    ],
+    "values": [
+      [
+        "Bảo Hà\n(mm/day)",
+        "2024",
+        "2.426 / 0.744",
+        "0.0814",
+        "1.488 / 1.464",
+        "-1.60"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "789",
+        "2.426 / 0.744",
+        "0.0416",
+        "1.854 / 1.837",
+        "-0.96"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "789",
+        "2.426 / 0.744",
+        "0.0769",
+        "1.070 / 1.056",
+        "-1.34"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "789",
+        "2.334 / 0.720",
+        "0.0711",
+        "4.746 / 4.812",
+        "1.40"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "123",
+        "2.334 / 0.721",
+        "0.2899",
+        "17.058 / 17.095",
+        "0.22"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "789",
+        "2.334 / 0.721",
+        "0.9956",
+        "26.278 / 25.999",
+        "-1.06"
+      ]
+    ]
+  },
+  {
+    "number": "12",
+    "title": "Saved desktop Chrome inference times in milliseconds",
+    "rows": 12,
+    "headers": [
+      "Region",
+      "Storage",
+      "Backend",
+      "Warm\nmean",
+      "Warm\nmedian",
+      "Warm\nP95",
+      "First\ninference"
+    ],
+    "values": [
+      [
+        "Bảo Hà",
+        "FP32",
+        "CPU",
+        "4.90",
+        "4.71",
+        "6.23",
+        "9.64"
+      ],
+      [
+        "Bảo Hà",
+        "uint8",
+        "CPU",
+        "4.55",
+        "4.37",
+        "5.49",
+        "6.30"
+      ],
+      [
+        "Sông Gianh",
+        "FP32",
+        "CPU",
+        "4.90",
+        "4.67",
+        "6.15",
+        "13.11"
+      ],
+      [
+        "Sông Gianh",
+        "uint8",
+        "CPU",
+        "5.54",
+        "5.35",
+        "6.97",
+        "5.39"
+      ],
+      [
+        "Cần Thơ",
+        "FP32",
+        "CPU",
+        "5.24",
+        "5.07",
+        "6.56",
+        "8.16"
+      ],
+      [
+        "Cần Thơ",
+        "uint8",
+        "CPU",
+        "5.22",
+        "4.86",
+        "7.12",
+        "5.46"
+      ],
+      [
+        "Bảo Hà",
+        "FP32",
+        "WebGL",
+        "12.82",
+        "12.16",
+        "17.11",
+        "2907.51"
+      ],
+      [
+        "Bảo Hà",
+        "uint8",
+        "WebGL",
+        "12.47",
+        "12.16",
+        "15.86",
+        "19.95"
+      ],
+      [
+        "Sông Gianh",
+        "FP32",
+        "WebGL",
+        "12.25",
+        "12.00",
+        "16.55",
+        "22.59"
+      ],
+      [
+        "Sông Gianh",
+        "uint8",
+        "WebGL",
+        "11.75",
+        "11.77",
+        "13.73",
+        "20.57"
+      ],
+      [
+        "Cần Thơ",
+        "FP32",
+        "WebGL",
+        "12.28",
+        "11.94",
+        "16.38",
+        "19.74"
+      ],
+      [
+        "Cần Thơ",
+        "uint8",
+        "WebGL",
+        "12.99",
+        "12.04",
+        "17.81",
+        "27.61"
+      ]
+    ]
+  },
+  {
+    "number": "13",
+    "title": "Mean rates over malicious rounds 4–10 in the mimic configuration",
+    "rows": 18,
+    "headers": [
+      "Feedback",
+      "Method",
+      "False\nalerts (%)",
+      "Missed\nalerts (%)",
+      "Abstention\n(%)",
+      "Decisive\ncoverage (%)"
+    ],
+    "values": [
+      [
+        "Frozen reputation",
+        "Classical DST",
+        "98.7",
+        "100.0",
+        "1.3",
+        "98.7"
+      ],
+      [
+        "Frozen reputation",
+        "Grouped maximum support",
+        "1.2",
+        "14.9",
+        "13.7",
+        "86.3"
+      ],
+      [
+        "Frozen reputation",
+        "Weighted Bayesian Beta",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Frozen reputation",
+        "Weighted vote 0.75",
+        "0.0",
+        "100.0",
+        "100.0",
+        "0.0"
+      ],
+      [
+        "Frozen reputation",
+        "Weighted vote 0.50",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Frozen reputation",
+        "Majority",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Simulated independent reference",
+        "Classical DST",
+        "28.6",
+        "28.6",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Simulated independent reference",
+        "Grouped maximum support",
+        "14.7",
+        "17.1",
+        "2.4",
+        "97.6"
+      ],
+      [
+        "Simulated independent reference",
+        "Weighted Bayesian Beta",
+        "28.6",
+        "42.9",
+        "14.3",
+        "85.7"
+      ],
+      [
+        "Simulated independent reference",
+        "Weighted vote 0.75",
+        "14.3",
+        "42.9",
+        "28.6",
+        "71.4"
+      ],
+      [
+        "Simulated independent reference",
+        "Weighted vote 0.50",
+        "34.4",
+        "34.4",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Simulated independent reference",
+        "Majority",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Self-consensus feedback",
+        "Classical DST",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Self-consensus feedback",
+        "Grouped maximum support",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Self-consensus feedback",
+        "Weighted Bayesian Beta",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Self-consensus feedback",
+        "Weighted vote 0.75",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Self-consensus feedback",
+        "Weighted vote 0.50",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ],
+      [
+        "Self-consensus feedback",
+        "Majority",
+        "100.0",
+        "100.0",
+        "0.0",
+        "100.0"
+      ]
+    ]
+  },
+  {
+    "number": "A1",
+    "title": "Bias and high target MAE for every test method",
+    "rows": 60,
+    "headers": [
+      "Site and units",
+      "Method",
+      "Mean bias",
+      "High target MAE",
+      "High\ndays"
+    ],
+    "values": [
+      [
+        "Bảo Hà\n(mm/day)",
+        "Persistence",
+        "0.000",
+        "7.288",
+        "178"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Seasonal persistence",
+        "-0.121",
+        "10.228",
+        "178"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "MA (7 days)",
+        "0.000",
+        "8.440",
+        "178"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Linear trend",
+        "-0.088",
+        "10.535",
+        "178"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Seasonal decomposition",
+        "-0.101",
+        "10.205",
+        "178"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Equal-weight ensemble",
+        "-0.063",
+        "8.486",
+        "178"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Expected-MSE ensemble",
+        "-0.037",
+        "8.220",
+        "178"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "LSTM",
+        "0.012 ± 0.475",
+        "6.148 ± 0.313",
+        "178"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "TA-LSTM",
+        "0.354 ± 0.274",
+        "5.945 ± 0.188",
+        "178"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "Censored TA-LSTM",
+        "-0.022 ± 0.150",
+        "6.232 ± 0.233",
+        "178"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Persistence",
+        "-0.000",
+        "9.818",
+        "200"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Seasonal persistence",
+        "0.454",
+        "13.751",
+        "200"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "MA (7 days)",
+        "-0.001",
+        "12.380",
+        "200"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Linear trend",
+        "0.429",
+        "11.082",
+        "200"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Seasonal decomposition",
+        "0.753",
+        "12.992",
+        "200"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Equal-weight ensemble",
+        "0.394",
+        "10.398",
+        "200"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Expected-MSE ensemble",
+        "0.181",
+        "10.678",
+        "200"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "LSTM",
+        "-0.356 ± 0.115",
+        "8.499 ± 0.075",
+        "200"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "TA-LSTM",
+        "-0.381 ± 0.089",
+        "8.524 ± 0.039",
+        "200"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "Censored TA-LSTM",
+        "-0.503 ± 0.118",
+        "8.705 ± 0.085",
+        "200"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Persistence",
+        "-0.000",
+        "4.151",
+        "225"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Seasonal persistence",
+        "-0.139",
+        "4.669",
+        "225"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "MA (7 days)",
+        "-0.002",
+        "3.696",
+        "225"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Linear trend",
+        "-0.039",
+        "6.146",
+        "225"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Seasonal decomposition",
+        "-0.188",
+        "4.659",
+        "225"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Equal-weight ensemble",
+        "-0.076",
+        "3.864",
+        "225"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Expected-MSE ensemble",
+        "-0.024",
+        "3.580",
+        "225"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "LSTM",
+        "0.363 ± 0.162",
+        "3.142 ± 0.076",
+        "225"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "TA-LSTM",
+        "0.358 ± 0.347",
+        "3.171 ± 0.161",
+        "225"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "Censored TA-LSTM",
+        "0.188 ± 0.397",
+        "3.331 ± 0.206",
+        "225"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Persistence",
+        "-0.000",
+        "1.515",
+        "9"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Seasonal persistence",
+        "7.345",
+        "40.774",
+        "9"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "MA (7 days)",
+        "-0.002",
+        "11.005",
+        "9"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Linear trend",
+        "1.559",
+        "35.935",
+        "9"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Seasonal decomposition",
+        "4.149",
+        "41.193",
+        "9"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Equal-weight ensemble",
+        "1.902",
+        "29.378",
+        "9"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Expected-MSE ensemble",
+        "0.126",
+        "11.936",
+        "9"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "LSTM",
+        "3.891 ± 0.389",
+        "8.640 ± 0.273",
+        "9"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "TA-LSTM",
+        "3.722 ± 0.390",
+        "9.714 ± 0.765",
+        "9"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "Censored TA-LSTM",
+        "4.084 ± 0.486",
+        "11.669 ± 2.047",
+        "9"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Persistence",
+        "0.039",
+        "26.107",
+        "151"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Seasonal persistence",
+        "-0.420",
+        "98.222",
+        "151"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "MA (7 days)",
+        "0.685",
+        "66.803",
+        "151"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Linear trend",
+        "3.318",
+        "83.451",
+        "151"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Seasonal decomposition",
+        "-5.810",
+        "98.008",
+        "151"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Equal-weight ensemble",
+        "-0.603",
+        "71.121",
+        "151"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Expected-MSE ensemble",
+        "0.862",
+        "64.131",
+        "151"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "LSTM",
+        "-7.764 ± 0.516",
+        "32.236 ± 0.864",
+        "151"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "TA-LSTM",
+        "-8.828 ± 0.712",
+        "36.127 ± 2.231",
+        "151"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "Censored TA-LSTM",
+        "-7.095 ± 2.162",
+        "41.942 ± 1.394",
+        "151"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Persistence",
+        "-0.205",
+        "17.616",
+        "32"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Seasonal persistence",
+        "20.046",
+        "162.575",
+        "32"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "MA (7 days)",
+        "-0.102",
+        "45.633",
+        "32"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Linear trend",
+        "7.324",
+        "131.129",
+        "32"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Seasonal decomposition",
+        "11.198",
+        "173.266",
+        "32"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Equal-weight ensemble",
+        "6.140",
+        "116.603",
+        "32"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Expected-MSE ensemble",
+        "0.580",
+        "53.285",
+        "32"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "LSTM",
+        "1.387 ± 3.301",
+        "45.941 ± 3.384",
+        "32"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "TA-LSTM",
+        "3.397 ± 4.179",
+        "57.700 ± 8.704",
+        "32"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "Censored TA-LSTM",
+        "3.309 ± 3.501",
+        "78.019 ± 3.705",
+        "32"
+      ]
+    ]
+  },
+  {
+    "number": "B1",
+    "title": "Four prespecified diagonal shrinkage settings",
+    "rows": 24,
+    "headers": [
+      "Site and error units",
+      "λ",
+      "Weights: moving average;\nlinear trend; seasonal decomposition",
+      "Test MAE",
+      "Test RMSE"
+    ],
+    "values": [
+      [
+        "Bảo Hà\n(mm/day)",
+        "0.00",
+        "0.6598; 0.1406; 0.1996",
+        "1.952",
+        "4.754"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "0.05",
+        "0.6329; 0.1626; 0.2044",
+        "1.965",
+        "4.754"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "0.10",
+        "0.6098; 0.1809; 0.2093",
+        "1.976",
+        "4.757"
+      ],
+      [
+        "Bảo Hà\n(mm/day)",
+        "0.20",
+        "0.5717; 0.2097; 0.2186",
+        "1.997",
+        "4.765"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "0.00",
+        "0.6986; 0.2608; 0.0406",
+        "2.351",
+        "8.225"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "0.05",
+        "0.6687; 0.2661; 0.0652",
+        "2.369",
+        "8.176"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "0.10",
+        "0.6420; 0.2719; 0.0861",
+        "2.387",
+        "8.141"
+      ],
+      [
+        "Sông Gianh\n(mm/day)",
+        "0.20",
+        "0.5965; 0.2831; 0.1203",
+        "2.421",
+        "8.096"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "0.00",
+        "0.8746; 0.0390; 0.0864",
+        "1.117",
+        "2.548"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "0.05",
+        "0.8509; 0.0525; 0.0966",
+        "1.124",
+        "2.546"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "0.10",
+        "0.8285; 0.0651; 0.1063",
+        "1.130",
+        "2.545"
+      ],
+      [
+        "Cần Thơ\n(mm/day)",
+        "0.20",
+        "0.7877; 0.0880; 0.1243",
+        "1.143",
+        "2.546"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "0.00",
+        "0.9707; 0.0000; 0.0293",
+        "1.130",
+        "3.532"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "0.05",
+        "0.9700; 0.0000; 0.0300",
+        "1.136",
+        "3.533"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "0.10",
+        "0.9692; 0.0000; 0.0308",
+        "1.141",
+        "3.533"
+      ],
+      [
+        "USGS 06903900\n(m³/s)",
+        "0.20",
+        "0.9652; 0.0043; 0.0305",
+        "1.150",
+        "3.532"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "0.00",
+        "0.9193; 0.0807; 0.0000",
+        "23.900",
+        "52.615"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "0.05",
+        "0.8875; 0.1125; 0.0000",
+        "24.090",
+        "52.179"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "0.10",
+        "0.8581; 0.1203; 0.0215",
+        "24.175",
+        "51.832"
+      ],
+      [
+        "USGS 05421000\n(m³/s)",
+        "0.20",
+        "0.8029; 0.1325; 0.0646",
+        "24.381",
+        "51.421"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "0.00",
+        "0.9233; 0.0767; 0.0000",
+        "19.325",
+        "29.178"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "0.05",
+        "0.9156; 0.0844; 0.0000",
+        "19.472",
+        "29.205"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "0.10",
+        "0.9082; 0.0918; 0.0000",
+        "19.616",
+        "29.238"
+      ],
+      [
+        "USGS 05453520\n(m³/s)",
+        "0.20",
+        "0.8941; 0.1059; 0.0000",
+        "19.899",
+        "29.317"
+      ]
+    ]
+  }
+]

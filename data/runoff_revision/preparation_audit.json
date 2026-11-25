@@ -1,0 +1,1710 @@
+{
+  "zones": [
+    {
+      "zone": "Bao_Ha_Runoff",
+      "rows": 9132,
+      "basin_id": "4071015370",
+      "basin_level": 7,
+      "date_start": "2000-01-01",
+      "date_end": "2024-12-31",
+      "negative_runoff_values_rectified": 0,
+      "negative_precipitation_values_rectified": 0,
+      "valid_area_m2_min": 6270731439.341177,
+      "valid_area_m2_max": 6270731439.341177,
+      "source_image_count": 9132,
+      "derived_csv_sha256": "325c1f032249e5058dee1d31cfcf1632643c2cc964bdb6b843a4a49f8deaad63",
+      "selection_uses_test_data": false,
+      "selection_period_end": "2017-12-31",
+      "selection_rule": "fixed geographical basin independent of outcomes",
+      "download_files": [
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.csv",
+          "sha256": "57b6be8b9e311fb96aff95e6d09bfa3b3e3c8e21bb6e6f8a95fd7da8121e1d00",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.receipt.json",
+          "request_receipt_sha256": "a10482b83c26fb3fb67312621be1bf69cf955a366468e9eb323aa6bd0a8accc5"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.csv",
+          "sha256": "39563ee78a7ed85d2971e11e74c5629ab3de88cdf02fb89f4b79e621a99dec73",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.receipt.json",
+          "request_receipt_sha256": "6a17b518b23e2e3ff7e0466b7588bcbd3669aff6d9a3ad5d24bff55b833568bd"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.csv",
+          "sha256": "9b96075c0dbeb5d8372dba7b0a39d2c71999615e2a69a2f296da206ed5d638cd",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.receipt.json",
+          "request_receipt_sha256": "ebc40b2337b39ff94da588934a76a6ff699009910fff2698e3c74728e79b1838"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.csv",
+          "sha256": "fe3fab2785d6fd749b8a6c8d092793a5eda33d5502e7d23ea548ab2a6afe77b5",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.receipt.json",
+          "request_receipt_sha256": "a0947558d64aa28c9da3fcdcd74b3b33ea9ff3172cedaf0ec483f33d8c72bf37"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.csv",
+          "sha256": "db034a392521449c0555024be8c11d2dd19fc66c5ef4a4a35fa825a8015f3577",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.receipt.json",
+          "request_receipt_sha256": "ee399a3414e739a6e6ebe5b0daa7b488782e49cb93e931a20bde48fc273bb422"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.csv",
+          "sha256": "cd87e7a498f2cebe6ebb9c23a47b56ffd5ab271d0d1dbd9c7e0c803e78c397b4",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.receipt.json",
+          "request_receipt_sha256": "4dbd58d34e9bc1a73447defb94698043d1c87822316a2b0cc6c90b29e7045e5b"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.csv",
+          "sha256": "43390d6a571fa8887c20296addb9d0f6b87177f38a99dfa2f2b00d06d8b77082",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.receipt.json",
+          "request_receipt_sha256": "e6b111a604ec9bb7d85e4d90ed5aea0ef03e9a8025bf21b2fe59e97c8ba242b0"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.csv",
+          "sha256": "8e0f1fa924504a308cbf1b4af7fade7801e82f146e73f928ca0213028ca10796",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.receipt.json",
+          "request_receipt_sha256": "1cc3d22dfff52276556c0234b34523f5b0ed87ea3a0471df69aa0f5829b52114"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.csv",
+          "sha256": "6c0c85773409400270a636e23299298ee92fdd5df949aa95ddb0d0cd9798d155",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.receipt.json",
+          "request_receipt_sha256": "c4d5adbdb80352673aea24e22aaac382d6d93051c6c3de3e5b7e17aceaa99221"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.csv",
+          "sha256": "6af2b6ee18ca6a2247297f50694a216643bab800c74216fe1ca7e115c2cd203a",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.receipt.json",
+          "request_receipt_sha256": "e94469f318631c1859c8877780d35dc27323c3ab685fc0495cf94589756db51a"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.csv",
+          "sha256": "32b8b3d7fd21ba095a904a4ac9c5252001fe3cd3a513a383e4318bd3ee3ace17",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.receipt.json",
+          "request_receipt_sha256": "614d83f01ac78bdd01eec5477ff995f0b60acab514232cc03039c333f6248b0f"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.csv",
+          "sha256": "e85c3276a32d06417b033bbe68b8dc9e1b3775af3df0dce896f6b52c201f6e18",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.receipt.json",
+          "request_receipt_sha256": "0f429557e101209c5c2807c88ccfebc4e4a971bf82c2d5dc254e7a57d8313897"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.csv",
+          "sha256": "70d87f0838b65330f4544a023fdba4ec707ad1695e612e15dd8bd3a764d5ee03",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.receipt.json",
+          "request_receipt_sha256": "65b5bc35167ae36c4ffcd118ae85449a30c0dba8c03edef0fe80a1cee4b18dbc"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.csv",
+          "sha256": "41a5962957da8953ccb3f073d011901acd4ec1de373e9681ae5c51b38be30f5b",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.receipt.json",
+          "request_receipt_sha256": "2f03da8ee073de9be5628d6e0b9e56d19d3a00bc7c7b9d9df6e4f58c21ce2923"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.csv",
+          "sha256": "094be19b6e2a9748a999ec8079e25653749fc759f658880ddbd7d5072f4129b4",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.receipt.json",
+          "request_receipt_sha256": "33a310b37b08e563827a0fa57f14931b89b271de47df64d0db7fe21ff58e0d5d"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.csv",
+          "sha256": "8afc62bd563f9ead377151c601a8cae996f306f481ccda7e96cd0bff1d275460",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.receipt.json",
+          "request_receipt_sha256": "3614c43eb3aa32b6ac4a25f006142e273af17052bbf1021d45eaf8424ee627c9"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.csv",
+          "sha256": "26d79c766b1cc71c4dd349a6c102c5a9517476af9c90a53fedb6d647c86f8409",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.receipt.json",
+          "request_receipt_sha256": "ab707f227d4144074f964de84f37ed7d7bce8db2d86f472e9322ae92170a29dd"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.csv",
+          "sha256": "e9c97872d78b6d41a779e1c73bfef02f1db12efef37941f661806c1193eeebdc",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.receipt.json",
+          "request_receipt_sha256": "cfcbb6872f39e741ae528260f2b37d89d1abd7755b145a946dfa38affa4f0aaf"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.csv",
+          "sha256": "87e240cbb95cb3959157d65a67febb7c97c9e7e6cab1dd90198a176b42173651",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.receipt.json",
+          "request_receipt_sha256": "01cae80a7b2296ba4db692a415d1f388e949a87af39ab0417b0edc388444ffa5"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.csv",
+          "sha256": "e40cc89b75ee7fd39c15a83f2c3e21c336be9e119abb071ea6602fc5472668e6",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.receipt.json",
+          "request_receipt_sha256": "ec8b5044811e7b98b663d909ab43715745110b5c6981e0d947abdcd60cd421af"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.csv",
+          "sha256": "d0540705b53e8ffe704aed55547cf72f987b0ae80252f47605a83ac05178eba4",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.receipt.json",
+          "request_receipt_sha256": "d0151a9da0569c522d0d86fbf440e9287ef720afc8390276e875a92048abe7ff"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.csv",
+          "sha256": "24450c0916831c3c9dd40bf75fa73f5bea4c97074bb1c466961646abee22893e",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.receipt.json",
+          "request_receipt_sha256": "4029cb8fc31e37069913547ffb0a5afb62463121f5a6de935e5acd8f85affc8f"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.csv",
+          "sha256": "8814cfb07417e761e8b41854f71f468b0bf7684c5e7b91d7ae808a986a5c87bb",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.receipt.json",
+          "request_receipt_sha256": "93d908701faf222dea8666a83122e3e752b91516d1bae5fb60d8cc963ea53ce4"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.csv",
+          "sha256": "c600e2c04b6ef507e3a6c1ff8d32ce4eba270a9d549b2f244f2cef29dc3d8e1a",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.receipt.json",
+          "request_receipt_sha256": "37569a041b7b2b1455629d00d571b7cc685d7346e6f96ee6fa0147bd4187df73"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.csv",
+          "sha256": "49d4273247acc02384db331bdc619e778e1075b7fcf4099cc12780182d9468e5",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.receipt.json",
+          "request_receipt_sha256": "0dd2d571688927ce20e276834fe25295358abacf2354f881bfbdbe361a45356b"
+        }
+      ]
+    },
+    {
+      "zone": "Can_Tho_Runoff",
+      "rows": 9132,
+      "basin_id": "4070017020",
+      "basin_level": 7,
+      "date_start": "2000-01-01",
+      "date_end": "2024-12-31",
+      "negative_runoff_values_rectified": 0,
+      "negative_precipitation_values_rectified": 0,
+      "valid_area_m2_min": 2804269216.4078445,
+      "valid_area_m2_max": 2804269216.4078445,
+      "source_image_count": 9132,
+      "derived_csv_sha256": "64d9b84858ffc1a71605797b0656e91379e9b2448ed686af60829cb73e349718",
+      "selection_uses_test_data": false,
+      "selection_period_end": "2017-12-31",
+      "selection_rule": "fixed geographical basin independent of outcomes",
+      "download_files": [
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.csv",
+          "sha256": "57b6be8b9e311fb96aff95e6d09bfa3b3e3c8e21bb6e6f8a95fd7da8121e1d00",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.receipt.json",
+          "request_receipt_sha256": "a10482b83c26fb3fb67312621be1bf69cf955a366468e9eb323aa6bd0a8accc5"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.csv",
+          "sha256": "39563ee78a7ed85d2971e11e74c5629ab3de88cdf02fb89f4b79e621a99dec73",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.receipt.json",
+          "request_receipt_sha256": "6a17b518b23e2e3ff7e0466b7588bcbd3669aff6d9a3ad5d24bff55b833568bd"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.csv",
+          "sha256": "9b96075c0dbeb5d8372dba7b0a39d2c71999615e2a69a2f296da206ed5d638cd",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.receipt.json",
+          "request_receipt_sha256": "ebc40b2337b39ff94da588934a76a6ff699009910fff2698e3c74728e79b1838"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.csv",
+          "sha256": "fe3fab2785d6fd749b8a6c8d092793a5eda33d5502e7d23ea548ab2a6afe77b5",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.receipt.json",
+          "request_receipt_sha256": "a0947558d64aa28c9da3fcdcd74b3b33ea9ff3172cedaf0ec483f33d8c72bf37"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.csv",
+          "sha256": "db034a392521449c0555024be8c11d2dd19fc66c5ef4a4a35fa825a8015f3577",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.receipt.json",
+          "request_receipt_sha256": "ee399a3414e739a6e6ebe5b0daa7b488782e49cb93e931a20bde48fc273bb422"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.csv",
+          "sha256": "cd87e7a498f2cebe6ebb9c23a47b56ffd5ab271d0d1dbd9c7e0c803e78c397b4",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.receipt.json",
+          "request_receipt_sha256": "4dbd58d34e9bc1a73447defb94698043d1c87822316a2b0cc6c90b29e7045e5b"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.csv",
+          "sha256": "43390d6a571fa8887c20296addb9d0f6b87177f38a99dfa2f2b00d06d8b77082",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.receipt.json",
+          "request_receipt_sha256": "e6b111a604ec9bb7d85e4d90ed5aea0ef03e9a8025bf21b2fe59e97c8ba242b0"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.csv",
+          "sha256": "8e0f1fa924504a308cbf1b4af7fade7801e82f146e73f928ca0213028ca10796",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.receipt.json",
+          "request_receipt_sha256": "1cc3d22dfff52276556c0234b34523f5b0ed87ea3a0471df69aa0f5829b52114"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.csv",
+          "sha256": "6c0c85773409400270a636e23299298ee92fdd5df949aa95ddb0d0cd9798d155",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.receipt.json",
+          "request_receipt_sha256": "c4d5adbdb80352673aea24e22aaac382d6d93051c6c3de3e5b7e17aceaa99221"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.csv",
+          "sha256": "6af2b6ee18ca6a2247297f50694a216643bab800c74216fe1ca7e115c2cd203a",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.receipt.json",
+          "request_receipt_sha256": "e94469f318631c1859c8877780d35dc27323c3ab685fc0495cf94589756db51a"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.csv",
+          "sha256": "32b8b3d7fd21ba095a904a4ac9c5252001fe3cd3a513a383e4318bd3ee3ace17",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.receipt.json",
+          "request_receipt_sha256": "614d83f01ac78bdd01eec5477ff995f0b60acab514232cc03039c333f6248b0f"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.csv",
+          "sha256": "e85c3276a32d06417b033bbe68b8dc9e1b3775af3df0dce896f6b52c201f6e18",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.receipt.json",
+          "request_receipt_sha256": "0f429557e101209c5c2807c88ccfebc4e4a971bf82c2d5dc254e7a57d8313897"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.csv",
+          "sha256": "70d87f0838b65330f4544a023fdba4ec707ad1695e612e15dd8bd3a764d5ee03",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.receipt.json",
+          "request_receipt_sha256": "65b5bc35167ae36c4ffcd118ae85449a30c0dba8c03edef0fe80a1cee4b18dbc"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.csv",
+          "sha256": "41a5962957da8953ccb3f073d011901acd4ec1de373e9681ae5c51b38be30f5b",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.receipt.json",
+          "request_receipt_sha256": "2f03da8ee073de9be5628d6e0b9e56d19d3a00bc7c7b9d9df6e4f58c21ce2923"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.csv",
+          "sha256": "094be19b6e2a9748a999ec8079e25653749fc759f658880ddbd7d5072f4129b4",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.receipt.json",
+          "request_receipt_sha256": "33a310b37b08e563827a0fa57f14931b89b271de47df64d0db7fe21ff58e0d5d"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.csv",
+          "sha256": "8afc62bd563f9ead377151c601a8cae996f306f481ccda7e96cd0bff1d275460",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.receipt.json",
+          "request_receipt_sha256": "3614c43eb3aa32b6ac4a25f006142e273af17052bbf1021d45eaf8424ee627c9"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.csv",
+          "sha256": "26d79c766b1cc71c4dd349a6c102c5a9517476af9c90a53fedb6d647c86f8409",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.receipt.json",
+          "request_receipt_sha256": "ab707f227d4144074f964de84f37ed7d7bce8db2d86f472e9322ae92170a29dd"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.csv",
+          "sha256": "e9c97872d78b6d41a779e1c73bfef02f1db12efef37941f661806c1193eeebdc",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.receipt.json",
+          "request_receipt_sha256": "cfcbb6872f39e741ae528260f2b37d89d1abd7755b145a946dfa38affa4f0aaf"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.csv",
+          "sha256": "87e240cbb95cb3959157d65a67febb7c97c9e7e6cab1dd90198a176b42173651",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.receipt.json",
+          "request_receipt_sha256": "01cae80a7b2296ba4db692a415d1f388e949a87af39ab0417b0edc388444ffa5"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.csv",
+          "sha256": "e40cc89b75ee7fd39c15a83f2c3e21c336be9e119abb071ea6602fc5472668e6",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.receipt.json",
+          "request_receipt_sha256": "ec8b5044811e7b98b663d909ab43715745110b5c6981e0d947abdcd60cd421af"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.csv",
+          "sha256": "d0540705b53e8ffe704aed55547cf72f987b0ae80252f47605a83ac05178eba4",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.receipt.json",
+          "request_receipt_sha256": "d0151a9da0569c522d0d86fbf440e9287ef720afc8390276e875a92048abe7ff"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.csv",
+          "sha256": "24450c0916831c3c9dd40bf75fa73f5bea4c97074bb1c466961646abee22893e",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.receipt.json",
+          "request_receipt_sha256": "4029cb8fc31e37069913547ffb0a5afb62463121f5a6de935e5acd8f85affc8f"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.csv",
+          "sha256": "8814cfb07417e761e8b41854f71f468b0bf7684c5e7b91d7ae808a986a5c87bb",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.receipt.json",
+          "request_receipt_sha256": "93d908701faf222dea8666a83122e3e752b91516d1bae5fb60d8cc963ea53ce4"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.csv",
+          "sha256": "c600e2c04b6ef507e3a6c1ff8d32ce4eba270a9d549b2f244f2cef29dc3d8e1a",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.receipt.json",
+          "request_receipt_sha256": "37569a041b7b2b1455629d00d571b7cc685d7346e6f96ee6fa0147bd4187df73"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.csv",
+          "sha256": "49d4273247acc02384db331bdc619e778e1075b7fcf4099cc12780182d9468e5",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.receipt.json",
+          "request_receipt_sha256": "0dd2d571688927ce20e276834fe25295358abacf2354f881bfbdbe361a45356b"
+        }
+      ]
+    },
+    {
+      "zone": "Gianh_Runoff",
+      "rows": 9132,
+      "basin_id": "4070015440",
+      "basin_level": 7,
+      "date_start": "2000-01-01",
+      "date_end": "2024-12-31",
+      "negative_runoff_values_rectified": 0,
+      "negative_precipitation_values_rectified": 0,
+      "valid_area_m2_min": 1830392302.1176472,
+      "valid_area_m2_max": 1830392302.1176472,
+      "source_image_count": 9132,
+      "derived_csv_sha256": "f8d73ccdcdce46efd12ffb5ce05b223c812f2f53fc228e19813de5297b7ebe7d",
+      "selection_uses_test_data": false,
+      "selection_period_end": "2017-12-31",
+      "selection_rule": "fixed geographical basin independent of outcomes",
+      "download_files": [
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.csv",
+          "sha256": "57b6be8b9e311fb96aff95e6d09bfa3b3e3c8e21bb6e6f8a95fd7da8121e1d00",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.receipt.json",
+          "request_receipt_sha256": "a10482b83c26fb3fb67312621be1bf69cf955a366468e9eb323aa6bd0a8accc5"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.csv",
+          "sha256": "39563ee78a7ed85d2971e11e74c5629ab3de88cdf02fb89f4b79e621a99dec73",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.receipt.json",
+          "request_receipt_sha256": "6a17b518b23e2e3ff7e0466b7588bcbd3669aff6d9a3ad5d24bff55b833568bd"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.csv",
+          "sha256": "9b96075c0dbeb5d8372dba7b0a39d2c71999615e2a69a2f296da206ed5d638cd",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.receipt.json",
+          "request_receipt_sha256": "ebc40b2337b39ff94da588934a76a6ff699009910fff2698e3c74728e79b1838"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.csv",
+          "sha256": "fe3fab2785d6fd749b8a6c8d092793a5eda33d5502e7d23ea548ab2a6afe77b5",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.receipt.json",
+          "request_receipt_sha256": "a0947558d64aa28c9da3fcdcd74b3b33ea9ff3172cedaf0ec483f33d8c72bf37"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.csv",
+          "sha256": "db034a392521449c0555024be8c11d2dd19fc66c5ef4a4a35fa825a8015f3577",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.receipt.json",
+          "request_receipt_sha256": "ee399a3414e739a6e6ebe5b0daa7b488782e49cb93e931a20bde48fc273bb422"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.csv",
+          "sha256": "cd87e7a498f2cebe6ebb9c23a47b56ffd5ab271d0d1dbd9c7e0c803e78c397b4",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.receipt.json",
+          "request_receipt_sha256": "4dbd58d34e9bc1a73447defb94698043d1c87822316a2b0cc6c90b29e7045e5b"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.csv",
+          "sha256": "43390d6a571fa8887c20296addb9d0f6b87177f38a99dfa2f2b00d06d8b77082",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.receipt.json",
+          "request_receipt_sha256": "e6b111a604ec9bb7d85e4d90ed5aea0ef03e9a8025bf21b2fe59e97c8ba242b0"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.csv",
+          "sha256": "8e0f1fa924504a308cbf1b4af7fade7801e82f146e73f928ca0213028ca10796",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.receipt.json",
+          "request_receipt_sha256": "1cc3d22dfff52276556c0234b34523f5b0ed87ea3a0471df69aa0f5829b52114"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.csv",
+          "sha256": "6c0c85773409400270a636e23299298ee92fdd5df949aa95ddb0d0cd9798d155",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.receipt.json",
+          "request_receipt_sha256": "c4d5adbdb80352673aea24e22aaac382d6d93051c6c3de3e5b7e17aceaa99221"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.csv",
+          "sha256": "6af2b6ee18ca6a2247297f50694a216643bab800c74216fe1ca7e115c2cd203a",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.receipt.json",
+          "request_receipt_sha256": "e94469f318631c1859c8877780d35dc27323c3ab685fc0495cf94589756db51a"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.csv",
+          "sha256": "32b8b3d7fd21ba095a904a4ac9c5252001fe3cd3a513a383e4318bd3ee3ace17",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.receipt.json",
+          "request_receipt_sha256": "614d83f01ac78bdd01eec5477ff995f0b60acab514232cc03039c333f6248b0f"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.csv",
+          "sha256": "e85c3276a32d06417b033bbe68b8dc9e1b3775af3df0dce896f6b52c201f6e18",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.receipt.json",
+          "request_receipt_sha256": "0f429557e101209c5c2807c88ccfebc4e4a971bf82c2d5dc254e7a57d8313897"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.csv",
+          "sha256": "70d87f0838b65330f4544a023fdba4ec707ad1695e612e15dd8bd3a764d5ee03",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.receipt.json",
+          "request_receipt_sha256": "65b5bc35167ae36c4ffcd118ae85449a30c0dba8c03edef0fe80a1cee4b18dbc"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.csv",
+          "sha256": "41a5962957da8953ccb3f073d011901acd4ec1de373e9681ae5c51b38be30f5b",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.receipt.json",
+          "request_receipt_sha256": "2f03da8ee073de9be5628d6e0b9e56d19d3a00bc7c7b9d9df6e4f58c21ce2923"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.csv",
+          "sha256": "094be19b6e2a9748a999ec8079e25653749fc759f658880ddbd7d5072f4129b4",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.receipt.json",
+          "request_receipt_sha256": "33a310b37b08e563827a0fa57f14931b89b271de47df64d0db7fe21ff58e0d5d"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.csv",
+          "sha256": "8afc62bd563f9ead377151c601a8cae996f306f481ccda7e96cd0bff1d275460",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.receipt.json",
+          "request_receipt_sha256": "3614c43eb3aa32b6ac4a25f006142e273af17052bbf1021d45eaf8424ee627c9"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.csv",
+          "sha256": "26d79c766b1cc71c4dd349a6c102c5a9517476af9c90a53fedb6d647c86f8409",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.receipt.json",
+          "request_receipt_sha256": "ab707f227d4144074f964de84f37ed7d7bce8db2d86f472e9322ae92170a29dd"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.csv",
+          "sha256": "e9c97872d78b6d41a779e1c73bfef02f1db12efef37941f661806c1193eeebdc",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.receipt.json",
+          "request_receipt_sha256": "cfcbb6872f39e741ae528260f2b37d89d1abd7755b145a946dfa38affa4f0aaf"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.csv",
+          "sha256": "87e240cbb95cb3959157d65a67febb7c97c9e7e6cab1dd90198a176b42173651",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.receipt.json",
+          "request_receipt_sha256": "01cae80a7b2296ba4db692a415d1f388e949a87af39ab0417b0edc388444ffa5"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.csv",
+          "sha256": "e40cc89b75ee7fd39c15a83f2c3e21c336be9e119abb071ea6602fc5472668e6",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.receipt.json",
+          "request_receipt_sha256": "ec8b5044811e7b98b663d909ab43715745110b5c6981e0d947abdcd60cd421af"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.csv",
+          "sha256": "d0540705b53e8ffe704aed55547cf72f987b0ae80252f47605a83ac05178eba4",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.receipt.json",
+          "request_receipt_sha256": "d0151a9da0569c522d0d86fbf440e9287ef720afc8390276e875a92048abe7ff"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.csv",
+          "sha256": "24450c0916831c3c9dd40bf75fa73f5bea4c97074bb1c466961646abee22893e",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.receipt.json",
+          "request_receipt_sha256": "4029cb8fc31e37069913547ffb0a5afb62463121f5a6de935e5acd8f85affc8f"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.csv",
+          "sha256": "8814cfb07417e761e8b41854f71f468b0bf7684c5e7b91d7ae808a986a5c87bb",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.receipt.json",
+          "request_receipt_sha256": "93d908701faf222dea8666a83122e3e752b91516d1bae5fb60d8cc963ea53ce4"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.csv",
+          "sha256": "c600e2c04b6ef507e3a6c1ff8d32ce4eba270a9d549b2f244f2cef29dc3d8e1a",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.receipt.json",
+          "request_receipt_sha256": "37569a041b7b2b1455629d00d571b7cc685d7346e6f96ee6fa0147bd4187df73"
+        },
+        {
+          "path": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.csv",
+          "sha256": "49d4273247acc02384db331bdc619e778e1075b7fcf4099cc12780182d9468e5",
+          "request": {
+            "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+            "frequency": "daily",
+            "start": "2000-01-01",
+            "end": "2024-12-31",
+            "source_bands": [
+              "runoff_sum",
+              "total_precipitation_sum",
+              "temperature_2m",
+              "volumetric_soil_water_layer_1"
+            ],
+            "aggregation": "valid_land_pixel_area_weighted_mean",
+            "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+            "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+          },
+          "request_receipt": "data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.receipt.json",
+          "request_receipt_sha256": "0dd2d571688927ce20e276834fe25295358abacf2354f881bfbdbe361a45356b"
+        }
+      ]
+    }
+  ],
+  "request": {
+    "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+    "frequency": "daily",
+    "start": "2000-01-01",
+    "end": "2024-12-31",
+    "source_bands": [
+      "runoff_sum",
+      "total_precipitation_sum",
+      "temperature_2m",
+      "volumetric_soil_water_layer_1"
+    ],
+    "aggregation": "valid_land_pixel_area_weighted_mean",
+    "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+    "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+  },
+  "basin_geojson_sha256": "ec3f2dc45af690cb41551926affaf8e0e7a6e74c04012615867c20bacb11eacf",
+  "geometry": {
+    "basin_geojson_sha256": "ec3f2dc45af690cb41551926affaf8e0e7a6e74c04012615867c20bacb11eacf",
+    "zones": [
+      {
+        "zone": "Bao_Ha_Runoff",
+        "basin_id": "4071015370",
+        "anchor_inside_polygon": true,
+        "geometry_type": "Polygon",
+        "polygon_parts": 1,
+        "bounds_lon_lat": [
+          104.0077650808301,
+          21.583333285784402,
+          105.22076541964144,
+          23.11285403843493
+        ],
+        "hydrobasins_sub_area_km2": 6294.1,
+        "valid_land_support_km2": 6270.731439341177,
+        "land_support_over_catalogue_area": 0.9962872276165261,
+        "interpretation": "enclosing level-7 regional drainage unit, not an asserted river-gauge catchment"
+      },
+      {
+        "zone": "Can_Tho_Runoff",
+        "basin_id": "4070017020",
+        "anchor_inside_polygon": true,
+        "geometry_type": "MultiPolygon",
+        "polygon_parts": 2,
+        "bounds_lon_lat": [
+          105.1624984136493,
+          9.611931242518393,
+          106.29639874720709,
+          10.550001204633306
+        ],
+        "hydrobasins_sub_area_km2": 2827.5,
+        "valid_land_support_km2": 2804.2692164078444,
+        "land_support_over_catalogue_area": 0.991783984582792,
+        "interpretation": "enclosing level-7 regional drainage unit, not an asserted river-gauge catchment"
+      },
+      {
+        "zone": "Gianh_Runoff",
+        "basin_id": "4070015440",
+        "anchor_inside_polygon": true,
+        "geometry_type": "Polygon",
+        "polygon_parts": 1,
+        "bounds_lon_lat": [
+          105.99166825490478,
+          17.245845316417014,
+          106.4505676929193,
+          17.808334178696857
+        ],
+        "hydrobasins_sub_area_km2": 1841.1,
+        "valid_land_support_km2": 1830.3923021176472,
+        "land_support_over_catalogue_area": 0.9941840758881361,
+        "interpretation": "enclosing level-7 regional drainage unit, not an asserted river-gauge catchment"
+      }
+    ]
+  },
+  "rectification_tolerance_mm": 0.01,
+  "monthly_conversion": "GEE accumulated monthly sums are multiplied by 1000 only; no multiplication by days in month"
+}

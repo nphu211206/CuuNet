@@ -1,0 +1,13 @@
+zone,precision,backend,n,warm_median_ms,warm_p95_ms,mean_ms,sample_sd_ms,first_inference_ms,device_scope
+Bao_Ha_Runoff,fp32,cpu,50,4.710000000000001,6.231,4.8961,0.620409912222293,9.644999999552965,"automated desktop Chrome, no mobile measurement"
+Bao_Ha_Runoff,uint8,cpu,50,4.3725000000000005,5.491,4.5544,0.5895844610695687,6.305000000633299,"automated desktop Chrome, no mobile measurement"
+Gianh_Runoff,fp32,cpu,50,4.67,6.14825,4.8955,0.7494258006048662,13.105000000447035,"automated desktop Chrome, no mobile measurement"
+Gianh_Runoff,uint8,cpu,50,5.35,6.96775,5.5383000000000004,0.8523841773016939,5.394999999552965,"automated desktop Chrome, no mobile measurement"
+Can_Tho_Runoff,fp32,cpu,50,5.0675,6.5584999999999996,5.2433000000000005,0.8701041516358128,8.165000000037253,"automated desktop Chrome, no mobile measurement"
+Can_Tho_Runoff,uint8,cpu,50,4.859999999999999,7.11625,5.2204999999999995,0.8404488900193121,5.459999999962747,"automated desktop Chrome, no mobile measurement"
+Bao_Ha_Runoff,fp32,webgl,50,12.162500000000001,17.10825,12.821399999999999,2.2220189936549297,2907.5099999997765,"automated desktop Chrome, no mobile measurement"
+Bao_Ha_Runoff,uint8,webgl,50,12.16,15.862499999999999,12.4736,2.1843487891481663,19.955000000074506,"automated desktop Chrome, no mobile measurement"
+Gianh_Runoff,fp32,webgl,50,11.995000000000001,16.549749999999992,12.254599999999998,1.888601101992948,22.595000000670552,"automated desktop Chrome, no mobile measurement"
+Gianh_Runoff,uint8,webgl,50,11.77,13.725999999999997,11.748299999999999,1.2288727246828237,20.575000000186265,"automated desktop Chrome, no mobile measurement"
+Can_Tho_Runoff,fp32,webgl,50,11.935,16.37925,12.2839,1.8090744307292521,19.740000000223517,"automated desktop Chrome, no mobile measurement"
+Can_Tho_Runoff,uint8,webgl,50,12.045,17.8075,12.986,2.832707293781851,27.609999999403954,"automated desktop Chrome, no mobile measurement"

@@ -1,0 +1,133 @@
+{
+  "study_id": "HYDRO-D-26-00188-observed-discharge-reference",
+  "provenance_class": "observed",
+  "validation_mode": "physical_target_replacement",
+  "target_kind": "observed_daily_mean_discharge_m3s",
+  "publication_eligible": true,
+  "lookback": 30,
+  "seasonal_period": 365,
+  "sampling_frequency": "D",
+  "moving_average_window": 7,
+  "baseline_history_window": 1095,
+  "peak_quantile_from_training": 0.9,
+  "prediction_bounds": {
+    "lower": 0.0,
+    "upper": null
+  },
+  "covariance_shrinkage": 0.1,
+  "covariance_shrinkage_sensitivity": [
+    0.0,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "bootstrap_block_length": 30,
+  "outage_horizons": [
+    1,
+    3,
+    7
+  ],
+  "outage_origin_stride": 7,
+  "outage_max_gap": 7,
+  "outage_input_policy": "frozen",
+  "source_manifest_file": "data/waterbench_observed/prepared/source_manifest.json",
+  "verified_bibliography_file": "analysis/verified_bibliography.runoff.csv",
+  "data_preparation_audit_file": "data/waterbench_observed/prepared/preparation_audit.json",
+  "splits": {
+    "train_start": "2011-10-01",
+    "train_end": "2015-09-30",
+    "validation_end": "2016-09-30",
+    "test_end": "2018-09-30"
+  },
+  "training": {
+    "seeds": [
+      42,
+      123,
+      456,
+      789,
+      2024
+    ],
+    "epochs": 100,
+    "batch_size": 64,
+    "early_stopping_patience": 15,
+    "learning_rate": 0.001,
+    "lstm_units": 64,
+    "attention_units": 32,
+    "dropout": 0.2,
+    "unroll_lstm": true,
+    "precision": "float32",
+    "include_outage_variant": true,
+    "input_censoring_probability": 0.5,
+    "write_progress_archives": true
+  },
+  "zones": [
+    {
+      "id": "USGS_05453520",
+      "label": "USGS gauge 05453520",
+      "file": "data/waterbench_observed/prepared/USGS_05453520.csv",
+      "date_column": "date",
+      "target_column": "discharge_m3s",
+      "target_input_column": "discharge_input_m3s",
+      "availability_feature_columns": [
+        "discharge_available"
+      ],
+      "allow_missing_targets": true,
+      "age_feature_column": "input_age_01",
+      "fixed_range_features": [
+        "discharge_available",
+        "input_age_01"
+      ],
+      "feature_columns": [
+        "discharge_input_m3s",
+        "discharge_available",
+        "input_age_01"
+      ],
+      "include_lagged_target": false,
+      "feature_metadata": {
+        "discharge_input_m3s": {
+          "data_class": "observed_derived",
+          "units": "m3 s-1",
+          "source_id": "WaterBench-Iowa:USGS:05453520",
+          "source_url": "https://doi.org/10.5194/essd-14-5605-2022",
+          "licence": "MIT repository licence; attribution to WaterBench and USGS retained",
+          "available_at_forecast_origin": true,
+          "availability_mode": "retrospective_hindcast",
+          "transformation": "causal forward fill with explicit availability mask; no future values"
+        },
+        "discharge_available": {
+          "data_class": "observed_derived",
+          "units": "binary",
+          "source_id": "WaterBench-Iowa:USGS:05453520",
+          "source_url": "https://doi.org/10.5194/essd-14-5605-2022",
+          "licence": "MIT repository licence; attribution to WaterBench and USGS retained",
+          "available_at_forecast_origin": true,
+          "availability_mode": "retrospective_hindcast",
+          "transformation": "causal forward fill with explicit availability mask; no future values"
+        },
+        "input_age_01": {
+          "data_class": "observed_derived",
+          "units": "normalized observation age, capped at seven days",
+          "source_id": "WaterBench-Iowa:USGS:05453520",
+          "source_url": "https://doi.org/10.5194/essd-14-5605-2022",
+          "licence": "MIT repository licence; attribution to WaterBench and USGS retained",
+          "available_at_forecast_origin": true,
+          "availability_mode": "retrospective_hindcast",
+          "transformation": "causal forward fill with explicit availability mask; no future values"
+        }
+      },
+      "target_metadata": {
+        "data_class": "observed",
+        "variable": "daily mean of reported USGS discharge aggregated from WaterBench hours",
+        "units": "m3 s-1",
+        "source_id": "WaterBench-Iowa:USGS:05453520",
+        "source_url": "https://doi.org/10.5194/essd-14-5605-2022",
+        "licence": "MIT repository licence; attribution to WaterBench and USGS retained",
+        "geographic_support": "USGS gauge 05453520; catchment area 8067 km2",
+        "temporal_resolution": "source hourly observations aggregated to daily mean if at least 22 of 24 hours valid"
+      },
+      "sampling_frequency": "D",
+      "source_note": "Independent observed reference outside Vietnam; no claim of Vietnam gauge or disaster-impact validation"
+    }
+  ],
+  "interpretation": "Observed supplementary benchmark outside Vietnam; reference labels are never filled and all comparisons use the same observed days"
+}

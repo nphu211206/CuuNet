@@ -1,0 +1,5 @@
+zone,shrinkage,weights,test_mae,test_rmse,primary_setting,interpretation,run_id,provenance_class
+Gianh_Runoff,0.0,"[0.6985528404711578, 0.26082582110704666, 0.04062133842179552]",2.3511817480868884,8.225477662365803,False,pre-specified test sensitivity; never used to select the primary setting,ad67677a7139e38c444a,reanalysis
+Gianh_Runoff,0.05,"[0.668738537761036, 0.2660736076162971, 0.06518785462266696]",2.3691838645085928,8.17646739450008,False,pre-specified test sensitivity; never used to select the primary setting,ad67677a7139e38c444a,reanalysis
+Gianh_Runoff,0.1,"[0.6420238357361133, 0.27188755315892327, 0.08608861110496352]",2.387279454360538,8.14105698433149,True,pre-specified test sensitivity; never used to select the primary setting,ad67677a7139e38c444a,reanalysis
+Gianh_Runoff,0.2,"[0.5965299689727648, 0.28314805297061474, 0.12032197805662036]",2.4207291322840643,8.096317630380224,False,pre-specified test sensitivity; never used to select the primary setting,ad67677a7139e38c444a,reanalysis

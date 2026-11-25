@@ -1,0 +1,54 @@
+{
+  "observed_primary_audits": [
+    {
+      "zone": "USGS_06903900",
+      "passed": true,
+      "checks": 96287,
+      "failures": []
+    },
+    {
+      "zone": "USGS_05421000",
+      "passed": true,
+      "checks": 97800,
+      "failures": []
+    },
+    {
+      "zone": "USGS_05453520",
+      "passed": true,
+      "checks": 98067,
+      "failures": []
+    }
+  ],
+  "all_six_Kaggle_primary_runs_complete": true,
+  "extra_Kaggle_runs_required_for_current_protocol": false,
+  "browser_latency_groups_checked": 12,
+  "browser_latency_raw_repetitions": 600,
+  "summary_statistics_agree_with_raw_trace": true,
+  "browser_FP32_rollout_reference_comparisons": 9,
+  "browser_FP32_rollout_max_abs_difference_mm_day": 4.970230472078896e-06,
+  "verification_JS_tests_passed": 23,
+  "verification_cross_language_numerical_parity_not_yet_established_by_those_tests": true,
+  "browser_measurement_scope": "HeadlessChrome 157 on Windows desktop; CPU and WebGL backends; hardware renderer unspecified",
+  "mobile_browser_performance_established": false,
+  "battery_energy_established": false,
+  "offline_reload_independently_replayed_in_this_turn": true,
+  "offline_report_persistence_proven": true,
+  "offline_audit_log_path": "paper_submission/browser_benchmarks/offline_reload_persistence_audit.json",
+  "git_head_commit": "27cc510a5ea511205f935b87fb677f1a45f96d3b",
+  "raw_browser_log_sha256": "24ea5643efe765bf8d82fc4d8d2970797d34dbe111390b23d51351797774daf8",
+  "offline_audit_log_sha256": "afa7213299780b44ddca39b52d3ef33ecebf52a9a1676c064117027aa0b8ff9e",
+  "browser_source_sha256": {
+    "app.mjs": "3948a447034fed6c9e58efb088c23d5bb05556a8c796bbc6bfc3e63fc30ef84a",
+    "sw.js": "674e1acdc9703e3210cd319a84954e6dcc15c3f9f1d5289fd8b168b4ef084b82",
+    "verification.mjs": "10e98b5795344ebde4aba63d92ea9ac7fc1c2f2986423404a326621ee8c81cb5",
+    "index.html": "1bfda27983fc38ffc0034131bc2833b9d0c112c4216542baab24782a2f10fc25"
+  },
+  "findings": [
+    "Narrative warm median ranges now corrected to match detailed table/raw timings (CPU: 4.37-5.35 ms, WebGL: 11.77-12.16 ms).",
+    "Narrative FP32 error corrected to exact bounds (<= 1.06e-5 mm/day single-step Case 0 across backends; < 4.98e-6 mm/day across 9 multi-lead outage rollouts).",
+    "Offline report persistence successfully replayed and established with 3 persisted crowdsourced reports surviving page reload under severed network conditions.",
+    "sw.js cache deletion scoped strictly to keys starting with 'cuunet-research-' prefix, preserving external origin caches.",
+    "The browser verification tests mainly check invariants and inequalities; they are not full numerical Python golden parity.",
+    "Confirmed tested cache storage version is cuunet-research-v4, and IndexedDB database is cuunet-research-v1."
+  ]
+}

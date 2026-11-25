@@ -1,0 +1,49 @@
+{
+  "trials": 2000,
+  "seed": 42,
+  "primary_threshold": 0.75,
+  "bot_counts": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    10,
+    20,
+    30,
+    50,
+    100
+  ],
+  "honest_counts": [
+    3,
+    5,
+    10,
+    50
+  ],
+  "reputation_tiers": {
+    "decayed": 0.15,
+    "neutral": 0.5,
+    "compromised": 0.8
+  },
+  "thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9
+  ],
+  "schema_version": 2,
+  "provenance_class": "synthetic_adversarial_simulation",
+  "script_sha256": "e2c80b111e1595e24d1072a9e4165e034bfe9f569c53c6e644988872eaa3598d",
+  "dempster_rule": "Normalised Dempster combination evaluated in log space. Only exact total conflict invokes the uncertainty fallback; small denominators alone do not.",
+  "baseline_note": "Symmetric Beta MAP with a 0.5 decision threshold is equivalent to unweighted majority voting for binary reports.",
+  "weighted_baseline_note": "Weighted decisions use the same sampled effective masses as DST; conventional 0.5 decisions and threshold-matched score decisions are reported separately.",
+  "interval_note": "FAR/MAR intervals are Wilson binomial confidence intervals; belief quantiles describe the simulated distribution, not confidence intervals of its mean.",
+  "raw_trials_file": "sybil_monte_carlo_trials.csv.gz",
+  "interpretation_limit": "Static mass-assignment experiments, not a browser implementation or proof against arbitrary dependent identities; the separate pipeline campaign tests spatial and reputation assumptions."
+}

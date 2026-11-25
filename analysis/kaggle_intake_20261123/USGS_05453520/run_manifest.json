@@ -1,0 +1,326 @@
+{
+  "schema_version": 2,
+  "run_id": "25269b76f9725110d369",
+  "status": "completed",
+  "started_at_utc": "2026-11-23T09:09:05.969247+00:00",
+  "study_id": "HYDRO-D-26-00188-observed-discharge-reference",
+  "provenance_class": "observed",
+  "validation_mode": "physical_target_replacement",
+  "target_kind": "observed_daily_mean_discharge_m3s",
+  "input_manifest_sha256": "c992e4e7707abae0e1fda8c073267cd12f3cc6ba937e2e0c6a2027b9be8e55f1",
+  "git_commit": null,
+  "packaged_source_context": {
+    "format": "cuunet-kaggle-physical-v8",
+    "full_vietnam_data_included": false,
+    "observed_prepared_data_included": true,
+    "source_sha256": {
+      "notebooks/revision_experiments.py": "a61e75da28fd3d6f8e8859dc5fe39265636be760d7d0edb2d2bb10e6b715d0db",
+      "notebooks/outage_revision_experiments.py": "b1a49168cd4ddc35d40fee5d834d769164bb2f24a57fb1dfa023c2e8f1417796",
+      "notebooks/audit_revision_outputs.py": "b0b0bd7b4de7db6bfb03ce4d788f837299c9347753b11c9ea3c7767442925cde",
+      "notebooks/prepare_runoff_revision_data.py": "8b0756ed7d5955dfbf0cab1863209efc55dbbe4325c0f09e39a7f18fc18a6c7e",
+      "notebooks/prepare_waterbench_reference.py": "10c8fdd462de3e0c853f8c0164a5550e24f32fdaab32db6809617616ca7868ba",
+      "notebooks/acquire_waterbench_reference.py": "aaf31c3376e82df0897292b4a1ac25105368e4bf4941c5addb0c8b7b32f1769e",
+      "notebooks/export_era5_land_level7.js": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6",
+      "notebooks/tfjs_daily_preflight.py": "e22c5f20e5d2a8fb2823fa0b05cb07f44b4357aa9945e93e8844d054c7432a2d",
+      "notebooks/verify_tfjs_equivalence.mjs": "ceb2b61d381c2c2dfccce5bc342b448797ab65181faf348e9bc743f2c879f097",
+      "notebooks/test_tfjs_equivalence.mjs": "801dcfd91847700db539855420150fcac17a6cc8962ac68752f738305533c780",
+      "notebooks/test_runoff_revision.py": "7cb7b35fd90b077fe87e9618a830534561a8e2919a2e5973bf0754625f581369",
+      "notebooks/test_revision_pipeline.py": "a1113c6979f815c5aefbb4e02055b74b98eb0c42312085eb97d4d696595a4479",
+      "notebooks/test_revision_handoff_v7.py": "64b236557c667da9b9a9c5a09a4a7031d5ad7bd7c4db02885227fa09199fbc49",
+      "notebooks/requirements_revision_kaggle.lock.txt": "4daafbd0d9882458ec9c44abcf0c0be3caa1358334e7619346b78660d5a17828",
+      "notebooks/requirements_revision_kaggle.txt": "03fc10dece1c9f0cde364bc392d1b43e00e85b4f5abed0539b1fd71e5cfaa946",
+      "analysis/verified_bibliography.runoff.csv": "5528e37e4552169a759cd517efeb999c7aad56d057c4ad829c1329fb6fb99e9f",
+      "analysis/master_revision_20261121/waterbench_selection.json": "416129212a71d311390931a35fc92f7f5f218083854811fc4884823ae7668796",
+      "data/waterbench_observed/prepared/experiment_manifest.json": "4eb26a7bdabef8cd857eb088383ed3db215df47fef256a23b794171a9ceb4d29",
+      "data/waterbench_observed/prepared/preparation_audit.json": "922a1239efddc3b33f7925c114ef42a49841dfc9e94fada5f8a6e672991062a7",
+      "data/waterbench_observed/prepared/source_manifest.json": "ba1548b6162de4e892382a784ff999ce7db1dfc68c46c414bcba9079ed781ac1",
+      "data/waterbench_observed/prepared/USGS_05421000.csv": "dae324e7225b6b17783446129b6059c4dc7fa89b5e05bb563868b4db7b60d46b",
+      "data/waterbench_observed/prepared/USGS_05453520.csv": "61ef27f3444c3361f8fa7d534d6493a50d50eb730ef739c89ad8654634042109",
+      "data/waterbench_observed/prepared/USGS_06903900.csv": "cd9ef1051493d72b44ea48ba8a5d71598863ad667ef99276466b347627123154",
+      "data/waterbench_observed/raw/acquisition_receipt.json": "dc4ad2e40069f63be5a1480d8b0fe84ece15aa7f78814863f5e520993174271e",
+      "data/waterbench_observed/raw/catchment_USGS_ID.csv": "f06c41a15b491b317568c3380500f8edb7bd63a1b8bcef5230232903646ecf00",
+      "notebooks/revision_dual_gpu.py": "1f68e3d7acf9a4aea01e9883f4cdcec2215b9875cf0a3947ebeb25b90a3dfc72",
+      "notebooks/dual_gpu_preflight.py": "d8d89d48ed0a60bbb12a4dcb6ddf8bc47c42bd1efca50420bdd4b37ef81ed71f",
+      "notebooks/test_dual_gpu_execution.py": "9070a8d2319bf25aedcc6ff3549ae1f132ca63366b5edd9ace6c426e3f1dcaa3"
+    },
+    "scope": "Daily physical targets, three neural variants, five seeds, expected-MSE weights and frozen-input interruption tests",
+    "hotfix": "Preflight selected_seed metadata and regression consumer contract",
+    "base_notebook_sha256": "6918e10e3707660aa409f22fd9b08bfd590a5f5979ef46a665fd0776512b41a5",
+    "execution": "two isolated single-GPU training workers; unchanged canonical v7 scoring and source",
+    "gpu_preflight_verified_on_author_machine": false
+  },
+  "code_sha256": {
+    "notebooks/revision_experiments.py": "a61e75da28fd3d6f8e8859dc5fe39265636be760d7d0edb2d2bb10e6b715d0db",
+    "notebooks/verify_tfjs_equivalence.mjs": "ceb2b61d381c2c2dfccce5bc342b448797ab65181faf348e9bc743f2c879f097",
+    "notebooks/audit_revision_outputs.py": "b0b0bd7b4de7db6bfb03ce4d788f837299c9347753b11c9ea3c7767442925cde",
+    "notebooks/prepare_runoff_revision_data.py": "8b0756ed7d5955dfbf0cab1863209efc55dbbe4325c0f09e39a7f18fc18a6c7e",
+    "notebooks/prepare_waterbench_reference.py": "10c8fdd462de3e0c853f8c0164a5550e24f32fdaab32db6809617616ca7868ba",
+    "notebooks/outage_revision_experiments.py": "b1a49168cd4ddc35d40fee5d834d769164bb2f24a57fb1dfa023c2e8f1417796",
+    "notebooks/acquire_waterbench_reference.py": "aaf31c3376e82df0897292b4a1ac25105368e4bf4941c5addb0c8b7b32f1769e",
+    "notebooks/revision_dual_gpu.py": "1f68e3d7acf9a4aea01e9883f4cdcec2215b9875cf0a3947ebeb25b90a3dfc72"
+  },
+  "software": {
+    "python": "3.12.12 (main, Oct 28 2025, 12:10:49) [Clang 20.1.4 ]",
+    "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "statsmodels": "0.14.6",
+    "tensorflow": "2.19.0",
+    "keras": "3.9.2",
+    "tensorflowjs": "4.22.0",
+    "tensorflow-decision-forests": "1.12.0",
+    "ydf": "0.11.0",
+    "protobuf": "5.29.6",
+    "ml-dtypes": "0.7.0",
+    "jax": "0.5.3",
+    "xarray": "2025.4.0",
+    "netCDF4": "1.7.2",
+    "cdsapi": "0.7.7"
+  },
+  "gpu_devices": [
+    {
+      "compute_capability": [
+        7,
+        5
+      ],
+      "device_name": "Tesla T4"
+    },
+    {
+      "compute_capability": [
+        7,
+        5
+      ],
+      "device_name": "Tesla T4"
+    }
+  ],
+  "single_gpu_training": false,
+  "float_precision": "float32",
+  "deterministic_tensorflow_ops": true,
+  "python_hash_seed_at_process_start": "0",
+  "evidence_contract": {
+    "provenance_class": "observed",
+    "validation_mode": "physical_target_replacement",
+    "source_manifest": "/kaggle/working/CuuNet_revision/data/waterbench_observed/prepared/source_manifest.json",
+    "source_manifest_sha256": "ba1548b6162de4e892382a784ff999ce7db1dfc68c46c414bcba9079ed781ac1",
+    "data_files": [
+      {
+        "zone": "USGS_05453520",
+        "path": "/kaggle/working/CuuNet_revision/data/waterbench_observed/prepared/USGS_05453520.csv",
+        "sha256": "61ef27f3444c3361f8fa7d534d6493a50d50eb730ef739c89ad8654634042109"
+      }
+    ],
+    "verified_bibliography_file": {
+      "path": "/kaggle/working/CuuNet_revision/analysis/verified_bibliography.runoff.csv",
+      "sha256": "5528e37e4552169a759cd517efeb999c7aad56d057c4ad829c1329fb6fb99e9f"
+    },
+    "data_preparation_audit_file": {
+      "path": "/kaggle/working/CuuNet_revision/data/waterbench_observed/prepared/preparation_audit.json",
+      "sha256": "922a1239efddc3b33f7925c114ef42a49841dfc9e94fada5f8a6e672991062a7"
+    },
+    "bundled_inputs": [
+      {
+        "bundle_path": "inputs/analysis/verified_bibliography.runoff.csv",
+        "sha256": "5528e37e4552169a759cd517efeb999c7aad56d057c4ad829c1329fb6fb99e9f",
+        "bytes": 17421
+      },
+      {
+        "bundle_path": "inputs/data/manifest_v7_observed_USGS_05453520.json",
+        "sha256": "c992e4e7707abae0e1fda8c073267cd12f3cc6ba937e2e0c6a2027b9be8e55f1",
+        "bytes": 4896
+      },
+      {
+        "bundle_path": "inputs/data/waterbench_observed/prepared/USGS_05453520.csv",
+        "sha256": "61ef27f3444c3361f8fa7d534d6493a50d50eb730ef739c89ad8654634042109",
+        "bytes": 338783
+      },
+      {
+        "bundle_path": "inputs/data/waterbench_observed/prepared/preparation_audit.json",
+        "sha256": "922a1239efddc3b33f7925c114ef42a49841dfc9e94fada5f8a6e672991062a7",
+        "bytes": 6182
+      },
+      {
+        "bundle_path": "inputs/data/waterbench_observed/prepared/source_manifest.json",
+        "sha256": "ba1548b6162de4e892382a784ff999ce7db1dfc68c46c414bcba9079ed781ac1",
+        "bytes": 888
+      },
+      {
+        "bundle_path": "inputs/data/waterbench_observed/raw/acquisition_receipt.json",
+        "sha256": "dc4ad2e40069f63be5a1480d8b0fe84ece15aa7f78814863f5e520993174271e",
+        "bytes": 5840
+      },
+      {
+        "bundle_path": "inputs/data/waterbench_observed/raw/data_time_series.zip",
+        "sha256": "64879ffce056c1183cf708ad68a3153f3f87155be93282831ff6105219a87316",
+        "bytes": 51412568
+      }
+    ]
+  },
+  "manifest": {
+    "study_id": "HYDRO-D-26-00188-observed-discharge-reference",
+    "provenance_class": "observed",
+    "validation_mode": "physical_target_replacement",
+    "target_kind": "observed_daily_mean_discharge_m3s",
+    "publication_eligible": true,
+    "lookback": 30,
+    "seasonal_period": 365,
+    "sampling_frequency": "D",
+    "moving_average_window": 7,
+    "baseline_history_window": 1095,
+    "peak_quantile_from_training": 0.9,
+    "prediction_bounds": {
+      "lower": 0.0,
+      "upper": null
+    },
+    "covariance_shrinkage": 0.1,
+    "covariance_shrinkage_sensitivity": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "bootstrap_block_length": 30,
+    "outage_horizons": [
+      1,
+      3,
+      7
+    ],
+    "outage_origin_stride": 7,
+    "outage_max_gap": 7,
+    "outage_input_policy": "frozen",
+    "source_manifest_file": "data/waterbench_observed/prepared/source_manifest.json",
+    "verified_bibliography_file": "analysis/verified_bibliography.runoff.csv",
+    "data_preparation_audit_file": "data/waterbench_observed/prepared/preparation_audit.json",
+    "splits": {
+      "train_start": "2011-10-01",
+      "train_end": "2015-09-30",
+      "validation_end": "2016-09-30",
+      "test_end": "2018-09-30"
+    },
+    "training": {
+      "seeds": [
+        42,
+        123,
+        456,
+        789,
+        2024
+      ],
+      "epochs": 100,
+      "batch_size": 64,
+      "early_stopping_patience": 15,
+      "learning_rate": 0.001,
+      "lstm_units": 64,
+      "attention_units": 32,
+      "dropout": 0.2,
+      "unroll_lstm": true,
+      "precision": "float32",
+      "include_outage_variant": true,
+      "input_censoring_probability": 0.5,
+      "write_progress_archives": true
+    },
+    "zones": [
+      {
+        "id": "USGS_05453520",
+        "label": "USGS gauge 05453520",
+        "file": "data/waterbench_observed/prepared/USGS_05453520.csv",
+        "date_column": "date",
+        "target_column": "discharge_m3s",
+        "target_input_column": "discharge_input_m3s",
+        "availability_feature_columns": [
+          "discharge_available"
+        ],
+        "allow_missing_targets": true,
+        "age_feature_column": "input_age_01",
+        "fixed_range_features": [
+          "discharge_available",
+          "input_age_01"
+        ],
+        "feature_columns": [
+          "discharge_input_m3s",
+          "discharge_available",
+          "input_age_01"
+        ],
+        "include_lagged_target": false,
+        "feature_metadata": {
+          "discharge_input_m3s": {
+            "data_class": "observed_derived",
+            "units": "m3 s-1",
+            "source_id": "WaterBench-Iowa:USGS:05453520",
+            "source_url": "https://doi.org/10.5194/essd-14-5605-2022",
+            "licence": "MIT repository licence; attribution to WaterBench and USGS retained",
+            "available_at_forecast_origin": true,
+            "availability_mode": "retrospective_hindcast",
+            "transformation": "causal forward fill with explicit availability mask; no future values"
+          },
+          "discharge_available": {
+            "data_class": "observed_derived",
+            "units": "binary",
+            "source_id": "WaterBench-Iowa:USGS:05453520",
+            "source_url": "https://doi.org/10.5194/essd-14-5605-2022",
+            "licence": "MIT repository licence; attribution to WaterBench and USGS retained",
+            "available_at_forecast_origin": true,
+            "availability_mode": "retrospective_hindcast",
+            "transformation": "causal forward fill with explicit availability mask; no future values"
+          },
+          "input_age_01": {
+            "data_class": "observed_derived",
+            "units": "normalized observation age, capped at seven days",
+            "source_id": "WaterBench-Iowa:USGS:05453520",
+            "source_url": "https://doi.org/10.5194/essd-14-5605-2022",
+            "licence": "MIT repository licence; attribution to WaterBench and USGS retained",
+            "available_at_forecast_origin": true,
+            "availability_mode": "retrospective_hindcast",
+            "transformation": "causal forward fill with explicit availability mask; no future values"
+          }
+        },
+        "target_metadata": {
+          "data_class": "observed",
+          "variable": "daily mean of reported USGS discharge aggregated from WaterBench hours",
+          "units": "m3 s-1",
+          "source_id": "WaterBench-Iowa:USGS:05453520",
+          "source_url": "https://doi.org/10.5194/essd-14-5605-2022",
+          "licence": "MIT repository licence; attribution to WaterBench and USGS retained",
+          "geographic_support": "USGS gauge 05453520; catchment area 8067 km2",
+          "temporal_resolution": "source hourly observations aggregated to daily mean if at least 22 of 24 hours valid"
+        },
+        "sampling_frequency": "D",
+        "source_note": "Independent observed reference outside Vietnam; no claim of Vietnam gauge or disaster-impact validation"
+      }
+    ],
+    "interpretation": "Observed supplementary benchmark outside Vietnam; reference labels are never filled and all comparisons use the same observed days"
+  },
+  "neural_requested": true,
+  "conversion_requested": true,
+  "bootstrap": {
+    "method": "circular moving blocks",
+    "block_length": 30,
+    "repetitions": 2000,
+    "seed": 42
+  },
+  "prediction_bounds": {
+    "lower": 0.0,
+    "upper": null
+  },
+  "forecast_protocol": "retrospective one-step predictions using earlier timestamps only; the separate outage experiment freezes all physical inputs at explicit origins",
+  "training_execution": {
+    "strategy": "two independent GPU worker processes; canonical serial scoring",
+    "worker_gpu_ids": [
+      0,
+      1
+    ],
+    "one_gpu_per_model": true,
+    "execution_report": "dual_gpu_execution.json"
+  },
+  "aggregation_gpu_devices": [
+    {
+      "compute_capability": [
+        7,
+        5
+      ],
+      "device_name": "Tesla T4"
+    }
+  ],
+  "input_manifest_bundle_path": "inputs/data/manifest_v7_observed_USGS_05453520.json",
+  "completed_at_utc": "2026-11-23T09:54:50.834795+00:00"
+}

@@ -1,0 +1,56 @@
+{
+  "zones": [
+    "Bao_Ha_Runoff",
+    "Gianh_Runoff",
+    "Can_Tho_Runoff"
+  ],
+  "trained_models": 45,
+  "one_step_test_days_per_zone": 1461,
+  "outage_origins_per_zone": 208,
+  "outage_audits": [
+    {
+      "zone": "Bao_Ha_Runoff",
+      "passed": true,
+      "checks": 494,
+      "failures": [],
+      "raw_rows": 13728,
+      "metric_rows": 66,
+      "scope": "hashes, target identities, model checksums, origin/cutoff metadata and metrics; does not rerun TensorFlow or prove field outages"
+    },
+    {
+      "zone": "Gianh_Runoff",
+      "passed": true,
+      "checks": 494,
+      "failures": [],
+      "raw_rows": 13728,
+      "metric_rows": 66,
+      "scope": "hashes, target identities, model checksums, origin/cutoff metadata and metrics; does not rerun TensorFlow or prove field outages"
+    },
+    {
+      "zone": "Can_Tho_Runoff",
+      "passed": true,
+      "checks": 494,
+      "failures": [],
+      "raw_rows": 13728,
+      "metric_rows": 66,
+      "scope": "hashes, target identities, model checksums, origin/cutoff metadata and metrics; does not rerun TensorFlow or prove field outages"
+    }
+  ],
+  "units": "mm/day",
+  "provenance": "ERA5-Land regional runoff generation reanalysis",
+  "not_established": [
+    "observed Vietnam discharge",
+    "field flood warnings",
+    "Iowa model outcomes",
+    "browser/mobile latency",
+    "battery measurements"
+  ],
+  "derived_files": {
+    "forecast_summary.csv": "accccf7a28ba2cbf6bcc0f389d4ffafa043f43fd4b3b032bb32385693208eaad",
+    "outage_summary.csv": "1f26dca7a60b6e931a3915e83ea5557eb3afc768a07fee7510c8a5c57a620fc8",
+    "paired_mean_loss_comparisons.csv": "221a9cfbe5e95490f579009a979238b3bae083b11fc9f8a447630f5b563ef1b3",
+    "quantisation_summary.csv": "72c36f245655bb0d8c8157ac829a0bf993dde219806fdafdba153286cc997243",
+    "combination_weights.csv": "8480b902b20518c01a3960c3435151ce9d1426fa312786bf791e693213f392b6",
+    "runtime_summary.csv": "dd061430f3f464850d1970f7e0e4f9b4b53206078a14ae0c44757f3396c8b108"
+  }
+}

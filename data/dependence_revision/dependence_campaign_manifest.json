@@ -1,0 +1,2312 @@
+{
+  "created_at_utc": "2026-11-21T14:16:31.418731+00:00",
+  "trials": 1000,
+  "seed": 211206,
+  "complete_primary_case_set": true,
+  "expected_unique_cases": 71,
+  "provenance_class": "synthetic_adversarial_simulation",
+  "methods": [
+    "classical_dst",
+    "group_max_dst",
+    "bayesian_weighted_beta",
+    "weighted_vote_075",
+    "weighted_vote_050",
+    "majority"
+  ],
+  "feedback_modes": [
+    "independent_reference",
+    "self_consensus",
+    "no_verified_feedback"
+  ],
+  "cases": [
+    {
+      "case_id": "910899414c39227e",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 0,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 17379919699107085324,
+      "raw_file": "raw_trials/910899414c39227e.npz",
+      "raw_sha256": "5f03ecf7c3d84c100e324ffc6ee9c7b5c38ac0443a2a2f6b0c6057af43308b4a"
+    },
+    {
+      "case_id": "934d72ebbdd3ffb7",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 7040612265812236572,
+      "raw_file": "raw_trials/934d72ebbdd3ffb7.npz",
+      "raw_sha256": "26174c2d2ee1f1a332cf21b766b2eb20b98d916a4c0c5dae2baf950a5978f886"
+    },
+    {
+      "case_id": "685387aae18ca648",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 15110850031148751318,
+      "raw_file": "raw_trials/685387aae18ca648.npz",
+      "raw_sha256": "e030394a3fa56874a0458767542da466e9732cf6e26ac88c10230c99623a3cf9"
+    },
+    {
+      "case_id": "12c6be2a04a909eb",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 5890143958527738671,
+      "raw_file": "raw_trials/12c6be2a04a909eb.npz",
+      "raw_sha256": "74b5cea64617980c8ba2f8d5a1e7a8d26f2fcc6275474184bcb610e025a877c4"
+    },
+    {
+      "case_id": "2d1471e600d8fe3b",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 2994398275886499558,
+      "raw_file": "raw_trials/2d1471e600d8fe3b.npz",
+      "raw_sha256": "239ec259300a9db7a283afe87b92ac41c7796aacf8b9dd73e19d386af9d73f52"
+    },
+    {
+      "case_id": "a1eed673ead73dd5",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 7040612265812236572,
+      "raw_file": "raw_trials/a1eed673ead73dd5.npz",
+      "raw_sha256": "88098a8c849e3218c7aae07b3bcaa1ae20873fe8c5b719acfa818104a2a70e0c"
+    },
+    {
+      "case_id": "c0cb093fdb8b3b25",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 15110850031148751318,
+      "raw_file": "raw_trials/c0cb093fdb8b3b25.npz",
+      "raw_sha256": "0e4b709d75bb2c0d0871e4cc985df2f70debec2eef2292860cf87f08baab8348"
+    },
+    {
+      "case_id": "3e2fbc3cd33f07c4",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 5890143958527738671,
+      "raw_file": "raw_trials/3e2fbc3cd33f07c4.npz",
+      "raw_sha256": "1ec52ccf8b30e4cf8d6b93004d8c7d18790059576353aea2d47955a80345e5f7"
+    },
+    {
+      "case_id": "87b0b42eeb4a6973",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 2994398275886499558,
+      "raw_file": "raw_trials/87b0b42eeb4a6973.npz",
+      "raw_sha256": "d5fcdc070d8e944a5cf4373f637fc6b72f8a2be5a3f409b5dcbb460e5ad09c3a"
+    },
+    {
+      "case_id": "ae2ab5a8107e2032",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 7040612265812236572,
+      "raw_file": "raw_trials/ae2ab5a8107e2032.npz",
+      "raw_sha256": "4899ef7864be45cb6a9553450c9e6e7bd3e66fb1b20bcfaa58f1ae606469665e"
+    },
+    {
+      "case_id": "540716986a2ea52a",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 15110850031148751318,
+      "raw_file": "raw_trials/540716986a2ea52a.npz",
+      "raw_sha256": "59d9b43c7c5f7b226a42831d3fd1b1f357f96e4b2a2223455b75a21515fd64f6"
+    },
+    {
+      "case_id": "729c9dcab77e8154",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 5890143958527738671,
+      "raw_file": "raw_trials/729c9dcab77e8154.npz",
+      "raw_sha256": "ccf82d607eccdd0bcafef9eb718ce1e4a6bdc99e26bcc3abaa30828068556db2"
+    },
+    {
+      "case_id": "90538c6f2df4eb5c",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 5,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 2994398275886499558,
+      "raw_file": "raw_trials/90538c6f2df4eb5c.npz",
+      "raw_sha256": "670e12725e131836d6d0be8a0f429020ff72ade238f7e5f2511c8fd54518aaf6"
+    },
+    {
+      "case_id": "f1e4aff380c0afec",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/f1e4aff380c0afec.npz",
+      "raw_sha256": "33962f7cc21e3c43c049a613b02447fafc0b920fb8f16316104cf9223d0674c1"
+    },
+    {
+      "case_id": "ea1c978c6a38d541",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 15047424584575365858,
+      "raw_file": "raw_trials/ea1c978c6a38d541.npz",
+      "raw_sha256": "2f2eac0b8d22f1be228f32adb3a72e391fdabaac5697543e0ec622dbf513f5f7"
+    },
+    {
+      "case_id": "b818c87d12a12d9f",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 3979744591601532446,
+      "raw_file": "raw_trials/b818c87d12a12d9f.npz",
+      "raw_sha256": "922a2b42901bf6d6472efe4ae773ded740e89b58eb2c02e7d0756c35064969b5"
+    },
+    {
+      "case_id": "a386563d7b2d75d3",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 17992841679438330859,
+      "raw_file": "raw_trials/a386563d7b2d75d3.npz",
+      "raw_sha256": "9849e7ec3c5ccb4863cf84516b82badaee2bf2de41a98f8c7e2081a5d411db9e"
+    },
+    {
+      "case_id": "2afb3e904424e242",
+      "purposes": [
+        "primary",
+        "cell_sensitivity",
+        "time_sensitivity",
+        "threshold_sensitivity",
+        "retention_sensitivity",
+        "reward_sensitivity",
+        "penalty_sensitivity",
+        "dbscan_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/2afb3e904424e242.npz",
+      "raw_sha256": "a70eb51a9918f0abdf6d2a624de362fa14f74c1375b8e041722197bae3740e6e"
+    },
+    {
+      "case_id": "9a38e384028feeeb",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 15047424584575365858,
+      "raw_file": "raw_trials/9a38e384028feeeb.npz",
+      "raw_sha256": "e76c3d4f09fbd91d949f5fb2cf80fd64ecbb8799e66592ff4363751a588498e6"
+    },
+    {
+      "case_id": "bb4c6603ec8d9da8",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 3979744591601532446,
+      "raw_file": "raw_trials/bb4c6603ec8d9da8.npz",
+      "raw_sha256": "2f319d3d4543c5fa6fdf92e3448f9a90fa2ede930ee94c8d210db13d63370876"
+    },
+    {
+      "case_id": "a715766d9c15f97d",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 17992841679438330859,
+      "raw_file": "raw_trials/a715766d9c15f97d.npz",
+      "raw_sha256": "a35ee081e3cf4aa9a3713d5f4a5796ef79bc7d7461061f3ccddae435e1244e5e"
+    },
+    {
+      "case_id": "e3f65a36da4c5ce9",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/e3f65a36da4c5ce9.npz",
+      "raw_sha256": "80041e88e989bd35accf3ba9761328572f0a01328107b8ea9ad765489f2be180"
+    },
+    {
+      "case_id": "7b65a16230d4095f",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 15047424584575365858,
+      "raw_file": "raw_trials/7b65a16230d4095f.npz",
+      "raw_sha256": "9078b617f1f4ad35d949d62eb9886a33b3c2f62e27ea7e757ccce3ec2b16aecc"
+    },
+    {
+      "case_id": "7cc940c8b23b5042",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 3979744591601532446,
+      "raw_file": "raw_trials/7cc940c8b23b5042.npz",
+      "raw_sha256": "f405fd53d989ab5b98fc1f49617a9ef5c0661bba40c73735478ceecbff12b5e5"
+    },
+    {
+      "case_id": "b64a21deae212ab3",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 17992841679438330859,
+      "raw_file": "raw_trials/b64a21deae212ab3.npz",
+      "raw_sha256": "1e5405784cbbe67af87a09fa2364dcea3dbcf7214cffa1c4e5adbae88deddd38"
+    },
+    {
+      "case_id": "a9489f2a1beef862",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 11635064217425547667,
+      "raw_file": "raw_trials/a9489f2a1beef862.npz",
+      "raw_sha256": "06f548febf04578d30d9d92eaf5c29c0724b90667cda9e19dd5a7113564e76af"
+    },
+    {
+      "case_id": "8b228a661eeb30ed",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 8026920813535695160,
+      "raw_file": "raw_trials/8b228a661eeb30ed.npz",
+      "raw_sha256": "c380331286c5eb458239325d46eafa4f11a0735be982971b182b0c94b99c9b40"
+    },
+    {
+      "case_id": "c127b35fcea5d86e",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 16344940420665003448,
+      "raw_file": "raw_trials/c127b35fcea5d86e.npz",
+      "raw_sha256": "f1041a9b6819f1cd5df30c6f8d0d63f8bbfd05bfa5d2398b6750d191f1c52c46"
+    },
+    {
+      "case_id": "fc8f8dcf99b59d3a",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 14868686896655246498,
+      "raw_file": "raw_trials/fc8f8dcf99b59d3a.npz",
+      "raw_sha256": "c15ab2c9004d932468a8a68d7def3210a4991e80aa7b85ddab9f3a3b3e8de6bf"
+    },
+    {
+      "case_id": "28340e0ccf43a30f",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 11635064217425547667,
+      "raw_file": "raw_trials/28340e0ccf43a30f.npz",
+      "raw_sha256": "f921d65dfae6ed9931d33d170ccb4e13cc22ce32f3c3cb72554e6cd585c7ad06"
+    },
+    {
+      "case_id": "2141494bb31b997d",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 8026920813535695160,
+      "raw_file": "raw_trials/2141494bb31b997d.npz",
+      "raw_sha256": "9d8fe648572450d074a1776b684be9f39756a5651242cfc54272445cfec20af1"
+    },
+    {
+      "case_id": "da4173d3d515880f",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 16344940420665003448,
+      "raw_file": "raw_trials/da4173d3d515880f.npz",
+      "raw_sha256": "43d0ff02f97f2f4cf849197717bb9b1631c4bad79c24b9924a5fc9eea07999a8"
+    },
+    {
+      "case_id": "3cc765f6024895d5",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 14868686896655246498,
+      "raw_file": "raw_trials/3cc765f6024895d5.npz",
+      "raw_sha256": "b84e2da68ed1ae2619b34875288554ce01f138670ce7ddfc7492a6290738a95d"
+    },
+    {
+      "case_id": "2cc85abef67ca85b",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 11635064217425547667,
+      "raw_file": "raw_trials/2cc85abef67ca85b.npz",
+      "raw_sha256": "6487ab0b12bd5ba7aac609f408ebc508647dc1da530baf0dd26b21ffda28d6dd"
+    },
+    {
+      "case_id": "cb46c95f50305d6e",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 8026920813535695160,
+      "raw_file": "raw_trials/cb46c95f50305d6e.npz",
+      "raw_sha256": "f43bf4bd1fd0f4a5001f45ca1e2d444c1feae60984bf518482e6dac981003e31"
+    },
+    {
+      "case_id": "c743cc14e42b1298",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 16344940420665003448,
+      "raw_file": "raw_trials/c743cc14e42b1298.npz",
+      "raw_sha256": "8c369535656a5dd9927155be99b4b6f8194f4198731362f2874a265ed85e2d37"
+    },
+    {
+      "case_id": "6da1f5658a346600",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 50,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 14868686896655246498,
+      "raw_file": "raw_trials/6da1f5658a346600.npz",
+      "raw_sha256": "f9d08a173dfd4abbe6ebd0649567eb595e6165e2588a0a7a736c7641a996be99"
+    },
+    {
+      "case_id": "77e832d14da527fd",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 14776873983061483031,
+      "raw_file": "raw_trials/77e832d14da527fd.npz",
+      "raw_sha256": "a600b3e155c6333765cae583f7af371911c94b0457c59904595614ffe7656369"
+    },
+    {
+      "case_id": "15409b2261c29810",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 12818436368910015950,
+      "raw_file": "raw_trials/15409b2261c29810.npz",
+      "raw_sha256": "3bc4fa5b31e5791d2c47dca529df504b83a9296a80b7f726d84443a2c8ac7ddb"
+    },
+    {
+      "case_id": "77332fac86a2e69d",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 9947071900196575676,
+      "raw_file": "raw_trials/77332fac86a2e69d.npz",
+      "raw_sha256": "3fd6a6522d66be602833d9698e69521729835fcd442dd824842534fad1e3ba2c"
+    },
+    {
+      "case_id": "62390b6d2dc887aa",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.15,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 15270825865115974,
+      "raw_file": "raw_trials/62390b6d2dc887aa.npz",
+      "raw_sha256": "1a371e197f30d2e02cdcd1dcf58523e60fb0c8ec9a281e47bce18a6216a8bca4"
+    },
+    {
+      "case_id": "51d4a05b637bf342",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 14776873983061483031,
+      "raw_file": "raw_trials/51d4a05b637bf342.npz",
+      "raw_sha256": "0a073f421cb514978a2f7faec0ec6cc616d736e63db6c8105a8485a5e2bd3e1e"
+    },
+    {
+      "case_id": "8f23997ca92381a8",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 12818436368910015950,
+      "raw_file": "raw_trials/8f23997ca92381a8.npz",
+      "raw_sha256": "64568d0737d319dc700a114213edda16762607b4f75fcd37c5571968e07b7ef6"
+    },
+    {
+      "case_id": "76763f274bcd5dda",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 9947071900196575676,
+      "raw_file": "raw_trials/76763f274bcd5dda.npz",
+      "raw_sha256": "53a91c0ab8d55e5f52806f7d65c375f76c8d6663ff3c39ccc7b7285aac93ace8"
+    },
+    {
+      "case_id": "b48193ef2a1475d1",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 15270825865115974,
+      "raw_file": "raw_trials/b48193ef2a1475d1.npz",
+      "raw_sha256": "cf9f7de2a8655e609841b6cfc2b8e56b332305de01bf4037a21628aaeab3f0eb"
+    },
+    {
+      "case_id": "3ec8567e7c604127",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 14776873983061483031,
+      "raw_file": "raw_trials/3ec8567e7c604127.npz",
+      "raw_sha256": "ee40764082705b35f5b828e228124d198ce18e0e103c4e111dd5fe37854a940e"
+    },
+    {
+      "case_id": "3344fc45bbb4869d",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "dispersed",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 12818436368910015950,
+      "raw_file": "raw_trials/3344fc45bbb4869d.npz",
+      "raw_sha256": "7f3edb483bf94e46a5be0318ad59a328efd0b531ebd47b357361570b54d3100d"
+    },
+    {
+      "case_id": "d060812d7d815588",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "remote_cluster",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 9947071900196575676,
+      "raw_file": "raw_trials/d060812d7d815588.npz",
+      "raw_sha256": "c40a2333f857453c6ff5efbb9315b3374c34ccce904e4c9275bf0096060129cc"
+    },
+    {
+      "case_id": "cda1f0ecd473d91d",
+      "purposes": [
+        "primary"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 100,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.8,
+        "pattern": "stale",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 15270825865115974,
+      "raw_file": "raw_trials/cda1f0ecd473d91d.npz",
+      "raw_sha256": "56a3d3ac97ded228244142fc069fe0659a1a5ed7f0c52b08917d18cb4809030d"
+    },
+    {
+      "case_id": "6a17895e39e003bc",
+      "purposes": [
+        "honest_cold_start"
+      ],
+      "configuration": {
+        "honest_count": 1,
+        "bot_count": 0,
+        "honest_initial_reputation": 0.5,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 14859494899006850516,
+      "raw_file": "raw_trials/6a17895e39e003bc.npz",
+      "raw_sha256": "b7e7737ddcbcdf40fbb7db9f5e109dd9d106337284131d5ded3c481b169181d5"
+    },
+    {
+      "case_id": "3c130dea99da91ef",
+      "purposes": [
+        "honest_cold_start"
+      ],
+      "configuration": {
+        "honest_count": 1,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.5,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 8732671526631479639,
+      "raw_file": "raw_trials/3c130dea99da91ef.npz",
+      "raw_sha256": "b62f9a02c24b038dd15345efe29f8462b9084a266e3c2b094012137ab6d7733a"
+    },
+    {
+      "case_id": "2e18a1ca43176d96",
+      "purposes": [
+        "honest_cold_start"
+      ],
+      "configuration": {
+        "honest_count": 3,
+        "bot_count": 0,
+        "honest_initial_reputation": 0.5,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 4214370827135880959,
+      "raw_file": "raw_trials/2e18a1ca43176d96.npz",
+      "raw_sha256": "5b6c2b1f7d2516b4e2d6e3e4b86f5f154a6055e1007339e2bf5acbbc5775ce41"
+    },
+    {
+      "case_id": "025512269430ca4d",
+      "purposes": [
+        "honest_cold_start"
+      ],
+      "configuration": {
+        "honest_count": 3,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.5,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 11422823346265202826,
+      "raw_file": "raw_trials/025512269430ca4d.npz",
+      "raw_sha256": "db4ac2e5ad818925f8e7cd2026adbb5cb790b8b3f85b3f1c540b22cf81614b75"
+    },
+    {
+      "case_id": "ecb94fc4a4a9675b",
+      "purposes": [
+        "honest_cold_start"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 0,
+        "honest_initial_reputation": 0.5,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 17379919699107085324,
+      "raw_file": "raw_trials/ecb94fc4a4a9675b.npz",
+      "raw_sha256": "eb0affb87d8aef00f02627edcb477799acd913401b196385cbbf4ae1b1439d7d"
+    },
+    {
+      "case_id": "0e9a54156045fc8d",
+      "purposes": [
+        "honest_cold_start"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.5,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/0e9a54156045fc8d.npz",
+      "raw_sha256": "18253ae8b3568f12c90f731355fd9b2b1516efa70853d13718207fe408010528"
+    },
+    {
+      "case_id": "c5b697934f8318a2",
+      "purposes": [
+        "cell_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.125,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/c5b697934f8318a2.npz",
+      "raw_sha256": "f8cdf189698db760f8138d9e62228176e7ee16dbd389784d5f721e3f25cc095a"
+    },
+    {
+      "case_id": "94da306939c30efb",
+      "purposes": [
+        "cell_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.5,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/94da306939c30efb.npz",
+      "raw_sha256": "2bd0ceec06cca520c7d79a23749f24aaca90d7d6fec9a6c8b864c281451a1984"
+    },
+    {
+      "case_id": "7da793e539bc8d8b",
+      "purposes": [
+        "time_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.25,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/7da793e539bc8d8b.npz",
+      "raw_sha256": "8e7983804504b43b4d1bf3e8baede1748023c23d63da035a7a963c944fda4ab8"
+    },
+    {
+      "case_id": "80e6b3d6108a1d2a",
+      "purposes": [
+        "time_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 1.0,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/80e6b3d6108a1d2a.npz",
+      "raw_sha256": "c8c4d390a37af064890542b7e6fdccad945b7102d6030fc7aa54beb9625cd458"
+    },
+    {
+      "case_id": "c9c72c081e621421",
+      "purposes": [
+        "threshold_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.6
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/c9c72c081e621421.npz",
+      "raw_sha256": "a44839aa1361bf1043f39d8254828f6ed261044409dd5513f95095548dc14717"
+    },
+    {
+      "case_id": "b4b2ec87db35b07f",
+      "purposes": [
+        "threshold_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.9
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/b4b2ec87db35b07f.npz",
+      "raw_sha256": "122e7c16e6bfc7ea97f0be6bfbc9d756efcf47e2b696b232a34f39067c9f9cf4"
+    },
+    {
+      "case_id": "446749c9a6c407c0",
+      "purposes": [
+        "retention_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.7,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/446749c9a6c407c0.npz",
+      "raw_sha256": "7a0b8d70277c2471ada7cc1c773a022e9e6a02f5eaf4480f829d7f7b738d25db"
+    },
+    {
+      "case_id": "b6a27fc7a7dc196d",
+      "purposes": [
+        "retention_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.85,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/b6a27fc7a7dc196d.npz",
+      "raw_sha256": "0fce21bd5cfa9067365ce67b70d96d8522f74877b7f46fa20ae17e7aa95131de"
+    },
+    {
+      "case_id": "f99a039cd1ff90d3",
+      "purposes": [
+        "retention_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.95,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/f99a039cd1ff90d3.npz",
+      "raw_sha256": "81876340a448d31963b8d4578b9903e76a955b41d296588e98deab4984e47b59"
+    },
+    {
+      "case_id": "b0563c581d7c4c73",
+      "purposes": [
+        "reward_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.05,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/b0563c581d7c4c73.npz",
+      "raw_sha256": "a70eb51a9918f0abdf6d2a624de362fa14f74c1375b8e041722197bae3740e6e"
+    },
+    {
+      "case_id": "64cd94cc9a00a271",
+      "purposes": [
+        "reward_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.2,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/64cd94cc9a00a271.npz",
+      "raw_sha256": "a70eb51a9918f0abdf6d2a624de362fa14f74c1375b8e041722197bae3740e6e"
+    },
+    {
+      "case_id": "e88c7f93b5097aa5",
+      "purposes": [
+        "penalty_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.1,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/e88c7f93b5097aa5.npz",
+      "raw_sha256": "41c412139f335863e565dee457261caebddbc197dcb18c56d0c6ade4eb1f2695"
+    },
+    {
+      "case_id": "6a5f8d7f5761222d",
+      "purposes": [
+        "penalty_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.5,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/6a5f8d7f5761222d.npz",
+      "raw_sha256": "cddd948929f58a39194e4f8998b0831bfac2473126bd20b59e44c68eb25e7216"
+    },
+    {
+      "case_id": "d1f8802c8fb7847f",
+      "purposes": [
+        "dbscan_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 0.25,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/d1f8802c8fb7847f.npz",
+      "raw_sha256": "e7a527e25df1a045231e5a9c617ff3befc471bf03aa9bb000aadcdba089f39db"
+    },
+    {
+      "case_id": "8f3f9063c62a4c3f",
+      "purposes": [
+        "dbscan_sensitivity"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 5.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": true,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/8f3f9063c62a4c3f.npz",
+      "raw_sha256": "2b379d61ccff4fa453be731c582e9dc49f144d765665e97330aafaf9d3b5b208"
+    },
+    {
+      "case_id": "cfca4fd2fd502e13",
+      "purposes": [
+        "terrain_ablation"
+      ],
+      "configuration": {
+        "honest_count": 5,
+        "bot_count": 20,
+        "honest_initial_reputation": 0.95,
+        "bot_initial_reputation": 0.5,
+        "pattern": "mimic",
+        "epsilon_distance_km": 1.0,
+        "min_samples": 3,
+        "maximum_report_age_hours": 6.0,
+        "alpha_retention": 0.9,
+        "beta_reward": 0.1,
+        "eta_penalty": 0.3,
+        "terrain_discount": false,
+        "rounds": 10,
+        "benign_rounds": 3,
+        "threshold": 0.75
+      },
+      "pooling_policy": {
+        "cell_width_km": 0.25,
+        "time_bin_hours": 0.5,
+        "mass_cap": 0.95,
+        "threshold": 0.75
+      },
+      "geometry_seed": 18172682482516401375,
+      "raw_file": "raw_trials/cfca4fd2fd502e13.npz",
+      "raw_sha256": "02252ca838c443469fc42ecabd7b42bfa183c7f3fd7a9fe43535aa5c6307031d"
+    }
+  ],
+  "campaign_sha256": "2c48544c20f575c831b9ee9e1c80c268af723a274f2bcd3e584949f105384774",
+  "code_sha256": {
+    "dependence_revision_campaign.py": "06e46b61cc8f552cd87b48a8163e4e99e0bb86a2e6122dd66a3b8e1933e1f26e",
+    "dependence_aware_verification.py": "8608a284d8e5930d78dd742e8a16b2102d25e2dbf437f962c73eaf79f58a0df2",
+    "sybil_pipeline_campaign.py": "a44b6a694ea4b8307781ab2858399f1fc2e7f79075dc5fb6b44e38292dcd8a2f",
+    "sybil_revision_experiments.py": "e2c80b111e1595e24d1072a9e4165e034bfe9f569c53c6e644988872eaa3598d"
+  },
+  "interpretation": "Matched geometry and initial reputation; each method has its own feedback trajectory. Oracle labels are simulated. Terrain is synthetic. Unresolved true events are counted as missed alerts.",
+  "bayesian_baseline": "Beta(1,1) prior with fractional reputation-discounted report counts; posterior P(theta>0.5) thresholded symmetrically. This differs from the symmetric Beta MAP baseline that duplicates majority voting.",
+  "limitations": "Grid and time buckets approximate dependence; accounts spanning more groups or compromised high reputation can defeat the policy. No identity-authentication or general Sybil-security proof."
+}

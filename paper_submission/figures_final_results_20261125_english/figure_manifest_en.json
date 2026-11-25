@@ -1,0 +1,246 @@
+{
+  "1": {
+    "key": "HydroBASINS_L7_regional_supports",
+    "title": "HydroBASINS level 7 regional supports for Vietnam runoff reanalysis",
+    "caption": "The three fixed Vietnam anchors and their selected HydroBASINS level-7 regional runoff supports. Boundaries are exported source polygons, not flood extent or asserted complete upstream gauge catchments. Country outlines use Natural Earth 1:50 million data. Runoff averages use valid ERA5-Land pixels within each support. Bao Ha, Gianh and Can Tho denote Bảo Hà, Sông Gianh and Cần Thơ, respectively.",
+    "alt": "An overview marks Bao Ha, Gianh and Can Tho. Three insets show the actual selected level-7 polygons and fixed acquisition anchors with identifiers 4071015370, 4070015440 and 4070017020. The polygons define regional runoff averaging supports, not observed inundation.",
+    "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_1.png",
+    "language": "en-GB",
+    "files": {
+      "png": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_1.png",
+        "sha256": "acf86260f5546e662fd0e548856f18e5c3b003dd62098396b63f0f3bc870bbf3"
+      },
+      "svg": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_1.svg",
+        "sha256": "6b38fa29431f2b9ffdfb15b2122f1f982b4cb1ceec4c76f1d39e8bcf4a136254"
+      },
+      "pdf": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_1.pdf",
+        "sha256": "295c6d8cd23efaa763fced5d197dda1673c5c6398bc3feb7655696eb131027d0"
+      }
+    },
+    "data_sha256": {
+      "analysis\\revision_review_20261121\\natural_earth_countries_50m.geojson": "3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb",
+      "data\\runoff_revision\\raw\\CuuNet_ERA5Land_L7_basins.geojson": "ec3f2dc45af690cb41551926affaf8e0e7a6e74c04012615867c20bacb11eacf"
+    },
+    "copied_from_verified_English_original": true
+  },
+  "2": {
+    "key": "Iowa_observed_hydrographs",
+    "title": "Observed daily discharge at the three WaterBench Iowa gauges",
+    "caption": "Daily mean USGS discharge from 1 October 2011 to 30 September 2018. Dashed lines mark the starts of validation (1 October 2015) and testing (1 October 2016); the preceding interval is training. Validation and testing have blue and orange shading, respectively. Daily outcomes require at least 22 valid hourly observations; missing references remain gaps. This figure contains observed discharge and no model predictions.",
+    "alt": "Three vertically aligned hydrographs show observed daily discharge in cubic metres per second at USGS 06903900, 05421000 and 05453520. Dashed vertical lines identify validation and test boundaries. Peaks differ among gauges, and missing days remain breaks in the reference series. These Iowa observations are a separate benchmark outside Vietnam.",
+    "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_2.png",
+    "language": "en-GB",
+    "files": {
+      "png": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_2.png",
+        "sha256": "2c4c7419f6946da668c19938c923ca38b0428c48701aea98a2dbe3894bebba81"
+      },
+      "svg": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_2.svg",
+        "sha256": "b6713601c5943245c4ae3b5bd759d9f6741016e719974cb6897c6e57def0cfe7"
+      },
+      "pdf": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_2.pdf",
+        "sha256": "c9a9e9390064ad8ce75484a9417e6763b92d7c4b5562558a358af6959e5b3384"
+      }
+    },
+    "data_sha256": {
+      "data\\waterbench_observed\\prepared\\experiment_manifest.json": "4eb26a7bdabef8cd857eb088383ed3db215df47fef256a23b794171a9ceb4d29",
+      "data\\waterbench_observed\\prepared\\USGS_06903900.csv": "cd9ef1051493d72b44ea48ba8a5d71598863ad667ef99276466b347627123154",
+      "data\\waterbench_observed\\prepared\\USGS_05421000.csv": "dae324e7225b6b17783446129b6059c4dc7fa89b5e05bb563868b4db7b60d46b",
+      "data\\waterbench_observed\\prepared\\USGS_05453520.csv": "61ef27f3444c3361f8fa7d534d6493a50d50eb730ef739c89ad8654634042109"
+    },
+    "copied_from_verified_English_original": false
+  },
+  "3": {
+    "key": "Deployment_design",
+    "title": "Browser forecasting and local report processing",
+    "caption": "Implemented deployment path separates local forecasting and local report verification from report transport. Browser inference and cached persistence have desktop test logs; input outages are retrospective simulations. JSON export/import is implemented locally and does not establish shared consensus across disconnected devices.",
+    "alt": "Historical physical data lead to model training, validation and numerical export. Cached inputs feed local browser inference. Reports are persisted and verified as a local batch. A separate transport mechanism is needed to share exported reports; offline global consensus is not claimed.",
+    "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_3.png",
+    "language": "en-GB",
+    "files": {
+      "png": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_3.png",
+        "sha256": "573b1fcd25308a0df774962ac592414b161bfa1b98addc9dd278428ea7339528"
+      },
+      "svg": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_3.svg",
+        "sha256": "fbb006014939262d5fd645d388425f05ae14488a086e75337782913c4c15f7ff"
+      },
+      "pdf": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_3.pdf",
+        "sha256": "a7ccb089c43a02447baf7aca8e5a6a2a82742c72769b7f36ccb6560acc54fc5d"
+      }
+    },
+    "data_sha256": {
+      "public\\research\\app.mjs": "5f64f18bf3b3a768032d7491fdaa5dded123ee4955a7fad7174c6ee0507f2703",
+      "public\\research\\verification.mjs": "10e98b5795344ebde4aba63d92ea9ac7fc1c2f2986423404a326621ee8c81cb5",
+      "paper_submission\\browser_benchmarks\\offline_reload_persistence_audit.json": "1bf8c44e0eb78d82411a87e02910940665661b4cc7037663072bc0ea30a447fa"
+    },
+    "copied_from_verified_English_original": true
+  },
+  "4": {
+    "key": "Vietnam_test_errors",
+    "title": "One day forecasting errors for Vietnam runoff depth",
+    "caption": "Held-out one-day forecasting errors. Neural points are means over five seeds; horizontal bars show one sample standard deviation across seeds, not confidence intervals. Deterministic baselines have no seed bars. All ten methods and paired time-block intervals are retained in the tables; linear trend and equal-weight combination are omitted only from this compact plot. All ten methods are reported in Table 4; paired intervals are in Table 6 and the source tables.",
+    "alt": "Three columns show the selected regions or gauges. Top panels compare MAE and bottom panels RMSE in physical units. Persistence and seasonal baselines are displayed alongside three recurrent variants. Neural models do not consistently outperform persistence.",
+    "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_4.png",
+    "language": "en-GB",
+    "files": {
+      "png": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_4.png",
+        "sha256": "c751ff96ee36f7126367942e17c69099b853c4742bc7b9179b04e0a4283551b5"
+      },
+      "svg": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_4.svg",
+        "sha256": "04f7685d8071cff58dd4aa3868737fcdaabd5e879b8becc4cd36dc640ef00f0c"
+      },
+      "pdf": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_4.pdf",
+        "sha256": "d51fb0c0a004b507b016bbdf3708ec67e5aa34aede1b4ae904938a0f861b21e0"
+      }
+    },
+    "data_sha256": {
+      "analysis\\final_revision_20261123\\task2\\forecast_summary.csv": "6386aee13cd9a4c8cf2bcfd5360d2daef9f0e1e77693e07bfa63d2291a7bfed4"
+    },
+    "copied_from_verified_English_original": true
+  },
+  "5": {
+    "key": "Iowa_test_errors",
+    "title": "One day forecasting errors for observed Iowa discharge",
+    "caption": "Held-out one-day forecasting errors. Neural points are means over five seeds; horizontal bars show one sample standard deviation across seeds, not confidence intervals. Deterministic baselines have no seed bars. All ten methods and paired time-block intervals are retained in the tables; linear trend and equal-weight combination are omitted only from this compact plot. All ten methods are reported in Table 5; paired intervals are in Table 6 and the source tables.",
+    "alt": "Three columns show the selected regions or gauges. Top panels compare MAE and bottom panels RMSE in physical units. Persistence and seasonal baselines are displayed alongside three recurrent variants. Neural models do not consistently outperform persistence.",
+    "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_5.png",
+    "language": "en-GB",
+    "files": {
+      "png": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_5.png",
+        "sha256": "a129b8d743ebb35374f9629f9ab8b0e218e21a9ed221cdc31213d21b2fc7d5a8"
+      },
+      "svg": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_5.svg",
+        "sha256": "87adc80925c4c37488e26492bb0a59a0da5e3bd3d0077df4f91e35e137e4e560"
+      },
+      "pdf": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_5.pdf",
+        "sha256": "50c2109acddc3336ba4744116b140ad478b46d5607c8da62e6c477369685c316"
+      }
+    },
+    "data_sha256": {
+      "analysis\\final_revision_20261123\\task2\\forecast_summary.csv": "6386aee13cd9a4c8cf2bcfd5360d2daef9f0e1e77693e07bfa63d2291a7bfed4"
+    },
+    "copied_from_verified_English_original": true
+  },
+  "6": {
+    "key": "Vietnam_frozen_input_MAE",
+    "title": "Vietnam forecast errors with frozen physical inputs",
+    "caption": "Frozen-input interruption errors at one, three and seven days. Neural curves show five-seed means and shaded one-SD training variation. Persistence is the validation-selected baseline for these runs. Evaluated horizons use the same scheduled origins but different target dates; missing observed targets are excluded equally, and errors need not rise monotonically with horizon. Paired time-block intervals and all ten methods are in the tables. There are 208 scheduled origins per region. Reference coverage is in Table 8, all ten methods in Table 9, and seven day paired differences in Table 10.",
+    "alt": "Three panels compare persistence, LSTM without attention, temporal-attention LSTM and censored-input temporal-attention LSTM at three outage horizons. Vietnam generally benefits from censored training relative to ordinary attention; the observed Iowa benchmark shows mixed effects.",
+    "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_6.png",
+    "language": "en-GB",
+    "files": {
+      "png": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_6.png",
+        "sha256": "1f73a099ecb137417e9c9194b8b1e08e8d839606cca5e121454296cd5078bc45"
+      },
+      "svg": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_6.svg",
+        "sha256": "54eeb8fc23c0adb1a3f8b2eb9833149f63d87d3e29b5426a8a507b1e588d99d6"
+      },
+      "pdf": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_6.pdf",
+        "sha256": "e57a16cf5d995242bb5b5b58dbd4208c1c959ee2accaea1749715947e7179da2"
+      }
+    },
+    "data_sha256": {
+      "analysis\\final_revision_20261123\\task2\\outage_summary.csv": "14f64bf875c4b8bcd7ad20622da612548c3806101d844ce13b629770de2f7b08",
+      "analysis\\final_revision_20261123\\task2\\coverage.csv": "317392f922d915f48a866a10e65cacce27e94bd7ec0206d493ca71615a1ae399"
+    },
+    "copied_from_verified_English_original": true
+  },
+  "7": {
+    "key": "Iowa_frozen_input_MAE",
+    "title": "Iowa forecast errors with frozen physical inputs",
+    "caption": "Frozen-input interruption errors at one, three and seven days. Neural curves show five-seed means and shaded one-SD training variation. Persistence is the validation-selected baseline for these runs. Evaluated horizons use the same scheduled origins but different target dates; missing observed targets are excluded equally, and errors need not rise monotonically with horizon. Paired time-block intervals and all ten methods are in the tables. There are 104 scheduled origins per gauge. Reference coverage is in Table 8, all ten methods in Table 9, and seven day paired differences in Table 10.",
+    "alt": "Three panels compare persistence, LSTM without attention, temporal-attention LSTM and censored-input temporal-attention LSTM at three outage horizons. Vietnam generally benefits from censored training relative to ordinary attention; the observed Iowa benchmark shows mixed effects.",
+    "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_7.png",
+    "language": "en-GB",
+    "files": {
+      "png": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_7.png",
+        "sha256": "94cead46cea9c1bccd3f08a825d2991c74329e570715525bdad94b0ec069dad5"
+      },
+      "svg": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_7.svg",
+        "sha256": "dddfba0a4ef617181deb722ac275d66a4ad52e804955cfc861d6012150c4e705"
+      },
+      "pdf": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_7.pdf",
+        "sha256": "ed861985be744abddaadfb4dfd57737e62613adc171afbbf9bb5b7443fa29067"
+      }
+    },
+    "data_sha256": {
+      "analysis\\final_revision_20261123\\task2\\outage_summary.csv": "14f64bf875c4b8bcd7ad20622da612548c3806101d844ce13b629770de2f7b08",
+      "analysis\\final_revision_20261123\\task2\\coverage.csv": "317392f922d915f48a866a10e65cacce27e94bd7ec0206d493ca71615a1ae399"
+    },
+    "copied_from_verified_English_original": true
+  },
+  "8": {
+    "key": "Sybil_count_sweep",
+    "title": "Attacker count sweep under frozen reputation",
+    "caption": "Synthetic mimic attacks with five honest reporters at initial reputation 0.95 and attackers at initial reputation 0.50. Six methods are compared at 0, 5, 20, 50 and 100 attacker accounts. Rates average malicious rounds 4–10 from 1,000 matched geometry trajectories per configuration; repeated rounds are not independent trials. Missed alerts include unresolved decisions. All reputations remain frozen without verified feedback. Low false-alert rates alone do not establish useful detection or general Sybil security.",
+    "alt": "Two panels compare false-alert and missed-alert percentages as attacker count increases from zero to one hundred. The curves represent classical Dempster fusion, grouped maximum support, weighted Bayesian Beta updating, two weighted voting thresholds and majority. Grouped support has a conditional advantage in the specified reputation setting, while abstention can hide poor detection in a method with few false alerts.",
+    "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_8.png",
+    "language": "en-GB",
+    "files": {
+      "png": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_8.png",
+        "sha256": "3b7a1a596a95504a447a7c2da8307a3b740230d4e3a635f7b2570d2306fcb237"
+      },
+      "svg": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_8.svg",
+        "sha256": "b869d87c4cc3ee3faff2df75025c4e3bdd83a3714705ca5572aba9cb483212c5"
+      },
+      "pdf": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_8.pdf",
+        "sha256": "5c96bc17fedf52d68427187408546196ce1637c4000c752cd822cfba26ace0df"
+      }
+    },
+    "data_sha256": {
+      "data\\dependence_revision\\dependence_campaign.csv": "2c48544c20f575c831b9ee9e1c80c268af723a274f2bcd3e584949f105384774",
+      "data\\dependence_revision\\dependence_campaign_manifest.json": "2f013218359cbb538e899c5eb3ebda77748833c6c72e63693b91db40b149bd85"
+    },
+    "copied_from_verified_English_original": false
+  },
+  "9": {
+    "key": "Sybil_feedback_trajectories",
+    "title": "Ten round trajectories under three feedback regimes",
+    "caption": "The same synthetic configuration has five honest reporters at initial reputation 0.95 and twenty mimic attackers at initial reputation 0.50. Top panels show false alerts; bottom panels show missed alerts, including unresolved decisions. Columns compare frozen reputation, an independently labelled simulated oracle and feedback from each method’s own decisions. Grey shading marks benign rounds 1–3; attacks occur in rounds 4–10. Solid lines are grouped maximum support and dashed lines classical DST. Each point uses 1,000 matched trajectories. The oracle is not an implemented independent sensor service, and late recovery does not remove earlier errors.",
+    "alt": "Six panels show false-alert and missed-alert trajectories through ten rounds. Frozen reputation preserves a conditional benefit of grouped support, the simulated oracle changes the trajectory, and self-consensus feedback drives both error rates to one hundred percent in the reported setting. The first three rounds are benign and shaded.",
+    "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_9.png",
+    "language": "en-GB",
+    "files": {
+      "png": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_9.png",
+        "sha256": "503d4191db93ba158f201d54401db0e9b8d0fbae362e2684d87de2ff72f0c9ec"
+      },
+      "svg": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_9.svg",
+        "sha256": "330dba276e960f0c2f6560f8ce6253e8941d5c4bdd54aa7fba5913e7933bc651"
+      },
+      "pdf": {
+        "path": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\figures_final_results_20261125_english\\Figure_9.pdf",
+        "sha256": "8b55a48fdaabca5bb30469bb7ee60108bc70ca241b2ddde17ab965a8e2fe993e"
+      }
+    },
+    "data_sha256": {
+      "data\\dependence_revision\\dependence_campaign.csv": "2c48544c20f575c831b9ee9e1c80c268af723a274f2bcd3e584949f105384774",
+      "data\\dependence_revision\\dependence_campaign_manifest.json": "2f013218359cbb538e899c5eb3ebda77748833c6c72e63693b91db40b149bd85"
+    },
+    "copied_from_verified_English_original": false
+  }
+}

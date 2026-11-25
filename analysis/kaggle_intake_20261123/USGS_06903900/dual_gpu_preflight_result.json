@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "publication_eligible": false,
+  "parallel_gpu_ids": [
+    0,
+    1
+  ],
+  "serial_reference_gpu": 0,
+  "cases_per_worker": 6,
+  "comparisons": [
+    {
+      "case": "ta_lstm_30_5",
+      "parallel_worker": "parallel_gpu_0",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "ta_lstm_30_5",
+      "parallel_worker": "parallel_gpu_1",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "lstm_no_attention_30_5",
+      "parallel_worker": "parallel_gpu_0",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "lstm_no_attention_30_5",
+      "parallel_worker": "parallel_gpu_1",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "ta_lstm_outage_30_5",
+      "parallel_worker": "parallel_gpu_0",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "ta_lstm_outage_30_5",
+      "parallel_worker": "parallel_gpu_1",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "ta_lstm_30_8",
+      "parallel_worker": "parallel_gpu_0",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "ta_lstm_30_8",
+      "parallel_worker": "parallel_gpu_1",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "lstm_no_attention_30_8",
+      "parallel_worker": "parallel_gpu_0",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "lstm_no_attention_30_8",
+      "parallel_worker": "parallel_gpu_1",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "ta_lstm_outage_30_8",
+      "parallel_worker": "parallel_gpu_0",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    },
+    {
+      "case": "ta_lstm_outage_30_8",
+      "parallel_worker": "parallel_gpu_1",
+      "max_abs_prediction_difference": 0.0,
+      "all_weight_arrays_within_tolerance": true
+    }
+  ],
+  "scope": "tiny synthetic two-epoch fits at 30x5 and 30x8; no full experiment, browser latency or general speedup claim",
+  "elapsed_seconds": 80.012190272,
+  "code_sha256": {
+    "dual_gpu_preflight.py": "d8d89d48ed0a60bbb12a4dcb6ddf8bc47c42bd1efca50420bdd4b37ef81ed71f",
+    "revision_dual_gpu.py": "1f68e3d7acf9a4aea01e9883f4cdcec2215b9875cf0a3947ebeb25b90a3dfc72",
+    "revision_experiments.py": "a61e75da28fd3d6f8e8859dc5fe39265636be760d7d0edb2d2bb10e6b715d0db"
+  },
+  "software": {
+    "tensorflow": "2.19.0",
+    "keras": "3.9.2"
+  }
+}

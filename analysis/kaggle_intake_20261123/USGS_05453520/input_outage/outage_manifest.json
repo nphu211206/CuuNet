@@ -1,0 +1,34 @@
+{
+  "completed_at_utc": "2026-11-23T10:00:44.191883+00:00",
+  "primary_run_id": "25269b76f9725110d369",
+  "manifest_sha256": "c992e4e7707abae0e1fda8c073267cd12f3cc6ba937e2e0c6a2027b9be8e55f1",
+  "code_sha256": "b1a49168cd4ddc35d40fee5d834d769164bb2f24a57fb1dfa023c2e8f1417796",
+  "evidence": {
+    "provenance_class": "observed",
+    "validation_mode": "physical_target_replacement",
+    "source_manifest": "/kaggle/working/CuuNet_revision/data/waterbench_observed/prepared/source_manifest.json",
+    "source_manifest_sha256": "ba1548b6162de4e892382a784ff999ce7db1dfc68c46c414bcba9079ed781ac1",
+    "data_files": [
+      {
+        "zone": "USGS_05453520",
+        "path": "/kaggle/working/CuuNet_revision/data/waterbench_observed/prepared/USGS_05453520.csv",
+        "sha256": "61ef27f3444c3361f8fa7d534d6493a50d50eb730ef739c89ad8654634042109"
+      }
+    ],
+    "verified_bibliography_file": {
+      "path": "/kaggle/working/CuuNet_revision/analysis/verified_bibliography.runoff.csv",
+      "sha256": "5528e37e4552169a759cd517efeb999c7aad56d057c4ad829c1329fb6fb99e9f"
+    },
+    "data_preparation_audit_file": {
+      "path": "/kaggle/working/CuuNet_revision/data/waterbench_observed/prepared/preparation_audit.json",
+      "sha256": "922a1239efddc3b33f7925c114ef42a49841dfc9e94fada5f8a6e672991062a7"
+    }
+  },
+  "pending": [],
+  "neural_complete": true,
+  "protocol": "Physical inputs stop at each origin; future calendar and input age are known. All physical input values remain frozen under the primary policy. Ensemble weights remain those fitted on validation.",
+  "input_rollout_policy": "frozen",
+  "interpretation": "Simulated input interruption over retrospective reanalysis, not field outage, live telemetry or a forecasting guarantee.",
+  "raw_predictions_sha256": "8d8c4c21b20b4a9e5641b589bb4babf257970ae1d1333769fa6bcdf68f33c0f5",
+  "metrics_sha256": "cfdd133a2d0155d2e6a9b1a3726a0d739936e959996a433dcb9a8df3835c1142"
+}

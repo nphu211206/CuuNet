@@ -1,0 +1,9 @@
+{
+  "zone": "Gianh_Runoff",
+  "passed": true,
+  "checks": 494,
+  "failures": [],
+  "raw_rows": 13728,
+  "metric_rows": 66,
+  "scope": "hashes, target identities, model checksums, origin/cutoff metadata and metrics; does not rerun TensorFlow or prove field outages"
+}

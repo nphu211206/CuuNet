@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CuuNet Research Demonstrator — Edge AI & Sybil Defence</title>
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="header-titles">
+        <h1>CuuNet Research Demonstrator <span class="badge-paper">HYDRO-D-26-00188</span></h1>
+        <p>A Spatio-Temporal Edge AI Framework with Sybil Defence for Crowdsourced Disaster Forecasting — <em>Journal of
+            Hydroinformatics</em></p>
+      </div>
+      <div class="header-badges">
+        <div id="netStatus" class="status-pill online">● Đang trực tuyến</div>
+        <div id="cacheStatus" class="status-pill cached" role="status">Đang kiểm tra Cache Storage…</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Control & Model Selection Panel -->
+    <section class="control-panel">
+      <div class="control-presets">
+        <span>Nạp nhanh mô hình đã kiểm toán:</span>
+        <button type="button" id="btnPresetBaoHa" class="btn-preset">🌊 Nạp Bảo Hà (ERA5)</button>
+        <button type="button" id="btnPresetGianh" class="btn-preset">🌊 Nạp Sông Gianh (ERA5)</button>
+        <button type="button" id="btnPresetCanTho" class="btn-preset">🌊 Nạp Cần Thơ (ERA5)</button>
+      </div>
+
+      <div class="control-grid">
+        <label>
+          Gói mô hình ZIP tùy chọn
+          <input id="modelZip" type="file" accept=".zip">
+        </label>
+
+        <label>
+          Mô hình đã chọn
+          <select id="modelSelect">
+            <option value="">Chưa nạp mô hình</option>
+          </select>
+        </label>
+
+        <label>
+          Backend suy luận
+          <select id="backend">
+            <option value="cpu">CPU (Xử lý chuỗi)</option>
+            <option value="webgl">WebGL (Tăng tốc GPU)</option>
+          </select>
+        </label>
+
+        <label>
+          Thời gian đứt gãy viễn thông
+          <select id="horizon">
+            <option value="1">1 ngày (Mất dữ liệu gần nhất)</option>
+            <option value="3">3 ngày (Mất dữ liệu trung hạn)</option>
+            <option value="7">7 ngày (Mất dữ liệu kéo dài)</option>
+          </select>
+        </label>
+
+        <label>
+          Trường hợp thử (0 - 63)
+          <div class="slider-container">
+            <input id="caseIndex" type="number" min="0" max="63" value="0">
+            <input id="caseSlider" type="range" min="0" max="63" value="0">
+          </div>
+        </label>
+
+        <div class="button-group">
+          <button id="predict" class="btn-primary" disabled>Dự báo Rollout</button>
+          <button id="benchmark" class="btn-secondary" disabled>Đo 50 lượt latency</button>
+          <button id="exportLogs" class="btn-secondary">Xuất log thiết bị</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two Column Scientific Dashboard -->
+    <div class="dashboard-grid">
+
+      <!-- LEFT: Hydrological Edge AI -->
+      <div class="dashboard-col">
+        <div class="card">
+          <div class="card-header">
+            <h2>🌊 Biểu đồ Dòng chảy & Rollout Đứt gãy Viễn thông</h2>
+            <span class="card-subtitle">30 ngày lịch sử + Hạn dự báo đệ quy</span>
+          </div>
+
+          <div class="canvas-wrapper">
+            <canvas id="hydrographCanvas" width="700" height="260"></canvas>
+            <div class="chart-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#0284c7;"></span> 30 ngày lịch sử
+                (Lookback)</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#f59e0b;"></span> Dự báo mô hình
+                (Rollout)</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#10b981;"></span> Dữ liệu thực tế
+                ERA5-Land</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#ef4444;"></span> Điểm đóng băng cảm
+                biến</div>
+            </div>
+          </div>
+
+          <div class="metrics-strip">
+            <div class="metric-box">
+              <div class="label">Dự báo mô hình</div>
+              <div id="statPrediction" class="value">-- mm/d</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">Thực tế ERA5</div>
+              <div id="statActual" class="value">-- mm/d</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">Sai số tuyệt đối</div>
+              <div id="statAbsError" class="value">-- mm/d</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">Tình trạng cảm biến</div>
+              <div id="statOutagePolicy" class="value" style="font-size:13px; font-weight:600;">Sẵn sàng</div>
+            </div>
+          </div>
+
+          <div class="card-header" style="margin-top:8px;">
+            <h2>⏱️ Hiệu năng Thực thi Runtime (50 lần lặp)</h2>
+            <span class="card-subtitle">TensorFlow.js Edge Profiler</span>
+          </div>
+
+          <div class="metrics-strip">
+            <div class="metric-box">
+              <div class="label">Khởi động (Cold)</div>
+              <div id="statCold" class="value">-- ms</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">Trung vị ấm (Median)</div>
+              <div id="statMedian" class="value">-- ms</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">Phân vị 95% (p95)</div>
+              <div id="statP95" class="value">-- ms</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">Tensor RAM</div>
+              <div id="statTensorMem" class="value">-- MB</div>
+            </div>
+            <div class="metric-box">
+              <div class="label">JS Heap</div>
+              <div id="statHeap" class="value">-- MB</div>
+            </div>
+          </div>
+
+          <pre id="forecastStatus" class="console-out"
+            role="status">Chưa nạp mô hình. Chọn một mô hình phía trên để chạy kiểm chứng.</pre>
+        </div>
+      </div>
+
+      <!-- RIGHT: Crowdsourced Sybil Defence -->
+      <div class="dashboard-col">
+        <div class="card">
+          <div class="card-header">
+            <h2>🛡️ Phòng vệ Sybil & Hợp nhất Bằng chứng</h2>
+            <span class="card-subtitle">DBSCAN (ε=1km) + Dempster-Shafer</span>
+          </div>
+
+          <!-- View Segmented Switch -->
+          <div class="view-toggle">
+            <button type="button" id="btnViewGIS" class="btn-toggle active">🗺️ Bản đồ GIS Lưu vực (Leaflet)</button>
+            <button type="button" id="btnViewCluster" class="btn-toggle">📐 Phân tích Cụm (Cartesian ε=1km)</button>
+          </div>
+
+          <!-- Leaflet GIS Map Container -->
+          <div id="leafletMapWrapper" style="display: block; position: relative;">
+            <div id="leafletMap"></div>
+            <div class="map-hint">💡 Nhấp chuột trên bản đồ để chọn tọa độ GPS và thêm báo cáo ngập lụt.</div>
+          </div>
+
+          <!-- Cartesian DBSCAN Canvas Container -->
+          <div id="sybilCanvasWrapper" class="canvas-wrapper" style="display: none;">
+            <canvas id="sybilMapCanvas" width="500" height="260"></canvas>
+            <div class="chart-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#ef4444;"></span> Có ngập</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#10b981;"></span> Không ngập</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#3b82f6;"></span> Cụm hợp lệ (Core)
+              </div>
+              <div class="legend-item"><span class="legend-dot" style="background:#94a3b8;"></span> Ngoại lai Sybil loại
+                bỏ</div>
+            </div>
+          </div>
+
+          <div class="belief-container">
+            <div class="belief-labels">
+              <span style="color:#ef4444;">m(Ngập): <strong id="massDisasterVal">0.0%</strong></span>
+              <span style="color:#10b981;">m(Không ngập): <strong id="massNoDisasterVal">0.0%</strong></span>
+              <span style="color:#64748b;">Bất định u: <strong id="massUncertaintyVal">100.0%</strong></span>
+            </div>
+            <div class="belief-bar">
+              <div id="massDisasterSeg" class="belief-seg-disaster" style="width: 0%;"></div>
+              <div id="massNoDisasterSeg" class="belief-seg-nodisaster" style="width: 0%;"></div>
+              <div id="massUncertaintySeg" class="belief-seg-uncertainty" style="width: 100%;"></div>
+            </div>
+            <div id="actionDecisionBanner" class="action-banner uncertain">
+              CHƯA CÓ BÁO CÁO CỤC BỘ (BẤT ĐỊNH u = 1.00)
+            </div>
+            <p style="font-size:11px; color:#64748b; text-align:center;">
+              🔒 Quy tắc liêm chính: Điểm uy tín người báo luôn ĐÓNG BĂNG (Frozen) để triệt tiêu vòng lặp tự củng cố của
+              kẻ tấn công Sybil.
+            </p>
+          </div>
+
+          <div class="control-presets" style="margin-top:4px;">
+            <span>Kịch bản thử nghiệm đối kháng:</span>
+            <button type="button" id="btnScenarioA" class="btn-preset" style="font-size:11px;">Kịch bản A: Cụm thật +
+              Sybil xa (50km)</button>
+            <button type="button" id="btnScenarioB" class="btn-preset" style="font-size:11px;">Kịch bản B: Mâu thuẫn
+              50/50</button>
+            <button type="button" id="btnScenarioC" class="btn-preset" style="font-size:11px;">Kịch bản C: Quá hạn
+              (>6h)</button>
+          </div>
+
+          <form id="reportForm">
+            <div style="display:flex; gap:10px; flex-wrap:wrap; width:100%; align-items:end;">
+              <label style="flex:1; min-width:80px;">X (km)<input id="reportX" name="x" type="number" step="any"
+                  value="0" required></label>
+              <label style="flex:1; min-width:80px;">Y (km)<input id="reportY" name="y" type="number" step="any"
+                  value="0" required></label>
+              <label style="flex:1.2; min-width:110px;">Uy tín (0-1)<input name="reputation" type="number" step="0.05"
+                  min="0" max="1" value="0.85" required></label>
+              <label style="flex:1.5; min-width:120px;">Nội dung
+                <select name="claim">
+                  <option value="true">Có ngập</option>
+                  <option value="false">Không ngập</option>
+                </select>
+              </label>
+              <button class="btn-primary" style="height:36px; padding:0 14px;">Lưu báo cáo</button>
+            </div>
+          </form>
+
+          <div
+            style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:4px;">
+            <span id="reportCount" style="font-size:12px; font-weight:600; color:#334155;">0 báo cáo đã lưu</span>
+            <label style="flex-direction:row; align-items:center; gap:6px; font-size:12px;">
+              <input id="terrain" type="checkbox"> Mô phỏng suy giảm theo độ dốc địa hình
+            </label>
+          </div>
+
+          <div class="button-group">
+            <button id="verify" class="btn-primary" style="flex:1;">Tổng hợp DBSCAN + D-S</button>
+            <button id="exportReports" class="btn-secondary">Xuất JSON</button>
+            <label style="margin:0;">
+              <span style="display:none;">Nhập JSON</span>
+              <input id="importReports" type="file" accept=".json" style="max-width:150px;">
+            </label>
+          </div>
+
+          <pre id="verificationStatus" class="console-out"
+            role="status">Chỉ xử lý báo cáo có trên thiết bị cục bộ. Không cần máy chủ trung tâm.</pre>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width:1400px; margin:auto; padding:0 20px;">
+      <p>CuuNet PWA Edge Research Prototype — Hydroinformatics 2026. Hỗ trợ reload ngoại tuyến qua Service Worker và lưu
+        trữ IndexedDB cục bộ.</p>
+    </div>
+  </footer>
+
+  <script src="vendor/leaflet.js"></script>
+  <script src="vendor/tf.min.js"></script>
+  <script src="vendor/fflate.js"></script>
+  <script type="module" src="app.mjs"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+{
+  "zone": "Gianh_Runoff",
+  "lookback": 30,
+  "feature_columns": [
+    "runoff_mm",
+    "precipitation_mm",
+    "temperature_C",
+    "soil_water",
+    "input_available",
+    "input_age_01",
+    "annual_sin",
+    "annual_cos"
+  ],
+  "feature_scaler": {
+    "scale": [
+      0.005808784919940931,
+      0.004124449135483852,
+      0.04217841921947814,
+      3.6932067038382974,
+      1.0,
+      1.0,
+      0.5000046301747816,
+      0.5
+    ],
+    "min": [
+      -0.0002136384650348577,
+      0.0,
+      -0.31671575887335446,
+      -0.7153324281873576,
+      0.0,
+      0.0,
+      0.5,
+      0.5
+    ]
+  },
+  "target_scaler": {
+    "scale": 0.005808784919940931,
+    "min": -0.0002136384650348577
+  },
+  "fit_period_end": "2017-12-31",
+  "prediction_bounds": {
+    "lower": 0.0,
+    "upper": null
+  },
+  "forecast_horizon": "one day",
+  "input_information": "the preceding 30 time steps only",
+  "sampling_frequency": "D",
+  "target_metadata": {
+    "data_class": "reanalysis",
+    "variable": "area-weighted total runoff generation",
+    "units": "mm day-1",
+    "source_id": "ECMWF/ERA5_LAND/DAILY_AGGR:basin=4070015440",
+    "source_url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR",
+    "licence": "Copernicus C3S information licence; attribution required",
+    "geographic_support": "valid land pixels in HydroBASINS level-5 basin 4070015440",
+    "temporal_resolution": "daily accumulated depth",
+    "routed_streamflow": false
+  },
+  "target_input_column": "runoff_mm",
+  "availability_feature_columns": [
+    "input_available"
+  ],
+  "age_feature_column": "input_age_01",
+  "age_normalisation_steps": 7,
+  "outage_input_policy": "frozen"
+}

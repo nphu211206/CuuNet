@@ -1,0 +1,66 @@
+{
+  "zone": "Bao_Ha_Runoff",
+  "lookback": 30,
+  "feature_columns": [
+    "runoff_mm",
+    "precipitation_mm",
+    "temperature_C",
+    "soil_water",
+    "input_available",
+    "input_age_01",
+    "annual_sin",
+    "annual_cos"
+  ],
+  "feature_scaler": {
+    "scale": [
+      0.008609765977521998,
+      0.007559478429788107,
+      0.03792647400127216,
+      4.675191881038559,
+      1.0,
+      1.0,
+      0.5000046301747816,
+      0.5
+    ],
+    "min": [
+      -0.0011302469383872701,
+      0.0,
+      -0.10122506007646506,
+      -1.3335874509609416,
+      0.0,
+      0.0,
+      0.5,
+      0.5
+    ]
+  },
+  "target_scaler": {
+    "scale": 0.008609765977521998,
+    "min": -0.0011302469383872701
+  },
+  "fit_period_end": "2017-12-31",
+  "prediction_bounds": {
+    "lower": 0.0,
+    "upper": null
+  },
+  "forecast_horizon": "one day",
+  "input_information": "the preceding 30 time steps only",
+  "sampling_frequency": "D",
+  "target_metadata": {
+    "data_class": "reanalysis",
+    "variable": "area-weighted total runoff generation",
+    "units": "mm day-1",
+    "source_id": "ECMWF/ERA5_LAND/DAILY_AGGR:basin=4071015370",
+    "source_url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR",
+    "licence": "Copernicus C3S information licence; attribution required",
+    "geographic_support": "valid land pixels in HydroBASINS level-5 basin 4071015370",
+    "temporal_resolution": "daily accumulated depth",
+    "routed_streamflow": false
+  },
+  "target_input_column": "runoff_mm",
+  "availability_feature_columns": [
+    "input_available"
+  ],
+  "age_feature_column": "input_age_01",
+  "age_normalisation_steps": 7,
+  "outage_input_policy": "frozen"
+}

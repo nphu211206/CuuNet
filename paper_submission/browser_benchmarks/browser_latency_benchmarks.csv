@@ -1,0 +1,5 @@
+model,backend,repeats,first_inference_ms,warm_runs,warm_median_ms,warm_p95_ms,allocated_tensor_bytes,unreliable_tensor_memory,js_heap_bytes
+"Bao_Ha_Runoff / FP32","cpu",50,5.595,,5.320,11.485,2259796,true,44085884
+"Bao_Ha_Runoff / uint8 storage","cpu",50,6.470,,5.165,6.820,2259796,true,42059436
+"Bao_Ha_Runoff / FP32","webgl",50,3013.285,,6.050,8.320,2259796,false,49774235
+"Bao_Ha_Runoff / uint8 storage","webgl",50,13.400,,6.055,7.630,2259796,false,22383118

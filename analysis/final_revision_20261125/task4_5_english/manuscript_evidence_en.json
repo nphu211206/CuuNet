@@ -1,0 +1,323 @@
+{
+  "provenance": "Exact unchanged values from the previously audited English table registry; no experiments or scientific data were modified.",
+  "tables": {
+    "1": {
+      "number": "1",
+      "title": "HydroBASINS level 7 regional runoff supports",
+      "rows": 3,
+      "headers": [
+        "Region",
+        "HYBAS_ID",
+        "Catalogue area\n(km²)",
+        "Valid land support\n(km²)",
+        "Daily rows"
+      ],
+      "values": [
+        [
+          "Bảo Hà",
+          "4071015370",
+          "6294.1",
+          "6270.73",
+          "9,132"
+        ],
+        [
+          "Sông Gianh",
+          "4070015440",
+          "1841.1",
+          "1830.39",
+          "9,132"
+        ],
+        [
+          "Cần Thơ",
+          "4070017020",
+          "2827.5",
+          "2804.27",
+          "9,132"
+        ]
+      ]
+    },
+    "12": {
+      "number": "12",
+      "title": "Saved desktop Chrome inference times in milliseconds",
+      "rows": 12,
+      "headers": [
+        "Region",
+        "Storage",
+        "Backend",
+        "Warm\nmean",
+        "Warm\nmedian",
+        "Warm\nP95",
+        "First\ninference"
+      ],
+      "values": [
+        [
+          "Bảo Hà",
+          "FP32",
+          "CPU",
+          "4.90",
+          "4.71",
+          "6.23",
+          "9.64"
+        ],
+        [
+          "Bảo Hà",
+          "uint8",
+          "CPU",
+          "4.55",
+          "4.37",
+          "5.49",
+          "6.30"
+        ],
+        [
+          "Sông Gianh",
+          "FP32",
+          "CPU",
+          "4.90",
+          "4.67",
+          "6.15",
+          "13.11"
+        ],
+        [
+          "Sông Gianh",
+          "uint8",
+          "CPU",
+          "5.54",
+          "5.35",
+          "6.97",
+          "5.39"
+        ],
+        [
+          "Cần Thơ",
+          "FP32",
+          "CPU",
+          "5.24",
+          "5.07",
+          "6.56",
+          "8.16"
+        ],
+        [
+          "Cần Thơ",
+          "uint8",
+          "CPU",
+          "5.22",
+          "4.86",
+          "7.12",
+          "5.46"
+        ],
+        [
+          "Bảo Hà",
+          "FP32",
+          "WebGL",
+          "12.82",
+          "12.16",
+          "17.11",
+          "2907.51"
+        ],
+        [
+          "Bảo Hà",
+          "uint8",
+          "WebGL",
+          "12.47",
+          "12.16",
+          "15.86",
+          "19.95"
+        ],
+        [
+          "Sông Gianh",
+          "FP32",
+          "WebGL",
+          "12.25",
+          "12.00",
+          "16.55",
+          "22.59"
+        ],
+        [
+          "Sông Gianh",
+          "uint8",
+          "WebGL",
+          "11.75",
+          "11.77",
+          "13.73",
+          "20.57"
+        ],
+        [
+          "Cần Thơ",
+          "FP32",
+          "WebGL",
+          "12.28",
+          "11.94",
+          "16.38",
+          "19.74"
+        ],
+        [
+          "Cần Thơ",
+          "uint8",
+          "WebGL",
+          "12.99",
+          "12.04",
+          "17.81",
+          "27.61"
+        ]
+      ]
+    },
+    "13": {
+      "number": "13",
+      "title": "Mean rates over malicious rounds 4–10 in the mimic configuration",
+      "rows": 18,
+      "headers": [
+        "Feedback",
+        "Method",
+        "False\nalerts (%)",
+        "Missed\nalerts (%)",
+        "Abstention\n(%)",
+        "Decisive\ncoverage (%)"
+      ],
+      "values": [
+        [
+          "Frozen reputation",
+          "Classical DST",
+          "98.7",
+          "100.0",
+          "1.3",
+          "98.7"
+        ],
+        [
+          "Frozen reputation",
+          "Grouped maximum support",
+          "1.2",
+          "14.9",
+          "13.7",
+          "86.3"
+        ],
+        [
+          "Frozen reputation",
+          "Weighted Bayesian Beta",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Frozen reputation",
+          "Weighted vote 0.75",
+          "0.0",
+          "100.0",
+          "100.0",
+          "0.0"
+        ],
+        [
+          "Frozen reputation",
+          "Weighted vote 0.50",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Frozen reputation",
+          "Majority",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Simulated independent reference",
+          "Classical DST",
+          "28.6",
+          "28.6",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Simulated independent reference",
+          "Grouped maximum support",
+          "14.7",
+          "17.1",
+          "2.4",
+          "97.6"
+        ],
+        [
+          "Simulated independent reference",
+          "Weighted Bayesian Beta",
+          "28.6",
+          "42.9",
+          "14.3",
+          "85.7"
+        ],
+        [
+          "Simulated independent reference",
+          "Weighted vote 0.75",
+          "14.3",
+          "42.9",
+          "28.6",
+          "71.4"
+        ],
+        [
+          "Simulated independent reference",
+          "Weighted vote 0.50",
+          "34.4",
+          "34.4",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Simulated independent reference",
+          "Majority",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Self-consensus feedback",
+          "Classical DST",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Self-consensus feedback",
+          "Grouped maximum support",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Self-consensus feedback",
+          "Weighted Bayesian Beta",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Self-consensus feedback",
+          "Weighted vote 0.75",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Self-consensus feedback",
+          "Weighted vote 0.50",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ],
+        [
+          "Self-consensus feedback",
+          "Majority",
+          "100.0",
+          "100.0",
+          "0.0",
+          "100.0"
+        ]
+      ]
+    }
+  }
+}

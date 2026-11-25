@@ -1,0 +1,556 @@
+{
+  "schema_version": 2,
+  "run_id": "ad67677a7139e38c444a",
+  "status": "completed",
+  "started_at_utc": "2026-11-22T14:39:59.779844+00:00",
+  "study_id": "HYDRO-D-26-00188-era5-land-runoff-daily",
+  "provenance_class": "reanalysis",
+  "validation_mode": "physical_target_replacement",
+  "target_kind": "regional_total_runoff_depth",
+  "input_manifest_sha256": "9506b4e026e17ed23449f6335d208620b1f79e74a60675747c3695210fb646b8",
+  "git_commit": null,
+  "packaged_source_context": {
+    "format": "cuunet-kaggle-physical-v7_1",
+    "full_vietnam_data_included": false,
+    "observed_prepared_data_included": true,
+    "source_sha256": {
+      "notebooks/revision_experiments.py": "a61e75da28fd3d6f8e8859dc5fe39265636be760d7d0edb2d2bb10e6b715d0db",
+      "notebooks/outage_revision_experiments.py": "b1a49168cd4ddc35d40fee5d834d769164bb2f24a57fb1dfa023c2e8f1417796",
+      "notebooks/audit_revision_outputs.py": "b0b0bd7b4de7db6bfb03ce4d788f837299c9347753b11c9ea3c7767442925cde",
+      "notebooks/prepare_runoff_revision_data.py": "8b0756ed7d5955dfbf0cab1863209efc55dbbe4325c0f09e39a7f18fc18a6c7e",
+      "notebooks/prepare_waterbench_reference.py": "10c8fdd462de3e0c853f8c0164a5550e24f32fdaab32db6809617616ca7868ba",
+      "notebooks/acquire_waterbench_reference.py": "aaf31c3376e82df0897292b4a1ac25105368e4bf4941c5addb0c8b7b32f1769e",
+      "notebooks/export_era5_land_level7.js": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6",
+      "notebooks/tfjs_daily_preflight.py": "e22c5f20e5d2a8fb2823fa0b05cb07f44b4357aa9945e93e8844d054c7432a2d",
+      "notebooks/verify_tfjs_equivalence.mjs": "ceb2b61d381c2c2dfccce5bc342b448797ab65181faf348e9bc743f2c879f097",
+      "notebooks/test_tfjs_equivalence.mjs": "801dcfd91847700db539855420150fcac17a6cc8962ac68752f738305533c780",
+      "notebooks/test_runoff_revision.py": "7cb7b35fd90b077fe87e9618a830534561a8e2919a2e5973bf0754625f581369",
+      "notebooks/test_revision_pipeline.py": "a1113c6979f815c5aefbb4e02055b74b98eb0c42312085eb97d4d696595a4479",
+      "notebooks/test_revision_handoff_v7.py": "64b236557c667da9b9a9c5a09a4a7031d5ad7bd7c4db02885227fa09199fbc49",
+      "notebooks/requirements_revision_kaggle.lock.txt": "4daafbd0d9882458ec9c44abcf0c0be3caa1358334e7619346b78660d5a17828",
+      "notebooks/requirements_revision_kaggle.txt": "03fc10dece1c9f0cde364bc392d1b43e00e85b4f5abed0539b1fd71e5cfaa946",
+      "analysis/verified_bibliography.runoff.csv": "5528e37e4552169a759cd517efeb999c7aad56d057c4ad829c1329fb6fb99e9f",
+      "analysis/master_revision_20261121/waterbench_selection.json": "416129212a71d311390931a35fc92f7f5f218083854811fc4884823ae7668796",
+      "data/waterbench_observed/prepared/experiment_manifest.json": "4eb26a7bdabef8cd857eb088383ed3db215df47fef256a23b794171a9ceb4d29",
+      "data/waterbench_observed/prepared/preparation_audit.json": "922a1239efddc3b33f7925c114ef42a49841dfc9e94fada5f8a6e672991062a7",
+      "data/waterbench_observed/prepared/source_manifest.json": "ba1548b6162de4e892382a784ff999ce7db1dfc68c46c414bcba9079ed781ac1",
+      "data/waterbench_observed/prepared/USGS_05421000.csv": "dae324e7225b6b17783446129b6059c4dc7fa89b5e05bb563868b4db7b60d46b",
+      "data/waterbench_observed/prepared/USGS_05453520.csv": "61ef27f3444c3361f8fa7d534d6493a50d50eb730ef739c89ad8654634042109",
+      "data/waterbench_observed/prepared/USGS_06903900.csv": "cd9ef1051493d72b44ea48ba8a5d71598863ad667ef99276466b347627123154",
+      "data/waterbench_observed/raw/acquisition_receipt.json": "dc4ad2e40069f63be5a1480d8b0fe84ece15aa7f78814863f5e520993174271e",
+      "data/waterbench_observed/raw/catchment_USGS_ID.csv": "f06c41a15b491b317568c3380500f8edb7bd63a1b8bcef5230232903646ecf00"
+    },
+    "scope": "Daily physical targets, three neural variants, five seeds, expected-MSE weights and frozen-input interruption tests",
+    "hotfix": "Preflight selected_seed metadata and regression consumer contract",
+    "base_notebook_sha256": "35aca12867001f68b9efcb2050cb3e6f8d4a19772618da08a83411459db88fd0"
+  },
+  "code_sha256": {
+    "notebooks/revision_experiments.py": "a61e75da28fd3d6f8e8859dc5fe39265636be760d7d0edb2d2bb10e6b715d0db",
+    "notebooks/verify_tfjs_equivalence.mjs": "ceb2b61d381c2c2dfccce5bc342b448797ab65181faf348e9bc743f2c879f097",
+    "notebooks/audit_revision_outputs.py": "b0b0bd7b4de7db6bfb03ce4d788f837299c9347753b11c9ea3c7767442925cde",
+    "notebooks/prepare_runoff_revision_data.py": "8b0756ed7d5955dfbf0cab1863209efc55dbbe4325c0f09e39a7f18fc18a6c7e",
+    "notebooks/prepare_waterbench_reference.py": "10c8fdd462de3e0c853f8c0164a5550e24f32fdaab32db6809617616ca7868ba",
+    "notebooks/outage_revision_experiments.py": "b1a49168cd4ddc35d40fee5d834d769164bb2f24a57fb1dfa023c2e8f1417796",
+    "notebooks/acquire_waterbench_reference.py": "aaf31c3376e82df0897292b4a1ac25105368e4bf4941c5addb0c8b7b32f1769e"
+  },
+  "software": {
+    "python": "3.12.12 (main, Oct 28 2025, 12:10:49) [Clang 20.1.4 ]",
+    "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "statsmodels": "0.14.6",
+    "tensorflow": "2.19.0",
+    "keras": "3.9.2",
+    "tensorflowjs": "4.22.0",
+    "tensorflow-decision-forests": "1.12.0",
+    "ydf": "0.11.0",
+    "protobuf": "5.29.6",
+    "ml-dtypes": "0.7.0",
+    "jax": "0.5.3",
+    "xarray": "2025.4.0",
+    "netCDF4": "1.7.2",
+    "cdsapi": "0.7.7"
+  },
+  "gpu_devices": [
+    {
+      "compute_capability": [
+        7,
+        5
+      ],
+      "device_name": "Tesla T4"
+    }
+  ],
+  "single_gpu_training": true,
+  "float_precision": "float32",
+  "deterministic_tensorflow_ops": true,
+  "python_hash_seed_at_process_start": "0",
+  "evidence_contract": {
+    "provenance_class": "reanalysis",
+    "validation_mode": "physical_target_replacement",
+    "source_manifest": "/kaggle/working/CuuNet_revision/data/runoff_revision/source_manifest.json",
+    "source_manifest_sha256": "801a657ad9c401735da985952f7ce71a9fb5dad3102acdf2d42117efc558351b",
+    "data_files": [
+      {
+        "zone": "Gianh_Runoff",
+        "path": "/kaggle/working/CuuNet_revision/data/runoff_revision/Gianh_Runoff.csv",
+        "sha256": "96745eb4c95b2803a5d56731da76652a35e61fa481a9d1232746ed74af7e3a30"
+      }
+    ],
+    "verified_bibliography_file": {
+      "path": "/kaggle/working/CuuNet_revision/analysis/verified_bibliography.runoff.csv",
+      "sha256": "5528e37e4552169a759cd517efeb999c7aad56d057c4ad829c1329fb6fb99e9f"
+    },
+    "data_preparation_audit_file": {
+      "path": "/kaggle/working/CuuNet_revision/data/runoff_revision/preparation_audit.json",
+      "sha256": "c86c66b7bb243b996cd07f63a462ff086a0836d6254a7bf57e785f9929ce4519"
+    },
+    "bundled_inputs": [
+      {
+        "bundle_path": "inputs/analysis/verified_bibliography.runoff.csv",
+        "sha256": "5528e37e4552169a759cd517efeb999c7aad56d057c4ad829c1329fb6fb99e9f",
+        "bytes": 17421
+      },
+      {
+        "bundle_path": "inputs/data/manifest_v7_vietnam_Gianh_Runoff.json",
+        "sha256": "9506b4e026e17ed23449f6335d208620b1f79e74a60675747c3695210fb646b8",
+        "bytes": 6288
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/Gianh_Runoff.csv",
+        "sha256": "96745eb4c95b2803a5d56731da76652a35e61fa481a9d1232746ed74af7e3a30",
+        "bytes": 4527297
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/preparation_audit.json",
+        "sha256": "c86c66b7bb243b996cd07f63a462ff086a0836d6254a7bf57e785f9929ce4519",
+        "bytes": 80676
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.csv",
+        "sha256": "57b6be8b9e311fb96aff95e6d09bfa3b3e3c8e21bb6e6f8a95fd7da8121e1d00",
+        "bytes": 362159
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.receipt.json",
+        "sha256": "e4c6422d5aa9ca734047aeffaf5960ebcaa30b96f192add51ea39466b6cd0334",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.csv",
+        "sha256": "39563ee78a7ed85d2971e11e74c5629ab3de88cdf02fb89f4b79e621a99dec73",
+        "bytes": 361162
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.receipt.json",
+        "sha256": "a968e92084dc8a7c36442c8bfd9394c399552d6ecd13f163c2509d9925797523",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.csv",
+        "sha256": "9b96075c0dbeb5d8372dba7b0a39d2c71999615e2a69a2f296da206ed5d638cd",
+        "bytes": 361088
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.receipt.json",
+        "sha256": "b6c6be46dd5fd7da1b4bf02cf11643822b50a2307ebd40dc92406805285396f8",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.csv",
+        "sha256": "fe3fab2785d6fd749b8a6c8d092793a5eda33d5502e7d23ea548ab2a6afe77b5",
+        "bytes": 361213
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.receipt.json",
+        "sha256": "df98790d1c260fb3b18aa33309321692d23a4b193177ddf985f38b72cc521c1f",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.csv",
+        "sha256": "db034a392521449c0555024be8c11d2dd19fc66c5ef4a4a35fa825a8015f3577",
+        "bytes": 362303
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.receipt.json",
+        "sha256": "15309163d102747e2539a6e5e128c13d45a97a326b3da07d613da35948e28e92",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.csv",
+        "sha256": "cd87e7a498f2cebe6ebb9c23a47b56ffd5ab271d0d1dbd9c7e0c803e78c397b4",
+        "bytes": 361089
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.receipt.json",
+        "sha256": "fd8d4d48d21b4d8a4cebe375f4f9a1d449bb46bd4f8fb1760fced4becb6940bf",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.csv",
+        "sha256": "43390d6a571fa8887c20296addb9d0f6b87177f38a99dfa2f2b00d06d8b77082",
+        "bytes": 361138
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.receipt.json",
+        "sha256": "9214eb9b9a54ecdc20fed9e3791a18553cf474374dadd6a9b4b305ef87fa5352",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.csv",
+        "sha256": "8e0f1fa924504a308cbf1b4af7fade7801e82f146e73f928ca0213028ca10796",
+        "bytes": 361077
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.receipt.json",
+        "sha256": "ffae15fc720ac3f8603d0b3594bc9e58394326bb424968b0494453d690b9d3be",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.csv",
+        "sha256": "6c0c85773409400270a636e23299298ee92fdd5df949aa95ddb0d0cd9798d155",
+        "bytes": 362276
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.receipt.json",
+        "sha256": "bbea0665ce5e420dd51b0654b3fde552f651cf132e6648fcef7a0ae0f4617b99",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.csv",
+        "sha256": "6af2b6ee18ca6a2247297f50694a216643bab800c74216fe1ca7e115c2cd203a",
+        "bytes": 361206
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.receipt.json",
+        "sha256": "34fd4aed7d7427550b45f848059e07708ab6b222e2df5fe72f97b21f4790e428",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.csv",
+        "sha256": "32b8b3d7fd21ba095a904a4ac9c5252001fe3cd3a513a383e4318bd3ee3ace17",
+        "bytes": 361060
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.receipt.json",
+        "sha256": "ef24b12b9c82efd7672e9ea1c9f6563c84d08c6d36d987e862cc73e7d057dea3",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.csv",
+        "sha256": "e85c3276a32d06417b033bbe68b8dc9e1b3775af3df0dce896f6b52c201f6e18",
+        "bytes": 361077
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.receipt.json",
+        "sha256": "87461b4e41a270da95a4e5fc71c122d65c2f4fc6e77b503c41c9aa251edcce1e",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.csv",
+        "sha256": "70d87f0838b65330f4544a023fdba4ec707ad1695e612e15dd8bd3a764d5ee03",
+        "bytes": 362220
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.receipt.json",
+        "sha256": "f2d0d60e85cc0073041aa4d73dada3be74cfab88738654f08cee3719667038cb",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.csv",
+        "sha256": "41a5962957da8953ccb3f073d011901acd4ec1de373e9681ae5c51b38be30f5b",
+        "bytes": 360986
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.receipt.json",
+        "sha256": "619877fe02d9f64e9e30de69d0a01292a8f1040b07a6319005ab22d85f57fe14",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.csv",
+        "sha256": "094be19b6e2a9748a999ec8079e25653749fc759f658880ddbd7d5072f4129b4",
+        "bytes": 361179
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.receipt.json",
+        "sha256": "a460e846fc6ca87abba5d8f28d2ce6cc962d376696ac3473b5154b1c489b0433",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.csv",
+        "sha256": "8afc62bd563f9ead377151c601a8cae996f306f481ccda7e96cd0bff1d275460",
+        "bytes": 361135
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.receipt.json",
+        "sha256": "0a6c01363e6af879e6191e0fa9bd10071fdaf82ade0645e4f6dcf6d3f1b55d68",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.csv",
+        "sha256": "26d79c766b1cc71c4dd349a6c102c5a9517476af9c90a53fedb6d647c86f8409",
+        "bytes": 362053
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.receipt.json",
+        "sha256": "7386c677020e8f9d79251740c286f53ef9020000ff90f6951f8f3fafef938622",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.csv",
+        "sha256": "e9c97872d78b6d41a779e1c73bfef02f1db12efef37941f661806c1193eeebdc",
+        "bytes": 360932
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.receipt.json",
+        "sha256": "295f43e405b20199eccfa9a23c194b39f580416089760e398e7d5870deb9f74c",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.csv",
+        "sha256": "87e240cbb95cb3959157d65a67febb7c97c9e7e6cab1dd90198a176b42173651",
+        "bytes": 361124
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.receipt.json",
+        "sha256": "90ab38f4ee7eb7b15399ec7bd7c9c00892624b9f24e7396bb9f983883ec1bea5",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.csv",
+        "sha256": "e40cc89b75ee7fd39c15a83f2c3e21c336be9e119abb071ea6602fc5472668e6",
+        "bytes": 361133
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.receipt.json",
+        "sha256": "6eac7a829ad5c267724bcb58e4ca4b21f38e2e87ebdd8c57f652a84fd3084109",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.csv",
+        "sha256": "d0540705b53e8ffe704aed55547cf72f987b0ae80252f47605a83ac05178eba4",
+        "bytes": 362008
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.receipt.json",
+        "sha256": "41d0fa626f574eedda7705c0a28e6d8d974928915529ae20275420f66c717eb9",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.csv",
+        "sha256": "24450c0916831c3c9dd40bf75fa73f5bea4c97074bb1c466961646abee22893e",
+        "bytes": 361087
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.receipt.json",
+        "sha256": "be383d2e46933ee41496461904f00ba33acb5ddb2a0b321965d31287d3128475",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.csv",
+        "sha256": "8814cfb07417e761e8b41854f71f468b0bf7684c5e7b91d7ae808a986a5c87bb",
+        "bytes": 361054
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.receipt.json",
+        "sha256": "ca33f9f232b87c8d20f7733434c4eb517c080296baf75bbacfa35e1bb9cd5bf7",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.csv",
+        "sha256": "c600e2c04b6ef507e3a6c1ff8d32ce4eba270a9d549b2f244f2cef29dc3d8e1a",
+        "bytes": 361103
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.receipt.json",
+        "sha256": "95de379829e846575f5bf5ab8e3c045a794442497cd41225ad6e14e898e1d02f",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.csv",
+        "sha256": "49d4273247acc02384db331bdc619e778e1075b7fcf4099cc12780182d9468e5",
+        "bytes": 361962
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.receipt.json",
+        "sha256": "5ac6e7659dc625c479c7ac79b7028b7fc972bde8369d33d344f69938ee188051",
+        "bytes": 757
+      },
+      {
+        "bundle_path": "inputs/data/runoff_revision/source_manifest.json",
+        "sha256": "801a657ad9c401735da985952f7ce71a9fb5dad3102acdf2d42117efc558351b",
+        "bytes": 1279
+      }
+    ]
+  },
+  "manifest": {
+    "study_id": "HYDRO-D-26-00188-era5-land-runoff-daily",
+    "provenance_class": "reanalysis",
+    "validation_mode": "physical_target_replacement",
+    "target_kind": "regional_total_runoff_depth",
+    "publication_eligible": true,
+    "sampling_frequency": "D",
+    "lookback": 30,
+    "seasonal_period": 365,
+    "moving_average_window": 7,
+    "baseline_history_window": 1095,
+    "peak_quantile_from_training": 0.9,
+    "prediction_bounds": {
+      "lower": 0.0,
+      "upper": null
+    },
+    "covariance_shrinkage": 0.1,
+    "covariance_shrinkage_sensitivity": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "bootstrap_block_length": 30,
+    "outage_horizons": [
+      1,
+      3,
+      7
+    ],
+    "outage_origin_stride": 7,
+    "outage_max_gap": 7,
+    "outage_input_policy": "frozen",
+    "source_manifest_file": "data/runoff_revision/source_manifest.json",
+    "data_preparation_audit_file": "data/runoff_revision/preparation_audit.json",
+    "verified_bibliography_file": "analysis/verified_bibliography.runoff.csv",
+    "splits": {
+      "train_start": "2000-01-01",
+      "train_end": "2017-12-31",
+      "validation_end": "2020-12-31",
+      "test_end": "2024-12-31"
+    },
+    "training": {
+      "seeds": [
+        42,
+        123,
+        456,
+        789,
+        2024
+      ],
+      "epochs": 100,
+      "batch_size": 64,
+      "early_stopping_patience": 15,
+      "learning_rate": 0.001,
+      "lstm_units": 64,
+      "attention_units": 32,
+      "dropout": 0.2,
+      "unroll_lstm": true,
+      "precision": "float32",
+      "include_outage_variant": true,
+      "input_censoring_probability": 0.5,
+      "write_progress_archives": true
+    },
+    "zones": [
+      {
+        "id": "Gianh_Runoff",
+        "label": "Gianh Runoff",
+        "file": "data/runoff_revision/Gianh_Runoff.csv",
+        "date_column": "date",
+        "target_column": "runoff_mm",
+        "sampling_frequency": "D",
+        "feature_columns": [
+          "precipitation_mm",
+          "temperature_C",
+          "soil_water",
+          "input_available",
+          "input_age_01"
+        ],
+        "feature_metadata": {
+          "precipitation_mm": {
+            "data_class": "reanalysis",
+            "units": "mm day-1",
+            "source_id": "ECMWF/ERA5_LAND/DAILY_AGGR:basin=4070015440",
+            "source_url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR",
+            "licence": "Copernicus C3S information licence; attribution required",
+            "available_at_forecast_origin": false,
+            "availability_mode": "retrospective_hindcast",
+            "availability_note": "Only preceding dates are used; the ERA5-Land product itself is delayed and is not a real-time input feed"
+          },
+          "temperature_C": {
+            "data_class": "reanalysis",
+            "units": "degC",
+            "source_id": "ECMWF/ERA5_LAND/DAILY_AGGR:basin=4070015440",
+            "source_url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR",
+            "licence": "Copernicus C3S information licence; attribution required",
+            "available_at_forecast_origin": false,
+            "availability_mode": "retrospective_hindcast",
+            "availability_note": "Only preceding dates are used; the ERA5-Land product itself is delayed and is not a real-time input feed"
+          },
+          "soil_water": {
+            "data_class": "reanalysis",
+            "units": "m3 m-3",
+            "source_id": "ECMWF/ERA5_LAND/DAILY_AGGR:basin=4070015440",
+            "source_url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR",
+            "licence": "Copernicus C3S information licence; attribution required",
+            "available_at_forecast_origin": false,
+            "availability_mode": "retrospective_hindcast",
+            "availability_note": "Only preceding dates are used; the ERA5-Land product itself is delayed and is not a real-time input feed"
+          },
+          "input_available": {
+            "data_class": "reanalysis",
+            "units": "binary, retrospective input presence",
+            "source_id": "ECMWF/ERA5_LAND/DAILY_AGGR:basin=4070015440",
+            "source_url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR",
+            "licence": "Copernicus C3S information licence; attribution required",
+            "available_at_forecast_origin": false,
+            "availability_mode": "retrospective_hindcast",
+            "availability_note": "Only preceding dates are used; the ERA5-Land product itself is delayed and is not a real-time input feed"
+          },
+          "input_age_01": {
+            "data_class": "reanalysis",
+            "units": "normalized cached-input age",
+            "source_id": "ECMWF/ERA5_LAND/DAILY_AGGR:basin=4070015440",
+            "source_url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR",
+            "licence": "Copernicus C3S information licence; attribution required",
+            "available_at_forecast_origin": false,
+            "availability_mode": "retrospective_hindcast",
+            "availability_note": "Only preceding dates are used; the ERA5-Land product itself is delayed and is not a real-time input feed"
+          }
+        },
+        "include_lagged_target": true,
+        "target_metadata": {
+          "data_class": "reanalysis",
+          "variable": "area-weighted total runoff generation",
+          "units": "mm day-1",
+          "source_id": "ECMWF/ERA5_LAND/DAILY_AGGR:basin=4070015440",
+          "source_url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR",
+          "licence": "Copernicus C3S information licence; attribution required",
+          "geographic_support": "valid land pixels in HydroBASINS level-5 basin 4070015440",
+          "temporal_resolution": "daily accumulated depth",
+          "routed_streamflow": false
+        },
+        "availability_feature_columns": [
+          "input_available"
+        ],
+        "age_feature_column": "input_age_01",
+        "fixed_range_features": [
+          "input_available",
+          "input_age_01"
+        ],
+        "source_note": "Provider-modelled runoff generation with documented grid/temporal support; all predictors are historical and the evaluation is retrospective"
+      }
+    ],
+    "interpretation": "Retrospective reanalysis forecast and input-interruption benchmark. New observations and operational feeds are not demonstrated."
+  },
+  "neural_requested": true,
+  "conversion_requested": true,
+  "bootstrap": {
+    "method": "circular moving blocks",
+    "block_length": 30,
+    "repetitions": 2000,
+    "seed": 42
+  },
+  "prediction_bounds": {
+    "lower": 0.0,
+    "upper": null
+  },
+  "forecast_protocol": "retrospective one-step predictions using earlier timestamps only; the separate outage experiment freezes all physical inputs at explicit origins",
+  "input_manifest_bundle_path": "inputs/data/manifest_v7_vietnam_Gianh_Runoff.json",
+  "completed_at_utc": "2026-11-22T16:40:45.748262+00:00"
+}

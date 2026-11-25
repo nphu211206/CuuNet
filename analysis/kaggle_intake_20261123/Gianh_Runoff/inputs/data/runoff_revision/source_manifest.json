@@ -1,0 +1,30 @@
+{
+  "sources": [
+    {
+      "id": "ECMWF/ERA5_LAND/DAILY_AGGR",
+      "url": "https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR",
+      "doi": "10.5194/essd-13-4349-2021",
+      "data_class": "reanalysis",
+      "licence": "Copernicus Climate Change Service information licence; attribution required",
+      "aggregation": "valid_land_pixel_area_weighted_mean",
+      "basin_geojson": "data/runoff_revision/raw/selected_basins.geojson",
+      "basin_geojson_sha256": "ec3f2dc45af690cb41551926affaf8e0e7a6e74c04012615867c20bacb11eacf",
+      "export_request": {
+        "source": "ECMWF/ERA5_LAND/DAILY_AGGR",
+        "frequency": "daily",
+        "start": "2000-01-01",
+        "end": "2024-12-31",
+        "source_bands": [
+          "runoff_sum",
+          "total_precipitation_sum",
+          "temperature_2m",
+          "volumetric_soil_water_layer_1"
+        ],
+        "aggregation": "valid_land_pixel_area_weighted_mean",
+        "basin_collection": "WWF/HydroSHEDS/v1/Basins/hybas_7",
+        "export_script_sha256": "2818ab86c5c43694695d58aa2b96849c27aa7f1c370619f842e06de2980cb4c6"
+      }
+    }
+  ],
+  "scope": "retrospective runoff-generation benchmark, not routed discharge, gauge observations, flood extent or live telemetry"
+}

@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+/.venv_revision/
+**/__pycache__/
+/.cdsapirc
 /.pnp
 .pnp.*
 .yarn/*
@@ -12,6 +15,7 @@
 
 # testing
 /coverage
+/.linux_tfjs_repro/
 
 # next.js
 /.next/
@@ -43,3 +47,28 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local conversations and document QA are not publication artifacts.
+codex*.md
+CODEX_*.md
+AGENT_*.md
+ban *.md
+parsed_codex_session.json
+/*.zip
+/analysis/master_revision_20261121/runtime/
+**/qa/
+**/qa_word/
+**/source_backup*/
+**/task4_5_vietnamese/
+**/.pytest_cache/
+*.docx.bak
+~$*.docx
+
+# Preserve one upstream archive as a Release asset, rather than repeated Git blobs.
+**/data_time_series.zip
+**/data_ten_years.zip
+/data/sybil_revision_v2/sybil_monte_carlo_trials.csv.gz
+
+# Document QA never publishes rendered PDFs.
+/paper_submission/figures_final_results_20261125_english/*.pdf
+/analysis/final_revision_20261125/task4_5_english/staged/

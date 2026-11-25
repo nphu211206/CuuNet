@@ -1,0 +1,3699 @@
+{
+  "schema_version": 1,
+  "run_id": "d4e1d5090ba616535417",
+  "audited_at_utc": "2026-11-23T11:16:04.538013+00:00",
+  "passed": true,
+  "total_checks": 97800,
+  "failed_checks": [],
+  "checks": [
+    {
+      "check": "forecasting process completed",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "result and runtime identifiers agree",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed script hashes recorded",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/revision_experiments.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/verify_tfjs_equivalence.mjs",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/audit_revision_outputs.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/prepare_runoff_revision_data.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/prepare_waterbench_reference.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/outage_revision_experiments.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/acquire_waterbench_reference.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/revision_dual_gpu.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash ablation_metrics.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash baseline_predictions.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash checkpoint_manifest.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/acquire_waterbench_reference.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/audit_revision_outputs.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/outage_revision_experiments.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/prepare_runoff_revision_data.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/prepare_waterbench_reference.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/revision_dual_gpu.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/revision_experiments.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/verify_tfjs_equivalence.mjs",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash covariance_shrinkage_sensitivity.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash data_audit.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash dual_gpu_execution.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash dual_gpu_preflight_result.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash forecast_combination_estimation.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash forecast_combination_weights.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash forecast_pairwise_comparisons.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash forecasting_metrics.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash held_out_month_diagnostics.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/analysis/verified_bibliography.runoff.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/manifest_v7_observed_USGS_05421000.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/waterbench_observed/prepared/USGS_05421000.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/waterbench_observed/prepared/preparation_audit.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/waterbench_observed/prepared/source_manifest.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/waterbench_observed/raw/acquisition_receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/waterbench_observed/raw/data_time_series.zip",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash model_selection.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_123.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_123.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_2024.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_2024.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_42.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_42.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_456.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_456.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_789.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/lstm_no_attention_seed_789.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/preprocessing.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_123.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_123.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_2024.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_2024.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_42.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_42.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_456.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_456.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_789.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_outage_seed_789.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_123.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_123.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_2024.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_2024.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_42.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_42.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_456.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_456.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_789.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/USGS_05421000/ta_lstm_seed_789.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash neural_metrics.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash neural_summary.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash per_seed_predictions.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash prediction_constraint_audit.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash quantisation_equivalence.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash run_manifest.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash saved_models/USGS_05421000/fingerprint.pb",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash saved_models/USGS_05421000/saved_model.pb",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash saved_models/USGS_05421000/variables/variables.data-00000-of-00001",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash saved_models/USGS_05421000/variables/variables.index",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_conversion.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_equivalence_cases/USGS_05421000.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_equivalence_results/USGS_05421000.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_models/USGS_05421000/group1-shard1of1.bin",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_models/USGS_05421000/model.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_models_float/USGS_05421000/group1-shard1of1.bin",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_models_float/USGS_05421000/model.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "source target snapshot exists USGS_05421000",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "prediction belongs to recorded run",
+      "checks": 24002,
+      "failed": 0
+    },
+    {
+      "check": "prediction provenance agrees with run",
+      "checks": 24002,
+      "failed": 0
+    },
+    {
+      "check": "prediction target is an available source reference, not an imputed label",
+      "checks": 24002,
+      "failed": 0
+    },
+    {
+      "check": "complete statistical model set USGS_05421000 validation",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete statistical model set USGS_05421000 test",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'persistence', 'validation', '')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'seasonal_persistence', 'validation', '')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'moving_average', 'validation', '')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'linear_trend', 'validation', '')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'seasonal_decomposition', 'validation', '')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'persistence', 'test', '')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'seasonal_persistence', 'test', '')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'moving_average', 'test', '')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'linear_trend', 'test', '')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'seasonal_decomposition', 'test', '')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'equal_weight_ensemble', 'test', '')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'expected_mse_ensemble', 'test', '')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'validation', '42')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'test', '42')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'validation', '123')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'test', '123')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'validation', '456')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'test', '456')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'validation', '789')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'test', '789')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'validation', '2024')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm', 'test', '2024')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'validation', '42')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'test', '42')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'validation', '123')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'test', '123')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'validation', '456')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'test', '456')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'validation', '789')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'test', '789')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'lstm_no_attention', 'test', '2024')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'test', '42')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'test', '123')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'test', '456')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'test', '789')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('USGS_05421000', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "nonnegative simplex weights USGS_05421000",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "configured covariance shrinkage used USGS_05421000",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed forecast combination USGS_05421000 validation",
+      "checks": 365,
+      "failed": 0
+    },
+    {
+      "check": "recomputed forecast combination USGS_05421000 test",
+      "checks": 726,
+      "failed": 0
+    },
+    {
+      "check": "statistical metric table has all expected rows",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "embedded manuscript metrics agree with the recalculated CSV",
+      "checks": 14,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds USGS_05421000 ta_lstm validation",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds USGS_05421000 ta_lstm test",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "model selected only from validation USGS_05421000 ta_lstm",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds USGS_05421000 lstm_no_attention validation",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds USGS_05421000 lstm_no_attention test",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "model selected only from validation USGS_05421000 lstm_no_attention",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds USGS_05421000 ta_lstm_outage validation",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds USGS_05421000 ta_lstm_outage test",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "model selected only from validation USGS_05421000 ta_lstm_outage",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "publication neural evaluation uses at least five seeds",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "physical benchmark validation mode",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "portable raw and derived input evidence preserved",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/analysis/verified_bibliography.runoff.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/manifest_v7_observed_USGS_05421000.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/waterbench_observed/prepared/USGS_05421000.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/waterbench_observed/prepared/preparation_audit.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/waterbench_observed/prepared/source_manifest.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/waterbench_observed/raw/acquisition_receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/waterbench_observed/raw/data_time_series.zip",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "FP32 export equivalence passed USGS_05421000",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "official graph exports USGS_05421000",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "fixed test case hash USGS_05421000",
+      "checks": 1,
+      "failed": 0
+    }
+  ],
+  "prediction_rows": 7637,
+  "neural_prediction_rows": 16365,
+  "publication_data_eligible": true,
+  "interpretation": "errors recalculated from per-date predictions and input/artifact hashes checked; this does not prove field deployment or index external validation"
+}

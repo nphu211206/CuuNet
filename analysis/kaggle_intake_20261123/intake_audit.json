@@ -1,0 +1,35 @@
+[
+  {
+    "zone": "Bao_Ha_Runoff",
+    "archive": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\kaggle_results\\CuuNet_v7_complete_vietnam_Bao_Ha_Runoff_20261122_113344.zip",
+    "archive_sha256": "64b408389ec093f13f3624c9bbf043b233669b6719fce168722f6099675a8cee",
+    "output": "E:\\Luu_Tru_O_C\\CuuNet\\analysis\\kaggle_intake_20261123\\Bao_Ha_Runoff",
+    "passed": true,
+    "total_checks": 228366,
+    "failed_checks": [],
+    "prediction_rows": 17899,
+    "neural_prediction_rows": 38355
+  },
+  {
+    "zone": "Can_Tho_Runoff",
+    "archive": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\kaggle_results\\CuuNet_v7_complete_vietnam_Can_Tho_Runoff_20261122_205334.zip",
+    "archive_sha256": "30b67560a10dd2381725ba07b9066c5e4c9dfb4cd2fc3684207e77486fd45a24",
+    "output": "E:\\Luu_Tru_O_C\\CuuNet\\analysis\\kaggle_intake_20261123\\Can_Tho_Runoff",
+    "passed": true,
+    "total_checks": 228366,
+    "failed_checks": [],
+    "prediction_rows": 17899,
+    "neural_prediction_rows": 38355
+  },
+  {
+    "zone": "Gianh_Runoff",
+    "archive": "E:\\Luu_Tru_O_C\\CuuNet\\paper_submission\\kaggle_results\\CuuNet_v7_complete_vietnam_Gianh_Runoff_20261122_143739.zip",
+    "archive_sha256": "2e378424b427e3c138b650d73f0fc8c84ac318cd4316d42e35c38229159c422f",
+    "output": "E:\\Luu_Tru_O_C\\CuuNet\\analysis\\kaggle_intake_20261123\\Gianh_Runoff",
+    "passed": true,
+    "total_checks": 228366,
+    "failed_checks": [],
+    "prediction_rows": 17899,
+    "neural_prediction_rows": 38355
+  }
+]

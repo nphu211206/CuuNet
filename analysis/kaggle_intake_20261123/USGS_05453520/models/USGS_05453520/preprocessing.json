@@ -1,0 +1,56 @@
+{
+  "zone": "USGS_05453520",
+  "lookback": 30,
+  "feature_columns": [
+    "discharge_input_m3s",
+    "discharge_available",
+    "input_age_01",
+    "annual_sin",
+    "annual_cos"
+  ],
+  "feature_scaler": {
+    "scale": [
+      0.0018456980101018842,
+      1.0,
+      1.0,
+      0.5000046301747816,
+      0.5
+    ],
+    "min": [
+      -0.0033121441328751344,
+      0.0,
+      0.0,
+      0.5,
+      0.5
+    ]
+  },
+  "target_scaler": {
+    "scale": 0.0018456980101018842,
+    "min": -0.0033121441328751344
+  },
+  "fit_period_end": "2015-09-30",
+  "prediction_bounds": {
+    "lower": 0.0,
+    "upper": null
+  },
+  "forecast_horizon": "one day",
+  "input_information": "the preceding 30 time steps only",
+  "sampling_frequency": "D",
+  "target_metadata": {
+    "data_class": "observed",
+    "variable": "daily mean of reported USGS discharge aggregated from WaterBench hours",
+    "units": "m3 s-1",
+    "source_id": "WaterBench-Iowa:USGS:05453520",
+    "source_url": "https://doi.org/10.5194/essd-14-5605-2022",
+    "licence": "MIT repository licence; attribution to WaterBench and USGS retained",
+    "geographic_support": "USGS gauge 05453520; catchment area 8067 km2",
+    "temporal_resolution": "source hourly observations aggregated to daily mean if at least 22 of 24 hours valid"
+  },
+  "target_input_column": "discharge_input_m3s",
+  "availability_feature_columns": [
+    "discharge_available"
+  ],
+  "age_feature_column": "input_age_01",
+  "age_normalisation_steps": 7,
+  "outage_input_policy": "frozen"
+}

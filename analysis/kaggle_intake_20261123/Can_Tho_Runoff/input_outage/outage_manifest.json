@@ -1,0 +1,34 @@
+{
+  "completed_at_utc": "2026-11-22T23:07:37.801950+00:00",
+  "primary_run_id": "1a39af45b2446965cbbc",
+  "manifest_sha256": "76f760222137077fcc89146c30669cc7c72cb71a1590573fca5f4ec8306009eb",
+  "code_sha256": "b1a49168cd4ddc35d40fee5d834d769164bb2f24a57fb1dfa023c2e8f1417796",
+  "evidence": {
+    "provenance_class": "reanalysis",
+    "validation_mode": "physical_target_replacement",
+    "source_manifest": "/kaggle/working/CuuNet_revision/data/runoff_revision/source_manifest.json",
+    "source_manifest_sha256": "801a657ad9c401735da985952f7ce71a9fb5dad3102acdf2d42117efc558351b",
+    "data_files": [
+      {
+        "zone": "Can_Tho_Runoff",
+        "path": "/kaggle/working/CuuNet_revision/data/runoff_revision/Can_Tho_Runoff.csv",
+        "sha256": "d63865559900127f97613a769e1c0d91fac6050cddcb7ff60a4a352187d5b6c7"
+      }
+    ],
+    "verified_bibliography_file": {
+      "path": "/kaggle/working/CuuNet_revision/analysis/verified_bibliography.runoff.csv",
+      "sha256": "5528e37e4552169a759cd517efeb999c7aad56d057c4ad829c1329fb6fb99e9f"
+    },
+    "data_preparation_audit_file": {
+      "path": "/kaggle/working/CuuNet_revision/data/runoff_revision/preparation_audit.json",
+      "sha256": "c7466b85ee1a7a70208d39ef3a894511a38d28cc761ba1c8cb39df34f348f8ed"
+    }
+  },
+  "pending": [],
+  "neural_complete": true,
+  "protocol": "Physical inputs stop at each origin; future calendar and input age are known. All physical input values remain frozen under the primary policy. Ensemble weights remain those fitted on validation.",
+  "input_rollout_policy": "frozen",
+  "interpretation": "Simulated input interruption over retrospective reanalysis, not field outage, live telemetry or a forecasting guarantee.",
+  "raw_predictions_sha256": "c54d4c283abb309fce688a18729ad76a5027963cf3e67459a03f1d2920d270b4",
+  "metrics_sha256": "b4e9eb2c1c0c8b61879ac85f0131038758c33c8f17e803fb395a733a9e4e1c36"
+}

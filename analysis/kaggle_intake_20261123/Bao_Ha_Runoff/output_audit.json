@@ -1,0 +1,4159 @@
+{
+  "schema_version": 1,
+  "run_id": "508950dbb7e8e04c42b4",
+  "audited_at_utc": "2026-11-23T11:16:06.306317+00:00",
+  "passed": true,
+  "total_checks": 228366,
+  "failed_checks": [],
+  "checks": [
+    {
+      "check": "forecasting process completed",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "result and runtime identifiers agree",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed script hashes recorded",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/revision_experiments.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/verify_tfjs_equivalence.mjs",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/audit_revision_outputs.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/prepare_runoff_revision_data.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/prepare_waterbench_reference.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/outage_revision_experiments.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "executed source snapshot notebooks/acquire_waterbench_reference.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash ablation_metrics.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash baseline_predictions.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash checkpoint_manifest.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/acquire_waterbench_reference.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/audit_revision_outputs.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/outage_revision_experiments.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/prepare_runoff_revision_data.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/prepare_waterbench_reference.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/revision_experiments.py",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash code/notebooks/verify_tfjs_equivalence.mjs",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash covariance_shrinkage_sensitivity.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash data_audit.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash forecast_combination_estimation.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash forecast_combination_weights.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash forecast_pairwise_comparisons.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash forecasting_metrics.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash held_out_month_diagnostics.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/analysis/verified_bibliography.runoff.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/manifest_v7_vietnam_Bao_Ha_Runoff.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/Bao_Ha_Runoff.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/preparation_audit.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash inputs/data/runoff_revision/source_manifest.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash model_selection.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_123.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_123.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_2024.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_2024.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_42.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_42.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_456.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_456.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_789.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/lstm_no_attention_seed_789.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/preprocessing.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_123.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_123.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_2024.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_2024.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_42.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_42.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_456.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_456.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_789.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_outage_seed_789.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_123.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_123.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_2024.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_2024.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_42.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_42.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_456.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_456.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_789.history.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash models/Bao_Ha_Runoff/ta_lstm_seed_789.keras",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash neural_metrics.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash neural_summary.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash per_seed_predictions.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash prediction_constraint_audit.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash quantisation_equivalence.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash run_manifest.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash saved_models/Bao_Ha_Runoff/fingerprint.pb",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash saved_models/Bao_Ha_Runoff/saved_model.pb",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash saved_models/Bao_Ha_Runoff/variables/variables.data-00000-of-00001",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash saved_models/Bao_Ha_Runoff/variables/variables.index",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_conversion.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_equivalence_cases/Bao_Ha_Runoff.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_equivalence_results/Bao_Ha_Runoff.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_models/Bao_Ha_Runoff/group1-shard1of1.bin",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_models/Bao_Ha_Runoff/model.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_models_float/Bao_Ha_Runoff/group1-shard1of1.bin",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "artifact hash tfjs_models_float/Bao_Ha_Runoff/model.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "source target snapshot exists Bao_Ha_Runoff",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "prediction belongs to recorded run",
+      "checks": 56254,
+      "failed": 0
+    },
+    {
+      "check": "prediction provenance agrees with run",
+      "checks": 56254,
+      "failed": 0
+    },
+    {
+      "check": "prediction target is an available source reference, not an imputed label",
+      "checks": 56254,
+      "failed": 0
+    },
+    {
+      "check": "complete statistical model set Bao_Ha_Runoff validation",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete statistical model set Bao_Ha_Runoff test",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'persistence', 'validation', '')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'seasonal_persistence', 'validation', '')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'moving_average', 'validation', '')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'linear_trend', 'validation', '')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'seasonal_decomposition', 'validation', '')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'validation', '')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'validation', '')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'persistence', 'test', '')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'seasonal_persistence', 'test', '')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'moving_average', 'test', '')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'linear_trend', 'test', '')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'seasonal_decomposition', 'test', '')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'equal_weight_ensemble', 'test', '')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'expected_mse_ensemble', 'test', '')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '42')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'test', '42')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '123')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'test', '123')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '456')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'test', '456')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '789')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'test', '789')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'validation', '2024')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm', 'test', '2024')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '42')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '42')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '123')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '123')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '456')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '456')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '789')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '789')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'validation', '2024')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'lstm_no_attention', 'test', '2024')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '42')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '42')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '123')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '123')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '456')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '456')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '789')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '789')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'validation', '2024')",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "raw predictions exist for ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete comparison window ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "unique prediction dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "exact observed-reference comparison dates ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "finite predictions and targets ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed rmse ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed mean_bias ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed peak_mae ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed high-flow count ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid rmse bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "valid peak_mae bootstrap interval ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "forecast physical bounds ('Bao_Ha_Runoff', 'ta_lstm_outage', 'test', '2024')",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "nonnegative simplex weights Bao_Ha_Runoff",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "configured covariance shrinkage used Bao_Ha_Runoff",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "recomputed forecast combination Bao_Ha_Runoff validation",
+      "checks": 1096,
+      "failed": 0
+    },
+    {
+      "check": "recomputed forecast combination Bao_Ha_Runoff test",
+      "checks": 1461,
+      "failed": 0
+    },
+    {
+      "check": "statistical metric table has all expected rows",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "embedded manuscript metrics agree with the recalculated CSV",
+      "checks": 14,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds Bao_Ha_Runoff ta_lstm validation",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds Bao_Ha_Runoff ta_lstm test",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "model selected only from validation Bao_Ha_Runoff ta_lstm",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds Bao_Ha_Runoff lstm_no_attention validation",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds Bao_Ha_Runoff lstm_no_attention test",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "model selected only from validation Bao_Ha_Runoff lstm_no_attention",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds Bao_Ha_Runoff ta_lstm_outage validation",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "complete repeated seeds Bao_Ha_Runoff ta_lstm_outage test",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "model selected only from validation Bao_Ha_Runoff ta_lstm_outage",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "publication neural evaluation uses at least five seeds",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "physical benchmark validation mode",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "portable raw and derived input evidence preserved",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/analysis/verified_bibliography.runoff.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/manifest_v7_vietnam_Bao_Ha_Runoff.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/Bao_Ha_Runoff.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/preparation_audit.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2000.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2001.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2002.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2003.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2004.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2005.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2006.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2007.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2008.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2009.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2010.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2011.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2012.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2013.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2014.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2015.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2016.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2017.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2018.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2019.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2020.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2021.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2022.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2023.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.csv",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/raw/CuuNet_ERA5Land_L7_daily_2024.receipt.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "input provenance hash inputs/data/runoff_revision/source_manifest.json",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "FP32 export equivalence passed Bao_Ha_Runoff",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "official graph exports Bao_Ha_Runoff",
+      "checks": 1,
+      "failed": 0
+    },
+    {
+      "check": "fixed test case hash Bao_Ha_Runoff",
+      "checks": 1,
+      "failed": 0
+    }
+  ],
+  "prediction_rows": 17899,
+  "neural_prediction_rows": 38355,
+  "publication_data_eligible": true,
+  "interpretation": "errors recalculated from per-date predictions and input/artifact hashes checked; this does not prove field deployment or index external validation"
+}

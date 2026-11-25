@@ -1,0 +1,5 @@
+zone,shrinkage,weights,test_mae,test_rmse,primary_setting,interpretation,run_id,provenance_class
+Can_Tho_Runoff,0.0,"[0.8745946827098576, 0.03901230493122745, 0.08639301235891497]",1.11739958983164,2.547924296218241,False,pre-specified test sensitivity; never used to select the primary setting,1a39af45b2446965cbbc,reanalysis
+Can_Tho_Runoff,0.05,"[0.8508503437114184, 0.052518610829710904, 0.09663104545887069]",1.1238051564283866,2.5457520726918283,False,pre-specified test sensitivity; never used to select the primary setting,1a39af45b2446965cbbc,reanalysis
+Can_Tho_Runoff,0.1,"[0.8285266542067514, 0.06513260802618898, 0.1063407377670596]",1.1301240116025453,2.544771039481432,True,pre-specified test sensitivity; never used to select the primary setting,1a39af45b2446965cbbc,reanalysis
+Can_Tho_Runoff,0.2,"[0.7876592210363716, 0.08803401877635017, 0.12430676018727817]",1.142585760942028,2.5456358851043883,False,pre-specified test sensitivity; never used to select the primary setting,1a39af45b2446965cbbc,reanalysis
