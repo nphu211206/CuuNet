@@ -1,0 +1,46 @@
+{
+  "dataset_doi": "10.5281/zenodo.13283821",
+  "license": "CC BY 4.0",
+  "sha256": "5cbd6812c0a03aa7749a246478f93a7d1b37c183f38aeb0d87728e9484de8f0c",
+  "series": {
+    "Water_level_TrungTrang_2021-202": {
+      "hours": 17520,
+      "days": 730,
+      "min_max": [
+        -83.0,
+        245.0
+      ],
+      "negative_hours": 4464,
+      "daily_mean_range": [
+        -1.375,
+        138.20833333333334
+      ]
+    },
+    "Water_level_HonDau_2021-2022": {
+      "hours": 17520,
+      "days": 730,
+      "min_max": [
+        12.0,
+        415.0
+      ],
+      "negative_hours": 0,
+      "daily_mean_range": [
+        169.20833333333334,
+        264.375
+      ]
+    },
+    "River_discharge_TrungTrang_2021": {
+      "hours": 17520,
+      "days": 730,
+      "min_max": [
+        -2280.0,
+        2740.0
+      ],
+      "negative_hours": 5608,
+      "daily_mean_range": [
+        78.19166666666666,
+        2200.0
+      ]
+    }
+  }
+}

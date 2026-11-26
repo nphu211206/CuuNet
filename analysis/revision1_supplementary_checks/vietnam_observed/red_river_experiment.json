@@ -1,0 +1,349 @@
+{
+  "dataset": "Son Nguyen (2023), Mendeley Data v1",
+  "doi": "10.17632/gmtw3zxhzc.1",
+  "license": "CC BY 4.0",
+  "stations": {
+    "Hoa_Binh": {
+      "file": "HBinh-Q_SPM_1975_2016_en.xlsx",
+      "sha256": "eee4b452d013aaba54213177604ff4959bafde3e81524c65079c248bc2f5e7f9",
+      "n_published": 15341,
+      "obs_2000_2016_in_read_daily_blocks": 6210,
+      "published_zeros_2000_2016": 0
+    },
+    "Vu_Quang": {
+      "file": "VuQuang_Q_SPM_2000-2016_en.xlsx",
+      "sha256": "92effa49f3768c91d24e9bc72dd335c9f68e11c3fa6db737c573b3da04f77e45",
+      "n_published": 6210,
+      "obs_2000_2016_in_read_daily_blocks": 6210,
+      "published_zeros_2000_2016": 0
+    },
+    "Son_Tay": {
+      "file": "SonTay-Q_SPM_1975-2016_en.xlsx",
+      "sha256": "1c463509bf52d9eed89fcad0a2875af50633055b14c43bd138e12c1ac5843dc1",
+      "n_published": 14976,
+      "obs_2000_2016_in_read_daily_blocks": 5845,
+      "published_zeros_2000_2016": 0
+    }
+  },
+  "chronology": {
+    "train": "2000\u20132008",
+    "validation_for_early_stopping": "2011\u20132013, excluding first 30 targets to use newly available 30-day windows",
+    "test": "2016, 366 common observed test dates. Provider 2015 daily mean Q is available as antecedent history.",
+    "why": "S\u01a1n T\u00e2y's 2009 and 2010 annual sheets label River \u0110\u00e0. They are excluded from learning at all sites. The separately laid out 2014 subdaily block was outside the analysis. No missing values are represented as observed test targets."
+  },
+  "recurrent_runs": [
+    {
+      "daily_sha256": "8ac1c676cfd5cd2adaf4b87942db4f95b7de8b79044441be8296d25394e7d8b1",
+      "metrics": [
+        {
+          "station": "Hoa_Binh",
+          "seed": 123,
+          "epochs": 17,
+          "best_epoch": 2,
+          "mae": 488.1341760718615
+        },
+        {
+          "station": "Vu_Quang",
+          "seed": 123,
+          "epochs": 100,
+          "best_epoch": 93,
+          "mae": 119.46221291945606
+        },
+        {
+          "station": "Son_Tay",
+          "seed": 123,
+          "epochs": 85,
+          "best_epoch": 70,
+          "mae": 316.5323883682653
+        }
+      ],
+      "training": {
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          2024
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "features": [
+        "lagged discharge",
+        "annual sine",
+        "annual cosine"
+      ],
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1"
+    },
+    {
+      "daily_sha256": "8ac1c676cfd5cd2adaf4b87942db4f95b7de8b79044441be8296d25394e7d8b1",
+      "metrics": [
+        {
+          "station": "Hoa_Binh",
+          "seed": 2024,
+          "epochs": 16,
+          "best_epoch": 1,
+          "mae": 428.60083330206453
+        },
+        {
+          "station": "Vu_Quang",
+          "seed": 2024,
+          "epochs": 100,
+          "best_epoch": 95,
+          "mae": 110.48280652209384
+        },
+        {
+          "station": "Son_Tay",
+          "seed": 2024,
+          "epochs": 90,
+          "best_epoch": 75,
+          "mae": 304.4543672300917
+        }
+      ],
+      "training": {
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          2024
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "features": [
+        "lagged discharge",
+        "annual sine",
+        "annual cosine"
+      ],
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1"
+    },
+    {
+      "daily_sha256": "8ac1c676cfd5cd2adaf4b87942db4f95b7de8b79044441be8296d25394e7d8b1",
+      "metrics": [
+        {
+          "station": "Hoa_Binh",
+          "seed": 42,
+          "epochs": 17,
+          "best_epoch": 2,
+          "mae": 477.6373296847394
+        },
+        {
+          "station": "Vu_Quang",
+          "seed": 42,
+          "epochs": 100,
+          "best_epoch": 97,
+          "mae": 113.17665085571059
+        },
+        {
+          "station": "Son_Tay",
+          "seed": 42,
+          "epochs": 17,
+          "best_epoch": 2,
+          "mae": 842.5774991207761
+        }
+      ],
+      "training": {
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          2024
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "features": [
+        "lagged discharge",
+        "annual sine",
+        "annual cosine"
+      ],
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1"
+    },
+    {
+      "daily_sha256": "8ac1c676cfd5cd2adaf4b87942db4f95b7de8b79044441be8296d25394e7d8b1",
+      "metrics": [
+        {
+          "station": "Hoa_Binh",
+          "seed": 456,
+          "epochs": 74,
+          "best_epoch": 59,
+          "mae": 256.76042618018886
+        },
+        {
+          "station": "Vu_Quang",
+          "seed": 456,
+          "epochs": 38,
+          "best_epoch": 23,
+          "mae": 133.96039429697834
+        },
+        {
+          "station": "Son_Tay",
+          "seed": 456,
+          "epochs": 68,
+          "best_epoch": 53,
+          "mae": 327.65733319480245
+        }
+      ],
+      "training": {
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          2024
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "features": [
+        "lagged discharge",
+        "annual sine",
+        "annual cosine"
+      ],
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1"
+    },
+    {
+      "daily_sha256": "8ac1c676cfd5cd2adaf4b87942db4f95b7de8b79044441be8296d25394e7d8b1",
+      "metrics": [
+        {
+          "station": "Hoa_Binh",
+          "seed": 789,
+          "epochs": 61,
+          "best_epoch": 46,
+          "mae": 255.41111745113926
+        },
+        {
+          "station": "Vu_Quang",
+          "seed": 789,
+          "epochs": 100,
+          "best_epoch": 94,
+          "mae": 110.57825481077361
+        },
+        {
+          "station": "Son_Tay",
+          "seed": 789,
+          "epochs": 71,
+          "best_epoch": 56,
+          "mae": 309.7030619125549
+        }
+      ],
+      "training": {
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          2024
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "features": [
+        "lagged discharge",
+        "annual sine",
+        "annual cosine"
+      ],
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1"
+    }
+  ],
+  "forecast_comparison": {
+    "Hoa_Binh": {
+      "lag_one_pearson_r": 0.933966168800948,
+      "training_90th_percentile_m3s": 3910.0,
+      "lstm_minus_persistence": {
+        "delta_mae_m3s": 190.12735577297138,
+        "ci_95": [
+          140.9958294560001,
+          251.4291943227269
+        ],
+        "n": 366,
+        "block_length": 30,
+        "repetitions": 2000,
+        "conditional_on_fits": true
+      }
+    },
+    "Vu_Quang": {
+      "lag_one_pearson_r": 0.97181123227659,
+      "training_90th_percentile_m3s": 2110.0,
+      "lstm_minus_persistence": {
+        "delta_mae_m3s": 44.41184530176752,
+        "ci_95": [
+          30.680538624181864,
+          57.38562512877008
+        ],
+        "n": 366,
+        "block_length": 30,
+        "repetitions": 2000,
+        "conditional_on_fits": true
+      }
+    },
+    "Son_Tay": {
+      "lag_one_pearson_r": 0.9683189344660659,
+      "training_90th_percentile_m3s": 7180.0,
+      "lstm_minus_persistence": {
+        "delta_mae_m3s": 209.15214308005218,
+        "ci_95": [
+          173.27392684309015,
+          247.28912884533364
+        ],
+        "n": 366,
+        "block_length": 30,
+        "repetitions": 2000,
+        "conditional_on_fits": true
+      }
+    }
+  },
+  "prediction_archive_sha256": "972e55895a4f70807a6189b37b2cffa2d40cbbf697d2a64743cb257799fe965f"
+}

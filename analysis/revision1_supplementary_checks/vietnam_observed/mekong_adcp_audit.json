@@ -1,0 +1,160 @@
+{
+  "doi": "10.5285/ac5b28ca-e087-4aec-974a-5a9f84b06595",
+  "licence": "OGL UK 3.0",
+  "summary": "Archive ratings files contain ADCP discharge measurements. Fluxes files contain the derived sediment flux series.",
+  "stations": {
+    "Cần Thơ": {
+      "rows": 1417,
+      "usable_measurements": 1265,
+      "unique_dates": 121,
+      "short_year_counts": {
+        "10": 152
+      },
+      "missing_or_invalid_date_with_four_digit_year": 0,
+      "coverage": [
+        "2005-01-10",
+        "2013-10-07"
+      ],
+      "negative_q_measurements": 0,
+      "counts_by_year": {
+        "2005": 150,
+        "2006": 65,
+        "2007": 189,
+        "2008": 157,
+        "2009": 175,
+        "2010": 67,
+        "2011": 155,
+        "2012": 143,
+        "2013": 164
+      },
+      "source_sha256": "9186998fc7acfaa61d4dbd2bf576074c870782a159e056196bd549ce4be0bbf6"
+    },
+    "Tân Châu": {
+      "rows": 1766,
+      "usable_measurements": 1766,
+      "unique_dates": 675,
+      "short_year_counts": {},
+      "missing_or_invalid_date_with_four_digit_year": 0,
+      "coverage": [
+        "2005-01-11",
+        "2017-09-28"
+      ],
+      "negative_q_measurements": 0,
+      "counts_by_year": {
+        "2005": 240,
+        "2006": 173,
+        "2007": 65,
+        "2008": 59,
+        "2009": 241,
+        "2010": 154,
+        "2011": 186,
+        "2012": 213,
+        "2013": 115,
+        "2014": 119,
+        "2015": 83,
+        "2016": 81,
+        "2017": 37
+      },
+      "source_sha256": "30fe5b8cc18619874c281070b81bb62aed05c14b412bc5d4150daee6338b4596",
+      "can_tho_regional_runoff_association": {
+        "n": 675,
+        "pearson_r": 0.4133381405011822,
+        "spearman_rho": 0.4740524057848869,
+        "pearson_r_after_month_centering": 0.24458812016241835,
+        "scope": "Upstream station measurements against the Cần Thơ regional runoff series. This is a contextual association across different supports."
+      }
+    },
+    "Châu Đốc": {
+      "rows": 1691,
+      "usable_measurements": 1691,
+      "unique_dates": 598,
+      "short_year_counts": {},
+      "missing_or_invalid_date_with_four_digit_year": 0,
+      "coverage": [
+        "2005-01-08",
+        "2017-09-27"
+      ],
+      "negative_q_measurements": 0,
+      "counts_by_year": {
+        "2005": 301,
+        "2006": 220,
+        "2007": 238,
+        "2008": 76,
+        "2009": 124,
+        "2010": 247,
+        "2011": 69,
+        "2012": 69,
+        "2013": 98,
+        "2014": 92,
+        "2015": 58,
+        "2016": 62,
+        "2017": 37
+      },
+      "source_sha256": "ad1346f0f11579f0e119f83ec68034a6f45fad29b0342eb876fd46a4a7ebd0fe",
+      "can_tho_regional_runoff_association": {
+        "n": 598,
+        "pearson_r": 0.44401719675105616,
+        "spearman_rho": 0.48249614861763934,
+        "pearson_r_after_month_centering": 0.22104498344954843,
+        "scope": "Upstream station measurements against the Cần Thơ regional runoff series. This is a contextual association across different supports."
+      }
+    },
+    "Mỹ Thuận": {
+      "rows": 1189,
+      "usable_measurements": 1189,
+      "unique_dates": 114,
+      "short_year_counts": {},
+      "missing_or_invalid_date_with_four_digit_year": 0,
+      "coverage": [
+        "2005-01-13",
+        "2014-05-20"
+      ],
+      "negative_q_measurements": 0,
+      "counts_by_year": {
+        "2005": 135,
+        "2006": 67,
+        "2008": 45,
+        "2009": 149,
+        "2010": 180,
+        "2011": 144,
+        "2012": 172,
+        "2013": 191,
+        "2014": 106
+      },
+      "source_sha256": "59e614d7185ab806ce96ec0d0c5e49c940a84f3c2d76172a10ff244af1d73c38"
+    }
+  },
+  "can_tho_pairing": {
+    "runoff_source": "data/runoff_revision/Can_Tho_Runoff.csv",
+    "matched_dates": 121,
+    "date_matching": "Exact calendar date labels. Source ADCP transects lack times in this table; statistics use a per-date mean/median over available transects.",
+    "physical_scope": "The area-averaged ERA5-Land runoff depth and channel discharge have different supports and units. This retrospective association uses measurement days and does not test the forecast model.",
+    "mean_summary": {
+      "n": 121,
+      "pearson_r": 0.6664147595699941,
+      "spearman_rho": 0.5564015716027638,
+      "pearson_r_after_month_centering": 0.09454042047407257
+    },
+    "median_summary": {
+      "n": 121,
+      "pearson_r": 0.6468783526390478,
+      "spearman_rho": 0.5284107844465518,
+      "pearson_r_after_month_centering": 0.09054730425645828
+    },
+    "per_date_transects_quantiles": {
+      "0.0": 2.0,
+      "0.25": 7.0,
+      "0.5": 11.0,
+      "0.75": 14.0,
+      "1.0": 22.0
+    },
+    "days_with_single_transect": 0,
+    "days_with_multiple_transects": 121,
+    "sensitivity_if_year_10_means_2010": {
+      "n": 136,
+      "pearson_r": 0.6870890398470181,
+      "spearman_rho": 0.5636420018128905,
+      "pearson_r_after_month_centering": 0.1683816326858111
+    }
+  }
+}

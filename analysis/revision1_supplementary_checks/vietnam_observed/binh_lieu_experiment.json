@@ -1,0 +1,592 @@
+{
+  "input": {
+    "dataset_doi": "10.5281/zenodo.23981946",
+    "rights": "CC BY 4.0",
+    "attribution": "Tran, Tuan Thach (2026). Source archive from the National Centre for Hydro-Meteorological Forecasting (Vietnam).",
+    "q_original_file": "Q_BinhLieu.xlsx",
+    "q_2024_file": "BinhLieu_H(90-25).xlsx",
+    "q_2024_sheet": "Qn",
+    "units": "m3/s",
+    "precipitation": "X_TienYen.xlsx, daily station rainfall in mm",
+    "overlap_q_records_match": 1461,
+    "complete_q_2024": 366,
+    "raw_workbooks": {
+      "Q_BinhLieu.xlsx": "d1ed57051ba76c993b1ac338957280cb8795eb381f46e66ef8dce3e6a7942004",
+      "BinhLieu_H(90-25).xlsx": "39e6340b32711fbda1262a3da98acc9555bde0b2325aa8c80be1295fe64139ae",
+      "X_TienYen.xlsx": "a309bcfe69400408accd8ff0a2c040a5699a8deded533219447c10195ced64d5"
+    },
+    "discharge_processing": "Station-published, no smoothing or rating-curve correction applied in this check. Q file for 2000\u20132023; Qn for 2024. No use of 2025 values.",
+    "precipitation_processing": "Station-published rainfall. Only rainfall dated before the target is included in a neural input window."
+  },
+  "test_dates": 1461,
+  "outage_origins": 208,
+  "training_90th_percentile_m3s": 46.5,
+  "validation_ensemble_and_baseline": {
+    "components": [
+      "moving_average",
+      "linear_trend",
+      "seasonal_decomposition"
+    ],
+    "weights": [
+      0.4663221515488457,
+      0.3807148699526427,
+      0.1529629784985116
+    ],
+    "bias": [
+      0.007391814389990035,
+      0.4940141161234268,
+      -1.1304448424193982
+    ],
+    "covariance": [
+      [
+        3780.078331483951,
+        2783.718725193988,
+        2589.7247436531848
+      ],
+      [
+        2783.718725193988,
+        3862.6633113895973,
+        2941.7396084785487
+      ],
+      [
+        2589.7247436531848,
+        2941.7396084785487,
+        5825.465309990775
+      ]
+    ],
+    "shrinkage": 0.1,
+    "val_mae": {
+      "persistence": 12.133795620437958,
+      "seasonal_persistence": 24.606587591240874,
+      "moving_average": 17.06712851929093,
+      "linear_trend": 24.035061737778083,
+      "seasonal_decomposition": 25.886527251781345,
+      "equal_weight_ensemble": 18.163487211326885,
+      "expected_mse_ensemble": 18.021350177382743
+    },
+    "selected_baseline": "persistence",
+    "outage_origins": 208,
+    "stl_interpolation": {
+      "seasonal_jump": 1,
+      "trend_jump": 7,
+      "low_pass_jump": 7,
+      "validation_check_origins": 84,
+      "mean_and_max_absolute_difference_m3s_by_horizon": {
+        "mean": {
+          "1": 0.09078741668219174,
+          "3": 0.11062396523815886,
+          "7": 0.1114999280936279
+        },
+        "max": {
+          "1": 2.4009348311415373,
+          "3": 3.090254659805076,
+          "7": 3.137092479654001
+        }
+      }
+    }
+  },
+  "recurrent_fits": [
+    {
+      "seed": 123,
+      "features": [
+        "discharge_m3s",
+        "rainfall_mm",
+        "flow_available",
+        "age_01",
+        "annual_sin",
+        "annual_cos"
+      ],
+      "splits": {
+        "train_start": "2000-01-01",
+        "train_end": "2017-12-31",
+        "validation_end": "2020-12-31",
+        "test_end": "2024-12-31"
+      },
+      "training": {
+        "seeds": [
+          123
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1",
+      "input_sha256": "bad2be51e778ca0888c6bdf9eab9fa2fff755d5f7cdc2884df919320149ba7cc",
+      "tf_enable_onednn_opts": "0",
+      "models": [
+        {
+          "model": "ta_lstm",
+          "split": "validation",
+          "mae": 17.031149176476873,
+          "rmse": 53.41621028038973,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm",
+          "split": "test",
+          "mae": 15.862137190556997,
+          "rmse": 65.0354254838153,
+          "observations": 1461
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "validation",
+          "mae": 15.084690457757109,
+          "rmse": 52.8859597350901,
+          "observations": 1096
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "test",
+          "mae": 14.70325345742316,
+          "rmse": 65.09796359877923,
+          "observations": 1461
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "validation",
+          "mae": 18.328830144660813,
+          "rmse": 53.78573853363574,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "test",
+          "mae": 17.279318451346988,
+          "rmse": 65.99875955040442,
+          "observations": 1461
+        }
+      ]
+    },
+    {
+      "seed": 2024,
+      "features": [
+        "discharge_m3s",
+        "rainfall_mm",
+        "flow_available",
+        "age_01",
+        "annual_sin",
+        "annual_cos"
+      ],
+      "splits": {
+        "train_start": "2000-01-01",
+        "train_end": "2017-12-31",
+        "validation_end": "2020-12-31",
+        "test_end": "2024-12-31"
+      },
+      "training": {
+        "seeds": [
+          2024
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1",
+      "input_sha256": "bad2be51e778ca0888c6bdf9eab9fa2fff755d5f7cdc2884df919320149ba7cc",
+      "tf_enable_onednn_opts": "0",
+      "models": [
+        {
+          "model": "ta_lstm",
+          "split": "validation",
+          "mae": 15.850903055795243,
+          "rmse": 52.4529113774731,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm",
+          "split": "test",
+          "mae": 15.272131365722116,
+          "rmse": 63.9306694303656,
+          "observations": 1461
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "validation",
+          "mae": 14.064149583625957,
+          "rmse": 53.309319005721015,
+          "observations": 1096
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "test",
+          "mae": 13.734670375595202,
+          "rmse": 65.19696886500302,
+          "observations": 1461
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "validation",
+          "mae": 17.155356748296395,
+          "rmse": 54.16445527563901,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "test",
+          "mae": 16.434533542937217,
+          "rmse": 67.10075907874045,
+          "observations": 1461
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "features": [
+        "discharge_m3s",
+        "rainfall_mm",
+        "flow_available",
+        "age_01",
+        "annual_sin",
+        "annual_cos"
+      ],
+      "splits": {
+        "train_start": "2000-01-01",
+        "train_end": "2017-12-31",
+        "validation_end": "2020-12-31",
+        "test_end": "2024-12-31"
+      },
+      "training": {
+        "seeds": [
+          42
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1",
+      "input_sha256": "bad2be51e778ca0888c6bdf9eab9fa2fff755d5f7cdc2884df919320149ba7cc",
+      "tf_enable_onednn_opts": "0",
+      "models": [
+        {
+          "model": "ta_lstm",
+          "split": "validation",
+          "mae": 15.872742601720615,
+          "rmse": 55.29768454265937,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm",
+          "split": "test",
+          "mae": 16.402853547417656,
+          "rmse": 68.509069887512,
+          "observations": 1461
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "validation",
+          "mae": 12.930918607382328,
+          "rmse": 56.518627429274225,
+          "observations": 1096
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "test",
+          "mae": 14.429983678402827,
+          "rmse": 71.11361598199092,
+          "observations": 1461
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "validation",
+          "mae": 16.02414242016138,
+          "rmse": 53.59630425966323,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "test",
+          "mae": 15.058132564824477,
+          "rmse": 66.08764545035025,
+          "observations": 1461
+        }
+      ]
+    },
+    {
+      "seed": 456,
+      "features": [
+        "discharge_m3s",
+        "rainfall_mm",
+        "flow_available",
+        "age_01",
+        "annual_sin",
+        "annual_cos"
+      ],
+      "splits": {
+        "train_start": "2000-01-01",
+        "train_end": "2017-12-31",
+        "validation_end": "2020-12-31",
+        "test_end": "2024-12-31"
+      },
+      "training": {
+        "seeds": [
+          456
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1",
+      "input_sha256": "bad2be51e778ca0888c6bdf9eab9fa2fff755d5f7cdc2884df919320149ba7cc",
+      "tf_enable_onednn_opts": "0",
+      "models": [
+        {
+          "model": "ta_lstm",
+          "split": "validation",
+          "mae": 16.732371679121684,
+          "rmse": 53.29893683031756,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm",
+          "split": "test",
+          "mae": 16.095042018960708,
+          "rmse": 65.23690737171142,
+          "observations": 1461
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "validation",
+          "mae": 13.103169033987946,
+          "rmse": 54.2348807779045,
+          "observations": 1096
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "test",
+          "mae": 13.180743454247414,
+          "rmse": 66.7142640664569,
+          "observations": 1461
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "validation",
+          "mae": 17.03995916148394,
+          "rmse": 55.2569827075105,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "test",
+          "mae": 16.53845487847374,
+          "rmse": 69.13580504070424,
+          "observations": 1461
+        }
+      ]
+    },
+    {
+      "seed": 789,
+      "features": [
+        "discharge_m3s",
+        "rainfall_mm",
+        "flow_available",
+        "age_01",
+        "annual_sin",
+        "annual_cos"
+      ],
+      "splits": {
+        "train_start": "2000-01-01",
+        "train_end": "2017-12-31",
+        "validation_end": "2020-12-31",
+        "test_end": "2024-12-31"
+      },
+      "training": {
+        "seeds": [
+          789
+        ],
+        "epochs": 100,
+        "batch_size": 64,
+        "early_stopping_patience": 15,
+        "learning_rate": 0.001,
+        "lstm_units": 64,
+        "attention_units": 32,
+        "dropout": 0.2,
+        "unroll_lstm": true,
+        "precision": "float32",
+        "include_outage_variant": true,
+        "input_censoring_probability": 0.5
+      },
+      "tensorflow": "2.20.0",
+      "keras": "3.15.1",
+      "input_sha256": "bad2be51e778ca0888c6bdf9eab9fa2fff755d5f7cdc2884df919320149ba7cc",
+      "tf_enable_onednn_opts": "0",
+      "models": [
+        {
+          "model": "ta_lstm",
+          "split": "validation",
+          "mae": 15.386111158616988,
+          "rmse": 52.537627004559525,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm",
+          "split": "test",
+          "mae": 14.364013370217497,
+          "rmse": 64.07537358362472,
+          "observations": 1461
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "validation",
+          "mae": 14.213002663357829,
+          "rmse": 52.54427608796697,
+          "observations": 1096
+        },
+        {
+          "model": "lstm_no_attention",
+          "split": "test",
+          "mae": 13.649891479069954,
+          "rmse": 64.21602546778674,
+          "observations": 1461
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "validation",
+          "mae": 16.556043882155464,
+          "rmse": 52.9677263266719,
+          "observations": 1096
+        },
+        {
+          "model": "ta_lstm_outage",
+          "split": "test",
+          "mae": 15.860527306941929,
+          "rmse": 65.68872791015926,
+          "observations": 1461
+        }
+      ]
+    }
+  ],
+  "ordinary_paired_ta_minus_lstm": {
+    "delta_mae_m3s": 1.659527009627283,
+    "ci_95": [
+      0.9575570513171886,
+      2.3937918454513665
+    ],
+    "n": 1461,
+    "block_length": 30,
+    "repetitions": 2000,
+    "conditional_on_fits": true
+  },
+  "ordinary_paired_lstm_minus_persistence": {
+    "delta_mae_m3s": 0.8622889133145832,
+    "ci_95": [
+      -1.744781805110324,
+      3.097433030348197
+    ],
+    "n": 1461,
+    "block_length": 30,
+    "repetitions": 2000,
+    "conditional_on_fits": true
+  },
+  "outage_paired_contrasts": {
+    "1": {
+      "censored_minus_ta_lstm": {
+        "delta_mae_m3s": 0.4986161994351029,
+        "ci_95": [
+          -0.1517895622104903,
+          1.1608837500325493
+        ],
+        "n": 208,
+        "block_length": 5,
+        "repetitions": 2000,
+        "conditional_on_fits": true
+      },
+      "censored_minus_validation_selected_baseline": {
+        "delta_mae_m3s": 3.6753808669491432,
+        "ci_95": [
+          1.2985797573790228,
+          5.906745806670758
+        ],
+        "n": 208,
+        "block_length": 5,
+        "repetitions": 2000,
+        "conditional_on_fits": true
+      }
+    },
+    "3": {
+      "censored_minus_ta_lstm": {
+        "delta_mae_m3s": -20.675078554474965,
+        "ci_95": [
+          -22.583536463300174,
+          -18.91271641508695
+        ],
+        "n": 208,
+        "block_length": 5,
+        "repetitions": 2000,
+        "conditional_on_fits": true
+      },
+      "censored_minus_validation_selected_baseline": {
+        "delta_mae_m3s": -1.2174246340728412,
+        "ci_95": [
+          -5.7702312140350385,
+          2.6971494691023445
+        ],
+        "n": 208,
+        "block_length": 5,
+        "repetitions": 2000,
+        "conditional_on_fits": true
+      }
+    },
+    "7": {
+      "censored_minus_ta_lstm": {
+        "delta_mae_m3s": -37.18305143329536,
+        "ci_95": [
+          -39.21863362495924,
+          -35.40727443454772
+        ],
+        "n": 208,
+        "block_length": 5,
+        "repetitions": 2000,
+        "conditional_on_fits": true
+      },
+      "censored_minus_validation_selected_baseline": {
+        "delta_mae_m3s": -4.5392485317755815,
+        "ci_95": [
+          -10.153495852307561,
+          0.05749961611272593
+        ],
+        "n": 208,
+        "block_length": 5,
+        "repetitions": 2000,
+        "conditional_on_fits": true
+      }
+    }
+  },
+  "prediction_archive_sha256": "2d9f363c996b87bb82ac9f07f9f97a36a198b9b26ada64f4d3015af9609cf3e2"
+}
