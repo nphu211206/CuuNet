@@ -1,0 +1,41 @@
+{
+  "station": "Yên Bái, Red River (Sông Hồng)",
+  "source": {
+    "dataset": "Nguyen S (2023), Mendeley Data V1",
+    "doi": "10.17632/gmtw3zxhzc.1",
+    "workbook_url": "https://data.mendeley.com/public-files/datasets/gmtw3zxhzc/files/f4042a03-7fcb-445d-b4b7-d0eb798c42a0/file_downloaded",
+    "workbook_sha256": "2d88cbbc0b3948351dec05c0c4c694bc90e4775921794d624c72cea8386daf2c",
+    "licence": "CC BY 4.0",
+    "worksheet": "Q-ngay ",
+    "definition": "Daily discharge, m³/s. Reconstruct dates from the calendar-year blocks and columns January–December.",
+    "workbook": "YenBai_Q_SPM_2000-2016_en.xlsx",
+    "licence_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "data_period": [
+    "2000-01-01",
+    "2016-12-31"
+  ],
+  "daily_rows": 6210,
+  "duplicates": 0,
+  "missing_days": 0,
+  "evaluation_period": [
+    "2014-01-01",
+    "2016-12-31"
+  ],
+  "evaluation_days": 1096,
+  "baseline_protocol": "One-day forecasts from t−1, mean(t−7 to t−1), or t−365. All methods scored on the same dates with no parameters fitted.",
+  "results": {
+    "persistence": {
+      "mae_m3_s": 103.33740875912409,
+      "rmse_m3_s": 251.2085440978018
+    },
+    "7_day_moving_average": {
+      "mae_m3_s": 166.25247653806048,
+      "rmse_m3_s": 346.9744307962714
+    },
+    "365_day_seasonal_persistence": {
+      "mae_m3_s": 287.1346715328467,
+      "rmse_m3_s": 535.3717113602637
+    }
+  }
+}
