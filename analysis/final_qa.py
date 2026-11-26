@@ -40,6 +40,17 @@ TABLE_5_ALT_ROWS = re.compile(r'^Table 5\b.*?\bcontains (\d+) data rows\b')
 REPLAY_COMMIT = '26084c7b33e487819ee9117c8a3f908ef4f5feb7'
 SUPP_COMMIT = '81ba768a2a9b48dbe7427b820f89b00b5a43a5b9'
 REPLAY_NUMBERS = ('8,448', '2,112', '2,304')
+EXPECTED_ORCID = '0009-0005-0529-2131'
+ORCID_RE = re.compile(r'\b000\d-\d{4}-\d{4}-\d{3}[\dX]\b')
+
+
+def orcid_checksum_valid(oid):
+    digits = oid.replace('-', '')
+    total = 0
+    for d in digits[:-1]:
+        total = (total + int(d)) * 2
+    chk_num = (12 - (total % 11)) % 11
+    return ('X' if chk_num == 10 else str(chk_num)) == digits[-1]
 
 
 def check_docx_hyperlinks(path):
@@ -84,6 +95,11 @@ for name, path in files.items():
     if name != 'AltText':
         if AI_DECL not in all_text:
             issues.append('MISSING AI declaration')
+        if EXPECTED_ORCID not in all_text:
+            issues.append(f'MISSING verified ORCID {EXPECTED_ORCID}')
+    for found_orcid in sorted(set(ORCID_RE.findall(all_text))):
+        if found_orcid != EXPECTED_ORCID or not orcid_checksum_valid(found_orcid):
+            issues.append(f'BAD ORCID found: {found_orcid}')
     
     if name in ('Clean', 'TrackedChanges'):
         if MALFORMED_SERVER_URL.search(all_text):
