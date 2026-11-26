@@ -73,7 +73,7 @@ def main():
         'clean_sha256': sha(STAGE / NAMES['clean']), 'accepted_sha256': sha(accepted),
         'intentional_word_serialisation': 'Word canonicalises native math minus/prime characters and retains four empty comparison paragraphs; all authored text, numerical cells and scientific images are unchanged.',
         'table_rows_including_headers': [len(t.rows) for t in b.tables],
-        'author': AUTHOR, 'affiliation': '', 'orcid': '', 'language': 'en-GB',
+        'author': AUTHOR, 'affiliation': AFFILIATION, 'orcid': ORCID, 'language': 'en-GB',
         'experiments_rerun': False,
     }
     (WORK / 'accepted_clean_fidelity_en.json').write_text(json.dumps(record, indent=2), encoding='utf-8')

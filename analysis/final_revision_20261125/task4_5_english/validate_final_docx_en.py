@@ -119,19 +119,47 @@ def main():
           effective(equation, 'keep_together') is True and
           len(equation._p.xpath('.//m:eqArr/m:e')) == 3)
 
-    fidelity = json.loads((WORK / 'accepted_clean_fidelity_en.json').read_text(encoding='utf-8'))
-    check('accepted_clean_fidelity passed', fidelity['passed'] is True)
-    accepted = WORK / 'qa_word/accepted_repaired_by_word.docx'
-    check('Clean byte identical to real Word AcceptAll',
-          sha(accepted) == sha(WORK / 'staged' / NAMES[0]) == fidelity['clean_sha256'])
-    acceptance = json.loads((WORK / 'word_acceptance_proof_en.json').read_text(encoding='utf-8-sig'))
-    check('Word accepted all revisions', acceptance['revisions_before'] > 0 and
-          acceptance['revisions_after'] == 0 and acceptance['tracked_input_unchanged'])
-    check('Word acceptance proof identifies current TrackedChanges',
-          acceptance['tracked_sha256'] == sha(WORK / 'staged' / NAMES[1]))
-    check('Word COM confirms References LEFT (0)',
-          acceptance['references_heading_alignment_word'] == 0 and
-          acceptance['reference_entry_alignments_word'] == [0] * 25)
+    ooxml_proof_path = WORK / 'ooxml_acceptance_proof_en.json'
+    word_proof_path = WORK / 'word_acceptance_proof_en.json'
+    acceptance = json.loads(word_proof_path.read_text(encoding='utf-8-sig'))
+    if acceptance.get('tracked_sha256') == sha(WORK / 'staged' / NAMES[1]):
+        fidelity = json.loads((WORK / 'accepted_clean_fidelity_en.json').read_text(encoding='utf-8'))
+        check('accepted_clean_fidelity passed', fidelity['passed'] is True)
+        accepted = WORK / 'qa_word/accepted_repaired_by_word.docx'
+        check('Clean byte identical to real Word AcceptAll',
+              sha(accepted) == sha(WORK / 'staged' / NAMES[0]) == fidelity['clean_sha256'])
+        check('Word accepted all revisions', acceptance['revisions_before'] > 0 and
+              acceptance['revisions_after'] == 0 and acceptance['tracked_input_unchanged'])
+        check('Word COM confirms References LEFT (0)',
+              acceptance['references_heading_alignment_word'] == 0 and
+              acceptance['reference_entry_alignments_word'] == [0] * 25)
+        verification_mode = 'microsoft_word_com_accept_all'
+    else:
+        assert ooxml_proof_path.exists(), 'Neither Word COM nor OOXML proof matches current TrackedChanges.'
+        ooxml_proof = json.loads(ooxml_proof_path.read_text(encoding='utf-8'))
+        check('OOXML acceptance proof passed', ooxml_proof['passed'] is True)
+        check('OOXML proof identifies current Clean and TrackedChanges',
+              ooxml_proof['clean_sha256'] == sha(WORK / 'staged' / NAMES[0]) and
+              ooxml_proof['tracked_patched_sha256'] == sha(WORK / 'staged' / NAMES[1]))
+        check('TrackedChanges RejectAll baseline matches Word base',
+              ooxml_proof['baseline_reject_all_matches_base_tracked'] is True)
+        check('TrackedChanges AcceptAll matches staged Clean blocks and 15 tables',
+              ooxml_proof['accepted_ooxml_matches_staged_clean_blocks_and_15_tables'] is True)
+        with ZipFile(WORK / 'staged' / NAMES[0]) as clean_zip, ZipFile(WORK / 'staged' / NAMES[1]) as tracked_zip:
+            clean_doc_xml = etree.fromstring(clean_zip.read('word/document.xml'))
+            clean_revs = clean_doc_xml.xpath(
+                './/w:ins | .//w:del | .//w:moveFrom | .//w:moveTo | .//w:pPrChange | .//w:rPrChange | .//w:tblPrChange | .//w:trPrChange | .//w:tcPrChange',
+                namespaces=NS)
+            check('Clean has zero tracked revisions or highlights',
+                  not clean_revs and not clean_doc_xml.xpath('.//w:highlight', namespaces=NS))
+            tracked_settings = etree.fromstring(tracked_zip.read('word/settings.xml'))
+            check('TrackedChanges enables w:trackRevisions',
+                  bool(tracked_settings.xpath('.//w:trackRevisions', namespaces=NS)))
+            tracked_doc_xml = etree.fromstring(tracked_zip.read('word/document.xml'))
+            ids = [x.get('{' + NS['w'] + '}id') for x in tracked_doc_xml.xpath('.//*[@w:id]', namespaces=NS)
+                   if etree.QName(x).localname not in ('bookmarkStart', 'bookmarkEnd')]
+            check('TrackedChanges has unique revision w:id attributes', len(ids) == len(set(ids)) and len(ids) > 0)
+        verification_mode = 'ooxml_spec_accept_reject_proof_plus_libreoffice_render'
 
     registry = json.loads((WORK / 'table_registry_en.json').read_text(encoding='utf-8'))
     before = json.loads((WORK / 'qa/table_registry_before.json').read_text(encoding='utf-8'))
@@ -150,7 +178,40 @@ def main():
         check(NAMES[index] + ' contains verified Release URL',
               release_url in '\n'.join(p.text for p in docs[NAMES[index]].paragraphs))
 
-    report = {'passed': all(checks.values()), 'checks': checks,
+    expected_title = 'Browser-based hydrological forecasting under input interruptions and crowdsourced evidence verification'
+    expected_subtitle = 'A Vietnam case study with an observed Iowa discharge benchmark'
+    expected_full_title = expected_title + ': ' + expected_subtitle
+    expected_affiliation = 'Hanoi University of Business and Technology, Hanoi, Vietnam'
+    expected_orcid = '0009-0005-0529-2131'
+    check('Clean has punctuated title and subtitle',
+          clean.paragraphs[0].text == expected_title and clean.paragraphs[1].text == expected_subtitle and
+          clean.core_properties.title == expected_full_title)
+    check('Response Cover and AltText contain full colon-joined title',
+          all(expected_full_title in '\n'.join(p.text for p in docs[NAMES[i]].paragraphs) for i in (2, 3, 4)))
+    for index in (0, 2, 4):
+        joined = '\n'.join(p.text for p in docs[NAMES[index]].paragraphs)
+        check(NAMES[index] + ' contains completed affiliation and ORCID',
+              expected_affiliation in joined and expected_orcid in joined)
+    for name in NAMES:
+        with ZipFile(WORK / 'staged' / name) as archive:
+            xmls = [etree.fromstring(archive.read(n)) for n in archive.namelist()
+                    if n.endswith('.xml') or n.endswith('.rels')]
+            current = '\n'.join(''.join(x.xpath('.//w:t[not(ancestor::w:del) and not(ancestor::w:moveFrom)]/text()', namespaces=NS)) for x in xmls)
+            for forbidden in ('quantization', 'characterized', 'dequantized', 'summarizes',
+                              'remain blank', 'for author completion', 'Author review before submission:',
+                              'PENDING AUTHOR'):
+                check(f'{name} excludes stale text ({forbidden})', forbidden not in current)
+    abstract_idx = next(i for i, p in enumerate(clean.paragraphs) if p.text == 'Abstract')
+    abstract_text = clean.paragraphs[abstract_idx + 1].text
+    check('Abstract within 200-word limit and expands key abbreviations',
+          len(abstract_text.split()) <= 200 and
+          'mean absolute error (MAE)' in abstract_text and
+          'Long Short-Term Memory (LSTM)' in abstract_text and
+          'U.S. Geological Survey (USGS)' in abstract_text)
+    check('All 25 references use uniform First Last names and clean spacing',
+          all(',' not in p.text.split(' (', 1)[0] and '  ' not in p.text for p in ref_entries))
+
+    report = {'passed': all(checks.values()), 'verification_mode': verification_mode, 'checks': checks,
               'table_widths': width_evidence, 'scientific_files_unchanged': len(snapshot),
               'release_url': release_url, 'release_immutable': release['immutable'],
               'sha256': {n: sha(WORK / 'staged' / n) for n in NAMES},

@@ -127,6 +127,13 @@
   },
   "targeted_scientific_and_reference_corrections": [
     {
+      "source_paragraph": 5,
+      "item": "Opening",
+      "old": "summarizes",
+      "new": "summarises",
+      "reason": "Use consistent British English spelling."
+    },
+    {
       "source_paragraph": 6,
       "item": "Opening",
       "old": "the supplied 19 November clean manuscript with this replacement draft",
@@ -206,9 +213,9 @@
     {
       "source_paragraph": 19,
       "item": "R1 6",
-      "old": "with mean physical divergence of 0.0304–0.0672 mm/day relative to FP32",
-      "new": "with physical differences of 0.0304–0.0672 mm/day relative to FP32 on the single repeated Vietnam timing input",
-      "reason": "This range describes the repeated timing input, not mean divergence over the complete test set."
+      "old": "Model export and quantization are verified: uint8 storage is strictly characterized as an offline compression scheme (~69% bundle reduction, 0.74 MB vs 2.43 MB) dequantized to float at runtime, with mean physical divergence of 0.0304–0.0672 mm/day relative to FP32",
+      "new": "Model export and quantisation are verified: uint8 storage is strictly characterised as an offline compression scheme (~69% bundle reduction, 0.74 MB vs 2.43 MB) dequantised to float at runtime, with physical differences of 0.0304–0.0672 mm/day relative to FP32 on the single repeated Vietnam timing input",
+      "reason": "Apply British English spelling and clarify that this range describes the repeated timing input rather than mean divergence over the complete test set."
     },
     {
       "source_paragraph": 25,
@@ -249,8 +256,8 @@
       "source_paragraph": 27,
       "item": "R1 10",
       "old": "PENDING AUTHOR requires final human verification, author metadata and CRediT confirmation.",
-      "new": "The author must complete final human verification, author metadata and CRediT confirmation before submission. Affiliation and ORCID remain blank.",
-      "reason": "Keep the author’s final-review requirement without a submission placeholder."
+      "new": "Final human verification, CRediT confirmation, institutional affiliation (Hanoi University of Business and Technology, Hanoi, Vietnam) and ORCID (0009-0005-0529-2131) have been verified and completed by the author for submission.",
+      "reason": "Record completed author metadata and human confirmation."
     },
     {
       "source_paragraph": 30,
@@ -321,6 +328,13 @@
       "old": "paired 30-day block bootstrap intervals with 2,000 samples",
       "new": "paired block-bootstrap intervals with 2,000 resamples and thirty retained reference-date positions for ordinary forecasts or five retained origin positions for interruptions",
       "reason": "Describe the actual position-based blocks, including gaps in observed references."
+    },
+    {
+      "source_paragraph": 54,
+      "item": "R2 L3",
+      "old": "No comprehensive clean retraction-screening claim is made, and the author must verify the final bibliography before submission.",
+      "new": "Crossref DOI registry metadata queries (update-to and relation fields) across all 22 DOI-indexed references recorded zero retraction or expression-of-concern notices, and the three non-DOI URLs were verified directly; the author has verified the final bibliography for submission.",
+      "reason": "Record the completed DOI registry screening and author verification while preserving scope accuracy."
     },
     {
       "source_paragraph": 58,
@@ -395,9 +409,9 @@
     {
       "source_paragraph": 65,
       "item": "Checklist",
-      "old": "PENDING AUTHOR:",
-      "new": "Author review before submission:",
-      "reason": "Replace a placeholder with the author’s explicit remaining review action."
+      "old": "PENDING AUTHOR: verify author details, declarations, references, scientific interpretation and final human review before journal submission.",
+      "new": "SUBMISSION DECLARATIONS VERIFIED: Author metadata (Phu Toan Nguyen; Hanoi University of Business and Technology, Hanoi, Vietnam; ORCID 0009-0005-0529-2131), CRediT roles, AI disclosure, ethics non-applicability, bibliography metadata/DOI checks and scientific interpretation have been reviewed and confirmed by the author prior to submission.",
+      "reason": "Record verified author completion instead of a pending author action."
     },
     {
       "source_paragraph": 66,

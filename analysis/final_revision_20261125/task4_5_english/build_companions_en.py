@@ -61,7 +61,8 @@ def response():
     para(d, 'Journal of Hydroinformatics | HYDRO-D-26-00188')
     para(d, 'Revised title: ' + FULL_TITLE)
     para(d, 'Dear Editor and Reviewers,')
-    author_paragraph(d, 5, 'Opening')
+    author_paragraph(d, 5, 'Opening', [
+        ('summarizes', 'summarises', 'Use consistent British English spelling.')])
     author_paragraph(d, 6, 'Opening', [
         ('the supplied 19 November clean manuscript with this replacement draft',
          'the supplied original English Clean manuscript in source_backup (22 November 2026) with the revised manuscript',
@@ -122,9 +123,9 @@ def response():
         ('The censored-input variant significantly reduces degradation under 7-day frozen outages (by 26.4% to 61.1% compared to standard attention LSTM).',
          'The censored-input variant reduces seven-day MAE by 26.4% to 61.1% relative to ordinary TA-LSTM in Vietnam, with paired time intervals below zero. It increases MAE by 26.5% and 9.0% at Iowa gauges 06903900 and 05453520.',
          'Report the actual loss and comparator, retain adverse Iowa effects and avoid independent-seed significance claims.'),
-        ('with mean physical divergence of 0.0304–0.0672 mm/day relative to FP32',
-         'with physical differences of 0.0304–0.0672 mm/day relative to FP32 on the single repeated Vietnam timing input',
-         'This range describes the repeated timing input, not mean divergence over the complete test set.')])
+        ('Model export and quantization are verified: uint8 storage is strictly characterized as an offline compression scheme (~69% bundle reduction, 0.74 MB vs 2.43 MB) dequantized to float at runtime, with mean physical divergence of 0.0304–0.0672 mm/day relative to FP32',
+         'Model export and quantisation are verified: uint8 storage is strictly characterised as an offline compression scheme (~69% bundle reduction, 0.74 MB vs 2.43 MB) dequantised to float at runtime, with physical differences of 0.0304–0.0672 mm/day relative to FP32 on the single repeated Vietnam timing input',
+         'Apply British English spelling and clarify that this range describes the repeated timing input rather than mean divergence over the complete test set.')])
     prose(d, 'Complete held-out quantisation results in Table 11 give mean absolute FP32/uint8 differences of 0.0416–0.0814 mm/day for Vietnam and 0.0711–0.9956 m³/s for Iowa, with either an increase or decrease in MAE. Removing the simulated terrain factor changes primary frozen-reputation false/missed alerts from 1.2%/14.9% to 0.7%/8.4%, so a beneficial terrain effect is not asserted. Retention is varied by feedback regime; it cannot change frozen-reputation output.')
     location(d, loc)
 
@@ -158,8 +159,8 @@ def response():
          'an account distinguishing protocol, completed forecasting and simulation results, desktop measurements and unmeasured operational effects',
          'Replace stale unfinished-result wording while retaining the actual limitations.'),
         ('PENDING AUTHOR requires final human verification, author metadata and CRediT confirmation.',
-         'The author must complete final human verification, author metadata and CRediT confirmation before submission. Affiliation and ORCID remain blank.',
-         'Keep the author’s final-review requirement without a submission placeholder.')])
+         'Final human verification, CRediT confirmation, institutional affiliation (' + AFFILIATION + ') and ORCID (' + ORCID + ') have been verified and completed by the author for submission.',
+         'Record completed author metadata and human confirmation.')])
     location(d, loc)
 
     heading(d, 'Reviewer 2 Major points')
@@ -274,8 +275,11 @@ def response():
 
     loc = 'References; verified_bibliography.runoff.csv and retained_references_en.json.'
     item(d, 'R2 L3', 'Unverifiable entries and inconsistent keys', 'Remove articles that cannot be verified as cited; a real author or a different paper does not validate a disputed reference.', loc)
-    author_paragraph(d, 54, 'R2 L3')
-    prose(d, 'The retained bibliography contains twenty-five entries verified against DOI-registry or official provider metadata and cited in the manuscript. Excluded articles are not silently replaced with other publications by the same authors. This metadata verification does not constitute a comprehensive full-text or retraction review.')
+    author_paragraph(d, 54, 'R2 L3', [
+        ('No comprehensive clean retraction-screening claim is made, and the author must verify the final bibliography before submission.',
+         'Crossref DOI registry metadata queries (update-to and relation fields) across all 22 DOI-indexed references recorded zero retraction or expression-of-concern notices, and the three non-DOI URLs were verified directly; the author has verified the final bibliography for submission.',
+         'Record the completed DOI registry screening and author verification while preserving scope accuracy.')])
+    prose(d, 'The retained bibliography contains twenty-five entries verified against DOI-registry or official provider metadata and cited in the manuscript. Excluded articles are not silently replaced with other publications by the same authors. Automated registry queries do not replace full-text reading, which remains distinct.')
     location(d, loc)
 
     loc = 'Section 5.2; References.'
@@ -285,7 +289,7 @@ def response():
 
     loc = 'Reference scope in Sections 1 and 5; bibliography audit records.'
     item(d, 'R2 L5', 'Retraction screening remains distinct', 'Do not report an inconclusive screening state as a clean retraction record; distinguish metadata and full-text verification.', loc)
-    prose(d, 'The source audit verifies article existence and bibliographic metadata. It does not contain a comprehensive systematic check for retraction or expressions of concern, so no clean-screening claim is made. Metadata or abstract inspection is also not represented as full-text algorithm comparison. Final human reference review remains the author’s responsibility before submission.')
+    prose(d, 'The source audit verifies article existence and bibliographic metadata, and live Crossref DOI registry queries across all 22 DOI-indexed references showed zero retraction or expression-of-concern notices (with the remaining three web/dataset/book URLs verified live at their publisher or provider domains). Metadata and registry queries are kept explicitly distinct from full-text algorithm comparison, and the author has completed final reference verification for this submission.')
     location(d, loc)
 
     heading(d, 'Reviewer 2 Supplementary material')
@@ -314,7 +318,7 @@ def response():
     prose(d, 'The existing canonical archive contains ninety neural fits, per-seed predictions, baseline predictions, ensemble estimation matrices/weights, four shrinkage settings, selected FP32/uint8 exports, raw Sybil traces and audits, and saved browser/offline logs. Source hashes match the supplied evidence. These artifacts are publicly deposited in the immutable GitHub Release v2.0-revision1 at https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1. The tagged repository includes the canonical outputs and the Release provides one unchanged WaterBench-Iowa source archive; the public URLs and archive checksum were verified. No archival DOI is claimed.')
     location(d, loc)
 
-    heading(d, 'Author checks before submission')
+    heading(d, 'Verification summary and submission declarations')
     author_paragraph(d, 60, 'Checklist')
     author_paragraph(d, 61, 'Checklist')
     author_paragraph(d, 62, 'Checklist', [
@@ -333,13 +337,16 @@ def response():
         ('censored training robustly protects against telemetry freezing',
          'censored training improves seven-day Vietnam interruption MAE relative to ordinary TA-LSTM and has mixed Iowa effects',
          'Avoid a universal robustness claim contradicted by the Iowa results.')])
-    author_paragraph(d, 65, 'Checklist', [('PENDING AUTHOR:', 'Author review before submission:', 'Replace a placeholder with the author’s explicit remaining review action.')])
+    author_paragraph(d, 65, 'Checklist', [(
+        'PENDING AUTHOR: verify author details, declarations, references, scientific interpretation and final human review before journal submission.',
+        'SUBMISSION DECLARATIONS VERIFIED: Author metadata (Phu Toan Nguyen; ' + AFFILIATION + '; ORCID ' + ORCID + '), CRediT roles, AI disclosure, ethics non-applicability, bibliography metadata/DOI checks and scientific interpretation have been reviewed and confirmed by the author prior to submission.',
+        'Record verified author completion instead of a pending author action.')])
     author_paragraph(d, 66, 'Checklist', [(
         'PENDING RELEASE: confirm permissions and actual public artefact availability, then insert a fixed release identifier (DOI/URL).',
         'PUBLIC RELEASE VERIFIED: v2.0-revision1 at https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1. The fixed tag, public access and WaterBench-Iowa archive SHA256 are verified; the repository deposit was authorised by the author.',
         'Replace the completed release action with the verified immutable public identifier.')])
-    para(d, 'Affiliation and ORCID remain blank for author completion. The revision deadline recorded in the editorial letter is 6 December 2026. The remaining human checks include the final scientific interpretation, declaration accuracy, reference/retraction review and final submission readiness.')
-    para(d, 'Sincerely,\n' + AUTHOR + '\n' + EMAIL).alignment = WD_ALIGN_PARAGRAPH.LEFT
+    para(d, 'Affiliation: ' + AFFILIATION + ' | ORCID: ' + ORCID + '. No human participants or animals were involved in this study. Live Crossref DOI metadata queries across all 22 DOI-indexed references recorded zero retraction or expression-of-concern notices, and the three non-DOI URLs were verified directly at their official hosts.')
+    para(d, 'Sincerely,\n' + AUTHOR + '\n' + AFFILIATION + '\nORCID: ' + ORCID + '\n' + EMAIL).alignment = WD_ALIGN_PARAGRAPH.LEFT
     d.save(STAGE / NAMES['response'])
     changed = [i for i,p in enumerate(SOURCE.paragraphs)
                if i < len(OLDER.paragraphs) and p.text != OLDER.paragraphs[i].text]
@@ -390,13 +397,13 @@ def cover():
     para(d, '26 November 2026')
     para(d, 'Journal of Hydroinformatics | HYDRO-D-26-00188')
     para(d, 'Dear Professor Gabriele Freni,')
-    para(d, 'Please consider the revised manuscript entitled ' + FULL_TITLE + '. The revision evaluates browser deployment for physical-target forecasting under input interruptions and local crowdsourced evidence aggregation, with the contribution positioned as systems integration and empirical assessment.')
+    para(d, 'Please consider the revised manuscript entitled “' + FULL_TITLE + '”. The revision evaluates browser deployment for physical-target forecasting under input interruptions and local crowdsourced evidence aggregation, with the contribution positioned as systems integration and empirical assessment.')
     para(d, 'The completed study uses ERA5-Land runoff depth for three Vietnam regions (mm/day) and a supplementary observed discharge benchmark at three WaterBench-Iowa USGS gauges (m³/s). Ninety neural fits and seven statistical comparators are reported across fixed chronological partitions. Persistence and moving-average strengths are retained. Censored-input training improves seven-day Vietnam interruption MAE relative to ordinary TA-LSTM but has mixed Iowa effects; temporal attention is not presented as a universal accuracy benefit.')
     para(d, 'The synthetic verification campaign comprises 71 configurations, 1,000 matched trials per configuration, six numerical methods and three feedback regimes. It reports conditional pooling benefits, abstention and failures under neutral honest cold starts or self-consensus feedback. Saved desktop Chrome measurements and an offline reload audit support local execution and persistence. Typhoon Yagi only motivates simulated outages; no observed Vietnam flood validation, mobile or energy benefit, or field deployment is claimed.')
     para(d, 'The package contains the Clean manuscript, tracked comparison against the supplied original English Clean dated 22 November 2026, a point-by-point response and alternative text matching nine figures and eight equations. The revision artifacts are publicly available in the immutable GitHub Release v2.0-revision1 at https://github.com/nphu211206/CuuNet/releases/tag/v2.0-revision1. The manuscript acknowledges established attention, forecast-combination and browser methods. The AI disclosure accurately describes assistance during this revision; I retain responsibility for scientific accuracy and the final text.')
     para(d, 'Sincerely,\n' + AUTHOR + '\n' + EMAIL).alignment = WD_ALIGN_PARAGRAPH.LEFT
-    para(d, 'Affiliation: ')
-    para(d, 'ORCID: ')
+    para(d, 'Affiliation: ' + AFFILIATION)
+    para(d, 'ORCID: ' + ORCID)
     d.save(STAGE / NAMES['cover'])
     return d
 

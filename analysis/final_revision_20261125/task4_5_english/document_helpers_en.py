@@ -17,10 +17,12 @@ ROOT = WORK.parents[2]
 BASELINE = WORK / 'source_backup_20261125'
 STAGE = WORK / 'staged'
 STAGE.mkdir(exist_ok=True)
-TITLE = 'Browser based hydrological forecasting under input interruptions and crowdsourced evidence verification'
+TITLE = 'Browser-based hydrological forecasting under input interruptions and crowdsourced evidence verification'
 SUBTITLE = 'A Vietnam case study with an observed Iowa discharge benchmark'
-FULL_TITLE = TITLE + ' ' + SUBTITLE
+FULL_TITLE = TITLE + ': ' + SUBTITLE
 AUTHOR = 'Phu Toan Nguyen'
+AFFILIATION = 'Hanoi University of Business and Technology, Hanoi, Vietnam'
+ORCID = '0009-0005-0529-2131'
 EMAIL = 'nphu211206@gmail.com'
 NAMES = {'clean': 'HYDRO_D_26_00188_Revision1_Clean.docx', 'tracked': 'HYDRO_D_26_00188_TrackedChanges.docx',
          'response': 'HYDRO_D_26_00188_Response_to_Reviewers.docx', 'alt': 'HYDRO_D_26_00188_AltText.docx',
@@ -45,7 +47,7 @@ EQ = {
     1: ('Nonnegative forecast combination',
         ['w* = arg min wᵀQw', 'wᵢ ≥ 0; Σᵢ wᵢ = 1'],
         'Choose nonnegative forecast weights that sum to one and minimise the estimated expected squared error of the combination. The minimisation is over the weight vector w.'),
-    2: ('Bias aware error matrix',
+    2: ('Bias-aware error matrix',
         ['Q = (1 − λ)Σ̂ + λ diag(Σ̂) + bbᵀ;  λ = 0.10'],
         'The matrix Q is sample error covariance shrunk towards its diagonal, plus the outer product of the mean error vector b. Sample covariance uses the n minus one denominator; the prespecified primary shrinkage coefficient is 0.10.'),
     3: ('Additive temporal attention',
@@ -60,7 +62,7 @@ EQ = {
     6: ('Normalised Dempster combination',
         ['m(A) = [Σᴮ∩ᶜ⁼ᴬ m₁(B)m₂(C)] / (1 − K)', 'K = Σᴮ∩ᶜ⁼∅ m₁(B)m₂(C)'],
         'For each nonempty set A, sum products of masses whose intersection is A, then divide by one minus conflict K. Conflict sums products whose intersection is empty. Numerical total conflict is unresolved rather than a confident decision.'),
-    7: ('Two sided decision rule',
+    7: ('Two-sided decision rule',
         ['action = alert if m(D) ≥ q; reject if m(N) ≥ q', 'action = unresolved otherwise;  q = 0.75'],
         'Issue an alert or rejection only when the corresponding singleton mass reaches 0.75; otherwise abstain. With an active event in the simulation, abstention counts as a missed alert.'),
     8: ('Conditional reputation update',
@@ -367,11 +369,22 @@ def references(d):
     assert len(rows) == len(keys)
     sort_keys = {'HydroLang': 'Erazo Ramirez', 'Earth Engine daily': 'Google Earth Engine',
                  'Demir et al WaterBench': 'Demir', 'Munoz-Sabater et al': 'Muñoz-Sabater'}
+    def _norm_author(author):
+        cleaned = re.sub(r'\s+', ' ', author.strip())
+        if ',' in cleaned:
+            last, first = [part.strip() for part in cleaned.split(',', 1)]
+            return f'{first} {last}'
+        return cleaned
+
+    formatted_rows = []
     for row in sorted(rows, key=lambda r: sort_keys.get(r['citation_key'], r['citation_key']).casefold()):
         assert row['verification_status'] == 'verified' and row['url'].startswith('https://')
+        authors = '; '.join(_norm_author(part) for part in row['authors'].split(';') if part.strip())
+        title = re.sub(r'\s+', ' ', row['title']).strip()
         volume = row['volume'].removesuffix('.0')
         venue = row['venue'] + (' ' + volume if volume else '') + ('(' + row['issue'] + ')' if row['issue'] else '') + (', ' + row['pages'] if row['pages'] else '')
-        text = f'{row["authors"]} ({row["year"]}). {row["title"]}. {venue}. {row["url"]}'
+        venue = re.sub(r'\s+', ' ', venue).strip()
+        text = f'{authors} ({row["year"]}). {title}. {venue}. {row["url"]}'
         if row['citation_key'] == 'Shafer':
             text += ' Original book published in 1976; the DOI links to the electronic edition.'
         if row['citation_key'] == 'Bahdanau et al':
@@ -381,5 +394,9 @@ def references(d):
         p.paragraph_format.line_spacing = 1.02
         for run in p.runs:
             run.font.size = Pt(9.5)
-    (WORK / 'retained_references_en.json').write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding='utf-8')
-    return rows
+        entry = dict(row)
+        entry['formatted_authors'] = authors
+        entry['formatted_venue'] = venue
+        formatted_rows.append(entry)
+    (WORK / 'retained_references_en.json').write_text(json.dumps(formatted_rows, ensure_ascii=False, indent=2), encoding='utf-8')
+    return formatted_rows

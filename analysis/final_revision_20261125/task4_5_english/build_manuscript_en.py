@@ -156,8 +156,8 @@ def build():
     subtitle = para(d, SUBTITLE)
     subtitle.paragraph_format.keep_with_next = True
     para(d, AUTHOR + ' | ' + EMAIL)
-    para(d, 'Affiliation: ')
-    para(d, 'ORCID: ')
+    para(d, 'Affiliation: ' + AFFILIATION)
+    para(d, 'ORCID: ' + ORCID)
     text = (WORK / 'manuscript_en.md').read_text(encoding='utf-8')
     for block in text.split('\n\n'):
         block = block.strip()
