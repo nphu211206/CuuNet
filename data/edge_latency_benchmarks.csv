@@ -1,8 +1,13 @@
-device_tier,device_spec,browser,backend,avg_inference_latency_ms,memory_consumption_mb
-High-end Desktop,Intel i9 + RTX 4090,Chrome v120,WebGL (GPU Accelerated),4.2,12
-High-end Desktop,Intel i9,Firefox v119,WebAssembly (WASM CPU),12.8,8
-Mid-range Laptop,Intel i5 + Iris Xe,Chrome v120,WebGL (GPU Accelerated),14.5,15
-Mid-range Laptop,Intel i5,Safari v17,WebGL (GPU Accelerated),18.2,14
-Smartphone High-end,Apple iPhone 13 (A15 Bionic),Safari Mobile,WebGL (GPU Accelerated),28.5,22
-Smartphone High-end,Apple iPhone 13 (A15 Bionic),Safari Mobile,WebAssembly (WASM CPU),65.4,18
-Smartphone Budget,Xiaomi Redmi 9 (Helio G80),Chrome Mobile,CPU Fallback,142.1,30
+zone,backend,model_variant,n_measured_passes,median_latency_ms,p5_latency_ms,p95_latency_ms,environment
+Bao_Ha_Runoff,cpu,fp32,50,4.71,4.22,6.24,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Bao_Ha_Runoff,cpu,uint8,50,4.37,4.04,5.54,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Bao_Ha_Runoff,webgl,fp32,50,12.16,10.12,17.16,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Bao_Ha_Runoff,webgl,uint8,50,12.16,10.15,16.16,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Can_Tho_Runoff,cpu,fp32,50,5.07,4.17,6.63,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Can_Tho_Runoff,cpu,uint8,50,4.86,4.39,7.15,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Can_Tho_Runoff,webgl,fp32,50,11.94,10.26,16.48,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Can_Tho_Runoff,webgl,uint8,50,12.04,10.16,17.88,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Gianh_Runoff,cpu,fp32,50,4.67,4.28,6.16,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Gianh_Runoff,cpu,uint8,50,5.35,4.54,7.06,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Gianh_Runoff,webgl,fp32,50,12.00,10.10,17.56,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
+Gianh_Runoff,webgl,uint8,50,11.77,9.98,13.91,Headless Chrome 157 / Windows x64 / Intel i5-12400F / TensorFlow.js 4.22.0
