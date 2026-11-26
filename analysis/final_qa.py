@@ -30,10 +30,17 @@ BAD_PATTERNS = ['former inconsistent', 'localhost', '37.5%', 'first spatio']
 BAD_EXACT = [r'\bCOMPLETED\b(?! empirical| physical| adversarial| audit| campaign| observed| streamflow| forecasting| evaluation)']
 FIX_MARKERS = ['HTESSEL land-surface scheme', 'Rathbun Dam (USACE)', 'sensitivity test parameter rather than']
 NEW_REFS_CHECK = ['10.5194/hess-21-5293-2017', '10.1016/j.jhydrol.2024.130771', '10.5194/gmd-19-10763-2026']
+MALFORMED_SERVER_URL = re.compile(r'https?://the\s+local\s+development\s+server\b', re.IGNORECASE)
+STALE_AUDIT_PREFIX = re.compile(
+    r'^(?:DATA VN & OBSERVED IOWA|FCAST EXPERIMENTS|OUTAGE EXPERIMENTS|'
+    r'EDGE & OFFLINE PWA AUDIT):\s*[.&](?=\s|$)'
+)
+TABLE_5_ALT_ROWS = re.compile(r'^Table 5\b.*?\bcontains (\d+) data rows\b')
 
 print('=== FINAL QA REPORT ===')
 print()
 all_pass = True
+expected_table_5_rows = None
 for name, path in files.items():
     if not os.path.exists(path):
         print(f'[MISSING] {name}')
@@ -42,7 +49,8 @@ for name, path in files.items():
     sha = sha256_file(path)
     size_kb = os.path.getsize(path) // 1024
     doc = Document(path)
-    all_text = ' '.join(get_text(p) for p in doc.paragraphs)
+    paragraphs = [get_text(p) for p in doc.paragraphs]
+    all_text = ' '.join(paragraphs)
     
     issues = []
     for bad in BAD_PATTERNS:
@@ -58,15 +66,37 @@ for name, path in files.items():
             issues.append('MISSING AI declaration')
     
     if name in ('Clean', 'TrackedChanges'):
+        if MALFORMED_SERVER_URL.search(all_text):
+            issues.append('BAD: local development server written as a malformed URL')
         for marker in FIX_MARKERS:
             if marker not in all_text:
                 issues.append(f'MISSING FIX: "{marker[:40]}"')
     
     if name == 'Clean':
+        if len(doc.tables) < 5:
+            issues.append('MISSING Table 5 for the alt text check')
+        else:
+            table_5 = doc.tables[4]
+            expected_table_5_rows = len(table_5.rows) - 1  # The first row is the column header.
         for doi in NEW_REFS_CHECK:
             if doi not in all_text:
                 issues.append(f'MISSING REF: {doi}')
     
+    if name == 'Response':
+        for paragraph in paragraphs:
+            if STALE_AUDIT_PREFIX.match(paragraph):
+                issues.append(f'BAD: malformed verification summary label "{paragraph.split(":", 1)[0]}"')
+
+    if name == 'AltText' and expected_table_5_rows is not None:
+        stated_rows = [
+            int(match[1]) for paragraph in paragraphs
+            if (match := TABLE_5_ALT_ROWS.match(paragraph))
+        ]
+        if stated_rows != [expected_table_5_rows]:
+            issues.append(
+                f'BAD: Table 5 alt text row counts {stated_rows} must match {expected_table_5_rows} data rows'
+            )
+
     status = 'PASS' if not issues else 'FAIL'
     if issues:
         all_pass = False
